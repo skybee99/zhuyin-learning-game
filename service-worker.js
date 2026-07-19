@@ -1,10 +1,12 @@
-const CACHE_NAME = 'zhuyin-bee-v1';
+const CACHE_VERSION = '20260719-03';
+const CACHE_NAME = `zhuyin-bee-${CACHE_VERSION}`;
 const APP_SHELL = [
   './',
   './index.html',
   './src/styles.css',
   './src/app.js',
   './manifest.json',
+  './assets/audio/audio-manifest.json',
   './assets/icons/icon.svg'
 ];
 
@@ -15,7 +17,9 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))))
+    caches.keys().then((keys) => Promise.all(
+      keys.filter((key) => key.startsWith('zhuyin-bee-') && key !== CACHE_NAME).map((key) => caches.delete(key))
+    ))
   );
   self.clients.claim();
 });

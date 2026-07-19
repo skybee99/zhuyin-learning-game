@@ -1,0 +1,22 @@
+name: Validate PWA
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate app files and PWA settings
+        run: node tests/validate-app.js
+      - name: Check app JavaScript syntax
+        run: node --check src/app.js
+      - name: Check service worker syntax
+        run: node --check service-worker.js

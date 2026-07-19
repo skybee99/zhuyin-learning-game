@@ -24,3 +24,14 @@
 - 語音合成在 iOS / iPadOS Safari 需由使用者點擊後觸發。
 - PWA icon 目前使用 SVG 檔，部分舊版 iOS 可能仍偏好 PNG icon。
 - 離線與加入主畫面仍需在實體 iPhone / iPad Safari 做最終驗證。
+
+### 2026-07-19 補強
+
+- 建立 `reports/` 報告架構、`CHANGELOG.md`、`ARCHITECTURE.md` 與 `MEMORY.md`。
+- 補齊完整 37 個台灣常用注音符號資料。
+- 為每個注音加入例字與 emoji 暫代圖像。
+- 建立 `assets/audio/audio-manifest.json` 統一標示真人錄音狀態。
+- 修正聲音備援文案，不再假設瀏覽器語音合成可正確發出單一注音。
+- 將 192×192、512×512 與 Apple 180×180 PNG icon 改列下一階段待辦，本次保留 SVG icon。
+- 更新 `manifest.json`、Apple touch icon 與 Service Worker cache 版本。
+- 新增 GitHub Actions 驗證 workflow。

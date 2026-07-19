@@ -1,21 +1,49 @@
 const STORAGE_KEY = 'zhuyinBeeProgressV1';
 
+const AUDIO_MANIFEST_URL = 'assets/audio/audio-manifest.json';
+let audioManifest = null;
+
 const symbols = [
-  { symbol: 'ㄅ', sound: 'ㄅ', word: '爸', emoji: '👨', audio: 'assets/audio/bo.mp3' },
-  { symbol: 'ㄆ', sound: 'ㄆ', word: '泡', emoji: '🫧', audio: 'assets/audio/po.mp3' },
-  { symbol: 'ㄇ', sound: 'ㄇ', word: '馬', emoji: '🐴', audio: 'assets/audio/mo.mp3' },
-  { symbol: 'ㄈ', sound: 'ㄈ', word: '飛', emoji: '🪽', audio: 'assets/audio/fo.mp3' },
-  { symbol: 'ㄉ', sound: 'ㄉ', word: '燈', emoji: '💡', audio: 'assets/audio/de.mp3' },
-  { symbol: 'ㄊ', sound: 'ㄊ', word: '兔', emoji: '🐰', audio: 'assets/audio/te.mp3' },
-  { symbol: 'ㄋ', sound: 'ㄋ', word: '鳥', emoji: '🐦', audio: 'assets/audio/ne.mp3' },
-  { symbol: 'ㄌ', sound: 'ㄌ', word: '鹿', emoji: '🦌', audio: 'assets/audio/le.mp3' },
-  { symbol: 'ㄧ', sound: 'ㄧ', word: '衣', emoji: '👕', audio: 'assets/audio/yi.mp3' },
-  { symbol: 'ㄨ', sound: 'ㄨ', word: '屋', emoji: '🏠', audio: 'assets/audio/wu.mp3' },
-  { symbol: 'ㄩ', sound: 'ㄩ', word: '魚', emoji: '🐟', audio: 'assets/audio/yu.mp3' },
-  { symbol: 'ㄚ', sound: 'ㄚ', word: '花', emoji: '🌸', audio: 'assets/audio/a.mp3' }
+  { symbol: 'ㄅ', sound: 'ㄅ', word: '爸', emoji: '👨', audioKey: 'ㄅ' },
+  { symbol: 'ㄆ', sound: 'ㄆ', word: '泡', emoji: '🫧', audioKey: 'ㄆ' },
+  { symbol: 'ㄇ', sound: 'ㄇ', word: '馬', emoji: '🐴', audioKey: 'ㄇ' },
+  { symbol: 'ㄈ', sound: 'ㄈ', word: '飛', emoji: '🪽', audioKey: 'ㄈ' },
+  { symbol: 'ㄉ', sound: 'ㄉ', word: '燈', emoji: '💡', audioKey: 'ㄉ' },
+  { symbol: 'ㄊ', sound: 'ㄊ', word: '兔', emoji: '🐰', audioKey: 'ㄊ' },
+  { symbol: 'ㄋ', sound: 'ㄋ', word: '鳥', emoji: '🐦', audioKey: 'ㄋ' },
+  { symbol: 'ㄌ', sound: 'ㄌ', word: '鹿', emoji: '🦌', audioKey: 'ㄌ' },
+  { symbol: 'ㄍ', sound: 'ㄍ', word: '狗', emoji: '🐶', audioKey: 'ㄍ' },
+  { symbol: 'ㄎ', sound: 'ㄎ', word: '口', emoji: '👄', audioKey: 'ㄎ' },
+  { symbol: 'ㄏ', sound: 'ㄏ', word: '河', emoji: '🏞️', audioKey: 'ㄏ' },
+  { symbol: 'ㄐ', sound: 'ㄐ', word: '雞', emoji: '🐔', audioKey: 'ㄐ' },
+  { symbol: 'ㄑ', sound: 'ㄑ', word: '旗', emoji: '🚩', audioKey: 'ㄑ' },
+  { symbol: 'ㄒ', sound: 'ㄒ', word: '西', emoji: '🌅', audioKey: 'ㄒ' },
+  { symbol: 'ㄓ', sound: 'ㄓ', word: '竹', emoji: '🎋', audioKey: 'ㄓ' },
+  { symbol: 'ㄔ', sound: 'ㄔ', word: '車', emoji: '🚗', audioKey: 'ㄔ' },
+  { symbol: 'ㄕ', sound: 'ㄕ', word: '書', emoji: '📖', audioKey: 'ㄕ' },
+  { symbol: 'ㄖ', sound: 'ㄖ', word: '日', emoji: '☀️', audioKey: 'ㄖ' },
+  { symbol: 'ㄗ', sound: 'ㄗ', word: '字', emoji: '🔤', audioKey: 'ㄗ' },
+  { symbol: 'ㄘ', sound: 'ㄘ', word: '草', emoji: '🌱', audioKey: 'ㄘ' },
+  { symbol: 'ㄙ', sound: 'ㄙ', word: '傘', emoji: '☂️', audioKey: 'ㄙ' },
+  { symbol: 'ㄧ', sound: 'ㄧ', word: '衣', emoji: '👕', audioKey: 'ㄧ' },
+  { symbol: 'ㄨ', sound: 'ㄨ', word: '屋', emoji: '🏠', audioKey: 'ㄨ' },
+  { symbol: 'ㄩ', sound: 'ㄩ', word: '魚', emoji: '🐟', audioKey: 'ㄩ' },
+  { symbol: 'ㄚ', sound: 'ㄚ', word: '鴨', emoji: '🦆', audioKey: 'ㄚ' },
+  { symbol: 'ㄛ', sound: 'ㄛ', word: '喔', emoji: '⭕', audioKey: 'ㄛ' },
+  { symbol: 'ㄜ', sound: 'ㄜ', word: '鵝', emoji: '🪿', audioKey: 'ㄜ' },
+  { symbol: 'ㄝ', sound: 'ㄝ', word: '欸', emoji: '🙋', audioKey: 'ㄝ' },
+  { symbol: 'ㄞ', sound: 'ㄞ', word: '愛', emoji: '❤️', audioKey: 'ㄞ' },
+  { symbol: 'ㄟ', sound: 'ㄟ', word: '杯', emoji: '🥤', audioKey: 'ㄟ' },
+  { symbol: 'ㄠ', sound: 'ㄠ', word: '凹', emoji: '🕳️', audioKey: 'ㄠ' },
+  { symbol: 'ㄡ', sound: 'ㄡ', word: '藕', emoji: '🪷', audioKey: 'ㄡ' },
+  { symbol: 'ㄢ', sound: 'ㄢ', word: '安', emoji: '🛏️', audioKey: 'ㄢ' },
+  { symbol: 'ㄣ', sound: 'ㄣ', word: '恩', emoji: '🙏', audioKey: 'ㄣ' },
+  { symbol: 'ㄤ', sound: 'ㄤ', word: '羊', emoji: '🐑', audioKey: 'ㄤ' },
+  { symbol: 'ㄥ', sound: 'ㄥ', word: '風', emoji: '🌬️', audioKey: 'ㄥ' },
+  { symbol: 'ㄦ', sound: 'ㄦ', word: '兒', emoji: '🧒', audioKey: 'ㄦ' },
 ];
 
-const wordItems = symbols.map(({ word, emoji, sound }) => ({ word, emoji, sound }));
+const wordItems = symbols.map(({ word, emoji, sound, symbol }) => ({ word, emoji, sound, symbol }));
 let progress = loadProgress();
 let currentListen = symbols[0];
 let currentWord = wordItems[0];
@@ -45,8 +73,34 @@ function renderProgress() {
 }
 
 async function playSound(item) {
-  const recordingPlayed = await playRecording(item.audio);
-  if (!recordingPlayed) speak(item.sound || item.symbol || item.word);
+  const audioItem = await getAudioItem(item);
+  const recordingPlayed = audioItem?.status === 'recorded' && await playRecording(`${audioManifest.basePath}${audioItem.file}`);
+  showAudioNotice(recordingPlayed, item);
+  if (!recordingPlayed) speak(item.word || item.symbol);
+}
+
+async function getAudioManifest() {
+  if (audioManifest) return audioManifest;
+  const response = await fetch(AUDIO_MANIFEST_URL);
+  audioManifest = await response.json();
+  return audioManifest;
+}
+
+async function getAudioItem(item) {
+  try {
+    const manifest = await getAudioManifest();
+    return manifest.items[item.audioKey || item.symbol];
+  } catch {
+    return null;
+  }
+}
+
+function showAudioNotice(recordingPlayed, item) {
+  const message = recordingPlayed
+    ? `正在播放 ${item.symbol} 的真人錄音。`
+    : `${item.symbol} 目前沒有真人錄音，改用瀏覽器語音合成唸例字「${item.word}」作為備援，不代表標準單一注音發音。`;
+  const notice = $('#audioNotice');
+  if (notice) notice.textContent = message;
 }
 
 function playRecording(src) {
@@ -96,6 +150,7 @@ function renderCards() {
     <button class="symbol-card" type="button" data-symbol="${item.symbol}" aria-label="播放 ${item.symbol} 的發音">
       <span class="symbol">${item.symbol}</span>
       <span class="sample">${item.emoji} ${item.word}</span>
+      <span class="audio-state">真人錄音待補，將使用備援</span>
     </button>
   `).join('');
   $('#symbolCards').addEventListener('click', (event) => {

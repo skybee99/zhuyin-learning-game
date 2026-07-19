@@ -9,7 +9,6 @@
     <meta name="apple-mobile-web-app-title" content="注音小蜜蜂" />
     <meta name="description" content="適合 iPhone 與 iPad 的注音、認字與語音學習遊戲。" />
     <link rel="manifest" href="manifest.json" />
-    <link rel="apple-touch-icon" href="assets/icons/icon.svg" />
     <link rel="stylesheet" href="src/styles.css" />
     <title>注音小蜜蜂</title>
   </head>
@@ -35,7 +34,8 @@
 
         <section class="panel active" id="cardsView" aria-labelledby="cardsTitle">
           <h2 id="cardsTitle">注音符號學習卡</h2>
-          <p>點卡片聽發音。未來可將真人錄音放入 <code>assets/audio/</code>。</p>
+          <p>點卡片聽發音。真人錄音尚未補齊時，系統只會使用瀏覽器語音合成唸例字作為備援，不會宣稱是標準單一注音發音。</p>
+          <p class="audio-notice" id="audioNotice" aria-live="polite">目前尚未內建真人錄音；播放時會標示備援狀態。</p>
           <div class="card-grid" id="symbolCards"></div>
         </section>
 
