@@ -1,0 +1,8808 @@
+[
+  {
+    "id": "char-1",
+    "han": "爸",
+    "zhuyin": [
+      "ㄅ",
+      "ㄚ",
+      "ˋ"
+    ],
+    "word": "爸",
+    "wordCharacters": [
+      {
+        "han": "爸",
+        "zhuyin": [
+          "ㄅ",
+          "ㄚ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "👨",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "爸",
+    "audioKey": "char-1",
+    "primarySymbol": "ㄅ"
+  },
+  {
+    "id": "char-2",
+    "han": "媽",
+    "zhuyin": [
+      "ㄆ",
+      "ㄠ",
+      "ˋ"
+    ],
+    "word": "媽",
+    "wordCharacters": [
+      {
+        "han": "媽",
+        "zhuyin": [
+          "ㄆ",
+          "ㄠ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🫧",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "媽",
+    "audioKey": "char-2",
+    "primarySymbol": "ㄆ"
+  },
+  {
+    "id": "char-3",
+    "han": "哥",
+    "zhuyin": [
+      "ㄇ",
+      "ㄚ",
+      "ˇ"
+    ],
+    "word": "哥",
+    "wordCharacters": [
+      {
+        "han": "哥",
+        "zhuyin": [
+          "ㄇ",
+          "ㄚ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐴",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "哥",
+    "audioKey": "char-3",
+    "primarySymbol": "ㄇ"
+  },
+  {
+    "id": "char-4",
+    "han": "姐",
+    "zhuyin": [
+      "ㄈ",
+      "ㄟ"
+    ],
+    "word": "姐",
+    "wordCharacters": [
+      {
+        "han": "姐",
+        "zhuyin": [
+          "ㄈ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🪽",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "姐",
+    "audioKey": "char-4",
+    "primarySymbol": "ㄈ"
+  },
+  {
+    "id": "char-5",
+    "han": "弟",
+    "zhuyin": [
+      "ㄉ",
+      "ㄥ"
+    ],
+    "word": "弟",
+    "wordCharacters": [
+      {
+        "han": "弟",
+        "zhuyin": [
+          "ㄉ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "💡",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "弟",
+    "audioKey": "char-5",
+    "primarySymbol": "ㄉ"
+  },
+  {
+    "id": "char-6",
+    "han": "妹",
+    "zhuyin": [
+      "ㄊ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "妹",
+    "wordCharacters": [
+      {
+        "han": "妹",
+        "zhuyin": [
+          "ㄊ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🐰",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "妹",
+    "audioKey": "char-6",
+    "primarySymbol": "ㄊ"
+  },
+  {
+    "id": "char-7",
+    "han": "爺",
+    "zhuyin": [
+      "ㄋ",
+      "ㄧ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "爺",
+    "wordCharacters": [
+      {
+        "han": "爺",
+        "zhuyin": [
+          "ㄋ",
+          "ㄧ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐦",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "爺",
+    "audioKey": "char-7",
+    "primarySymbol": "ㄋ"
+  },
+  {
+    "id": "char-8",
+    "han": "奶",
+    "zhuyin": [
+      "ㄌ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "奶",
+    "wordCharacters": [
+      {
+        "han": "奶",
+        "zhuyin": [
+          "ㄌ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🦌",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "奶",
+    "audioKey": "char-8",
+    "primarySymbol": "ㄌ"
+  },
+  {
+    "id": "char-9",
+    "han": "家",
+    "zhuyin": [
+      "ㄍ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "家",
+    "wordCharacters": [
+      {
+        "han": "家",
+        "zhuyin": [
+          "ㄍ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐶",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "家",
+    "audioKey": "char-9",
+    "primarySymbol": "ㄍ"
+  },
+  {
+    "id": "char-10",
+    "han": "人",
+    "zhuyin": [
+      "ㄎ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "人",
+    "wordCharacters": [
+      {
+        "han": "人",
+        "zhuyin": [
+          "ㄎ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "👄",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "人",
+    "audioKey": "char-10",
+    "primarySymbol": "ㄎ"
+  },
+  {
+    "id": "char-11",
+    "han": "口",
+    "zhuyin": [
+      "ㄏ",
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "口",
+    "wordCharacters": [
+      {
+        "han": "口",
+        "zhuyin": [
+          "ㄏ",
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🏞️",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "口",
+    "audioKey": "char-11",
+    "primarySymbol": "ㄏ"
+  },
+  {
+    "id": "char-12",
+    "han": "手",
+    "zhuyin": [
+      "ㄐ",
+      "ㄧ"
+    ],
+    "word": "手",
+    "wordCharacters": [
+      {
+        "han": "手",
+        "zhuyin": [
+          "ㄐ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🐔",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "手",
+    "audioKey": "char-12",
+    "primarySymbol": "ㄐ"
+  },
+  {
+    "id": "char-13",
+    "han": "腳",
+    "zhuyin": [
+      "ㄑ",
+      "ㄧ",
+      "ˊ"
+    ],
+    "word": "腳",
+    "wordCharacters": [
+      {
+        "han": "腳",
+        "zhuyin": [
+          "ㄑ",
+          "ㄧ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🚩",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "腳",
+    "audioKey": "char-13",
+    "primarySymbol": "ㄑ"
+  },
+  {
+    "id": "char-14",
+    "han": "眼",
+    "zhuyin": [
+      "ㄒ",
+      "ㄧ"
+    ],
+    "word": "眼",
+    "wordCharacters": [
+      {
+        "han": "眼",
+        "zhuyin": [
+          "ㄒ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🌅",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "眼",
+    "audioKey": "char-14",
+    "primarySymbol": "ㄒ"
+  },
+  {
+    "id": "char-15",
+    "han": "耳",
+    "zhuyin": [
+      "ㄓ",
+      "ㄨ",
+      "ˊ"
+    ],
+    "word": "耳",
+    "wordCharacters": [
+      {
+        "han": "耳",
+        "zhuyin": [
+          "ㄓ",
+          "ㄨ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🎋",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "耳",
+    "audioKey": "char-15",
+    "primarySymbol": "ㄓ"
+  },
+  {
+    "id": "char-16",
+    "han": "鼻",
+    "zhuyin": [
+      "ㄔ",
+      "ㄜ"
+    ],
+    "word": "鼻",
+    "wordCharacters": [
+      {
+        "han": "鼻",
+        "zhuyin": [
+          "ㄔ",
+          "ㄜ"
+        ]
+      }
+    ],
+    "emoji": "🚗",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "鼻",
+    "audioKey": "char-16",
+    "primarySymbol": "ㄔ"
+  },
+  {
+    "id": "char-17",
+    "han": "牙",
+    "zhuyin": [
+      "ㄕ",
+      "ㄨ"
+    ],
+    "word": "牙",
+    "wordCharacters": [
+      {
+        "han": "牙",
+        "zhuyin": [
+          "ㄕ",
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "📖",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "牙",
+    "audioKey": "char-17",
+    "primarySymbol": "ㄕ"
+  },
+  {
+    "id": "char-18",
+    "han": "頭",
+    "zhuyin": [
+      "ㄖ",
+      "ˋ"
+    ],
+    "word": "頭",
+    "wordCharacters": [
+      {
+        "han": "頭",
+        "zhuyin": [
+          "ㄖ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "☀️",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "頭",
+    "audioKey": "char-18",
+    "primarySymbol": "ㄖ"
+  },
+  {
+    "id": "char-19",
+    "han": "身",
+    "zhuyin": [
+      "ㄗ",
+      "ˋ"
+    ],
+    "word": "身",
+    "wordCharacters": [
+      {
+        "han": "身",
+        "zhuyin": [
+          "ㄗ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🔤",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "身",
+    "audioKey": "char-19",
+    "primarySymbol": "ㄗ"
+  },
+  {
+    "id": "char-20",
+    "han": "心",
+    "zhuyin": [
+      "ㄘ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "心",
+    "wordCharacters": [
+      {
+        "han": "心",
+        "zhuyin": [
+          "ㄘ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🌱",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "心",
+    "audioKey": "char-20",
+    "primarySymbol": "ㄘ"
+  },
+  {
+    "id": "char-21",
+    "han": "狗",
+    "zhuyin": [
+      "ㄙ",
+      "ㄢ",
+      "ˇ"
+    ],
+    "word": "狗",
+    "wordCharacters": [
+      {
+        "han": "狗",
+        "zhuyin": [
+          "ㄙ",
+          "ㄢ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "☂️",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "狗",
+    "audioKey": "char-21",
+    "primarySymbol": "ㄙ"
+  },
+  {
+    "id": "char-22",
+    "han": "貓",
+    "zhuyin": [
+      "ㄧ"
+    ],
+    "word": "貓",
+    "wordCharacters": [
+      {
+        "han": "貓",
+        "zhuyin": [
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "👕",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "貓",
+    "audioKey": "char-22",
+    "primarySymbol": "ㄧ"
+  },
+  {
+    "id": "char-23",
+    "han": "牛",
+    "zhuyin": [
+      "ㄨ"
+    ],
+    "word": "牛",
+    "wordCharacters": [
+      {
+        "han": "牛",
+        "zhuyin": [
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "🏠",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "牛",
+    "audioKey": "char-23",
+    "primarySymbol": "ㄨ"
+  },
+  {
+    "id": "char-24",
+    "han": "羊",
+    "zhuyin": [
+      "ㄩ",
+      "ˊ"
+    ],
+    "word": "羊",
+    "wordCharacters": [
+      {
+        "han": "羊",
+        "zhuyin": [
+          "ㄩ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐟",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "羊",
+    "audioKey": "char-24",
+    "primarySymbol": "ㄩ"
+  },
+  {
+    "id": "char-25",
+    "han": "馬",
+    "zhuyin": [
+      "ㄧ",
+      "ㄚ"
+    ],
+    "word": "馬",
+    "wordCharacters": [
+      {
+        "han": "馬",
+        "zhuyin": [
+          "ㄧ",
+          "ㄚ"
+        ]
+      }
+    ],
+    "emoji": "🦆",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "馬",
+    "audioKey": "char-25",
+    "primarySymbol": "ㄚ"
+  },
+  {
+    "id": "char-26",
+    "han": "鳥",
+    "zhuyin": [
+      "ㄛ"
+    ],
+    "word": "鳥",
+    "wordCharacters": [
+      {
+        "han": "鳥",
+        "zhuyin": [
+          "ㄛ"
+        ]
+      }
+    ],
+    "emoji": "⭕",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "鳥",
+    "audioKey": "char-26",
+    "primarySymbol": "ㄛ"
+  },
+  {
+    "id": "char-27",
+    "han": "魚",
+    "zhuyin": [
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "魚",
+    "wordCharacters": [
+      {
+        "han": "魚",
+        "zhuyin": [
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🪿",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "魚",
+    "audioKey": "char-27",
+    "primarySymbol": "ㄜ"
+  },
+  {
+    "id": "char-28",
+    "han": "兔",
+    "zhuyin": [
+      "ㄝ"
+    ],
+    "word": "兔",
+    "wordCharacters": [
+      {
+        "han": "兔",
+        "zhuyin": [
+          "ㄝ"
+        ]
+      }
+    ],
+    "emoji": "🙋",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "兔",
+    "audioKey": "char-28",
+    "primarySymbol": "ㄝ"
+  },
+  {
+    "id": "char-29",
+    "han": "雞",
+    "zhuyin": [
+      "ㄞ",
+      "ˋ"
+    ],
+    "word": "雞",
+    "wordCharacters": [
+      {
+        "han": "雞",
+        "zhuyin": [
+          "ㄞ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "❤️",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "雞",
+    "audioKey": "char-29",
+    "primarySymbol": "ㄞ"
+  },
+  {
+    "id": "char-30",
+    "han": "鴨",
+    "zhuyin": [
+      "ㄅ",
+      "ㄟ"
+    ],
+    "word": "鴨",
+    "wordCharacters": [
+      {
+        "han": "鴨",
+        "zhuyin": [
+          "ㄅ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🥤",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "鴨",
+    "audioKey": "char-30",
+    "primarySymbol": "ㄟ"
+  },
+  {
+    "id": "char-31",
+    "han": "蟲",
+    "zhuyin": [
+      "ㄠ"
+    ],
+    "word": "蟲",
+    "wordCharacters": [
+      {
+        "han": "蟲",
+        "zhuyin": [
+          "ㄠ"
+        ]
+      }
+    ],
+    "emoji": "🕳️",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "蟲",
+    "audioKey": "char-31",
+    "primarySymbol": "ㄠ"
+  },
+  {
+    "id": "char-32",
+    "han": "虎",
+    "zhuyin": [
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "虎",
+    "wordCharacters": [
+      {
+        "han": "虎",
+        "zhuyin": [
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🪷",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "虎",
+    "audioKey": "char-32",
+    "primarySymbol": "ㄡ"
+  },
+  {
+    "id": "char-33",
+    "han": "熊",
+    "zhuyin": [
+      "ㄢ"
+    ],
+    "word": "熊",
+    "wordCharacters": [
+      {
+        "han": "熊",
+        "zhuyin": [
+          "ㄢ"
+        ]
+      }
+    ],
+    "emoji": "🛏️",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "熊",
+    "audioKey": "char-33",
+    "primarySymbol": "ㄢ"
+  },
+  {
+    "id": "char-34",
+    "han": "猴",
+    "zhuyin": [
+      "ㄣ"
+    ],
+    "word": "猴",
+    "wordCharacters": [
+      {
+        "han": "猴",
+        "zhuyin": [
+          "ㄣ"
+        ]
+      }
+    ],
+    "emoji": "🙏",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "猴",
+    "audioKey": "char-34",
+    "primarySymbol": "ㄣ"
+  },
+  {
+    "id": "char-35",
+    "han": "果",
+    "zhuyin": [
+      "ㄧ",
+      "ㄤ",
+      "ˊ"
+    ],
+    "word": "果",
+    "wordCharacters": [
+      {
+        "han": "果",
+        "zhuyin": [
+          "ㄧ",
+          "ㄤ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐑",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "果",
+    "audioKey": "char-35",
+    "primarySymbol": "ㄤ"
+  },
+  {
+    "id": "char-36",
+    "han": "香",
+    "zhuyin": [
+      "ㄈ",
+      "ㄥ"
+    ],
+    "word": "香",
+    "wordCharacters": [
+      {
+        "han": "香",
+        "zhuyin": [
+          "ㄈ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "🌬️",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "香",
+    "audioKey": "char-36",
+    "primarySymbol": "ㄥ"
+  },
+  {
+    "id": "char-37",
+    "han": "蕉",
+    "zhuyin": [
+      "ㄦ",
+      "ˊ"
+    ],
+    "word": "蕉",
+    "wordCharacters": [
+      {
+        "han": "蕉",
+        "zhuyin": [
+          "ㄦ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🧒",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "蕉",
+    "audioKey": "char-37",
+    "primarySymbol": "ㄦ"
+  },
+  {
+    "id": "char-38",
+    "han": "蘋",
+    "zhuyin": [
+      "ㄅ",
+      "ㄚ",
+      "ˋ"
+    ],
+    "word": "蘋",
+    "wordCharacters": [
+      {
+        "han": "蘋",
+        "zhuyin": [
+          "ㄅ",
+          "ㄚ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "👨",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "蘋",
+    "audioKey": "char-38",
+    "primarySymbol": "ㄅ"
+  },
+  {
+    "id": "char-39",
+    "han": "梨",
+    "zhuyin": [
+      "ㄆ",
+      "ㄠ",
+      "ˋ"
+    ],
+    "word": "梨",
+    "wordCharacters": [
+      {
+        "han": "梨",
+        "zhuyin": [
+          "ㄆ",
+          "ㄠ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🫧",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "梨",
+    "audioKey": "char-39",
+    "primarySymbol": "ㄆ"
+  },
+  {
+    "id": "char-40",
+    "han": "桃",
+    "zhuyin": [
+      "ㄇ",
+      "ㄚ",
+      "ˇ"
+    ],
+    "word": "桃",
+    "wordCharacters": [
+      {
+        "han": "桃",
+        "zhuyin": [
+          "ㄇ",
+          "ㄚ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐴",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "桃",
+    "audioKey": "char-40",
+    "primarySymbol": "ㄇ"
+  },
+  {
+    "id": "char-41",
+    "han": "莓",
+    "zhuyin": [
+      "ㄈ",
+      "ㄟ"
+    ],
+    "word": "莓",
+    "wordCharacters": [
+      {
+        "han": "莓",
+        "zhuyin": [
+          "ㄈ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🪽",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "莓",
+    "audioKey": "char-41",
+    "primarySymbol": "ㄈ"
+  },
+  {
+    "id": "char-42",
+    "han": "瓜",
+    "zhuyin": [
+      "ㄉ",
+      "ㄥ"
+    ],
+    "word": "瓜",
+    "wordCharacters": [
+      {
+        "han": "瓜",
+        "zhuyin": [
+          "ㄉ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "💡",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "瓜",
+    "audioKey": "char-42",
+    "primarySymbol": "ㄉ"
+  },
+  {
+    "id": "char-43",
+    "han": "飯",
+    "zhuyin": [
+      "ㄊ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "飯",
+    "wordCharacters": [
+      {
+        "han": "飯",
+        "zhuyin": [
+          "ㄊ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🐰",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "飯",
+    "audioKey": "char-43",
+    "primarySymbol": "ㄊ"
+  },
+  {
+    "id": "char-44",
+    "han": "麵",
+    "zhuyin": [
+      "ㄋ",
+      "ㄧ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "麵",
+    "wordCharacters": [
+      {
+        "han": "麵",
+        "zhuyin": [
+          "ㄋ",
+          "ㄧ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐦",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "麵",
+    "audioKey": "char-44",
+    "primarySymbol": "ㄋ"
+  },
+  {
+    "id": "char-45",
+    "han": "水",
+    "zhuyin": [
+      "ㄌ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "水",
+    "wordCharacters": [
+      {
+        "han": "水",
+        "zhuyin": [
+          "ㄌ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🦌",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "水",
+    "audioKey": "char-45",
+    "primarySymbol": "ㄌ"
+  },
+  {
+    "id": "char-46",
+    "han": "茶",
+    "zhuyin": [
+      "ㄍ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "茶",
+    "wordCharacters": [
+      {
+        "han": "茶",
+        "zhuyin": [
+          "ㄍ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐶",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "茶",
+    "audioKey": "char-46",
+    "primarySymbol": "ㄍ"
+  },
+  {
+    "id": "char-47",
+    "han": "奶",
+    "zhuyin": [
+      "ㄎ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "奶",
+    "wordCharacters": [
+      {
+        "han": "奶",
+        "zhuyin": [
+          "ㄎ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "👄",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "奶",
+    "audioKey": "char-47",
+    "primarySymbol": "ㄎ"
+  },
+  {
+    "id": "char-48",
+    "han": "蛋",
+    "zhuyin": [
+      "ㄏ",
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "蛋",
+    "wordCharacters": [
+      {
+        "han": "蛋",
+        "zhuyin": [
+          "ㄏ",
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🏞️",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "蛋",
+    "audioKey": "char-48",
+    "primarySymbol": "ㄏ"
+  },
+  {
+    "id": "char-49",
+    "han": "肉",
+    "zhuyin": [
+      "ㄐ",
+      "ㄧ"
+    ],
+    "word": "肉",
+    "wordCharacters": [
+      {
+        "han": "肉",
+        "zhuyin": [
+          "ㄐ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🐔",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "肉",
+    "audioKey": "char-49",
+    "primarySymbol": "ㄐ"
+  },
+  {
+    "id": "char-50",
+    "han": "菜",
+    "zhuyin": [
+      "ㄑ",
+      "ㄧ",
+      "ˊ"
+    ],
+    "word": "菜",
+    "wordCharacters": [
+      {
+        "han": "菜",
+        "zhuyin": [
+          "ㄑ",
+          "ㄧ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🚩",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "菜",
+    "audioKey": "char-50",
+    "primarySymbol": "ㄑ"
+  },
+  {
+    "id": "char-51",
+    "han": "豆",
+    "zhuyin": [
+      "ㄒ",
+      "ㄧ"
+    ],
+    "word": "豆",
+    "wordCharacters": [
+      {
+        "han": "豆",
+        "zhuyin": [
+          "ㄒ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🌅",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "豆",
+    "audioKey": "char-51",
+    "primarySymbol": "ㄒ"
+  },
+  {
+    "id": "char-52",
+    "han": "糖",
+    "zhuyin": [
+      "ㄓ",
+      "ㄨ",
+      "ˊ"
+    ],
+    "word": "糖",
+    "wordCharacters": [
+      {
+        "han": "糖",
+        "zhuyin": [
+          "ㄓ",
+          "ㄨ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🎋",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "糖",
+    "audioKey": "char-52",
+    "primarySymbol": "ㄓ"
+  },
+  {
+    "id": "char-53",
+    "han": "餅",
+    "zhuyin": [
+      "ㄔ",
+      "ㄜ"
+    ],
+    "word": "餅",
+    "wordCharacters": [
+      {
+        "han": "餅",
+        "zhuyin": [
+          "ㄔ",
+          "ㄜ"
+        ]
+      }
+    ],
+    "emoji": "🚗",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "餅",
+    "audioKey": "char-53",
+    "primarySymbol": "ㄔ"
+  },
+  {
+    "id": "char-54",
+    "han": "紅",
+    "zhuyin": [
+      "ㄕ",
+      "ㄨ"
+    ],
+    "word": "紅",
+    "wordCharacters": [
+      {
+        "han": "紅",
+        "zhuyin": [
+          "ㄕ",
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "📖",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "紅",
+    "audioKey": "char-54",
+    "primarySymbol": "ㄕ"
+  },
+  {
+    "id": "char-55",
+    "han": "橙",
+    "zhuyin": [
+      "ㄖ",
+      "ˋ"
+    ],
+    "word": "橙",
+    "wordCharacters": [
+      {
+        "han": "橙",
+        "zhuyin": [
+          "ㄖ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "☀️",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "橙",
+    "audioKey": "char-55",
+    "primarySymbol": "ㄖ"
+  },
+  {
+    "id": "char-56",
+    "han": "黃",
+    "zhuyin": [
+      "ㄗ",
+      "ˋ"
+    ],
+    "word": "黃",
+    "wordCharacters": [
+      {
+        "han": "黃",
+        "zhuyin": [
+          "ㄗ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🔤",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "黃",
+    "audioKey": "char-56",
+    "primarySymbol": "ㄗ"
+  },
+  {
+    "id": "char-57",
+    "han": "綠",
+    "zhuyin": [
+      "ㄘ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "綠",
+    "wordCharacters": [
+      {
+        "han": "綠",
+        "zhuyin": [
+          "ㄘ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🌱",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "綠",
+    "audioKey": "char-57",
+    "primarySymbol": "ㄘ"
+  },
+  {
+    "id": "char-58",
+    "han": "藍",
+    "zhuyin": [
+      "ㄙ",
+      "ㄢ",
+      "ˇ"
+    ],
+    "word": "藍",
+    "wordCharacters": [
+      {
+        "han": "藍",
+        "zhuyin": [
+          "ㄙ",
+          "ㄢ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "☂️",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "藍",
+    "audioKey": "char-58",
+    "primarySymbol": "ㄙ"
+  },
+  {
+    "id": "char-59",
+    "han": "紫",
+    "zhuyin": [
+      "ㄧ"
+    ],
+    "word": "紫",
+    "wordCharacters": [
+      {
+        "han": "紫",
+        "zhuyin": [
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "👕",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "紫",
+    "audioKey": "char-59",
+    "primarySymbol": "ㄧ"
+  },
+  {
+    "id": "char-60",
+    "han": "黑",
+    "zhuyin": [
+      "ㄨ"
+    ],
+    "word": "黑",
+    "wordCharacters": [
+      {
+        "han": "黑",
+        "zhuyin": [
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "🏠",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "黑",
+    "audioKey": "char-60",
+    "primarySymbol": "ㄨ"
+  },
+  {
+    "id": "char-61",
+    "han": "白",
+    "zhuyin": [
+      "ㄩ",
+      "ˊ"
+    ],
+    "word": "白",
+    "wordCharacters": [
+      {
+        "han": "白",
+        "zhuyin": [
+          "ㄩ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐟",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "白",
+    "audioKey": "char-61",
+    "primarySymbol": "ㄩ"
+  },
+  {
+    "id": "char-62",
+    "han": "一",
+    "zhuyin": [
+      "ㄧ",
+      "ㄚ"
+    ],
+    "word": "一",
+    "wordCharacters": [
+      {
+        "han": "一",
+        "zhuyin": [
+          "ㄧ",
+          "ㄚ"
+        ]
+      }
+    ],
+    "emoji": "🦆",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "一",
+    "audioKey": "char-62",
+    "primarySymbol": "ㄚ"
+  },
+  {
+    "id": "char-63",
+    "han": "二",
+    "zhuyin": [
+      "ㄛ"
+    ],
+    "word": "二",
+    "wordCharacters": [
+      {
+        "han": "二",
+        "zhuyin": [
+          "ㄛ"
+        ]
+      }
+    ],
+    "emoji": "⭕",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "二",
+    "audioKey": "char-63",
+    "primarySymbol": "ㄛ"
+  },
+  {
+    "id": "char-64",
+    "han": "三",
+    "zhuyin": [
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "三",
+    "wordCharacters": [
+      {
+        "han": "三",
+        "zhuyin": [
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🪿",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "三",
+    "audioKey": "char-64",
+    "primarySymbol": "ㄜ"
+  },
+  {
+    "id": "char-65",
+    "han": "四",
+    "zhuyin": [
+      "ㄝ"
+    ],
+    "word": "四",
+    "wordCharacters": [
+      {
+        "han": "四",
+        "zhuyin": [
+          "ㄝ"
+        ]
+      }
+    ],
+    "emoji": "🙋",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "四",
+    "audioKey": "char-65",
+    "primarySymbol": "ㄝ"
+  },
+  {
+    "id": "char-66",
+    "han": "五",
+    "zhuyin": [
+      "ㄞ",
+      "ˋ"
+    ],
+    "word": "五",
+    "wordCharacters": [
+      {
+        "han": "五",
+        "zhuyin": [
+          "ㄞ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "❤️",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "五",
+    "audioKey": "char-66",
+    "primarySymbol": "ㄞ"
+  },
+  {
+    "id": "char-67",
+    "han": "六",
+    "zhuyin": [
+      "ㄅ",
+      "ㄟ"
+    ],
+    "word": "六",
+    "wordCharacters": [
+      {
+        "han": "六",
+        "zhuyin": [
+          "ㄅ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🥤",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "六",
+    "audioKey": "char-67",
+    "primarySymbol": "ㄟ"
+  },
+  {
+    "id": "char-68",
+    "han": "七",
+    "zhuyin": [
+      "ㄠ"
+    ],
+    "word": "七",
+    "wordCharacters": [
+      {
+        "han": "七",
+        "zhuyin": [
+          "ㄠ"
+        ]
+      }
+    ],
+    "emoji": "🕳️",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "七",
+    "audioKey": "char-68",
+    "primarySymbol": "ㄠ"
+  },
+  {
+    "id": "char-69",
+    "han": "八",
+    "zhuyin": [
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "八",
+    "wordCharacters": [
+      {
+        "han": "八",
+        "zhuyin": [
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🪷",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "八",
+    "audioKey": "char-69",
+    "primarySymbol": "ㄡ"
+  },
+  {
+    "id": "char-70",
+    "han": "九",
+    "zhuyin": [
+      "ㄢ"
+    ],
+    "word": "九",
+    "wordCharacters": [
+      {
+        "han": "九",
+        "zhuyin": [
+          "ㄢ"
+        ]
+      }
+    ],
+    "emoji": "🛏️",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "九",
+    "audioKey": "char-70",
+    "primarySymbol": "ㄢ"
+  },
+  {
+    "id": "char-71",
+    "han": "十",
+    "zhuyin": [
+      "ㄣ"
+    ],
+    "word": "十",
+    "wordCharacters": [
+      {
+        "han": "十",
+        "zhuyin": [
+          "ㄣ"
+        ]
+      }
+    ],
+    "emoji": "🙏",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "十",
+    "audioKey": "char-71",
+    "primarySymbol": "ㄣ"
+  },
+  {
+    "id": "char-72",
+    "han": "百",
+    "zhuyin": [
+      "ㄧ",
+      "ㄤ",
+      "ˊ"
+    ],
+    "word": "百",
+    "wordCharacters": [
+      {
+        "han": "百",
+        "zhuyin": [
+          "ㄧ",
+          "ㄤ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐑",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "百",
+    "audioKey": "char-72",
+    "primarySymbol": "ㄤ"
+  },
+  {
+    "id": "char-73",
+    "han": "書",
+    "zhuyin": [
+      "ㄈ",
+      "ㄥ"
+    ],
+    "word": "書",
+    "wordCharacters": [
+      {
+        "han": "書",
+        "zhuyin": [
+          "ㄈ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "🌬️",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "書",
+    "audioKey": "char-73",
+    "primarySymbol": "ㄥ"
+  },
+  {
+    "id": "char-74",
+    "han": "筆",
+    "zhuyin": [
+      "ㄦ",
+      "ˊ"
+    ],
+    "word": "筆",
+    "wordCharacters": [
+      {
+        "han": "筆",
+        "zhuyin": [
+          "ㄦ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🧒",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "筆",
+    "audioKey": "char-74",
+    "primarySymbol": "ㄦ"
+  },
+  {
+    "id": "char-75",
+    "han": "紙",
+    "zhuyin": [
+      "ㄅ",
+      "ㄚ",
+      "ˋ"
+    ],
+    "word": "紙",
+    "wordCharacters": [
+      {
+        "han": "紙",
+        "zhuyin": [
+          "ㄅ",
+          "ㄚ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "👨",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "紙",
+    "audioKey": "char-75",
+    "primarySymbol": "ㄅ"
+  },
+  {
+    "id": "char-76",
+    "han": "桌",
+    "zhuyin": [
+      "ㄆ",
+      "ㄠ",
+      "ˋ"
+    ],
+    "word": "桌",
+    "wordCharacters": [
+      {
+        "han": "桌",
+        "zhuyin": [
+          "ㄆ",
+          "ㄠ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🫧",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "桌",
+    "audioKey": "char-76",
+    "primarySymbol": "ㄆ"
+  },
+  {
+    "id": "char-77",
+    "han": "椅",
+    "zhuyin": [
+      "ㄇ",
+      "ㄚ",
+      "ˇ"
+    ],
+    "word": "椅",
+    "wordCharacters": [
+      {
+        "han": "椅",
+        "zhuyin": [
+          "ㄇ",
+          "ㄚ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐴",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "椅",
+    "audioKey": "char-77",
+    "primarySymbol": "ㄇ"
+  },
+  {
+    "id": "char-78",
+    "han": "包",
+    "zhuyin": [
+      "ㄈ",
+      "ㄟ"
+    ],
+    "word": "包",
+    "wordCharacters": [
+      {
+        "han": "包",
+        "zhuyin": [
+          "ㄈ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🪽",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "包",
+    "audioKey": "char-78",
+    "primarySymbol": "ㄈ"
+  },
+  {
+    "id": "char-79",
+    "han": "球",
+    "zhuyin": [
+      "ㄉ",
+      "ㄥ"
+    ],
+    "word": "球",
+    "wordCharacters": [
+      {
+        "han": "球",
+        "zhuyin": [
+          "ㄉ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "💡",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "球",
+    "audioKey": "char-79",
+    "primarySymbol": "ㄉ"
+  },
+  {
+    "id": "char-80",
+    "han": "車",
+    "zhuyin": [
+      "ㄊ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "車",
+    "wordCharacters": [
+      {
+        "han": "車",
+        "zhuyin": [
+          "ㄊ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🐰",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "車",
+    "audioKey": "char-80",
+    "primarySymbol": "ㄊ"
+  },
+  {
+    "id": "char-81",
+    "han": "船",
+    "zhuyin": [
+      "ㄋ",
+      "ㄧ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "船",
+    "wordCharacters": [
+      {
+        "han": "船",
+        "zhuyin": [
+          "ㄋ",
+          "ㄧ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐦",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "船",
+    "audioKey": "char-81",
+    "primarySymbol": "ㄋ"
+  },
+  {
+    "id": "char-82",
+    "han": "門",
+    "zhuyin": [
+      "ㄌ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "門",
+    "wordCharacters": [
+      {
+        "han": "門",
+        "zhuyin": [
+          "ㄌ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🦌",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "門",
+    "audioKey": "char-82",
+    "primarySymbol": "ㄌ"
+  },
+  {
+    "id": "char-83",
+    "han": "窗",
+    "zhuyin": [
+      "ㄍ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "窗",
+    "wordCharacters": [
+      {
+        "han": "窗",
+        "zhuyin": [
+          "ㄍ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐶",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "窗",
+    "audioKey": "char-83",
+    "primarySymbol": "ㄍ"
+  },
+  {
+    "id": "char-84",
+    "han": "山",
+    "zhuyin": [
+      "ㄎ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "山",
+    "wordCharacters": [
+      {
+        "han": "山",
+        "zhuyin": [
+          "ㄎ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "👄",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "山",
+    "audioKey": "char-84",
+    "primarySymbol": "ㄎ"
+  },
+  {
+    "id": "char-85",
+    "han": "河",
+    "zhuyin": [
+      "ㄏ",
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "河",
+    "wordCharacters": [
+      {
+        "han": "河",
+        "zhuyin": [
+          "ㄏ",
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🏞️",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "河",
+    "audioKey": "char-85",
+    "primarySymbol": "ㄏ"
+  },
+  {
+    "id": "char-86",
+    "han": "海",
+    "zhuyin": [
+      "ㄐ",
+      "ㄧ"
+    ],
+    "word": "海",
+    "wordCharacters": [
+      {
+        "han": "海",
+        "zhuyin": [
+          "ㄐ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🐔",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "海",
+    "audioKey": "char-86",
+    "primarySymbol": "ㄐ"
+  },
+  {
+    "id": "char-87",
+    "han": "天",
+    "zhuyin": [
+      "ㄑ",
+      "ㄧ",
+      "ˊ"
+    ],
+    "word": "天",
+    "wordCharacters": [
+      {
+        "han": "天",
+        "zhuyin": [
+          "ㄑ",
+          "ㄧ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🚩",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "天",
+    "audioKey": "char-87",
+    "primarySymbol": "ㄑ"
+  },
+  {
+    "id": "char-88",
+    "han": "日",
+    "zhuyin": [
+      "ㄒ",
+      "ㄧ"
+    ],
+    "word": "日",
+    "wordCharacters": [
+      {
+        "han": "日",
+        "zhuyin": [
+          "ㄒ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🌅",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "日",
+    "audioKey": "char-88",
+    "primarySymbol": "ㄒ"
+  },
+  {
+    "id": "char-89",
+    "han": "月",
+    "zhuyin": [
+      "ㄓ",
+      "ㄨ",
+      "ˊ"
+    ],
+    "word": "月",
+    "wordCharacters": [
+      {
+        "han": "月",
+        "zhuyin": [
+          "ㄓ",
+          "ㄨ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🎋",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "月",
+    "audioKey": "char-89",
+    "primarySymbol": "ㄓ"
+  },
+  {
+    "id": "char-90",
+    "han": "星",
+    "zhuyin": [
+      "ㄔ",
+      "ㄜ"
+    ],
+    "word": "星",
+    "wordCharacters": [
+      {
+        "han": "星",
+        "zhuyin": [
+          "ㄔ",
+          "ㄜ"
+        ]
+      }
+    ],
+    "emoji": "🚗",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "星",
+    "audioKey": "char-90",
+    "primarySymbol": "ㄔ"
+  },
+  {
+    "id": "char-91",
+    "han": "雲",
+    "zhuyin": [
+      "ㄕ",
+      "ㄨ"
+    ],
+    "word": "雲",
+    "wordCharacters": [
+      {
+        "han": "雲",
+        "zhuyin": [
+          "ㄕ",
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "📖",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "雲",
+    "audioKey": "char-91",
+    "primarySymbol": "ㄕ"
+  },
+  {
+    "id": "char-92",
+    "han": "雨",
+    "zhuyin": [
+      "ㄖ",
+      "ˋ"
+    ],
+    "word": "雨",
+    "wordCharacters": [
+      {
+        "han": "雨",
+        "zhuyin": [
+          "ㄖ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "☀️",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "雨",
+    "audioKey": "char-92",
+    "primarySymbol": "ㄖ"
+  },
+  {
+    "id": "char-93",
+    "han": "風",
+    "zhuyin": [
+      "ㄗ",
+      "ˋ"
+    ],
+    "word": "風",
+    "wordCharacters": [
+      {
+        "han": "風",
+        "zhuyin": [
+          "ㄗ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🔤",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "風",
+    "audioKey": "char-93",
+    "primarySymbol": "ㄗ"
+  },
+  {
+    "id": "char-94",
+    "han": "花",
+    "zhuyin": [
+      "ㄘ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "花",
+    "wordCharacters": [
+      {
+        "han": "花",
+        "zhuyin": [
+          "ㄘ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🌱",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "花",
+    "audioKey": "char-94",
+    "primarySymbol": "ㄘ"
+  },
+  {
+    "id": "char-95",
+    "han": "草",
+    "zhuyin": [
+      "ㄙ",
+      "ㄢ",
+      "ˇ"
+    ],
+    "word": "草",
+    "wordCharacters": [
+      {
+        "han": "草",
+        "zhuyin": [
+          "ㄙ",
+          "ㄢ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "☂️",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "草",
+    "audioKey": "char-95",
+    "primarySymbol": "ㄙ"
+  },
+  {
+    "id": "char-96",
+    "han": "樹",
+    "zhuyin": [
+      "ㄧ"
+    ],
+    "word": "樹",
+    "wordCharacters": [
+      {
+        "han": "樹",
+        "zhuyin": [
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "👕",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "樹",
+    "audioKey": "char-96",
+    "primarySymbol": "ㄧ"
+  },
+  {
+    "id": "char-97",
+    "han": "石",
+    "zhuyin": [
+      "ㄨ"
+    ],
+    "word": "石",
+    "wordCharacters": [
+      {
+        "han": "石",
+        "zhuyin": [
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "🏠",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "石",
+    "audioKey": "char-97",
+    "primarySymbol": "ㄨ"
+  },
+  {
+    "id": "char-98",
+    "han": "土",
+    "zhuyin": [
+      "ㄩ",
+      "ˊ"
+    ],
+    "word": "土",
+    "wordCharacters": [
+      {
+        "han": "土",
+        "zhuyin": [
+          "ㄩ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐟",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "土",
+    "audioKey": "char-98",
+    "primarySymbol": "ㄩ"
+  },
+  {
+    "id": "char-99",
+    "han": "跑",
+    "zhuyin": [
+      "ㄧ",
+      "ㄚ"
+    ],
+    "word": "跑",
+    "wordCharacters": [
+      {
+        "han": "跑",
+        "zhuyin": [
+          "ㄧ",
+          "ㄚ"
+        ]
+      }
+    ],
+    "emoji": "🦆",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "跑",
+    "audioKey": "char-99",
+    "primarySymbol": "ㄚ"
+  },
+  {
+    "id": "char-100",
+    "han": "走",
+    "zhuyin": [
+      "ㄛ"
+    ],
+    "word": "走",
+    "wordCharacters": [
+      {
+        "han": "走",
+        "zhuyin": [
+          "ㄛ"
+        ]
+      }
+    ],
+    "emoji": "⭕",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "走",
+    "audioKey": "char-100",
+    "primarySymbol": "ㄛ"
+  },
+  {
+    "id": "char-101",
+    "han": "跳",
+    "zhuyin": [
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "跳",
+    "wordCharacters": [
+      {
+        "han": "跳",
+        "zhuyin": [
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🪿",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "跳",
+    "audioKey": "char-101",
+    "primarySymbol": "ㄜ"
+  },
+  {
+    "id": "char-102",
+    "han": "看",
+    "zhuyin": [
+      "ㄝ"
+    ],
+    "word": "看",
+    "wordCharacters": [
+      {
+        "han": "看",
+        "zhuyin": [
+          "ㄝ"
+        ]
+      }
+    ],
+    "emoji": "🙋",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "看",
+    "audioKey": "char-102",
+    "primarySymbol": "ㄝ"
+  },
+  {
+    "id": "char-103",
+    "han": "聽",
+    "zhuyin": [
+      "ㄞ",
+      "ˋ"
+    ],
+    "word": "聽",
+    "wordCharacters": [
+      {
+        "han": "聽",
+        "zhuyin": [
+          "ㄞ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "❤️",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "聽",
+    "audioKey": "char-103",
+    "primarySymbol": "ㄞ"
+  },
+  {
+    "id": "char-104",
+    "han": "說",
+    "zhuyin": [
+      "ㄅ",
+      "ㄟ"
+    ],
+    "word": "說",
+    "wordCharacters": [
+      {
+        "han": "說",
+        "zhuyin": [
+          "ㄅ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🥤",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "說",
+    "audioKey": "char-104",
+    "primarySymbol": "ㄟ"
+  },
+  {
+    "id": "char-105",
+    "han": "唱",
+    "zhuyin": [
+      "ㄠ"
+    ],
+    "word": "唱",
+    "wordCharacters": [
+      {
+        "han": "唱",
+        "zhuyin": [
+          "ㄠ"
+        ]
+      }
+    ],
+    "emoji": "🕳️",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "唱",
+    "audioKey": "char-105",
+    "primarySymbol": "ㄠ"
+  },
+  {
+    "id": "char-106",
+    "han": "笑",
+    "zhuyin": [
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "笑",
+    "wordCharacters": [
+      {
+        "han": "笑",
+        "zhuyin": [
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🪷",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "笑",
+    "audioKey": "char-106",
+    "primarySymbol": "ㄡ"
+  },
+  {
+    "id": "char-107",
+    "han": "哭",
+    "zhuyin": [
+      "ㄢ"
+    ],
+    "word": "哭",
+    "wordCharacters": [
+      {
+        "han": "哭",
+        "zhuyin": [
+          "ㄢ"
+        ]
+      }
+    ],
+    "emoji": "🛏️",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "哭",
+    "audioKey": "char-107",
+    "primarySymbol": "ㄢ"
+  },
+  {
+    "id": "char-108",
+    "han": "愛",
+    "zhuyin": [
+      "ㄣ"
+    ],
+    "word": "愛",
+    "wordCharacters": [
+      {
+        "han": "愛",
+        "zhuyin": [
+          "ㄣ"
+        ]
+      }
+    ],
+    "emoji": "🙏",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "愛",
+    "audioKey": "char-108",
+    "primarySymbol": "ㄣ"
+  },
+  {
+    "id": "char-109",
+    "han": "怕",
+    "zhuyin": [
+      "ㄧ",
+      "ㄤ",
+      "ˊ"
+    ],
+    "word": "怕",
+    "wordCharacters": [
+      {
+        "han": "怕",
+        "zhuyin": [
+          "ㄧ",
+          "ㄤ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐑",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "怕",
+    "audioKey": "char-109",
+    "primarySymbol": "ㄤ"
+  },
+  {
+    "id": "char-110",
+    "han": "早",
+    "zhuyin": [
+      "ㄈ",
+      "ㄥ"
+    ],
+    "word": "早",
+    "wordCharacters": [
+      {
+        "han": "早",
+        "zhuyin": [
+          "ㄈ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "🌬️",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "早",
+    "audioKey": "char-110",
+    "primarySymbol": "ㄥ"
+  },
+  {
+    "id": "char-111",
+    "han": "午",
+    "zhuyin": [
+      "ㄦ",
+      "ˊ"
+    ],
+    "word": "午",
+    "wordCharacters": [
+      {
+        "han": "午",
+        "zhuyin": [
+          "ㄦ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🧒",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "午",
+    "audioKey": "char-111",
+    "primarySymbol": "ㄦ"
+  },
+  {
+    "id": "char-112",
+    "han": "晚",
+    "zhuyin": [
+      "ㄅ",
+      "ㄚ",
+      "ˋ"
+    ],
+    "word": "晚",
+    "wordCharacters": [
+      {
+        "han": "晚",
+        "zhuyin": [
+          "ㄅ",
+          "ㄚ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "👨",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "晚",
+    "audioKey": "char-112",
+    "primarySymbol": "ㄅ"
+  },
+  {
+    "id": "char-113",
+    "han": "今",
+    "zhuyin": [
+      "ㄆ",
+      "ㄠ",
+      "ˋ"
+    ],
+    "word": "今",
+    "wordCharacters": [
+      {
+        "han": "今",
+        "zhuyin": [
+          "ㄆ",
+          "ㄠ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🫧",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "今",
+    "audioKey": "char-113",
+    "primarySymbol": "ㄆ"
+  },
+  {
+    "id": "char-114",
+    "han": "天",
+    "zhuyin": [
+      "ㄇ",
+      "ㄚ",
+      "ˇ"
+    ],
+    "word": "天",
+    "wordCharacters": [
+      {
+        "han": "天",
+        "zhuyin": [
+          "ㄇ",
+          "ㄚ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐴",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "天",
+    "audioKey": "char-114",
+    "primarySymbol": "ㄇ"
+  },
+  {
+    "id": "char-115",
+    "han": "明",
+    "zhuyin": [
+      "ㄈ",
+      "ㄟ"
+    ],
+    "word": "明",
+    "wordCharacters": [
+      {
+        "han": "明",
+        "zhuyin": [
+          "ㄈ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🪽",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "明",
+    "audioKey": "char-115",
+    "primarySymbol": "ㄈ"
+  },
+  {
+    "id": "char-116",
+    "han": "校",
+    "zhuyin": [
+      "ㄉ",
+      "ㄥ"
+    ],
+    "word": "校",
+    "wordCharacters": [
+      {
+        "han": "校",
+        "zhuyin": [
+          "ㄉ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "💡",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "校",
+    "audioKey": "char-116",
+    "primarySymbol": "ㄉ"
+  },
+  {
+    "id": "char-117",
+    "han": "園",
+    "zhuyin": [
+      "ㄊ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "園",
+    "wordCharacters": [
+      {
+        "han": "園",
+        "zhuyin": [
+          "ㄊ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🐰",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "園",
+    "audioKey": "char-117",
+    "primarySymbol": "ㄊ"
+  },
+  {
+    "id": "char-118",
+    "han": "房",
+    "zhuyin": [
+      "ㄋ",
+      "ㄧ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "房",
+    "wordCharacters": [
+      {
+        "han": "房",
+        "zhuyin": [
+          "ㄋ",
+          "ㄧ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐦",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "房",
+    "audioKey": "char-118",
+    "primarySymbol": "ㄋ"
+  },
+  {
+    "id": "char-119",
+    "han": "市",
+    "zhuyin": [
+      "ㄌ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "市",
+    "wordCharacters": [
+      {
+        "han": "市",
+        "zhuyin": [
+          "ㄌ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🦌",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "市",
+    "audioKey": "char-119",
+    "primarySymbol": "ㄌ"
+  },
+  {
+    "id": "char-120",
+    "han": "店",
+    "zhuyin": [
+      "ㄍ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "店",
+    "wordCharacters": [
+      {
+        "han": "店",
+        "zhuyin": [
+          "ㄍ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐶",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "店",
+    "audioKey": "char-120",
+    "primarySymbol": "ㄍ"
+  },
+  {
+    "id": "char-121",
+    "han": "衣",
+    "zhuyin": [
+      "ㄎ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "衣",
+    "wordCharacters": [
+      {
+        "han": "衣",
+        "zhuyin": [
+          "ㄎ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "👄",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "衣",
+    "audioKey": "char-121",
+    "primarySymbol": "ㄎ"
+  },
+  {
+    "id": "char-122",
+    "han": "褲",
+    "zhuyin": [
+      "ㄏ",
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "褲",
+    "wordCharacters": [
+      {
+        "han": "褲",
+        "zhuyin": [
+          "ㄏ",
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🏞️",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "褲",
+    "audioKey": "char-122",
+    "primarySymbol": "ㄏ"
+  },
+  {
+    "id": "char-123",
+    "han": "鞋",
+    "zhuyin": [
+      "ㄐ",
+      "ㄧ"
+    ],
+    "word": "鞋",
+    "wordCharacters": [
+      {
+        "han": "鞋",
+        "zhuyin": [
+          "ㄐ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🐔",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "鞋",
+    "audioKey": "char-123",
+    "primarySymbol": "ㄐ"
+  },
+  {
+    "id": "char-124",
+    "han": "襪",
+    "zhuyin": [
+      "ㄑ",
+      "ㄧ",
+      "ˊ"
+    ],
+    "word": "襪",
+    "wordCharacters": [
+      {
+        "han": "襪",
+        "zhuyin": [
+          "ㄑ",
+          "ㄧ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🚩",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "襪",
+    "audioKey": "char-124",
+    "primarySymbol": "ㄑ"
+  },
+  {
+    "id": "char-125",
+    "han": "帽",
+    "zhuyin": [
+      "ㄒ",
+      "ㄧ"
+    ],
+    "word": "帽",
+    "wordCharacters": [
+      {
+        "han": "帽",
+        "zhuyin": [
+          "ㄒ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🌅",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "帽",
+    "audioKey": "char-125",
+    "primarySymbol": "ㄒ"
+  },
+  {
+    "id": "char-126",
+    "han": "床",
+    "zhuyin": [
+      "ㄓ",
+      "ㄨ",
+      "ˊ"
+    ],
+    "word": "床",
+    "wordCharacters": [
+      {
+        "han": "床",
+        "zhuyin": [
+          "ㄓ",
+          "ㄨ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🎋",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "床",
+    "audioKey": "char-126",
+    "primarySymbol": "ㄓ"
+  },
+  {
+    "id": "char-127",
+    "han": "燈",
+    "zhuyin": [
+      "ㄔ",
+      "ㄜ"
+    ],
+    "word": "燈",
+    "wordCharacters": [
+      {
+        "han": "燈",
+        "zhuyin": [
+          "ㄔ",
+          "ㄜ"
+        ]
+      }
+    ],
+    "emoji": "🚗",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "燈",
+    "audioKey": "char-127",
+    "primarySymbol": "ㄔ"
+  },
+  {
+    "id": "char-128",
+    "han": "杯",
+    "zhuyin": [
+      "ㄕ",
+      "ㄨ"
+    ],
+    "word": "杯",
+    "wordCharacters": [
+      {
+        "han": "杯",
+        "zhuyin": [
+          "ㄕ",
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "📖",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "杯",
+    "audioKey": "char-128",
+    "primarySymbol": "ㄕ"
+  },
+  {
+    "id": "char-129",
+    "han": "碗",
+    "zhuyin": [
+      "ㄖ",
+      "ˋ"
+    ],
+    "word": "碗",
+    "wordCharacters": [
+      {
+        "han": "碗",
+        "zhuyin": [
+          "ㄖ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "☀️",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "碗",
+    "audioKey": "char-129",
+    "primarySymbol": "ㄖ"
+  },
+  {
+    "id": "char-130",
+    "han": "盤",
+    "zhuyin": [
+      "ㄗ",
+      "ˋ"
+    ],
+    "word": "盤",
+    "wordCharacters": [
+      {
+        "han": "盤",
+        "zhuyin": [
+          "ㄗ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🔤",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "盤",
+    "audioKey": "char-130",
+    "primarySymbol": "ㄗ"
+  },
+  {
+    "id": "char-131",
+    "han": "匙",
+    "zhuyin": [
+      "ㄘ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "匙",
+    "wordCharacters": [
+      {
+        "han": "匙",
+        "zhuyin": [
+          "ㄘ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🌱",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "匙",
+    "audioKey": "char-131",
+    "primarySymbol": "ㄘ"
+  },
+  {
+    "id": "char-132",
+    "han": "鐘",
+    "zhuyin": [
+      "ㄙ",
+      "ㄢ",
+      "ˇ"
+    ],
+    "word": "鐘",
+    "wordCharacters": [
+      {
+        "han": "鐘",
+        "zhuyin": [
+          "ㄙ",
+          "ㄢ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "☂️",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "鐘",
+    "audioKey": "char-132",
+    "primarySymbol": "ㄙ"
+  },
+  {
+    "id": "char-133",
+    "han": "爸",
+    "zhuyin": [
+      "ㄧ"
+    ],
+    "word": "爸",
+    "wordCharacters": [
+      {
+        "han": "爸",
+        "zhuyin": [
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "👕",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "爸",
+    "audioKey": "char-133",
+    "primarySymbol": "ㄧ"
+  },
+  {
+    "id": "char-134",
+    "han": "媽",
+    "zhuyin": [
+      "ㄨ"
+    ],
+    "word": "媽",
+    "wordCharacters": [
+      {
+        "han": "媽",
+        "zhuyin": [
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "🏠",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "媽",
+    "audioKey": "char-134",
+    "primarySymbol": "ㄨ"
+  },
+  {
+    "id": "char-135",
+    "han": "哥",
+    "zhuyin": [
+      "ㄩ",
+      "ˊ"
+    ],
+    "word": "哥",
+    "wordCharacters": [
+      {
+        "han": "哥",
+        "zhuyin": [
+          "ㄩ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐟",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "哥",
+    "audioKey": "char-135",
+    "primarySymbol": "ㄩ"
+  },
+  {
+    "id": "char-136",
+    "han": "姐",
+    "zhuyin": [
+      "ㄧ",
+      "ㄚ"
+    ],
+    "word": "姐",
+    "wordCharacters": [
+      {
+        "han": "姐",
+        "zhuyin": [
+          "ㄧ",
+          "ㄚ"
+        ]
+      }
+    ],
+    "emoji": "🦆",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "姐",
+    "audioKey": "char-136",
+    "primarySymbol": "ㄚ"
+  },
+  {
+    "id": "char-137",
+    "han": "弟",
+    "zhuyin": [
+      "ㄛ"
+    ],
+    "word": "弟",
+    "wordCharacters": [
+      {
+        "han": "弟",
+        "zhuyin": [
+          "ㄛ"
+        ]
+      }
+    ],
+    "emoji": "⭕",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "弟",
+    "audioKey": "char-137",
+    "primarySymbol": "ㄛ"
+  },
+  {
+    "id": "char-138",
+    "han": "妹",
+    "zhuyin": [
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "妹",
+    "wordCharacters": [
+      {
+        "han": "妹",
+        "zhuyin": [
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🪿",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "妹",
+    "audioKey": "char-138",
+    "primarySymbol": "ㄜ"
+  },
+  {
+    "id": "char-139",
+    "han": "爺",
+    "zhuyin": [
+      "ㄝ"
+    ],
+    "word": "爺",
+    "wordCharacters": [
+      {
+        "han": "爺",
+        "zhuyin": [
+          "ㄝ"
+        ]
+      }
+    ],
+    "emoji": "🙋",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "爺",
+    "audioKey": "char-139",
+    "primarySymbol": "ㄝ"
+  },
+  {
+    "id": "char-140",
+    "han": "奶",
+    "zhuyin": [
+      "ㄞ",
+      "ˋ"
+    ],
+    "word": "奶",
+    "wordCharacters": [
+      {
+        "han": "奶",
+        "zhuyin": [
+          "ㄞ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "❤️",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "奶",
+    "audioKey": "char-140",
+    "primarySymbol": "ㄞ"
+  },
+  {
+    "id": "char-141",
+    "han": "家",
+    "zhuyin": [
+      "ㄅ",
+      "ㄟ"
+    ],
+    "word": "家",
+    "wordCharacters": [
+      {
+        "han": "家",
+        "zhuyin": [
+          "ㄅ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🥤",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "家",
+    "audioKey": "char-141",
+    "primarySymbol": "ㄟ"
+  },
+  {
+    "id": "char-142",
+    "han": "人",
+    "zhuyin": [
+      "ㄠ"
+    ],
+    "word": "人",
+    "wordCharacters": [
+      {
+        "han": "人",
+        "zhuyin": [
+          "ㄠ"
+        ]
+      }
+    ],
+    "emoji": "🕳️",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "人",
+    "audioKey": "char-142",
+    "primarySymbol": "ㄠ"
+  },
+  {
+    "id": "char-143",
+    "han": "口",
+    "zhuyin": [
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "口",
+    "wordCharacters": [
+      {
+        "han": "口",
+        "zhuyin": [
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🪷",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "口",
+    "audioKey": "char-143",
+    "primarySymbol": "ㄡ"
+  },
+  {
+    "id": "char-144",
+    "han": "手",
+    "zhuyin": [
+      "ㄢ"
+    ],
+    "word": "手",
+    "wordCharacters": [
+      {
+        "han": "手",
+        "zhuyin": [
+          "ㄢ"
+        ]
+      }
+    ],
+    "emoji": "🛏️",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "手",
+    "audioKey": "char-144",
+    "primarySymbol": "ㄢ"
+  },
+  {
+    "id": "char-145",
+    "han": "腳",
+    "zhuyin": [
+      "ㄣ"
+    ],
+    "word": "腳",
+    "wordCharacters": [
+      {
+        "han": "腳",
+        "zhuyin": [
+          "ㄣ"
+        ]
+      }
+    ],
+    "emoji": "🙏",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "腳",
+    "audioKey": "char-145",
+    "primarySymbol": "ㄣ"
+  },
+  {
+    "id": "char-146",
+    "han": "眼",
+    "zhuyin": [
+      "ㄧ",
+      "ㄤ",
+      "ˊ"
+    ],
+    "word": "眼",
+    "wordCharacters": [
+      {
+        "han": "眼",
+        "zhuyin": [
+          "ㄧ",
+          "ㄤ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐑",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "眼",
+    "audioKey": "char-146",
+    "primarySymbol": "ㄤ"
+  },
+  {
+    "id": "char-147",
+    "han": "耳",
+    "zhuyin": [
+      "ㄈ",
+      "ㄥ"
+    ],
+    "word": "耳",
+    "wordCharacters": [
+      {
+        "han": "耳",
+        "zhuyin": [
+          "ㄈ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "🌬️",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "耳",
+    "audioKey": "char-147",
+    "primarySymbol": "ㄥ"
+  },
+  {
+    "id": "char-148",
+    "han": "鼻",
+    "zhuyin": [
+      "ㄦ",
+      "ˊ"
+    ],
+    "word": "鼻",
+    "wordCharacters": [
+      {
+        "han": "鼻",
+        "zhuyin": [
+          "ㄦ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🧒",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "鼻",
+    "audioKey": "char-148",
+    "primarySymbol": "ㄦ"
+  },
+  {
+    "id": "char-149",
+    "han": "牙",
+    "zhuyin": [
+      "ㄅ",
+      "ㄚ",
+      "ˋ"
+    ],
+    "word": "牙",
+    "wordCharacters": [
+      {
+        "han": "牙",
+        "zhuyin": [
+          "ㄅ",
+          "ㄚ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "👨",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "牙",
+    "audioKey": "char-149",
+    "primarySymbol": "ㄅ"
+  },
+  {
+    "id": "char-150",
+    "han": "頭",
+    "zhuyin": [
+      "ㄆ",
+      "ㄠ",
+      "ˋ"
+    ],
+    "word": "頭",
+    "wordCharacters": [
+      {
+        "han": "頭",
+        "zhuyin": [
+          "ㄆ",
+          "ㄠ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🫧",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "頭",
+    "audioKey": "char-150",
+    "primarySymbol": "ㄆ"
+  },
+  {
+    "id": "char-151",
+    "han": "身",
+    "zhuyin": [
+      "ㄇ",
+      "ㄚ",
+      "ˇ"
+    ],
+    "word": "身",
+    "wordCharacters": [
+      {
+        "han": "身",
+        "zhuyin": [
+          "ㄇ",
+          "ㄚ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐴",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "身",
+    "audioKey": "char-151",
+    "primarySymbol": "ㄇ"
+  },
+  {
+    "id": "char-152",
+    "han": "心",
+    "zhuyin": [
+      "ㄈ",
+      "ㄟ"
+    ],
+    "word": "心",
+    "wordCharacters": [
+      {
+        "han": "心",
+        "zhuyin": [
+          "ㄈ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🪽",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "心",
+    "audioKey": "char-152",
+    "primarySymbol": "ㄈ"
+  },
+  {
+    "id": "char-153",
+    "han": "狗",
+    "zhuyin": [
+      "ㄉ",
+      "ㄥ"
+    ],
+    "word": "狗",
+    "wordCharacters": [
+      {
+        "han": "狗",
+        "zhuyin": [
+          "ㄉ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "💡",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "狗",
+    "audioKey": "char-153",
+    "primarySymbol": "ㄉ"
+  },
+  {
+    "id": "char-154",
+    "han": "貓",
+    "zhuyin": [
+      "ㄊ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "貓",
+    "wordCharacters": [
+      {
+        "han": "貓",
+        "zhuyin": [
+          "ㄊ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🐰",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "貓",
+    "audioKey": "char-154",
+    "primarySymbol": "ㄊ"
+  },
+  {
+    "id": "char-155",
+    "han": "牛",
+    "zhuyin": [
+      "ㄋ",
+      "ㄧ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "牛",
+    "wordCharacters": [
+      {
+        "han": "牛",
+        "zhuyin": [
+          "ㄋ",
+          "ㄧ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐦",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "牛",
+    "audioKey": "char-155",
+    "primarySymbol": "ㄋ"
+  },
+  {
+    "id": "char-156",
+    "han": "羊",
+    "zhuyin": [
+      "ㄌ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "羊",
+    "wordCharacters": [
+      {
+        "han": "羊",
+        "zhuyin": [
+          "ㄌ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🦌",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "羊",
+    "audioKey": "char-156",
+    "primarySymbol": "ㄌ"
+  },
+  {
+    "id": "char-157",
+    "han": "馬",
+    "zhuyin": [
+      "ㄍ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "馬",
+    "wordCharacters": [
+      {
+        "han": "馬",
+        "zhuyin": [
+          "ㄍ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐶",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "馬",
+    "audioKey": "char-157",
+    "primarySymbol": "ㄍ"
+  },
+  {
+    "id": "char-158",
+    "han": "鳥",
+    "zhuyin": [
+      "ㄎ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "鳥",
+    "wordCharacters": [
+      {
+        "han": "鳥",
+        "zhuyin": [
+          "ㄎ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "👄",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "鳥",
+    "audioKey": "char-158",
+    "primarySymbol": "ㄎ"
+  },
+  {
+    "id": "char-159",
+    "han": "魚",
+    "zhuyin": [
+      "ㄏ",
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "魚",
+    "wordCharacters": [
+      {
+        "han": "魚",
+        "zhuyin": [
+          "ㄏ",
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🏞️",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "魚",
+    "audioKey": "char-159",
+    "primarySymbol": "ㄏ"
+  },
+  {
+    "id": "char-160",
+    "han": "兔",
+    "zhuyin": [
+      "ㄐ",
+      "ㄧ"
+    ],
+    "word": "兔",
+    "wordCharacters": [
+      {
+        "han": "兔",
+        "zhuyin": [
+          "ㄐ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🐔",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "兔",
+    "audioKey": "char-160",
+    "primarySymbol": "ㄐ"
+  },
+  {
+    "id": "char-161",
+    "han": "雞",
+    "zhuyin": [
+      "ㄑ",
+      "ㄧ",
+      "ˊ"
+    ],
+    "word": "雞",
+    "wordCharacters": [
+      {
+        "han": "雞",
+        "zhuyin": [
+          "ㄑ",
+          "ㄧ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🚩",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "雞",
+    "audioKey": "char-161",
+    "primarySymbol": "ㄑ"
+  },
+  {
+    "id": "char-162",
+    "han": "鴨",
+    "zhuyin": [
+      "ㄒ",
+      "ㄧ"
+    ],
+    "word": "鴨",
+    "wordCharacters": [
+      {
+        "han": "鴨",
+        "zhuyin": [
+          "ㄒ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🌅",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "鴨",
+    "audioKey": "char-162",
+    "primarySymbol": "ㄒ"
+  },
+  {
+    "id": "char-163",
+    "han": "蟲",
+    "zhuyin": [
+      "ㄓ",
+      "ㄨ",
+      "ˊ"
+    ],
+    "word": "蟲",
+    "wordCharacters": [
+      {
+        "han": "蟲",
+        "zhuyin": [
+          "ㄓ",
+          "ㄨ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🎋",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "蟲",
+    "audioKey": "char-163",
+    "primarySymbol": "ㄓ"
+  },
+  {
+    "id": "char-164",
+    "han": "虎",
+    "zhuyin": [
+      "ㄔ",
+      "ㄜ"
+    ],
+    "word": "虎",
+    "wordCharacters": [
+      {
+        "han": "虎",
+        "zhuyin": [
+          "ㄔ",
+          "ㄜ"
+        ]
+      }
+    ],
+    "emoji": "🚗",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "虎",
+    "audioKey": "char-164",
+    "primarySymbol": "ㄔ"
+  },
+  {
+    "id": "char-165",
+    "han": "熊",
+    "zhuyin": [
+      "ㄕ",
+      "ㄨ"
+    ],
+    "word": "熊",
+    "wordCharacters": [
+      {
+        "han": "熊",
+        "zhuyin": [
+          "ㄕ",
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "📖",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "熊",
+    "audioKey": "char-165",
+    "primarySymbol": "ㄕ"
+  },
+  {
+    "id": "char-166",
+    "han": "猴",
+    "zhuyin": [
+      "ㄖ",
+      "ˋ"
+    ],
+    "word": "猴",
+    "wordCharacters": [
+      {
+        "han": "猴",
+        "zhuyin": [
+          "ㄖ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "☀️",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "猴",
+    "audioKey": "char-166",
+    "primarySymbol": "ㄖ"
+  },
+  {
+    "id": "char-167",
+    "han": "果",
+    "zhuyin": [
+      "ㄗ",
+      "ˋ"
+    ],
+    "word": "果",
+    "wordCharacters": [
+      {
+        "han": "果",
+        "zhuyin": [
+          "ㄗ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🔤",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "果",
+    "audioKey": "char-167",
+    "primarySymbol": "ㄗ"
+  },
+  {
+    "id": "char-168",
+    "han": "香",
+    "zhuyin": [
+      "ㄘ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "香",
+    "wordCharacters": [
+      {
+        "han": "香",
+        "zhuyin": [
+          "ㄘ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🌱",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "香",
+    "audioKey": "char-168",
+    "primarySymbol": "ㄘ"
+  },
+  {
+    "id": "char-169",
+    "han": "蕉",
+    "zhuyin": [
+      "ㄙ",
+      "ㄢ",
+      "ˇ"
+    ],
+    "word": "蕉",
+    "wordCharacters": [
+      {
+        "han": "蕉",
+        "zhuyin": [
+          "ㄙ",
+          "ㄢ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "☂️",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "蕉",
+    "audioKey": "char-169",
+    "primarySymbol": "ㄙ"
+  },
+  {
+    "id": "char-170",
+    "han": "蘋",
+    "zhuyin": [
+      "ㄧ"
+    ],
+    "word": "蘋",
+    "wordCharacters": [
+      {
+        "han": "蘋",
+        "zhuyin": [
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "👕",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "蘋",
+    "audioKey": "char-170",
+    "primarySymbol": "ㄧ"
+  },
+  {
+    "id": "char-171",
+    "han": "梨",
+    "zhuyin": [
+      "ㄨ"
+    ],
+    "word": "梨",
+    "wordCharacters": [
+      {
+        "han": "梨",
+        "zhuyin": [
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "🏠",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "梨",
+    "audioKey": "char-171",
+    "primarySymbol": "ㄨ"
+  },
+  {
+    "id": "char-172",
+    "han": "桃",
+    "zhuyin": [
+      "ㄩ",
+      "ˊ"
+    ],
+    "word": "桃",
+    "wordCharacters": [
+      {
+        "han": "桃",
+        "zhuyin": [
+          "ㄩ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐟",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "桃",
+    "audioKey": "char-172",
+    "primarySymbol": "ㄩ"
+  },
+  {
+    "id": "char-173",
+    "han": "莓",
+    "zhuyin": [
+      "ㄧ",
+      "ㄚ"
+    ],
+    "word": "莓",
+    "wordCharacters": [
+      {
+        "han": "莓",
+        "zhuyin": [
+          "ㄧ",
+          "ㄚ"
+        ]
+      }
+    ],
+    "emoji": "🦆",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "莓",
+    "audioKey": "char-173",
+    "primarySymbol": "ㄚ"
+  },
+  {
+    "id": "char-174",
+    "han": "瓜",
+    "zhuyin": [
+      "ㄛ"
+    ],
+    "word": "瓜",
+    "wordCharacters": [
+      {
+        "han": "瓜",
+        "zhuyin": [
+          "ㄛ"
+        ]
+      }
+    ],
+    "emoji": "⭕",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "瓜",
+    "audioKey": "char-174",
+    "primarySymbol": "ㄛ"
+  },
+  {
+    "id": "char-175",
+    "han": "飯",
+    "zhuyin": [
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "飯",
+    "wordCharacters": [
+      {
+        "han": "飯",
+        "zhuyin": [
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🪿",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "飯",
+    "audioKey": "char-175",
+    "primarySymbol": "ㄜ"
+  },
+  {
+    "id": "char-176",
+    "han": "麵",
+    "zhuyin": [
+      "ㄝ"
+    ],
+    "word": "麵",
+    "wordCharacters": [
+      {
+        "han": "麵",
+        "zhuyin": [
+          "ㄝ"
+        ]
+      }
+    ],
+    "emoji": "🙋",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "麵",
+    "audioKey": "char-176",
+    "primarySymbol": "ㄝ"
+  },
+  {
+    "id": "char-177",
+    "han": "水",
+    "zhuyin": [
+      "ㄞ",
+      "ˋ"
+    ],
+    "word": "水",
+    "wordCharacters": [
+      {
+        "han": "水",
+        "zhuyin": [
+          "ㄞ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "❤️",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "水",
+    "audioKey": "char-177",
+    "primarySymbol": "ㄞ"
+  },
+  {
+    "id": "char-178",
+    "han": "茶",
+    "zhuyin": [
+      "ㄅ",
+      "ㄟ"
+    ],
+    "word": "茶",
+    "wordCharacters": [
+      {
+        "han": "茶",
+        "zhuyin": [
+          "ㄅ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🥤",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "茶",
+    "audioKey": "char-178",
+    "primarySymbol": "ㄟ"
+  },
+  {
+    "id": "char-179",
+    "han": "奶",
+    "zhuyin": [
+      "ㄠ"
+    ],
+    "word": "奶",
+    "wordCharacters": [
+      {
+        "han": "奶",
+        "zhuyin": [
+          "ㄠ"
+        ]
+      }
+    ],
+    "emoji": "🕳️",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "奶",
+    "audioKey": "char-179",
+    "primarySymbol": "ㄠ"
+  },
+  {
+    "id": "char-180",
+    "han": "蛋",
+    "zhuyin": [
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "蛋",
+    "wordCharacters": [
+      {
+        "han": "蛋",
+        "zhuyin": [
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🪷",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "蛋",
+    "audioKey": "char-180",
+    "primarySymbol": "ㄡ"
+  },
+  {
+    "id": "char-181",
+    "han": "肉",
+    "zhuyin": [
+      "ㄢ"
+    ],
+    "word": "肉",
+    "wordCharacters": [
+      {
+        "han": "肉",
+        "zhuyin": [
+          "ㄢ"
+        ]
+      }
+    ],
+    "emoji": "🛏️",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "肉",
+    "audioKey": "char-181",
+    "primarySymbol": "ㄢ"
+  },
+  {
+    "id": "char-182",
+    "han": "菜",
+    "zhuyin": [
+      "ㄣ"
+    ],
+    "word": "菜",
+    "wordCharacters": [
+      {
+        "han": "菜",
+        "zhuyin": [
+          "ㄣ"
+        ]
+      }
+    ],
+    "emoji": "🙏",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "菜",
+    "audioKey": "char-182",
+    "primarySymbol": "ㄣ"
+  },
+  {
+    "id": "char-183",
+    "han": "豆",
+    "zhuyin": [
+      "ㄧ",
+      "ㄤ",
+      "ˊ"
+    ],
+    "word": "豆",
+    "wordCharacters": [
+      {
+        "han": "豆",
+        "zhuyin": [
+          "ㄧ",
+          "ㄤ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐑",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "豆",
+    "audioKey": "char-183",
+    "primarySymbol": "ㄤ"
+  },
+  {
+    "id": "char-184",
+    "han": "糖",
+    "zhuyin": [
+      "ㄈ",
+      "ㄥ"
+    ],
+    "word": "糖",
+    "wordCharacters": [
+      {
+        "han": "糖",
+        "zhuyin": [
+          "ㄈ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "🌬️",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "糖",
+    "audioKey": "char-184",
+    "primarySymbol": "ㄥ"
+  },
+  {
+    "id": "char-185",
+    "han": "餅",
+    "zhuyin": [
+      "ㄦ",
+      "ˊ"
+    ],
+    "word": "餅",
+    "wordCharacters": [
+      {
+        "han": "餅",
+        "zhuyin": [
+          "ㄦ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🧒",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "餅",
+    "audioKey": "char-185",
+    "primarySymbol": "ㄦ"
+  },
+  {
+    "id": "char-186",
+    "han": "紅",
+    "zhuyin": [
+      "ㄅ",
+      "ㄚ",
+      "ˋ"
+    ],
+    "word": "紅",
+    "wordCharacters": [
+      {
+        "han": "紅",
+        "zhuyin": [
+          "ㄅ",
+          "ㄚ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "👨",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "紅",
+    "audioKey": "char-186",
+    "primarySymbol": "ㄅ"
+  },
+  {
+    "id": "char-187",
+    "han": "橙",
+    "zhuyin": [
+      "ㄆ",
+      "ㄠ",
+      "ˋ"
+    ],
+    "word": "橙",
+    "wordCharacters": [
+      {
+        "han": "橙",
+        "zhuyin": [
+          "ㄆ",
+          "ㄠ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🫧",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "橙",
+    "audioKey": "char-187",
+    "primarySymbol": "ㄆ"
+  },
+  {
+    "id": "char-188",
+    "han": "黃",
+    "zhuyin": [
+      "ㄇ",
+      "ㄚ",
+      "ˇ"
+    ],
+    "word": "黃",
+    "wordCharacters": [
+      {
+        "han": "黃",
+        "zhuyin": [
+          "ㄇ",
+          "ㄚ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐴",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "黃",
+    "audioKey": "char-188",
+    "primarySymbol": "ㄇ"
+  },
+  {
+    "id": "char-189",
+    "han": "綠",
+    "zhuyin": [
+      "ㄈ",
+      "ㄟ"
+    ],
+    "word": "綠",
+    "wordCharacters": [
+      {
+        "han": "綠",
+        "zhuyin": [
+          "ㄈ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🪽",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "綠",
+    "audioKey": "char-189",
+    "primarySymbol": "ㄈ"
+  },
+  {
+    "id": "char-190",
+    "han": "藍",
+    "zhuyin": [
+      "ㄉ",
+      "ㄥ"
+    ],
+    "word": "藍",
+    "wordCharacters": [
+      {
+        "han": "藍",
+        "zhuyin": [
+          "ㄉ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "💡",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "藍",
+    "audioKey": "char-190",
+    "primarySymbol": "ㄉ"
+  },
+  {
+    "id": "char-191",
+    "han": "紫",
+    "zhuyin": [
+      "ㄊ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "紫",
+    "wordCharacters": [
+      {
+        "han": "紫",
+        "zhuyin": [
+          "ㄊ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🐰",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "紫",
+    "audioKey": "char-191",
+    "primarySymbol": "ㄊ"
+  },
+  {
+    "id": "char-192",
+    "han": "黑",
+    "zhuyin": [
+      "ㄋ",
+      "ㄧ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "黑",
+    "wordCharacters": [
+      {
+        "han": "黑",
+        "zhuyin": [
+          "ㄋ",
+          "ㄧ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐦",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "黑",
+    "audioKey": "char-192",
+    "primarySymbol": "ㄋ"
+  },
+  {
+    "id": "char-193",
+    "han": "白",
+    "zhuyin": [
+      "ㄌ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "白",
+    "wordCharacters": [
+      {
+        "han": "白",
+        "zhuyin": [
+          "ㄌ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🦌",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "白",
+    "audioKey": "char-193",
+    "primarySymbol": "ㄌ"
+  },
+  {
+    "id": "char-194",
+    "han": "一",
+    "zhuyin": [
+      "ㄍ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "一",
+    "wordCharacters": [
+      {
+        "han": "一",
+        "zhuyin": [
+          "ㄍ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐶",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "一",
+    "audioKey": "char-194",
+    "primarySymbol": "ㄍ"
+  },
+  {
+    "id": "char-195",
+    "han": "二",
+    "zhuyin": [
+      "ㄎ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "二",
+    "wordCharacters": [
+      {
+        "han": "二",
+        "zhuyin": [
+          "ㄎ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "👄",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "二",
+    "audioKey": "char-195",
+    "primarySymbol": "ㄎ"
+  },
+  {
+    "id": "char-196",
+    "han": "三",
+    "zhuyin": [
+      "ㄏ",
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "三",
+    "wordCharacters": [
+      {
+        "han": "三",
+        "zhuyin": [
+          "ㄏ",
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🏞️",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "三",
+    "audioKey": "char-196",
+    "primarySymbol": "ㄏ"
+  },
+  {
+    "id": "char-197",
+    "han": "四",
+    "zhuyin": [
+      "ㄐ",
+      "ㄧ"
+    ],
+    "word": "四",
+    "wordCharacters": [
+      {
+        "han": "四",
+        "zhuyin": [
+          "ㄐ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🐔",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "四",
+    "audioKey": "char-197",
+    "primarySymbol": "ㄐ"
+  },
+  {
+    "id": "char-198",
+    "han": "五",
+    "zhuyin": [
+      "ㄑ",
+      "ㄧ",
+      "ˊ"
+    ],
+    "word": "五",
+    "wordCharacters": [
+      {
+        "han": "五",
+        "zhuyin": [
+          "ㄑ",
+          "ㄧ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🚩",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "五",
+    "audioKey": "char-198",
+    "primarySymbol": "ㄑ"
+  },
+  {
+    "id": "char-199",
+    "han": "六",
+    "zhuyin": [
+      "ㄒ",
+      "ㄧ"
+    ],
+    "word": "六",
+    "wordCharacters": [
+      {
+        "han": "六",
+        "zhuyin": [
+          "ㄒ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🌅",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "六",
+    "audioKey": "char-199",
+    "primarySymbol": "ㄒ"
+  },
+  {
+    "id": "char-200",
+    "han": "七",
+    "zhuyin": [
+      "ㄓ",
+      "ㄨ",
+      "ˊ"
+    ],
+    "word": "七",
+    "wordCharacters": [
+      {
+        "han": "七",
+        "zhuyin": [
+          "ㄓ",
+          "ㄨ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🎋",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "七",
+    "audioKey": "char-200",
+    "primarySymbol": "ㄓ"
+  },
+  {
+    "id": "char-201",
+    "han": "八",
+    "zhuyin": [
+      "ㄔ",
+      "ㄜ"
+    ],
+    "word": "八",
+    "wordCharacters": [
+      {
+        "han": "八",
+        "zhuyin": [
+          "ㄔ",
+          "ㄜ"
+        ]
+      }
+    ],
+    "emoji": "🚗",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "八",
+    "audioKey": "char-201",
+    "primarySymbol": "ㄔ"
+  },
+  {
+    "id": "char-202",
+    "han": "九",
+    "zhuyin": [
+      "ㄕ",
+      "ㄨ"
+    ],
+    "word": "九",
+    "wordCharacters": [
+      {
+        "han": "九",
+        "zhuyin": [
+          "ㄕ",
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "📖",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "九",
+    "audioKey": "char-202",
+    "primarySymbol": "ㄕ"
+  },
+  {
+    "id": "char-203",
+    "han": "十",
+    "zhuyin": [
+      "ㄖ",
+      "ˋ"
+    ],
+    "word": "十",
+    "wordCharacters": [
+      {
+        "han": "十",
+        "zhuyin": [
+          "ㄖ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "☀️",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "十",
+    "audioKey": "char-203",
+    "primarySymbol": "ㄖ"
+  },
+  {
+    "id": "char-204",
+    "han": "百",
+    "zhuyin": [
+      "ㄗ",
+      "ˋ"
+    ],
+    "word": "百",
+    "wordCharacters": [
+      {
+        "han": "百",
+        "zhuyin": [
+          "ㄗ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🔤",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "百",
+    "audioKey": "char-204",
+    "primarySymbol": "ㄗ"
+  },
+  {
+    "id": "char-205",
+    "han": "書",
+    "zhuyin": [
+      "ㄘ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "書",
+    "wordCharacters": [
+      {
+        "han": "書",
+        "zhuyin": [
+          "ㄘ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🌱",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "書",
+    "audioKey": "char-205",
+    "primarySymbol": "ㄘ"
+  },
+  {
+    "id": "char-206",
+    "han": "筆",
+    "zhuyin": [
+      "ㄙ",
+      "ㄢ",
+      "ˇ"
+    ],
+    "word": "筆",
+    "wordCharacters": [
+      {
+        "han": "筆",
+        "zhuyin": [
+          "ㄙ",
+          "ㄢ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "☂️",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "筆",
+    "audioKey": "char-206",
+    "primarySymbol": "ㄙ"
+  },
+  {
+    "id": "char-207",
+    "han": "紙",
+    "zhuyin": [
+      "ㄧ"
+    ],
+    "word": "紙",
+    "wordCharacters": [
+      {
+        "han": "紙",
+        "zhuyin": [
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "👕",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "紙",
+    "audioKey": "char-207",
+    "primarySymbol": "ㄧ"
+  },
+  {
+    "id": "char-208",
+    "han": "桌",
+    "zhuyin": [
+      "ㄨ"
+    ],
+    "word": "桌",
+    "wordCharacters": [
+      {
+        "han": "桌",
+        "zhuyin": [
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "🏠",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "桌",
+    "audioKey": "char-208",
+    "primarySymbol": "ㄨ"
+  },
+  {
+    "id": "char-209",
+    "han": "椅",
+    "zhuyin": [
+      "ㄩ",
+      "ˊ"
+    ],
+    "word": "椅",
+    "wordCharacters": [
+      {
+        "han": "椅",
+        "zhuyin": [
+          "ㄩ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐟",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "椅",
+    "audioKey": "char-209",
+    "primarySymbol": "ㄩ"
+  },
+  {
+    "id": "char-210",
+    "han": "包",
+    "zhuyin": [
+      "ㄧ",
+      "ㄚ"
+    ],
+    "word": "包",
+    "wordCharacters": [
+      {
+        "han": "包",
+        "zhuyin": [
+          "ㄧ",
+          "ㄚ"
+        ]
+      }
+    ],
+    "emoji": "🦆",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "包",
+    "audioKey": "char-210",
+    "primarySymbol": "ㄚ"
+  },
+  {
+    "id": "char-211",
+    "han": "球",
+    "zhuyin": [
+      "ㄛ"
+    ],
+    "word": "球",
+    "wordCharacters": [
+      {
+        "han": "球",
+        "zhuyin": [
+          "ㄛ"
+        ]
+      }
+    ],
+    "emoji": "⭕",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "球",
+    "audioKey": "char-211",
+    "primarySymbol": "ㄛ"
+  },
+  {
+    "id": "char-212",
+    "han": "車",
+    "zhuyin": [
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "車",
+    "wordCharacters": [
+      {
+        "han": "車",
+        "zhuyin": [
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🪿",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "車",
+    "audioKey": "char-212",
+    "primarySymbol": "ㄜ"
+  },
+  {
+    "id": "char-213",
+    "han": "船",
+    "zhuyin": [
+      "ㄝ"
+    ],
+    "word": "船",
+    "wordCharacters": [
+      {
+        "han": "船",
+        "zhuyin": [
+          "ㄝ"
+        ]
+      }
+    ],
+    "emoji": "🙋",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "船",
+    "audioKey": "char-213",
+    "primarySymbol": "ㄝ"
+  },
+  {
+    "id": "char-214",
+    "han": "門",
+    "zhuyin": [
+      "ㄞ",
+      "ˋ"
+    ],
+    "word": "門",
+    "wordCharacters": [
+      {
+        "han": "門",
+        "zhuyin": [
+          "ㄞ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "❤️",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "門",
+    "audioKey": "char-214",
+    "primarySymbol": "ㄞ"
+  },
+  {
+    "id": "char-215",
+    "han": "窗",
+    "zhuyin": [
+      "ㄅ",
+      "ㄟ"
+    ],
+    "word": "窗",
+    "wordCharacters": [
+      {
+        "han": "窗",
+        "zhuyin": [
+          "ㄅ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🥤",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "窗",
+    "audioKey": "char-215",
+    "primarySymbol": "ㄟ"
+  },
+  {
+    "id": "char-216",
+    "han": "山",
+    "zhuyin": [
+      "ㄠ"
+    ],
+    "word": "山",
+    "wordCharacters": [
+      {
+        "han": "山",
+        "zhuyin": [
+          "ㄠ"
+        ]
+      }
+    ],
+    "emoji": "🕳️",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "山",
+    "audioKey": "char-216",
+    "primarySymbol": "ㄠ"
+  },
+  {
+    "id": "char-217",
+    "han": "河",
+    "zhuyin": [
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "河",
+    "wordCharacters": [
+      {
+        "han": "河",
+        "zhuyin": [
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🪷",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "河",
+    "audioKey": "char-217",
+    "primarySymbol": "ㄡ"
+  },
+  {
+    "id": "char-218",
+    "han": "海",
+    "zhuyin": [
+      "ㄢ"
+    ],
+    "word": "海",
+    "wordCharacters": [
+      {
+        "han": "海",
+        "zhuyin": [
+          "ㄢ"
+        ]
+      }
+    ],
+    "emoji": "🛏️",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "海",
+    "audioKey": "char-218",
+    "primarySymbol": "ㄢ"
+  },
+  {
+    "id": "char-219",
+    "han": "天",
+    "zhuyin": [
+      "ㄣ"
+    ],
+    "word": "天",
+    "wordCharacters": [
+      {
+        "han": "天",
+        "zhuyin": [
+          "ㄣ"
+        ]
+      }
+    ],
+    "emoji": "🙏",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "天",
+    "audioKey": "char-219",
+    "primarySymbol": "ㄣ"
+  },
+  {
+    "id": "char-220",
+    "han": "日",
+    "zhuyin": [
+      "ㄧ",
+      "ㄤ",
+      "ˊ"
+    ],
+    "word": "日",
+    "wordCharacters": [
+      {
+        "han": "日",
+        "zhuyin": [
+          "ㄧ",
+          "ㄤ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐑",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "日",
+    "audioKey": "char-220",
+    "primarySymbol": "ㄤ"
+  },
+  {
+    "id": "char-221",
+    "han": "月",
+    "zhuyin": [
+      "ㄈ",
+      "ㄥ"
+    ],
+    "word": "月",
+    "wordCharacters": [
+      {
+        "han": "月",
+        "zhuyin": [
+          "ㄈ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "🌬️",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "月",
+    "audioKey": "char-221",
+    "primarySymbol": "ㄥ"
+  },
+  {
+    "id": "char-222",
+    "han": "星",
+    "zhuyin": [
+      "ㄦ",
+      "ˊ"
+    ],
+    "word": "星",
+    "wordCharacters": [
+      {
+        "han": "星",
+        "zhuyin": [
+          "ㄦ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🧒",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "星",
+    "audioKey": "char-222",
+    "primarySymbol": "ㄦ"
+  },
+  {
+    "id": "char-223",
+    "han": "雲",
+    "zhuyin": [
+      "ㄅ",
+      "ㄚ",
+      "ˋ"
+    ],
+    "word": "雲",
+    "wordCharacters": [
+      {
+        "han": "雲",
+        "zhuyin": [
+          "ㄅ",
+          "ㄚ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "👨",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "雲",
+    "audioKey": "char-223",
+    "primarySymbol": "ㄅ"
+  },
+  {
+    "id": "char-224",
+    "han": "雨",
+    "zhuyin": [
+      "ㄆ",
+      "ㄠ",
+      "ˋ"
+    ],
+    "word": "雨",
+    "wordCharacters": [
+      {
+        "han": "雨",
+        "zhuyin": [
+          "ㄆ",
+          "ㄠ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🫧",
+    "category": "動物",
+    "difficulty": "beginner",
+    "speechText": "雨",
+    "audioKey": "char-224",
+    "primarySymbol": "ㄆ"
+  },
+  {
+    "id": "char-225",
+    "han": "風",
+    "zhuyin": [
+      "ㄇ",
+      "ㄚ",
+      "ˇ"
+    ],
+    "word": "風",
+    "wordCharacters": [
+      {
+        "han": "風",
+        "zhuyin": [
+          "ㄇ",
+          "ㄚ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐴",
+    "category": "水果",
+    "difficulty": "beginner",
+    "speechText": "風",
+    "audioKey": "char-225",
+    "primarySymbol": "ㄇ"
+  },
+  {
+    "id": "char-226",
+    "han": "花",
+    "zhuyin": [
+      "ㄈ",
+      "ㄟ"
+    ],
+    "word": "花",
+    "wordCharacters": [
+      {
+        "han": "花",
+        "zhuyin": [
+          "ㄈ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🪽",
+    "category": "食物",
+    "difficulty": "beginner",
+    "speechText": "花",
+    "audioKey": "char-226",
+    "primarySymbol": "ㄈ"
+  },
+  {
+    "id": "char-227",
+    "han": "草",
+    "zhuyin": [
+      "ㄉ",
+      "ㄥ"
+    ],
+    "word": "草",
+    "wordCharacters": [
+      {
+        "han": "草",
+        "zhuyin": [
+          "ㄉ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "💡",
+    "category": "顏色",
+    "difficulty": "beginner",
+    "speechText": "草",
+    "audioKey": "char-227",
+    "primarySymbol": "ㄉ"
+  },
+  {
+    "id": "char-228",
+    "han": "樹",
+    "zhuyin": [
+      "ㄊ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "樹",
+    "wordCharacters": [
+      {
+        "han": "樹",
+        "zhuyin": [
+          "ㄊ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🐰",
+    "category": "數字",
+    "difficulty": "beginner",
+    "speechText": "樹",
+    "audioKey": "char-228",
+    "primarySymbol": "ㄊ"
+  },
+  {
+    "id": "char-229",
+    "han": "石",
+    "zhuyin": [
+      "ㄋ",
+      "ㄧ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "石",
+    "wordCharacters": [
+      {
+        "han": "石",
+        "zhuyin": [
+          "ㄋ",
+          "ㄧ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐦",
+    "category": "學校",
+    "difficulty": "beginner",
+    "speechText": "石",
+    "audioKey": "char-229",
+    "primarySymbol": "ㄋ"
+  },
+  {
+    "id": "char-230",
+    "han": "土",
+    "zhuyin": [
+      "ㄌ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "土",
+    "wordCharacters": [
+      {
+        "han": "土",
+        "zhuyin": [
+          "ㄌ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🦌",
+    "category": "日用品",
+    "difficulty": "beginner",
+    "speechText": "土",
+    "audioKey": "char-230",
+    "primarySymbol": "ㄌ"
+  },
+  {
+    "id": "char-231",
+    "han": "跑",
+    "zhuyin": [
+      "ㄍ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "跑",
+    "wordCharacters": [
+      {
+        "han": "跑",
+        "zhuyin": [
+          "ㄍ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐶",
+    "category": "交通工具",
+    "difficulty": "beginner",
+    "speechText": "跑",
+    "audioKey": "char-231",
+    "primarySymbol": "ㄍ"
+  },
+  {
+    "id": "char-232",
+    "han": "走",
+    "zhuyin": [
+      "ㄎ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "走",
+    "wordCharacters": [
+      {
+        "han": "走",
+        "zhuyin": [
+          "ㄎ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "👄",
+    "category": "自然",
+    "difficulty": "beginner",
+    "speechText": "走",
+    "audioKey": "char-232",
+    "primarySymbol": "ㄎ"
+  },
+  {
+    "id": "char-233",
+    "han": "跳",
+    "zhuyin": [
+      "ㄏ",
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "跳",
+    "wordCharacters": [
+      {
+        "han": "跳",
+        "zhuyin": [
+          "ㄏ",
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🏞️",
+    "category": "動作",
+    "difficulty": "beginner",
+    "speechText": "跳",
+    "audioKey": "char-233",
+    "primarySymbol": "ㄏ"
+  },
+  {
+    "id": "char-234",
+    "han": "看",
+    "zhuyin": [
+      "ㄐ",
+      "ㄧ"
+    ],
+    "word": "看",
+    "wordCharacters": [
+      {
+        "han": "看",
+        "zhuyin": [
+          "ㄐ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🐔",
+    "category": "情緒",
+    "difficulty": "beginner",
+    "speechText": "看",
+    "audioKey": "char-234",
+    "primarySymbol": "ㄐ"
+  },
+  {
+    "id": "char-235",
+    "han": "聽",
+    "zhuyin": [
+      "ㄑ",
+      "ㄧ",
+      "ˊ"
+    ],
+    "word": "聽",
+    "wordCharacters": [
+      {
+        "han": "聽",
+        "zhuyin": [
+          "ㄑ",
+          "ㄧ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🚩",
+    "category": "時間",
+    "difficulty": "beginner",
+    "speechText": "聽",
+    "audioKey": "char-235",
+    "primarySymbol": "ㄑ"
+  },
+  {
+    "id": "char-236",
+    "han": "說",
+    "zhuyin": [
+      "ㄒ",
+      "ㄧ"
+    ],
+    "word": "說",
+    "wordCharacters": [
+      {
+        "han": "說",
+        "zhuyin": [
+          "ㄒ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🌅",
+    "category": "地點",
+    "difficulty": "beginner",
+    "speechText": "說",
+    "audioKey": "char-236",
+    "primarySymbol": "ㄒ"
+  },
+  {
+    "id": "char-237",
+    "han": "唱",
+    "zhuyin": [
+      "ㄓ",
+      "ㄨ",
+      "ˊ"
+    ],
+    "word": "唱",
+    "wordCharacters": [
+      {
+        "han": "唱",
+        "zhuyin": [
+          "ㄓ",
+          "ㄨ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🎋",
+    "category": "衣物",
+    "difficulty": "beginner",
+    "speechText": "唱",
+    "audioKey": "char-237",
+    "primarySymbol": "ㄓ"
+  },
+  {
+    "id": "char-238",
+    "han": "笑",
+    "zhuyin": [
+      "ㄔ",
+      "ㄜ"
+    ],
+    "word": "笑",
+    "wordCharacters": [
+      {
+        "han": "笑",
+        "zhuyin": [
+          "ㄔ",
+          "ㄜ"
+        ]
+      }
+    ],
+    "emoji": "🚗",
+    "category": "家中用品",
+    "difficulty": "beginner",
+    "speechText": "笑",
+    "audioKey": "char-238",
+    "primarySymbol": "ㄔ"
+  },
+  {
+    "id": "char-239",
+    "han": "哭",
+    "zhuyin": [
+      "ㄕ",
+      "ㄨ"
+    ],
+    "word": "哭",
+    "wordCharacters": [
+      {
+        "han": "哭",
+        "zhuyin": [
+          "ㄕ",
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "📖",
+    "category": "家人",
+    "difficulty": "beginner",
+    "speechText": "哭",
+    "audioKey": "char-239",
+    "primarySymbol": "ㄕ"
+  },
+  {
+    "id": "char-240",
+    "han": "愛",
+    "zhuyin": [
+      "ㄖ",
+      "ˋ"
+    ],
+    "word": "愛",
+    "wordCharacters": [
+      {
+        "han": "愛",
+        "zhuyin": [
+          "ㄖ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "☀️",
+    "category": "身體",
+    "difficulty": "beginner",
+    "speechText": "愛",
+    "audioKey": "char-240",
+    "primarySymbol": "ㄖ"
+  },
+  {
+    "id": "char-241",
+    "han": "怕",
+    "zhuyin": [
+      "ㄗ",
+      "ˋ"
+    ],
+    "word": "怕",
+    "wordCharacters": [
+      {
+        "han": "怕",
+        "zhuyin": [
+          "ㄗ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🔤",
+    "category": "動物",
+    "difficulty": "advanced",
+    "speechText": "怕",
+    "audioKey": "char-241",
+    "primarySymbol": "ㄗ"
+  },
+  {
+    "id": "char-242",
+    "han": "早",
+    "zhuyin": [
+      "ㄘ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "早",
+    "wordCharacters": [
+      {
+        "han": "早",
+        "zhuyin": [
+          "ㄘ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🌱",
+    "category": "水果",
+    "difficulty": "advanced",
+    "speechText": "早",
+    "audioKey": "char-242",
+    "primarySymbol": "ㄘ"
+  },
+  {
+    "id": "char-243",
+    "han": "午",
+    "zhuyin": [
+      "ㄙ",
+      "ㄢ",
+      "ˇ"
+    ],
+    "word": "午",
+    "wordCharacters": [
+      {
+        "han": "午",
+        "zhuyin": [
+          "ㄙ",
+          "ㄢ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "☂️",
+    "category": "食物",
+    "difficulty": "advanced",
+    "speechText": "午",
+    "audioKey": "char-243",
+    "primarySymbol": "ㄙ"
+  },
+  {
+    "id": "char-244",
+    "han": "晚",
+    "zhuyin": [
+      "ㄧ"
+    ],
+    "word": "晚",
+    "wordCharacters": [
+      {
+        "han": "晚",
+        "zhuyin": [
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "👕",
+    "category": "顏色",
+    "difficulty": "advanced",
+    "speechText": "晚",
+    "audioKey": "char-244",
+    "primarySymbol": "ㄧ"
+  },
+  {
+    "id": "char-245",
+    "han": "今",
+    "zhuyin": [
+      "ㄨ"
+    ],
+    "word": "今",
+    "wordCharacters": [
+      {
+        "han": "今",
+        "zhuyin": [
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "🏠",
+    "category": "數字",
+    "difficulty": "advanced",
+    "speechText": "今",
+    "audioKey": "char-245",
+    "primarySymbol": "ㄨ"
+  },
+  {
+    "id": "char-246",
+    "han": "天",
+    "zhuyin": [
+      "ㄩ",
+      "ˊ"
+    ],
+    "word": "天",
+    "wordCharacters": [
+      {
+        "han": "天",
+        "zhuyin": [
+          "ㄩ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐟",
+    "category": "學校",
+    "difficulty": "advanced",
+    "speechText": "天",
+    "audioKey": "char-246",
+    "primarySymbol": "ㄩ"
+  },
+  {
+    "id": "char-247",
+    "han": "明",
+    "zhuyin": [
+      "ㄧ",
+      "ㄚ"
+    ],
+    "word": "明",
+    "wordCharacters": [
+      {
+        "han": "明",
+        "zhuyin": [
+          "ㄧ",
+          "ㄚ"
+        ]
+      }
+    ],
+    "emoji": "🦆",
+    "category": "日用品",
+    "difficulty": "advanced",
+    "speechText": "明",
+    "audioKey": "char-247",
+    "primarySymbol": "ㄚ"
+  },
+  {
+    "id": "char-248",
+    "han": "校",
+    "zhuyin": [
+      "ㄛ"
+    ],
+    "word": "校",
+    "wordCharacters": [
+      {
+        "han": "校",
+        "zhuyin": [
+          "ㄛ"
+        ]
+      }
+    ],
+    "emoji": "⭕",
+    "category": "交通工具",
+    "difficulty": "advanced",
+    "speechText": "校",
+    "audioKey": "char-248",
+    "primarySymbol": "ㄛ"
+  },
+  {
+    "id": "char-249",
+    "han": "園",
+    "zhuyin": [
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "園",
+    "wordCharacters": [
+      {
+        "han": "園",
+        "zhuyin": [
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🪿",
+    "category": "自然",
+    "difficulty": "advanced",
+    "speechText": "園",
+    "audioKey": "char-249",
+    "primarySymbol": "ㄜ"
+  },
+  {
+    "id": "char-250",
+    "han": "房",
+    "zhuyin": [
+      "ㄝ"
+    ],
+    "word": "房",
+    "wordCharacters": [
+      {
+        "han": "房",
+        "zhuyin": [
+          "ㄝ"
+        ]
+      }
+    ],
+    "emoji": "🙋",
+    "category": "動作",
+    "difficulty": "advanced",
+    "speechText": "房",
+    "audioKey": "char-250",
+    "primarySymbol": "ㄝ"
+  },
+  {
+    "id": "char-251",
+    "han": "市",
+    "zhuyin": [
+      "ㄞ",
+      "ˋ"
+    ],
+    "word": "市",
+    "wordCharacters": [
+      {
+        "han": "市",
+        "zhuyin": [
+          "ㄞ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "❤️",
+    "category": "情緒",
+    "difficulty": "advanced",
+    "speechText": "市",
+    "audioKey": "char-251",
+    "primarySymbol": "ㄞ"
+  },
+  {
+    "id": "char-252",
+    "han": "店",
+    "zhuyin": [
+      "ㄅ",
+      "ㄟ"
+    ],
+    "word": "店",
+    "wordCharacters": [
+      {
+        "han": "店",
+        "zhuyin": [
+          "ㄅ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🥤",
+    "category": "時間",
+    "difficulty": "advanced",
+    "speechText": "店",
+    "audioKey": "char-252",
+    "primarySymbol": "ㄟ"
+  },
+  {
+    "id": "char-253",
+    "han": "衣",
+    "zhuyin": [
+      "ㄠ"
+    ],
+    "word": "衣",
+    "wordCharacters": [
+      {
+        "han": "衣",
+        "zhuyin": [
+          "ㄠ"
+        ]
+      }
+    ],
+    "emoji": "🕳️",
+    "category": "地點",
+    "difficulty": "advanced",
+    "speechText": "衣",
+    "audioKey": "char-253",
+    "primarySymbol": "ㄠ"
+  },
+  {
+    "id": "char-254",
+    "han": "褲",
+    "zhuyin": [
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "褲",
+    "wordCharacters": [
+      {
+        "han": "褲",
+        "zhuyin": [
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🪷",
+    "category": "衣物",
+    "difficulty": "advanced",
+    "speechText": "褲",
+    "audioKey": "char-254",
+    "primarySymbol": "ㄡ"
+  },
+  {
+    "id": "char-255",
+    "han": "鞋",
+    "zhuyin": [
+      "ㄢ"
+    ],
+    "word": "鞋",
+    "wordCharacters": [
+      {
+        "han": "鞋",
+        "zhuyin": [
+          "ㄢ"
+        ]
+      }
+    ],
+    "emoji": "🛏️",
+    "category": "家中用品",
+    "difficulty": "advanced",
+    "speechText": "鞋",
+    "audioKey": "char-255",
+    "primarySymbol": "ㄢ"
+  },
+  {
+    "id": "char-256",
+    "han": "襪",
+    "zhuyin": [
+      "ㄣ"
+    ],
+    "word": "襪",
+    "wordCharacters": [
+      {
+        "han": "襪",
+        "zhuyin": [
+          "ㄣ"
+        ]
+      }
+    ],
+    "emoji": "🙏",
+    "category": "家人",
+    "difficulty": "advanced",
+    "speechText": "襪",
+    "audioKey": "char-256",
+    "primarySymbol": "ㄣ"
+  },
+  {
+    "id": "char-257",
+    "han": "帽",
+    "zhuyin": [
+      "ㄧ",
+      "ㄤ",
+      "ˊ"
+    ],
+    "word": "帽",
+    "wordCharacters": [
+      {
+        "han": "帽",
+        "zhuyin": [
+          "ㄧ",
+          "ㄤ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐑",
+    "category": "身體",
+    "difficulty": "advanced",
+    "speechText": "帽",
+    "audioKey": "char-257",
+    "primarySymbol": "ㄤ"
+  },
+  {
+    "id": "char-258",
+    "han": "床",
+    "zhuyin": [
+      "ㄈ",
+      "ㄥ"
+    ],
+    "word": "床",
+    "wordCharacters": [
+      {
+        "han": "床",
+        "zhuyin": [
+          "ㄈ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "🌬️",
+    "category": "動物",
+    "difficulty": "advanced",
+    "speechText": "床",
+    "audioKey": "char-258",
+    "primarySymbol": "ㄥ"
+  },
+  {
+    "id": "char-259",
+    "han": "燈",
+    "zhuyin": [
+      "ㄦ",
+      "ˊ"
+    ],
+    "word": "燈",
+    "wordCharacters": [
+      {
+        "han": "燈",
+        "zhuyin": [
+          "ㄦ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🧒",
+    "category": "水果",
+    "difficulty": "advanced",
+    "speechText": "燈",
+    "audioKey": "char-259",
+    "primarySymbol": "ㄦ"
+  },
+  {
+    "id": "char-260",
+    "han": "杯",
+    "zhuyin": [
+      "ㄅ",
+      "ㄚ",
+      "ˋ"
+    ],
+    "word": "杯",
+    "wordCharacters": [
+      {
+        "han": "杯",
+        "zhuyin": [
+          "ㄅ",
+          "ㄚ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "👨",
+    "category": "食物",
+    "difficulty": "advanced",
+    "speechText": "杯",
+    "audioKey": "char-260",
+    "primarySymbol": "ㄅ"
+  },
+  {
+    "id": "char-261",
+    "han": "碗",
+    "zhuyin": [
+      "ㄆ",
+      "ㄠ",
+      "ˋ"
+    ],
+    "word": "碗",
+    "wordCharacters": [
+      {
+        "han": "碗",
+        "zhuyin": [
+          "ㄆ",
+          "ㄠ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🫧",
+    "category": "顏色",
+    "difficulty": "advanced",
+    "speechText": "碗",
+    "audioKey": "char-261",
+    "primarySymbol": "ㄆ"
+  },
+  {
+    "id": "char-262",
+    "han": "盤",
+    "zhuyin": [
+      "ㄇ",
+      "ㄚ",
+      "ˇ"
+    ],
+    "word": "盤",
+    "wordCharacters": [
+      {
+        "han": "盤",
+        "zhuyin": [
+          "ㄇ",
+          "ㄚ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐴",
+    "category": "數字",
+    "difficulty": "advanced",
+    "speechText": "盤",
+    "audioKey": "char-262",
+    "primarySymbol": "ㄇ"
+  },
+  {
+    "id": "char-263",
+    "han": "匙",
+    "zhuyin": [
+      "ㄈ",
+      "ㄟ"
+    ],
+    "word": "匙",
+    "wordCharacters": [
+      {
+        "han": "匙",
+        "zhuyin": [
+          "ㄈ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🪽",
+    "category": "學校",
+    "difficulty": "advanced",
+    "speechText": "匙",
+    "audioKey": "char-263",
+    "primarySymbol": "ㄈ"
+  },
+  {
+    "id": "char-264",
+    "han": "鐘",
+    "zhuyin": [
+      "ㄉ",
+      "ㄥ"
+    ],
+    "word": "鐘",
+    "wordCharacters": [
+      {
+        "han": "鐘",
+        "zhuyin": [
+          "ㄉ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "💡",
+    "category": "日用品",
+    "difficulty": "advanced",
+    "speechText": "鐘",
+    "audioKey": "char-264",
+    "primarySymbol": "ㄉ"
+  },
+  {
+    "id": "char-265",
+    "han": "爸",
+    "zhuyin": [
+      "ㄊ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "爸",
+    "wordCharacters": [
+      {
+        "han": "爸",
+        "zhuyin": [
+          "ㄊ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🐰",
+    "category": "交通工具",
+    "difficulty": "advanced",
+    "speechText": "爸",
+    "audioKey": "char-265",
+    "primarySymbol": "ㄊ"
+  },
+  {
+    "id": "char-266",
+    "han": "媽",
+    "zhuyin": [
+      "ㄋ",
+      "ㄧ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "媽",
+    "wordCharacters": [
+      {
+        "han": "媽",
+        "zhuyin": [
+          "ㄋ",
+          "ㄧ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐦",
+    "category": "自然",
+    "difficulty": "advanced",
+    "speechText": "媽",
+    "audioKey": "char-266",
+    "primarySymbol": "ㄋ"
+  },
+  {
+    "id": "char-267",
+    "han": "哥",
+    "zhuyin": [
+      "ㄌ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "哥",
+    "wordCharacters": [
+      {
+        "han": "哥",
+        "zhuyin": [
+          "ㄌ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🦌",
+    "category": "動作",
+    "difficulty": "advanced",
+    "speechText": "哥",
+    "audioKey": "char-267",
+    "primarySymbol": "ㄌ"
+  },
+  {
+    "id": "char-268",
+    "han": "姐",
+    "zhuyin": [
+      "ㄍ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "姐",
+    "wordCharacters": [
+      {
+        "han": "姐",
+        "zhuyin": [
+          "ㄍ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐶",
+    "category": "情緒",
+    "difficulty": "advanced",
+    "speechText": "姐",
+    "audioKey": "char-268",
+    "primarySymbol": "ㄍ"
+  },
+  {
+    "id": "char-269",
+    "han": "弟",
+    "zhuyin": [
+      "ㄎ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "弟",
+    "wordCharacters": [
+      {
+        "han": "弟",
+        "zhuyin": [
+          "ㄎ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "👄",
+    "category": "時間",
+    "difficulty": "advanced",
+    "speechText": "弟",
+    "audioKey": "char-269",
+    "primarySymbol": "ㄎ"
+  },
+  {
+    "id": "char-270",
+    "han": "妹",
+    "zhuyin": [
+      "ㄏ",
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "妹",
+    "wordCharacters": [
+      {
+        "han": "妹",
+        "zhuyin": [
+          "ㄏ",
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🏞️",
+    "category": "地點",
+    "difficulty": "advanced",
+    "speechText": "妹",
+    "audioKey": "char-270",
+    "primarySymbol": "ㄏ"
+  },
+  {
+    "id": "char-271",
+    "han": "爺",
+    "zhuyin": [
+      "ㄐ",
+      "ㄧ"
+    ],
+    "word": "爺",
+    "wordCharacters": [
+      {
+        "han": "爺",
+        "zhuyin": [
+          "ㄐ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🐔",
+    "category": "衣物",
+    "difficulty": "advanced",
+    "speechText": "爺",
+    "audioKey": "char-271",
+    "primarySymbol": "ㄐ"
+  },
+  {
+    "id": "char-272",
+    "han": "奶",
+    "zhuyin": [
+      "ㄑ",
+      "ㄧ",
+      "ˊ"
+    ],
+    "word": "奶",
+    "wordCharacters": [
+      {
+        "han": "奶",
+        "zhuyin": [
+          "ㄑ",
+          "ㄧ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🚩",
+    "category": "家中用品",
+    "difficulty": "advanced",
+    "speechText": "奶",
+    "audioKey": "char-272",
+    "primarySymbol": "ㄑ"
+  },
+  {
+    "id": "char-273",
+    "han": "家",
+    "zhuyin": [
+      "ㄒ",
+      "ㄧ"
+    ],
+    "word": "家",
+    "wordCharacters": [
+      {
+        "han": "家",
+        "zhuyin": [
+          "ㄒ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🌅",
+    "category": "家人",
+    "difficulty": "advanced",
+    "speechText": "家",
+    "audioKey": "char-273",
+    "primarySymbol": "ㄒ"
+  },
+  {
+    "id": "char-274",
+    "han": "人",
+    "zhuyin": [
+      "ㄓ",
+      "ㄨ",
+      "ˊ"
+    ],
+    "word": "人",
+    "wordCharacters": [
+      {
+        "han": "人",
+        "zhuyin": [
+          "ㄓ",
+          "ㄨ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🎋",
+    "category": "身體",
+    "difficulty": "advanced",
+    "speechText": "人",
+    "audioKey": "char-274",
+    "primarySymbol": "ㄓ"
+  },
+  {
+    "id": "char-275",
+    "han": "口",
+    "zhuyin": [
+      "ㄔ",
+      "ㄜ"
+    ],
+    "word": "口",
+    "wordCharacters": [
+      {
+        "han": "口",
+        "zhuyin": [
+          "ㄔ",
+          "ㄜ"
+        ]
+      }
+    ],
+    "emoji": "🚗",
+    "category": "動物",
+    "difficulty": "advanced",
+    "speechText": "口",
+    "audioKey": "char-275",
+    "primarySymbol": "ㄔ"
+  },
+  {
+    "id": "char-276",
+    "han": "手",
+    "zhuyin": [
+      "ㄕ",
+      "ㄨ"
+    ],
+    "word": "手",
+    "wordCharacters": [
+      {
+        "han": "手",
+        "zhuyin": [
+          "ㄕ",
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "📖",
+    "category": "水果",
+    "difficulty": "advanced",
+    "speechText": "手",
+    "audioKey": "char-276",
+    "primarySymbol": "ㄕ"
+  },
+  {
+    "id": "char-277",
+    "han": "腳",
+    "zhuyin": [
+      "ㄖ",
+      "ˋ"
+    ],
+    "word": "腳",
+    "wordCharacters": [
+      {
+        "han": "腳",
+        "zhuyin": [
+          "ㄖ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "☀️",
+    "category": "食物",
+    "difficulty": "advanced",
+    "speechText": "腳",
+    "audioKey": "char-277",
+    "primarySymbol": "ㄖ"
+  },
+  {
+    "id": "char-278",
+    "han": "眼",
+    "zhuyin": [
+      "ㄗ",
+      "ˋ"
+    ],
+    "word": "眼",
+    "wordCharacters": [
+      {
+        "han": "眼",
+        "zhuyin": [
+          "ㄗ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🔤",
+    "category": "顏色",
+    "difficulty": "advanced",
+    "speechText": "眼",
+    "audioKey": "char-278",
+    "primarySymbol": "ㄗ"
+  },
+  {
+    "id": "char-279",
+    "han": "耳",
+    "zhuyin": [
+      "ㄘ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "耳",
+    "wordCharacters": [
+      {
+        "han": "耳",
+        "zhuyin": [
+          "ㄘ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🌱",
+    "category": "數字",
+    "difficulty": "advanced",
+    "speechText": "耳",
+    "audioKey": "char-279",
+    "primarySymbol": "ㄘ"
+  },
+  {
+    "id": "char-280",
+    "han": "鼻",
+    "zhuyin": [
+      "ㄙ",
+      "ㄢ",
+      "ˇ"
+    ],
+    "word": "鼻",
+    "wordCharacters": [
+      {
+        "han": "鼻",
+        "zhuyin": [
+          "ㄙ",
+          "ㄢ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "☂️",
+    "category": "學校",
+    "difficulty": "advanced",
+    "speechText": "鼻",
+    "audioKey": "char-280",
+    "primarySymbol": "ㄙ"
+  },
+  {
+    "id": "char-281",
+    "han": "牙",
+    "zhuyin": [
+      "ㄧ"
+    ],
+    "word": "牙",
+    "wordCharacters": [
+      {
+        "han": "牙",
+        "zhuyin": [
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "👕",
+    "category": "日用品",
+    "difficulty": "advanced",
+    "speechText": "牙",
+    "audioKey": "char-281",
+    "primarySymbol": "ㄧ"
+  },
+  {
+    "id": "char-282",
+    "han": "頭",
+    "zhuyin": [
+      "ㄨ"
+    ],
+    "word": "頭",
+    "wordCharacters": [
+      {
+        "han": "頭",
+        "zhuyin": [
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "🏠",
+    "category": "交通工具",
+    "difficulty": "advanced",
+    "speechText": "頭",
+    "audioKey": "char-282",
+    "primarySymbol": "ㄨ"
+  },
+  {
+    "id": "char-283",
+    "han": "身",
+    "zhuyin": [
+      "ㄩ",
+      "ˊ"
+    ],
+    "word": "身",
+    "wordCharacters": [
+      {
+        "han": "身",
+        "zhuyin": [
+          "ㄩ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐟",
+    "category": "自然",
+    "difficulty": "advanced",
+    "speechText": "身",
+    "audioKey": "char-283",
+    "primarySymbol": "ㄩ"
+  },
+  {
+    "id": "char-284",
+    "han": "心",
+    "zhuyin": [
+      "ㄧ",
+      "ㄚ"
+    ],
+    "word": "心",
+    "wordCharacters": [
+      {
+        "han": "心",
+        "zhuyin": [
+          "ㄧ",
+          "ㄚ"
+        ]
+      }
+    ],
+    "emoji": "🦆",
+    "category": "動作",
+    "difficulty": "advanced",
+    "speechText": "心",
+    "audioKey": "char-284",
+    "primarySymbol": "ㄚ"
+  },
+  {
+    "id": "char-285",
+    "han": "狗",
+    "zhuyin": [
+      "ㄛ"
+    ],
+    "word": "狗",
+    "wordCharacters": [
+      {
+        "han": "狗",
+        "zhuyin": [
+          "ㄛ"
+        ]
+      }
+    ],
+    "emoji": "⭕",
+    "category": "情緒",
+    "difficulty": "advanced",
+    "speechText": "狗",
+    "audioKey": "char-285",
+    "primarySymbol": "ㄛ"
+  },
+  {
+    "id": "char-286",
+    "han": "貓",
+    "zhuyin": [
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "貓",
+    "wordCharacters": [
+      {
+        "han": "貓",
+        "zhuyin": [
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🪿",
+    "category": "時間",
+    "difficulty": "advanced",
+    "speechText": "貓",
+    "audioKey": "char-286",
+    "primarySymbol": "ㄜ"
+  },
+  {
+    "id": "char-287",
+    "han": "牛",
+    "zhuyin": [
+      "ㄝ"
+    ],
+    "word": "牛",
+    "wordCharacters": [
+      {
+        "han": "牛",
+        "zhuyin": [
+          "ㄝ"
+        ]
+      }
+    ],
+    "emoji": "🙋",
+    "category": "地點",
+    "difficulty": "advanced",
+    "speechText": "牛",
+    "audioKey": "char-287",
+    "primarySymbol": "ㄝ"
+  },
+  {
+    "id": "char-288",
+    "han": "羊",
+    "zhuyin": [
+      "ㄞ",
+      "ˋ"
+    ],
+    "word": "羊",
+    "wordCharacters": [
+      {
+        "han": "羊",
+        "zhuyin": [
+          "ㄞ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "❤️",
+    "category": "衣物",
+    "difficulty": "advanced",
+    "speechText": "羊",
+    "audioKey": "char-288",
+    "primarySymbol": "ㄞ"
+  },
+  {
+    "id": "char-289",
+    "han": "馬",
+    "zhuyin": [
+      "ㄅ",
+      "ㄟ"
+    ],
+    "word": "馬",
+    "wordCharacters": [
+      {
+        "han": "馬",
+        "zhuyin": [
+          "ㄅ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🥤",
+    "category": "家中用品",
+    "difficulty": "advanced",
+    "speechText": "馬",
+    "audioKey": "char-289",
+    "primarySymbol": "ㄟ"
+  },
+  {
+    "id": "char-290",
+    "han": "鳥",
+    "zhuyin": [
+      "ㄠ"
+    ],
+    "word": "鳥",
+    "wordCharacters": [
+      {
+        "han": "鳥",
+        "zhuyin": [
+          "ㄠ"
+        ]
+      }
+    ],
+    "emoji": "🕳️",
+    "category": "家人",
+    "difficulty": "advanced",
+    "speechText": "鳥",
+    "audioKey": "char-290",
+    "primarySymbol": "ㄠ"
+  },
+  {
+    "id": "char-291",
+    "han": "魚",
+    "zhuyin": [
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "魚",
+    "wordCharacters": [
+      {
+        "han": "魚",
+        "zhuyin": [
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🪷",
+    "category": "身體",
+    "difficulty": "advanced",
+    "speechText": "魚",
+    "audioKey": "char-291",
+    "primarySymbol": "ㄡ"
+  },
+  {
+    "id": "char-292",
+    "han": "兔",
+    "zhuyin": [
+      "ㄢ"
+    ],
+    "word": "兔",
+    "wordCharacters": [
+      {
+        "han": "兔",
+        "zhuyin": [
+          "ㄢ"
+        ]
+      }
+    ],
+    "emoji": "🛏️",
+    "category": "動物",
+    "difficulty": "advanced",
+    "speechText": "兔",
+    "audioKey": "char-292",
+    "primarySymbol": "ㄢ"
+  },
+  {
+    "id": "char-293",
+    "han": "雞",
+    "zhuyin": [
+      "ㄣ"
+    ],
+    "word": "雞",
+    "wordCharacters": [
+      {
+        "han": "雞",
+        "zhuyin": [
+          "ㄣ"
+        ]
+      }
+    ],
+    "emoji": "🙏",
+    "category": "水果",
+    "difficulty": "advanced",
+    "speechText": "雞",
+    "audioKey": "char-293",
+    "primarySymbol": "ㄣ"
+  },
+  {
+    "id": "char-294",
+    "han": "鴨",
+    "zhuyin": [
+      "ㄧ",
+      "ㄤ",
+      "ˊ"
+    ],
+    "word": "鴨",
+    "wordCharacters": [
+      {
+        "han": "鴨",
+        "zhuyin": [
+          "ㄧ",
+          "ㄤ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐑",
+    "category": "食物",
+    "difficulty": "advanced",
+    "speechText": "鴨",
+    "audioKey": "char-294",
+    "primarySymbol": "ㄤ"
+  },
+  {
+    "id": "char-295",
+    "han": "蟲",
+    "zhuyin": [
+      "ㄈ",
+      "ㄥ"
+    ],
+    "word": "蟲",
+    "wordCharacters": [
+      {
+        "han": "蟲",
+        "zhuyin": [
+          "ㄈ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "🌬️",
+    "category": "顏色",
+    "difficulty": "advanced",
+    "speechText": "蟲",
+    "audioKey": "char-295",
+    "primarySymbol": "ㄥ"
+  },
+  {
+    "id": "char-296",
+    "han": "虎",
+    "zhuyin": [
+      "ㄦ",
+      "ˊ"
+    ],
+    "word": "虎",
+    "wordCharacters": [
+      {
+        "han": "虎",
+        "zhuyin": [
+          "ㄦ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🧒",
+    "category": "數字",
+    "difficulty": "advanced",
+    "speechText": "虎",
+    "audioKey": "char-296",
+    "primarySymbol": "ㄦ"
+  },
+  {
+    "id": "char-297",
+    "han": "熊",
+    "zhuyin": [
+      "ㄅ",
+      "ㄚ",
+      "ˋ"
+    ],
+    "word": "熊",
+    "wordCharacters": [
+      {
+        "han": "熊",
+        "zhuyin": [
+          "ㄅ",
+          "ㄚ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "👨",
+    "category": "學校",
+    "difficulty": "advanced",
+    "speechText": "熊",
+    "audioKey": "char-297",
+    "primarySymbol": "ㄅ"
+  },
+  {
+    "id": "char-298",
+    "han": "猴",
+    "zhuyin": [
+      "ㄆ",
+      "ㄠ",
+      "ˋ"
+    ],
+    "word": "猴",
+    "wordCharacters": [
+      {
+        "han": "猴",
+        "zhuyin": [
+          "ㄆ",
+          "ㄠ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🫧",
+    "category": "日用品",
+    "difficulty": "advanced",
+    "speechText": "猴",
+    "audioKey": "char-298",
+    "primarySymbol": "ㄆ"
+  },
+  {
+    "id": "char-299",
+    "han": "果",
+    "zhuyin": [
+      "ㄇ",
+      "ㄚ",
+      "ˇ"
+    ],
+    "word": "果",
+    "wordCharacters": [
+      {
+        "han": "果",
+        "zhuyin": [
+          "ㄇ",
+          "ㄚ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐴",
+    "category": "交通工具",
+    "difficulty": "advanced",
+    "speechText": "果",
+    "audioKey": "char-299",
+    "primarySymbol": "ㄇ"
+  },
+  {
+    "id": "char-300",
+    "han": "香",
+    "zhuyin": [
+      "ㄈ",
+      "ㄟ"
+    ],
+    "word": "香",
+    "wordCharacters": [
+      {
+        "han": "香",
+        "zhuyin": [
+          "ㄈ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🪽",
+    "category": "自然",
+    "difficulty": "advanced",
+    "speechText": "香",
+    "audioKey": "char-300",
+    "primarySymbol": "ㄈ"
+  },
+  {
+    "id": "char-301",
+    "han": "蕉",
+    "zhuyin": [
+      "ㄉ",
+      "ㄥ"
+    ],
+    "word": "蕉",
+    "wordCharacters": [
+      {
+        "han": "蕉",
+        "zhuyin": [
+          "ㄉ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "💡",
+    "category": "動作",
+    "difficulty": "advanced",
+    "speechText": "蕉",
+    "audioKey": "char-301",
+    "primarySymbol": "ㄉ"
+  },
+  {
+    "id": "char-302",
+    "han": "蘋",
+    "zhuyin": [
+      "ㄊ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "蘋",
+    "wordCharacters": [
+      {
+        "han": "蘋",
+        "zhuyin": [
+          "ㄊ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🐰",
+    "category": "情緒",
+    "difficulty": "advanced",
+    "speechText": "蘋",
+    "audioKey": "char-302",
+    "primarySymbol": "ㄊ"
+  },
+  {
+    "id": "char-303",
+    "han": "梨",
+    "zhuyin": [
+      "ㄋ",
+      "ㄧ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "梨",
+    "wordCharacters": [
+      {
+        "han": "梨",
+        "zhuyin": [
+          "ㄋ",
+          "ㄧ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐦",
+    "category": "時間",
+    "difficulty": "advanced",
+    "speechText": "梨",
+    "audioKey": "char-303",
+    "primarySymbol": "ㄋ"
+  },
+  {
+    "id": "char-304",
+    "han": "桃",
+    "zhuyin": [
+      "ㄌ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "桃",
+    "wordCharacters": [
+      {
+        "han": "桃",
+        "zhuyin": [
+          "ㄌ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🦌",
+    "category": "地點",
+    "difficulty": "advanced",
+    "speechText": "桃",
+    "audioKey": "char-304",
+    "primarySymbol": "ㄌ"
+  },
+  {
+    "id": "char-305",
+    "han": "莓",
+    "zhuyin": [
+      "ㄍ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "莓",
+    "wordCharacters": [
+      {
+        "han": "莓",
+        "zhuyin": [
+          "ㄍ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐶",
+    "category": "衣物",
+    "difficulty": "advanced",
+    "speechText": "莓",
+    "audioKey": "char-305",
+    "primarySymbol": "ㄍ"
+  },
+  {
+    "id": "char-306",
+    "han": "瓜",
+    "zhuyin": [
+      "ㄎ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "瓜",
+    "wordCharacters": [
+      {
+        "han": "瓜",
+        "zhuyin": [
+          "ㄎ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "👄",
+    "category": "家中用品",
+    "difficulty": "advanced",
+    "speechText": "瓜",
+    "audioKey": "char-306",
+    "primarySymbol": "ㄎ"
+  },
+  {
+    "id": "char-307",
+    "han": "飯",
+    "zhuyin": [
+      "ㄏ",
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "飯",
+    "wordCharacters": [
+      {
+        "han": "飯",
+        "zhuyin": [
+          "ㄏ",
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🏞️",
+    "category": "家人",
+    "difficulty": "advanced",
+    "speechText": "飯",
+    "audioKey": "char-307",
+    "primarySymbol": "ㄏ"
+  },
+  {
+    "id": "char-308",
+    "han": "麵",
+    "zhuyin": [
+      "ㄐ",
+      "ㄧ"
+    ],
+    "word": "麵",
+    "wordCharacters": [
+      {
+        "han": "麵",
+        "zhuyin": [
+          "ㄐ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🐔",
+    "category": "身體",
+    "difficulty": "advanced",
+    "speechText": "麵",
+    "audioKey": "char-308",
+    "primarySymbol": "ㄐ"
+  },
+  {
+    "id": "char-309",
+    "han": "水",
+    "zhuyin": [
+      "ㄑ",
+      "ㄧ",
+      "ˊ"
+    ],
+    "word": "水",
+    "wordCharacters": [
+      {
+        "han": "水",
+        "zhuyin": [
+          "ㄑ",
+          "ㄧ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🚩",
+    "category": "動物",
+    "difficulty": "advanced",
+    "speechText": "水",
+    "audioKey": "char-309",
+    "primarySymbol": "ㄑ"
+  },
+  {
+    "id": "char-310",
+    "han": "茶",
+    "zhuyin": [
+      "ㄒ",
+      "ㄧ"
+    ],
+    "word": "茶",
+    "wordCharacters": [
+      {
+        "han": "茶",
+        "zhuyin": [
+          "ㄒ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🌅",
+    "category": "水果",
+    "difficulty": "advanced",
+    "speechText": "茶",
+    "audioKey": "char-310",
+    "primarySymbol": "ㄒ"
+  },
+  {
+    "id": "char-311",
+    "han": "奶",
+    "zhuyin": [
+      "ㄓ",
+      "ㄨ",
+      "ˊ"
+    ],
+    "word": "奶",
+    "wordCharacters": [
+      {
+        "han": "奶",
+        "zhuyin": [
+          "ㄓ",
+          "ㄨ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🎋",
+    "category": "食物",
+    "difficulty": "advanced",
+    "speechText": "奶",
+    "audioKey": "char-311",
+    "primarySymbol": "ㄓ"
+  },
+  {
+    "id": "char-312",
+    "han": "蛋",
+    "zhuyin": [
+      "ㄔ",
+      "ㄜ"
+    ],
+    "word": "蛋",
+    "wordCharacters": [
+      {
+        "han": "蛋",
+        "zhuyin": [
+          "ㄔ",
+          "ㄜ"
+        ]
+      }
+    ],
+    "emoji": "🚗",
+    "category": "顏色",
+    "difficulty": "advanced",
+    "speechText": "蛋",
+    "audioKey": "char-312",
+    "primarySymbol": "ㄔ"
+  },
+  {
+    "id": "char-313",
+    "han": "肉",
+    "zhuyin": [
+      "ㄕ",
+      "ㄨ"
+    ],
+    "word": "肉",
+    "wordCharacters": [
+      {
+        "han": "肉",
+        "zhuyin": [
+          "ㄕ",
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "📖",
+    "category": "數字",
+    "difficulty": "advanced",
+    "speechText": "肉",
+    "audioKey": "char-313",
+    "primarySymbol": "ㄕ"
+  },
+  {
+    "id": "char-314",
+    "han": "菜",
+    "zhuyin": [
+      "ㄖ",
+      "ˋ"
+    ],
+    "word": "菜",
+    "wordCharacters": [
+      {
+        "han": "菜",
+        "zhuyin": [
+          "ㄖ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "☀️",
+    "category": "學校",
+    "difficulty": "advanced",
+    "speechText": "菜",
+    "audioKey": "char-314",
+    "primarySymbol": "ㄖ"
+  },
+  {
+    "id": "char-315",
+    "han": "豆",
+    "zhuyin": [
+      "ㄗ",
+      "ˋ"
+    ],
+    "word": "豆",
+    "wordCharacters": [
+      {
+        "han": "豆",
+        "zhuyin": [
+          "ㄗ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🔤",
+    "category": "日用品",
+    "difficulty": "advanced",
+    "speechText": "豆",
+    "audioKey": "char-315",
+    "primarySymbol": "ㄗ"
+  },
+  {
+    "id": "char-316",
+    "han": "糖",
+    "zhuyin": [
+      "ㄘ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "糖",
+    "wordCharacters": [
+      {
+        "han": "糖",
+        "zhuyin": [
+          "ㄘ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🌱",
+    "category": "交通工具",
+    "difficulty": "advanced",
+    "speechText": "糖",
+    "audioKey": "char-316",
+    "primarySymbol": "ㄘ"
+  },
+  {
+    "id": "char-317",
+    "han": "餅",
+    "zhuyin": [
+      "ㄙ",
+      "ㄢ",
+      "ˇ"
+    ],
+    "word": "餅",
+    "wordCharacters": [
+      {
+        "han": "餅",
+        "zhuyin": [
+          "ㄙ",
+          "ㄢ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "☂️",
+    "category": "自然",
+    "difficulty": "advanced",
+    "speechText": "餅",
+    "audioKey": "char-317",
+    "primarySymbol": "ㄙ"
+  },
+  {
+    "id": "char-318",
+    "han": "紅",
+    "zhuyin": [
+      "ㄧ"
+    ],
+    "word": "紅",
+    "wordCharacters": [
+      {
+        "han": "紅",
+        "zhuyin": [
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "👕",
+    "category": "動作",
+    "difficulty": "advanced",
+    "speechText": "紅",
+    "audioKey": "char-318",
+    "primarySymbol": "ㄧ"
+  },
+  {
+    "id": "char-319",
+    "han": "橙",
+    "zhuyin": [
+      "ㄨ"
+    ],
+    "word": "橙",
+    "wordCharacters": [
+      {
+        "han": "橙",
+        "zhuyin": [
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "🏠",
+    "category": "情緒",
+    "difficulty": "advanced",
+    "speechText": "橙",
+    "audioKey": "char-319",
+    "primarySymbol": "ㄨ"
+  },
+  {
+    "id": "char-320",
+    "han": "黃",
+    "zhuyin": [
+      "ㄩ",
+      "ˊ"
+    ],
+    "word": "黃",
+    "wordCharacters": [
+      {
+        "han": "黃",
+        "zhuyin": [
+          "ㄩ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐟",
+    "category": "時間",
+    "difficulty": "advanced",
+    "speechText": "黃",
+    "audioKey": "char-320",
+    "primarySymbol": "ㄩ"
+  },
+  {
+    "id": "char-321",
+    "han": "綠",
+    "zhuyin": [
+      "ㄧ",
+      "ㄚ"
+    ],
+    "word": "綠",
+    "wordCharacters": [
+      {
+        "han": "綠",
+        "zhuyin": [
+          "ㄧ",
+          "ㄚ"
+        ]
+      }
+    ],
+    "emoji": "🦆",
+    "category": "地點",
+    "difficulty": "advanced",
+    "speechText": "綠",
+    "audioKey": "char-321",
+    "primarySymbol": "ㄚ"
+  },
+  {
+    "id": "char-322",
+    "han": "藍",
+    "zhuyin": [
+      "ㄛ"
+    ],
+    "word": "藍",
+    "wordCharacters": [
+      {
+        "han": "藍",
+        "zhuyin": [
+          "ㄛ"
+        ]
+      }
+    ],
+    "emoji": "⭕",
+    "category": "衣物",
+    "difficulty": "advanced",
+    "speechText": "藍",
+    "audioKey": "char-322",
+    "primarySymbol": "ㄛ"
+  },
+  {
+    "id": "char-323",
+    "han": "紫",
+    "zhuyin": [
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "紫",
+    "wordCharacters": [
+      {
+        "han": "紫",
+        "zhuyin": [
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🪿",
+    "category": "家中用品",
+    "difficulty": "advanced",
+    "speechText": "紫",
+    "audioKey": "char-323",
+    "primarySymbol": "ㄜ"
+  },
+  {
+    "id": "char-324",
+    "han": "黑",
+    "zhuyin": [
+      "ㄝ"
+    ],
+    "word": "黑",
+    "wordCharacters": [
+      {
+        "han": "黑",
+        "zhuyin": [
+          "ㄝ"
+        ]
+      }
+    ],
+    "emoji": "🙋",
+    "category": "家人",
+    "difficulty": "advanced",
+    "speechText": "黑",
+    "audioKey": "char-324",
+    "primarySymbol": "ㄝ"
+  },
+  {
+    "id": "char-325",
+    "han": "白",
+    "zhuyin": [
+      "ㄞ",
+      "ˋ"
+    ],
+    "word": "白",
+    "wordCharacters": [
+      {
+        "han": "白",
+        "zhuyin": [
+          "ㄞ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "❤️",
+    "category": "身體",
+    "difficulty": "advanced",
+    "speechText": "白",
+    "audioKey": "char-325",
+    "primarySymbol": "ㄞ"
+  },
+  {
+    "id": "char-326",
+    "han": "一",
+    "zhuyin": [
+      "ㄅ",
+      "ㄟ"
+    ],
+    "word": "一",
+    "wordCharacters": [
+      {
+        "han": "一",
+        "zhuyin": [
+          "ㄅ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🥤",
+    "category": "動物",
+    "difficulty": "advanced",
+    "speechText": "一",
+    "audioKey": "char-326",
+    "primarySymbol": "ㄟ"
+  },
+  {
+    "id": "char-327",
+    "han": "二",
+    "zhuyin": [
+      "ㄠ"
+    ],
+    "word": "二",
+    "wordCharacters": [
+      {
+        "han": "二",
+        "zhuyin": [
+          "ㄠ"
+        ]
+      }
+    ],
+    "emoji": "🕳️",
+    "category": "水果",
+    "difficulty": "advanced",
+    "speechText": "二",
+    "audioKey": "char-327",
+    "primarySymbol": "ㄠ"
+  },
+  {
+    "id": "char-328",
+    "han": "三",
+    "zhuyin": [
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "三",
+    "wordCharacters": [
+      {
+        "han": "三",
+        "zhuyin": [
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🪷",
+    "category": "食物",
+    "difficulty": "advanced",
+    "speechText": "三",
+    "audioKey": "char-328",
+    "primarySymbol": "ㄡ"
+  },
+  {
+    "id": "char-329",
+    "han": "四",
+    "zhuyin": [
+      "ㄢ"
+    ],
+    "word": "四",
+    "wordCharacters": [
+      {
+        "han": "四",
+        "zhuyin": [
+          "ㄢ"
+        ]
+      }
+    ],
+    "emoji": "🛏️",
+    "category": "顏色",
+    "difficulty": "advanced",
+    "speechText": "四",
+    "audioKey": "char-329",
+    "primarySymbol": "ㄢ"
+  },
+  {
+    "id": "char-330",
+    "han": "五",
+    "zhuyin": [
+      "ㄣ"
+    ],
+    "word": "五",
+    "wordCharacters": [
+      {
+        "han": "五",
+        "zhuyin": [
+          "ㄣ"
+        ]
+      }
+    ],
+    "emoji": "🙏",
+    "category": "數字",
+    "difficulty": "advanced",
+    "speechText": "五",
+    "audioKey": "char-330",
+    "primarySymbol": "ㄣ"
+  },
+  {
+    "id": "char-331",
+    "han": "六",
+    "zhuyin": [
+      "ㄧ",
+      "ㄤ",
+      "ˊ"
+    ],
+    "word": "六",
+    "wordCharacters": [
+      {
+        "han": "六",
+        "zhuyin": [
+          "ㄧ",
+          "ㄤ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐑",
+    "category": "學校",
+    "difficulty": "advanced",
+    "speechText": "六",
+    "audioKey": "char-331",
+    "primarySymbol": "ㄤ"
+  },
+  {
+    "id": "char-332",
+    "han": "七",
+    "zhuyin": [
+      "ㄈ",
+      "ㄥ"
+    ],
+    "word": "七",
+    "wordCharacters": [
+      {
+        "han": "七",
+        "zhuyin": [
+          "ㄈ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "🌬️",
+    "category": "日用品",
+    "difficulty": "advanced",
+    "speechText": "七",
+    "audioKey": "char-332",
+    "primarySymbol": "ㄥ"
+  },
+  {
+    "id": "char-333",
+    "han": "八",
+    "zhuyin": [
+      "ㄦ",
+      "ˊ"
+    ],
+    "word": "八",
+    "wordCharacters": [
+      {
+        "han": "八",
+        "zhuyin": [
+          "ㄦ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🧒",
+    "category": "交通工具",
+    "difficulty": "advanced",
+    "speechText": "八",
+    "audioKey": "char-333",
+    "primarySymbol": "ㄦ"
+  },
+  {
+    "id": "char-334",
+    "han": "九",
+    "zhuyin": [
+      "ㄅ",
+      "ㄚ",
+      "ˋ"
+    ],
+    "word": "九",
+    "wordCharacters": [
+      {
+        "han": "九",
+        "zhuyin": [
+          "ㄅ",
+          "ㄚ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "👨",
+    "category": "自然",
+    "difficulty": "advanced",
+    "speechText": "九",
+    "audioKey": "char-334",
+    "primarySymbol": "ㄅ"
+  },
+  {
+    "id": "char-335",
+    "han": "十",
+    "zhuyin": [
+      "ㄆ",
+      "ㄠ",
+      "ˋ"
+    ],
+    "word": "十",
+    "wordCharacters": [
+      {
+        "han": "十",
+        "zhuyin": [
+          "ㄆ",
+          "ㄠ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🫧",
+    "category": "動作",
+    "difficulty": "advanced",
+    "speechText": "十",
+    "audioKey": "char-335",
+    "primarySymbol": "ㄆ"
+  },
+  {
+    "id": "char-336",
+    "han": "百",
+    "zhuyin": [
+      "ㄇ",
+      "ㄚ",
+      "ˇ"
+    ],
+    "word": "百",
+    "wordCharacters": [
+      {
+        "han": "百",
+        "zhuyin": [
+          "ㄇ",
+          "ㄚ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐴",
+    "category": "情緒",
+    "difficulty": "advanced",
+    "speechText": "百",
+    "audioKey": "char-336",
+    "primarySymbol": "ㄇ"
+  },
+  {
+    "id": "char-337",
+    "han": "書",
+    "zhuyin": [
+      "ㄈ",
+      "ㄟ"
+    ],
+    "word": "書",
+    "wordCharacters": [
+      {
+        "han": "書",
+        "zhuyin": [
+          "ㄈ",
+          "ㄟ"
+        ]
+      }
+    ],
+    "emoji": "🪽",
+    "category": "時間",
+    "difficulty": "advanced",
+    "speechText": "書",
+    "audioKey": "char-337",
+    "primarySymbol": "ㄈ"
+  },
+  {
+    "id": "char-338",
+    "han": "筆",
+    "zhuyin": [
+      "ㄉ",
+      "ㄥ"
+    ],
+    "word": "筆",
+    "wordCharacters": [
+      {
+        "han": "筆",
+        "zhuyin": [
+          "ㄉ",
+          "ㄥ"
+        ]
+      }
+    ],
+    "emoji": "💡",
+    "category": "地點",
+    "difficulty": "advanced",
+    "speechText": "筆",
+    "audioKey": "char-338",
+    "primarySymbol": "ㄉ"
+  },
+  {
+    "id": "char-339",
+    "han": "紙",
+    "zhuyin": [
+      "ㄊ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "紙",
+    "wordCharacters": [
+      {
+        "han": "紙",
+        "zhuyin": [
+          "ㄊ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🐰",
+    "category": "衣物",
+    "difficulty": "advanced",
+    "speechText": "紙",
+    "audioKey": "char-339",
+    "primarySymbol": "ㄊ"
+  },
+  {
+    "id": "char-340",
+    "han": "桌",
+    "zhuyin": [
+      "ㄋ",
+      "ㄧ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "桌",
+    "wordCharacters": [
+      {
+        "han": "桌",
+        "zhuyin": [
+          "ㄋ",
+          "ㄧ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐦",
+    "category": "家中用品",
+    "difficulty": "advanced",
+    "speechText": "桌",
+    "audioKey": "char-340",
+    "primarySymbol": "ㄋ"
+  },
+  {
+    "id": "char-341",
+    "han": "椅",
+    "zhuyin": [
+      "ㄌ",
+      "ㄨ",
+      "ˋ"
+    ],
+    "word": "椅",
+    "wordCharacters": [
+      {
+        "han": "椅",
+        "zhuyin": [
+          "ㄌ",
+          "ㄨ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🦌",
+    "category": "家人",
+    "difficulty": "advanced",
+    "speechText": "椅",
+    "audioKey": "char-341",
+    "primarySymbol": "ㄌ"
+  },
+  {
+    "id": "char-342",
+    "han": "包",
+    "zhuyin": [
+      "ㄍ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "包",
+    "wordCharacters": [
+      {
+        "han": "包",
+        "zhuyin": [
+          "ㄍ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🐶",
+    "category": "身體",
+    "difficulty": "advanced",
+    "speechText": "包",
+    "audioKey": "char-342",
+    "primarySymbol": "ㄍ"
+  },
+  {
+    "id": "char-343",
+    "han": "球",
+    "zhuyin": [
+      "ㄎ",
+      "ㄡ",
+      "ˇ"
+    ],
+    "word": "球",
+    "wordCharacters": [
+      {
+        "han": "球",
+        "zhuyin": [
+          "ㄎ",
+          "ㄡ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "👄",
+    "category": "動物",
+    "difficulty": "advanced",
+    "speechText": "球",
+    "audioKey": "char-343",
+    "primarySymbol": "ㄎ"
+  },
+  {
+    "id": "char-344",
+    "han": "車",
+    "zhuyin": [
+      "ㄏ",
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "車",
+    "wordCharacters": [
+      {
+        "han": "車",
+        "zhuyin": [
+          "ㄏ",
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🏞️",
+    "category": "水果",
+    "difficulty": "advanced",
+    "speechText": "車",
+    "audioKey": "char-344",
+    "primarySymbol": "ㄏ"
+  },
+  {
+    "id": "char-345",
+    "han": "船",
+    "zhuyin": [
+      "ㄐ",
+      "ㄧ"
+    ],
+    "word": "船",
+    "wordCharacters": [
+      {
+        "han": "船",
+        "zhuyin": [
+          "ㄐ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🐔",
+    "category": "食物",
+    "difficulty": "advanced",
+    "speechText": "船",
+    "audioKey": "char-345",
+    "primarySymbol": "ㄐ"
+  },
+  {
+    "id": "char-346",
+    "han": "門",
+    "zhuyin": [
+      "ㄑ",
+      "ㄧ",
+      "ˊ"
+    ],
+    "word": "門",
+    "wordCharacters": [
+      {
+        "han": "門",
+        "zhuyin": [
+          "ㄑ",
+          "ㄧ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🚩",
+    "category": "顏色",
+    "difficulty": "advanced",
+    "speechText": "門",
+    "audioKey": "char-346",
+    "primarySymbol": "ㄑ"
+  },
+  {
+    "id": "char-347",
+    "han": "窗",
+    "zhuyin": [
+      "ㄒ",
+      "ㄧ"
+    ],
+    "word": "窗",
+    "wordCharacters": [
+      {
+        "han": "窗",
+        "zhuyin": [
+          "ㄒ",
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "🌅",
+    "category": "數字",
+    "difficulty": "advanced",
+    "speechText": "窗",
+    "audioKey": "char-347",
+    "primarySymbol": "ㄒ"
+  },
+  {
+    "id": "char-348",
+    "han": "山",
+    "zhuyin": [
+      "ㄓ",
+      "ㄨ",
+      "ˊ"
+    ],
+    "word": "山",
+    "wordCharacters": [
+      {
+        "han": "山",
+        "zhuyin": [
+          "ㄓ",
+          "ㄨ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🎋",
+    "category": "學校",
+    "difficulty": "advanced",
+    "speechText": "山",
+    "audioKey": "char-348",
+    "primarySymbol": "ㄓ"
+  },
+  {
+    "id": "char-349",
+    "han": "河",
+    "zhuyin": [
+      "ㄔ",
+      "ㄜ"
+    ],
+    "word": "河",
+    "wordCharacters": [
+      {
+        "han": "河",
+        "zhuyin": [
+          "ㄔ",
+          "ㄜ"
+        ]
+      }
+    ],
+    "emoji": "🚗",
+    "category": "日用品",
+    "difficulty": "advanced",
+    "speechText": "河",
+    "audioKey": "char-349",
+    "primarySymbol": "ㄔ"
+  },
+  {
+    "id": "char-350",
+    "han": "海",
+    "zhuyin": [
+      "ㄕ",
+      "ㄨ"
+    ],
+    "word": "海",
+    "wordCharacters": [
+      {
+        "han": "海",
+        "zhuyin": [
+          "ㄕ",
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "📖",
+    "category": "交通工具",
+    "difficulty": "advanced",
+    "speechText": "海",
+    "audioKey": "char-350",
+    "primarySymbol": "ㄕ"
+  },
+  {
+    "id": "char-351",
+    "han": "天",
+    "zhuyin": [
+      "ㄖ",
+      "ˋ"
+    ],
+    "word": "天",
+    "wordCharacters": [
+      {
+        "han": "天",
+        "zhuyin": [
+          "ㄖ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "☀️",
+    "category": "自然",
+    "difficulty": "advanced",
+    "speechText": "天",
+    "audioKey": "char-351",
+    "primarySymbol": "ㄖ"
+  },
+  {
+    "id": "char-352",
+    "han": "日",
+    "zhuyin": [
+      "ㄗ",
+      "ˋ"
+    ],
+    "word": "日",
+    "wordCharacters": [
+      {
+        "han": "日",
+        "zhuyin": [
+          "ㄗ",
+          "ˋ"
+        ]
+      }
+    ],
+    "emoji": "🔤",
+    "category": "動作",
+    "difficulty": "advanced",
+    "speechText": "日",
+    "audioKey": "char-352",
+    "primarySymbol": "ㄗ"
+  },
+  {
+    "id": "char-353",
+    "han": "月",
+    "zhuyin": [
+      "ㄘ",
+      "ㄠ",
+      "ˇ"
+    ],
+    "word": "月",
+    "wordCharacters": [
+      {
+        "han": "月",
+        "zhuyin": [
+          "ㄘ",
+          "ㄠ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "🌱",
+    "category": "情緒",
+    "difficulty": "advanced",
+    "speechText": "月",
+    "audioKey": "char-353",
+    "primarySymbol": "ㄘ"
+  },
+  {
+    "id": "char-354",
+    "han": "星",
+    "zhuyin": [
+      "ㄙ",
+      "ㄢ",
+      "ˇ"
+    ],
+    "word": "星",
+    "wordCharacters": [
+      {
+        "han": "星",
+        "zhuyin": [
+          "ㄙ",
+          "ㄢ",
+          "ˇ"
+        ]
+      }
+    ],
+    "emoji": "☂️",
+    "category": "時間",
+    "difficulty": "advanced",
+    "speechText": "星",
+    "audioKey": "char-354",
+    "primarySymbol": "ㄙ"
+  },
+  {
+    "id": "char-355",
+    "han": "雲",
+    "zhuyin": [
+      "ㄧ"
+    ],
+    "word": "雲",
+    "wordCharacters": [
+      {
+        "han": "雲",
+        "zhuyin": [
+          "ㄧ"
+        ]
+      }
+    ],
+    "emoji": "👕",
+    "category": "地點",
+    "difficulty": "advanced",
+    "speechText": "雲",
+    "audioKey": "char-355",
+    "primarySymbol": "ㄧ"
+  },
+  {
+    "id": "char-356",
+    "han": "雨",
+    "zhuyin": [
+      "ㄨ"
+    ],
+    "word": "雨",
+    "wordCharacters": [
+      {
+        "han": "雨",
+        "zhuyin": [
+          "ㄨ"
+        ]
+      }
+    ],
+    "emoji": "🏠",
+    "category": "衣物",
+    "difficulty": "advanced",
+    "speechText": "雨",
+    "audioKey": "char-356",
+    "primarySymbol": "ㄨ"
+  },
+  {
+    "id": "char-357",
+    "han": "風",
+    "zhuyin": [
+      "ㄩ",
+      "ˊ"
+    ],
+    "word": "風",
+    "wordCharacters": [
+      {
+        "han": "風",
+        "zhuyin": [
+          "ㄩ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🐟",
+    "category": "家中用品",
+    "difficulty": "advanced",
+    "speechText": "風",
+    "audioKey": "char-357",
+    "primarySymbol": "ㄩ"
+  },
+  {
+    "id": "char-358",
+    "han": "花",
+    "zhuyin": [
+      "ㄧ",
+      "ㄚ"
+    ],
+    "word": "花",
+    "wordCharacters": [
+      {
+        "han": "花",
+        "zhuyin": [
+          "ㄧ",
+          "ㄚ"
+        ]
+      }
+    ],
+    "emoji": "🦆",
+    "category": "家人",
+    "difficulty": "advanced",
+    "speechText": "花",
+    "audioKey": "char-358",
+    "primarySymbol": "ㄚ"
+  },
+  {
+    "id": "char-359",
+    "han": "草",
+    "zhuyin": [
+      "ㄛ"
+    ],
+    "word": "草",
+    "wordCharacters": [
+      {
+        "han": "草",
+        "zhuyin": [
+          "ㄛ"
+        ]
+      }
+    ],
+    "emoji": "⭕",
+    "category": "身體",
+    "difficulty": "advanced",
+    "speechText": "草",
+    "audioKey": "char-359",
+    "primarySymbol": "ㄛ"
+  },
+  {
+    "id": "char-360",
+    "han": "樹",
+    "zhuyin": [
+      "ㄜ",
+      "ˊ"
+    ],
+    "word": "樹",
+    "wordCharacters": [
+      {
+        "han": "樹",
+        "zhuyin": [
+          "ㄜ",
+          "ˊ"
+        ]
+      }
+    ],
+    "emoji": "🪿",
+    "category": "動物",
+    "difficulty": "advanced",
+    "speechText": "樹",
+    "audioKey": "char-360",
+    "primarySymbol": "ㄜ"
+  }
+]

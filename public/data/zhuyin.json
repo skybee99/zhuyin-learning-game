@@ -1,0 +1,483 @@
+[
+  {
+    "symbol": "ㄅ",
+    "systemSpeechText": "ㄅ",
+    "group": "聲母一",
+    "exampleWord": "爸",
+    "exampleZhuyin": "ㄅㄚˋ",
+    "emoji": "👨",
+    "audioKey": "ㄅ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3105.mp3"
+    }
+  },
+  {
+    "symbol": "ㄆ",
+    "systemSpeechText": "ㄆ",
+    "group": "聲母一",
+    "exampleWord": "泡",
+    "exampleZhuyin": "ㄆㄠˋ",
+    "emoji": "🫧",
+    "audioKey": "ㄆ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3106.mp3"
+    }
+  },
+  {
+    "symbol": "ㄇ",
+    "systemSpeechText": "ㄇ",
+    "group": "聲母一",
+    "exampleWord": "馬",
+    "exampleZhuyin": "ㄇㄚˇ",
+    "emoji": "🐴",
+    "audioKey": "ㄇ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3107.mp3"
+    }
+  },
+  {
+    "symbol": "ㄈ",
+    "systemSpeechText": "ㄈ",
+    "group": "聲母一",
+    "exampleWord": "飛",
+    "exampleZhuyin": "ㄈㄟ",
+    "emoji": "🪽",
+    "audioKey": "ㄈ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3108.mp3"
+    }
+  },
+  {
+    "symbol": "ㄉ",
+    "systemSpeechText": "ㄉ",
+    "group": "聲母一",
+    "exampleWord": "燈",
+    "exampleZhuyin": "ㄉㄥ",
+    "emoji": "💡",
+    "audioKey": "ㄉ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3109.mp3"
+    }
+  },
+  {
+    "symbol": "ㄊ",
+    "systemSpeechText": "ㄊ",
+    "group": "聲母一",
+    "exampleWord": "兔",
+    "exampleZhuyin": "ㄊㄨˋ",
+    "emoji": "🐰",
+    "audioKey": "ㄊ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/310a.mp3"
+    }
+  },
+  {
+    "symbol": "ㄋ",
+    "systemSpeechText": "ㄋ",
+    "group": "聲母一",
+    "exampleWord": "鳥",
+    "exampleZhuyin": "ㄋㄧㄠˇ",
+    "emoji": "🐦",
+    "audioKey": "ㄋ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/310b.mp3"
+    }
+  },
+  {
+    "symbol": "ㄌ",
+    "systemSpeechText": "ㄌ",
+    "group": "聲母一",
+    "exampleWord": "鹿",
+    "exampleZhuyin": "ㄌㄨˋ",
+    "emoji": "🦌",
+    "audioKey": "ㄌ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/310c.mp3"
+    }
+  },
+  {
+    "symbol": "ㄍ",
+    "systemSpeechText": "ㄍ",
+    "group": "聲母二",
+    "exampleWord": "狗",
+    "exampleZhuyin": "ㄍㄡˇ",
+    "emoji": "🐶",
+    "audioKey": "ㄍ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/310d.mp3"
+    }
+  },
+  {
+    "symbol": "ㄎ",
+    "systemSpeechText": "ㄎ",
+    "group": "聲母二",
+    "exampleWord": "口",
+    "exampleZhuyin": "ㄎㄡˇ",
+    "emoji": "👄",
+    "audioKey": "ㄎ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/310e.mp3"
+    }
+  },
+  {
+    "symbol": "ㄏ",
+    "systemSpeechText": "ㄏ",
+    "group": "聲母二",
+    "exampleWord": "河",
+    "exampleZhuyin": "ㄏㄜˊ",
+    "emoji": "🏞️",
+    "audioKey": "ㄏ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/310f.mp3"
+    }
+  },
+  {
+    "symbol": "ㄐ",
+    "systemSpeechText": "ㄐ",
+    "group": "聲母二",
+    "exampleWord": "雞",
+    "exampleZhuyin": "ㄐㄧ",
+    "emoji": "🐔",
+    "audioKey": "ㄐ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3110.mp3"
+    }
+  },
+  {
+    "symbol": "ㄑ",
+    "systemSpeechText": "ㄑ",
+    "group": "聲母二",
+    "exampleWord": "旗",
+    "exampleZhuyin": "ㄑㄧˊ",
+    "emoji": "🚩",
+    "audioKey": "ㄑ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3111.mp3"
+    }
+  },
+  {
+    "symbol": "ㄒ",
+    "systemSpeechText": "ㄒ",
+    "group": "聲母二",
+    "exampleWord": "西",
+    "exampleZhuyin": "ㄒㄧ",
+    "emoji": "🌅",
+    "audioKey": "ㄒ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3112.mp3"
+    }
+  },
+  {
+    "symbol": "ㄓ",
+    "systemSpeechText": "ㄓ",
+    "group": "聲母二",
+    "exampleWord": "竹",
+    "exampleZhuyin": "ㄓㄨˊ",
+    "emoji": "🎋",
+    "audioKey": "ㄓ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3113.mp3"
+    }
+  },
+  {
+    "symbol": "ㄔ",
+    "systemSpeechText": "ㄔ",
+    "group": "聲母二",
+    "exampleWord": "車",
+    "exampleZhuyin": "ㄔㄜ",
+    "emoji": "🚗",
+    "audioKey": "ㄔ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3114.mp3"
+    }
+  },
+  {
+    "symbol": "ㄕ",
+    "systemSpeechText": "ㄕ",
+    "group": "聲母二",
+    "exampleWord": "書",
+    "exampleZhuyin": "ㄕㄨ",
+    "emoji": "📖",
+    "audioKey": "ㄕ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3115.mp3"
+    }
+  },
+  {
+    "symbol": "ㄖ",
+    "systemSpeechText": "ㄖ",
+    "group": "聲母二",
+    "exampleWord": "日",
+    "exampleZhuyin": "ㄖˋ",
+    "emoji": "☀️",
+    "audioKey": "ㄖ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3116.mp3"
+    }
+  },
+  {
+    "symbol": "ㄗ",
+    "systemSpeechText": "ㄗ",
+    "group": "聲母二",
+    "exampleWord": "字",
+    "exampleZhuyin": "ㄗˋ",
+    "emoji": "🔤",
+    "audioKey": "ㄗ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3117.mp3"
+    }
+  },
+  {
+    "symbol": "ㄘ",
+    "systemSpeechText": "ㄘ",
+    "group": "聲母二",
+    "exampleWord": "草",
+    "exampleZhuyin": "ㄘㄠˇ",
+    "emoji": "🌱",
+    "audioKey": "ㄘ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3118.mp3"
+    }
+  },
+  {
+    "symbol": "ㄙ",
+    "systemSpeechText": "ㄙ",
+    "group": "聲母二",
+    "exampleWord": "傘",
+    "exampleZhuyin": "ㄙㄢˇ",
+    "emoji": "☂️",
+    "audioKey": "ㄙ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3119.mp3"
+    }
+  },
+  {
+    "symbol": "ㄧ",
+    "systemSpeechText": "ㄧ",
+    "group": "結合韻",
+    "exampleWord": "衣",
+    "exampleZhuyin": "ㄧ",
+    "emoji": "👕",
+    "audioKey": "ㄧ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3127.mp3"
+    }
+  },
+  {
+    "symbol": "ㄨ",
+    "systemSpeechText": "ㄨ",
+    "group": "結合韻",
+    "exampleWord": "屋",
+    "exampleZhuyin": "ㄨ",
+    "emoji": "🏠",
+    "audioKey": "ㄨ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3128.mp3"
+    }
+  },
+  {
+    "symbol": "ㄩ",
+    "systemSpeechText": "ㄩ",
+    "group": "結合韻",
+    "exampleWord": "魚",
+    "exampleZhuyin": "ㄩˊ",
+    "emoji": "🐟",
+    "audioKey": "ㄩ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3129.mp3"
+    }
+  },
+  {
+    "symbol": "ㄚ",
+    "systemSpeechText": "ㄚ",
+    "group": "韻母一",
+    "exampleWord": "鴨",
+    "exampleZhuyin": "ㄧㄚ",
+    "emoji": "🦆",
+    "audioKey": "ㄚ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/311a.mp3"
+    }
+  },
+  {
+    "symbol": "ㄛ",
+    "systemSpeechText": "ㄛ",
+    "group": "韻母一",
+    "exampleWord": "喔",
+    "exampleZhuyin": "ㄛ",
+    "emoji": "⭕",
+    "audioKey": "ㄛ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/311b.mp3"
+    }
+  },
+  {
+    "symbol": "ㄜ",
+    "systemSpeechText": "ㄜ",
+    "group": "韻母一",
+    "exampleWord": "鵝",
+    "exampleZhuyin": "ㄜˊ",
+    "emoji": "🪿",
+    "audioKey": "ㄜ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/311c.mp3"
+    }
+  },
+  {
+    "symbol": "ㄝ",
+    "systemSpeechText": "ㄝ",
+    "group": "韻母一",
+    "exampleWord": "欸",
+    "exampleZhuyin": "ㄝ",
+    "emoji": "🙋",
+    "audioKey": "ㄝ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/311d.mp3"
+    }
+  },
+  {
+    "symbol": "ㄞ",
+    "systemSpeechText": "ㄞ",
+    "group": "韻母一",
+    "exampleWord": "愛",
+    "exampleZhuyin": "ㄞˋ",
+    "emoji": "❤️",
+    "audioKey": "ㄞ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/311e.mp3"
+    }
+  },
+  {
+    "symbol": "ㄟ",
+    "systemSpeechText": "ㄟ",
+    "group": "韻母一",
+    "exampleWord": "杯",
+    "exampleZhuyin": "ㄅㄟ",
+    "emoji": "🥤",
+    "audioKey": "ㄟ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/311f.mp3"
+    }
+  },
+  {
+    "symbol": "ㄠ",
+    "systemSpeechText": "ㄠ",
+    "group": "韻母一",
+    "exampleWord": "凹",
+    "exampleZhuyin": "ㄠ",
+    "emoji": "🕳️",
+    "audioKey": "ㄠ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3120.mp3"
+    }
+  },
+  {
+    "symbol": "ㄡ",
+    "systemSpeechText": "ㄡ",
+    "group": "韻母一",
+    "exampleWord": "藕",
+    "exampleZhuyin": "ㄡˇ",
+    "emoji": "🪷",
+    "audioKey": "ㄡ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3121.mp3"
+    }
+  },
+  {
+    "symbol": "ㄢ",
+    "systemSpeechText": "ㄢ",
+    "group": "韻母二",
+    "exampleWord": "安",
+    "exampleZhuyin": "ㄢ",
+    "emoji": "🛏️",
+    "audioKey": "ㄢ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3122.mp3"
+    }
+  },
+  {
+    "symbol": "ㄣ",
+    "systemSpeechText": "ㄣ",
+    "group": "韻母二",
+    "exampleWord": "恩",
+    "exampleZhuyin": "ㄣ",
+    "emoji": "🙏",
+    "audioKey": "ㄣ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3123.mp3"
+    }
+  },
+  {
+    "symbol": "ㄤ",
+    "systemSpeechText": "ㄤ",
+    "group": "韻母二",
+    "exampleWord": "羊",
+    "exampleZhuyin": "ㄧㄤˊ",
+    "emoji": "🐑",
+    "audioKey": "ㄤ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3124.mp3"
+    }
+  },
+  {
+    "symbol": "ㄥ",
+    "systemSpeechText": "ㄥ",
+    "group": "韻母二",
+    "exampleWord": "風",
+    "exampleZhuyin": "ㄈㄥ",
+    "emoji": "🌬️",
+    "audioKey": "ㄥ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3125.mp3"
+    }
+  },
+  {
+    "symbol": "ㄦ",
+    "systemSpeechText": "ㄦ",
+    "group": "韻母二",
+    "exampleWord": "兒",
+    "exampleZhuyin": "ㄦˊ",
+    "emoji": "🧒",
+    "audioKey": "ㄦ",
+    "recording": {
+      "status": "planned",
+      "path": "assets/audio/3126.mp3"
+    }
+  }
+]

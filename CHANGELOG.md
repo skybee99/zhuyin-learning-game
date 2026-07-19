@@ -1,28 +1,29 @@
-# CHANGELOG.md
-
-## V1.1.0 - 2026-07-19 13:49 Asia/Ho_Chi_Minh
-
-### GitHub metadata correction
-
-- PR #4 Cloudflare 部署安全修正：Merged；Head `codex/-cloudflare-workers`；Base `main`。
-- PR #4 程式 Commit：`85f83e9f7d5f4fe477ab21042581df67ca77cf42`。
-- PR #4 Merge Commit：`60217f8293424eae8f64d663a845b21b3a5266d9`。
-- PR #4 GitHub Actions：Validate PWA；Workflow Run #8；結果 success。
-- PR #5 V1.1.0 功能更新：Merged；Head `codex/update-zhuyin-learning-game-features-and-metadata`；Base `main`。
-- PR #5 標題：`feat: improve zhuyin fonts, audio, grouping, ruby annotations and PWA versioning (V1.1.0)`。
-- PR #5 程式 Commit：`f7297d43c575061d681971df844df298265d80e2`。
-- PR #5 Merge Commit：`12dc2e204f17e48358f6da8e9a23b27339048c22`。
-- PR #5 合併時間：`2026-07-19T07:05:02Z`。
+## V1.2.0 - 2026-07-19 16:00 Asia/Ho_Chi_Minh
 
 ### Added
 
-- 新增 App 統一版本資訊 `V1.1.0`、修改時間與時區。
-- 新增注音分組瀏覽、回上面、拼一拼、初級／進階與聲調練習。
-- 新增兒童主要文字 ruby 注音、點讀與估算逐字高亮。
-- 新增家長模式注音顯示、聲音、音量與難度等 localStorage 設定。
+- 新增三位小孩獨立學習檔案：林芳伃 Lisa、林彥宇 Jack、林子齊 Kyky。
+- 新增第一次進入的「你是誰？」選擇畫面與換人功能。
+- 新增 `STORAGE_SCHEMA_VERSION = 2`，將 V1.1.0 單一資料一次遷移到 Lisa。
+- 新增「認識注音」功能，完整列出 37 個注音符號。
+- 新增 `playZhuyinSound(symbol)` 與 `playWordSound(word)`，注音本身與例字發音分離。
+- 新增 `BUTTON_SPEECH` 與 `speakThenRun()`，兒童主要按鈕點擊後朗讀功能名稱。
+- 新增答錯後的再試一次、返回、回首頁操作。
+- 新增 `public/data/` JSON 字庫：37 注音、360 國字、240 詞語、17 分類。
 
 ### Changed
 
-- 修正 iPhone／iPad Safari 注音字型，注音符號改用 `.zhuyin-symbol`，避免 900 超粗、傾斜、旋轉或 Emoji 字型影響。
-- 37 個注音資料補齊 group、sampleWord、sampleZhuyin、emoji、audio 欄位。
-- Service Worker cache 更新為 `zhuyin-bee-v1-1-0`，核心快取不包含不存在 MP3。
+- App 版本更新為 `V1.2.0`，修改時間 `2026-07-19 16:00`，時區 `Asia/Ho_Chi_Minh`。
+- 語音策略改為 `AUDIO_MODE = system`；正式版本全部使用系統語音。
+- 保留 audio manifest、audioKey 與預定錄音路徑，但不嘗試載入 missing MP3，不顯示錄音缺少或系統備援技術訊息給小孩。
+- 主要注音排版改為台灣課本式：國字右側逐字垂直注音。
+- 拼音答案卡改用 `.zhuyin-syllable-vertical`，避免 Safari 顯示成橫向拆散。
+- Service Worker cache 更新為 `zhuyin-bee-v1-2-0`。
+- Service Worker 不再預快取 `./`，導覽 request 使用 Network First，快取前排除 redirect、opaque、跨來源與非成功 response。
+
+### Known limitations
+
+- 尚未提供真人錄音檔。
+- 系統語音朗讀單一注音符號在不同 iOS 聲音下可能不穩定，需實體裝置逐一聽辨。
+- 尚未完成實體 iPhone／iPad Safari 人工驗收。
+- 尚未完成正式圖片素材、PNG icons 與精準逐字音訊同步。
