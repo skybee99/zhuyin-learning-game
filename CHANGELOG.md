@@ -4,11 +4,15 @@
 
 ### GitHub metadata correction
 
-- PR #4: Merged; Head `codex/-cloudflare-workers`; Base `main`.
-- 程式 Commit：`85f83e9f7d5f4fe477ab21042581df67ca77cf42`。
-- Merge Commit：`60217f8293424eae8f64d663a845b21b3a5266d9`。
-- GitHub Actions：Validate PWA；Workflow Run #8；結果 success。
-- 本次功能分支尚未合併，最終 Merge Commit 不適用。
+- PR #4 Cloudflare 部署安全修正：Merged；Head `codex/-cloudflare-workers`；Base `main`。
+- PR #4 程式 Commit：`85f83e9f7d5f4fe477ab21042581df67ca77cf42`。
+- PR #4 Merge Commit：`60217f8293424eae8f64d663a845b21b3a5266d9`。
+- PR #4 GitHub Actions：Validate PWA；Workflow Run #8；結果 success。
+- PR #5 V1.1.0 功能更新：Merged；Head `codex/update-zhuyin-learning-game-features-and-metadata`；Base `main`。
+- PR #5 標題：`feat: improve zhuyin fonts, audio, grouping, ruby annotations and PWA versioning (V1.1.0)`。
+- PR #5 程式 Commit：`f7297d43c575061d681971df844df298265d80e2`。
+- PR #5 Merge Commit：`12dc2e204f17e48358f6da8e9a23b27339048c22`。
+- PR #5 合併時間：`2026-07-19T07:05:02Z`。
 
 ### Added
 

@@ -12,11 +12,16 @@
 - Workflow Run：#8
 - 結果：success
 
-## 本次 V1.1.0 功能分支
+## 已完成並合併的 PR #5 V1.1.0 功能更新最終資料
 
-- 分支：`codex/zhuyin-learning-v1-1`
-- 本次功能分支尚未合併，最終 Merge Commit 不適用。
-- 本次新 PR 的編號、Commit SHA 與 Workflow Run 需以實際建立後的 GitHub 資料為準，且不可與 PR #4 混淆。
+- PR：#5
+- PR 狀態：Merged
+- PR 標題：`feat: improve zhuyin fonts, audio, grouping, ruby annotations and PWA versioning (V1.1.0)`
+- Head 分支：`codex/update-zhuyin-learning-game-features-and-metadata`
+- Base 分支：`main`
+- 程式 Commit：`f7297d43c575061d681971df844df298265d80e2`
+- Merge Commit：`12dc2e204f17e48358f6da8e9a23b27339048c22`
+- 合併時間：`2026-07-19T07:05:02Z`
 
 ## 修改摘要
 
