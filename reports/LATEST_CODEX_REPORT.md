@@ -1,50 +1,36 @@
 # 最新 Codex 專案報告
 
-## 已完成並合併的 PR #4 最終資料
+## V1.2.0 修改摘要
 
-- PR：#4
-- PR 狀態：Merged
-- Head 分支：`codex/-cloudflare-workers`
-- Base 分支：`main`
-- 程式 Commit：`85f83e9f7d5f4fe477ab21042581df67ca77cf42`
-- Merge Commit：`60217f8293424eae8f64d663a845b21b3a5266d9`
-- GitHub Actions：Validate PWA
-- Workflow Run：#8
-- 結果：success
-
-## 已完成並合併的 PR #5 V1.1.0 功能更新最終資料
-
-- PR：#5
-- PR 狀態：Merged
-- PR 標題：`feat: improve zhuyin fonts, audio, grouping, ruby annotations and PWA versioning (V1.1.0)`
-- Head 分支：`codex/update-zhuyin-learning-game-features-and-metadata`
-- Base 分支：`main`
-- 程式 Commit：`f7297d43c575061d681971df844df298265d80e2`
-- Merge Commit：`12dc2e204f17e48358f6da8e9a23b27339048c22`
-- 合併時間：`2026-07-19T07:05:02Z`
-
-## 修改摘要
-
-- 修正 Safari 注音符號字型：新增 `.zhuyin-symbol`，注音字重 600，不使用斜體、旋轉、直排或 Emoji 字型。
-- 補齊 37 個注音符號資料，每筆包含 group、sampleWord、sampleZhuyin、emoji、audio。
-- 注音卡改為五組分頁，避免手機一次顯示全部 37 張卡。
-- 新增兒童短文字介面、ruby 注音、點擊朗讀與估算逐字高亮。
-- 新增真人錄音優先與語音合成備援策略；技術錯誤只留在家長說明，不顯示給兒童。
-- 新增拼音與聲調練習第一版，含初級／進階設定。
-- 新增版本資訊：V1.1.0，2026-07-19 13:49，Asia/Ho_Chi_Minh。
-- 更新 Service Worker cache：`zhuyin-bee-v1-1-0`。
-- 維持 Cloudflare Workers Assets directory `./public`，不公開內部 Markdown、reports、tests、`.git` 或 `.wrangler`。
+- 版本更新：`V1.2.0`，修改時間 `2026-07-19 16:00`，時區 `Asia/Ho_Chi_Minh`。
+- 語音策略：正式固定 `AUDIO_MODE = system`，所有聲音走系統語音；真人錄音入口保留但日後加入。
+- 兒童檔案：新增 Lisa、Jack、Kyky 三位小孩獨立 profile 與換人。
+- Migration：V1.1.0 舊資料一次遷移到 Lisa，schema version 2。
+- 認識注音：新增 37 個注音符號瀏覽與注音本身播放。
+- 發音分離：`playZhuyinSound(symbol)` 播放注音本身，`playWordSound(word)` 播放例字或詞語。
+- 按鈕語音：兒童主要按鈕使用 `data-speech` 朗讀功能名稱。
+- 直排注音：新增 `.phonetic-word`、`.phonetic-char`、`.bopomofo-vertical` 與 `.zhuyin-syllable-vertical`。
+- 答錯操作：新增再試一次、返回、回首頁。
+- 字庫：37 注音、360 國字、240 詞語、17 分類，拆分於 `public/data/`。
+- Service Worker：更新 `zhuyin-bee-v1-2-0`，不預快取 `./`，不快取 redirect，導覽 Network First。
 
 ## 測試紀錄
 
 - `node --check public/src/app.js`：通過。
 - `node --check public/service-worker.js`：通過。
 - `node tests/validate-app.js`：通過。
-- 已完成程式與響應式檢查，但尚未完成實體裝置人工驗收。
+
+## 37 個注音系統語音狀態
+
+- 資料完整：37 / 37。
+- 程式路徑完整：每個符號使用 `systemSpeechText` 播放注音本身。
+- 未完成：尚未在實體 iPhone／iPad Safari 對 37 個單一注音逐一真人聽辨；不能宣稱所有系統語音發音精準。
 
 ## 尚未完成項目
 
-- 尚缺真人錄音檔。
-- 尚未實體 iPad／iPhone Safari 驗收。
-- 尚未完成正式圖片與 PNG icons。
-- 尚未完成精準逐字音訊同步。
+- 真人錄音日後加入。
+- 系統語音對部分單一注音可能不穩定。
+- 正式圖片素材。
+- PNG icons。
+- 精準逐字音訊同步。
+- 尚未完成實體裝置驗收。

@@ -1,11 +1,11 @@
 {
-  "version": "2026-07-19",
-  "description": "真人錄音檔清單。status=missing 表示尚未提供標準真人發音，App 會清楚標示並改用瀏覽器語音合成備援。",
+  "version": "2026-07-19-v1.2.0",
+  "description": "真人錄音檔清單保留未來入口。V1.2.0 正式模式固定 AUDIO_MODE=system，不嘗試載入 missing MP3。",
   "basePath": "assets/audio/",
   "fallback": {
     "type": "web-speech-api",
     "lang": "zh-TW",
-    "notice": "目前使用瀏覽器語音合成備援，不代表標準真人注音發音。"
+    "notice": "目前語音：系統語音；真人錄音日後加入。"
   },
   "items": {
     "ㄅ": {

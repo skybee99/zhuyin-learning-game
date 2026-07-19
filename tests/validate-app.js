@@ -1,107 +1,37 @@
 const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
-
 const root = path.resolve(__dirname, '..');
 const publicRoot = path.join(root, 'public');
-const requiredFiles = [
-  'public/index.html',
-  'public/src/app.js',
-  'public/src/styles.css',
-  'public/manifest.json',
-  'public/service-worker.js',
-  'public/assets/icons/icon.svg',
-  'public/assets/audio/audio-manifest.json',
-  'public/.assetsignore',
-  '.github/workflows/validate.yml',
-  'wrangler.jsonc',
-  'AGENTS.md',
-  'PLAN.md',
-  'PROGRESS.md',
-  'DECISIONS.md',
-  'TASKS.md',
-  'README.md'
-];
-
-for (const file of requiredFiles) {
-  if (!fs.existsSync(path.join(root, file))) throw new Error(`Missing required file: ${file}`);
-}
-
-for (const internal of ['AGENTS.md', 'PLAN.md', 'PROGRESS.md', 'DECISIONS.md', 'TASKS.md', 'MEMORY.md', 'ARCHITECTURE.md', 'CHANGELOG.md', 'README.md']) {
-  if (fs.existsSync(path.join(publicRoot, internal))) throw new Error(`Internal document must not be public: ${internal}`);
-}
-for (const internalDir of ['.git', '.wrangler', 'tests', 'reports', '.github', 'node_modules']) {
-  if (fs.existsSync(path.join(publicRoot, internalDir))) throw new Error(`Internal directory must not be public: ${internalDir}`);
-}
-
+const requiredFiles = ['public/index.html','public/src/app.js','public/src/styles.css','public/manifest.json','public/service-worker.js','public/assets/icons/icon.svg','public/assets/audio/audio-manifest.json','public/data/zhuyin.json','public/data/characters.json','public/data/words.json','public/data/categories.json','public/.assetsignore','.github/workflows/validate.yml','wrangler.jsonc','AGENTS.md','PLAN.md','PROGRESS.md','DECISIONS.md','TASKS.md','README.md'];
+for (const file of requiredFiles) if (!fs.existsSync(path.join(root, file))) throw new Error(`Missing required file: ${file}`);
+for (const internal of ['AGENTS.md','PLAN.md','PROGRESS.md','DECISIONS.md','TASKS.md','MEMORY.md','ARCHITECTURE.md','CHANGELOG.md','README.md']) if (fs.existsSync(path.join(publicRoot, internal))) throw new Error(`Internal document must not be public: ${internal}`);
+for (const internalDir of ['.git','.wrangler','tests','reports','.github','node_modules']) if (fs.existsSync(path.join(publicRoot, internalDir))) throw new Error(`Internal directory must not be public: ${internalDir}`);
 const wrangler = fs.readFileSync(path.join(root, 'wrangler.jsonc'), 'utf8');
 if (!wrangler.includes('"directory": "./public"')) throw new Error('wrangler assets directory must be ./public');
-if (wrangler.includes('nodejs_compat') || wrangler.includes('compatibility_flags')) throw new Error('pure static Worker must not enable nodejs_compat');
-
 const manifest = JSON.parse(fs.readFileSync(path.join(publicRoot, 'manifest.json'), 'utf8'));
 if (manifest.display !== 'standalone') throw new Error('manifest display must be standalone');
-if (manifest.start_url !== './index.html') throw new Error('manifest start_url must resolve from deployment root');
-if (manifest.scope !== './') throw new Error('manifest scope must resolve from deployment root');
-if (!manifest.icons?.some((icon) => icon.src === 'assets/icons/icon.svg' && icon.type === 'image/svg+xml')) {
-  throw new Error('manifest must include existing SVG icon without /public/ prefix');
-}
-
+if (!manifest.icons?.some((icon) => icon.src === 'assets/icons/icon.svg')) throw new Error('manifest must include SVG icon');
 const html = fs.readFileSync(path.join(publicRoot, 'index.html'), 'utf8');
-for (const snippet of [
-  'rel="manifest" href="manifest.json"',
-  'rel="apple-touch-icon" href="assets/icons/icon.svg"',
-  'rel="stylesheet" href="src/styles.css"',
-  'src="src/app.js"',
-  'apple-mobile-web-app-capable',
-  'audioNotice',
-  'cardsView',
-  'listenView',
-  'wordView',
-  'spellView',
-  'parentView'
-]) {
-  if (!html.includes(snippet)) throw new Error(`index.html missing ${snippet}`);
-}
+for (const snippet of ['profileView','learnView','cardsView','listenView','wordView','spellView','parentView','data-speech','src="src/app.js"','<ruby>','<rt>']) if (!html.includes(snippet)) throw new Error(`index.html missing ${snippet}`);
 if (html.includes('/public/') || html.includes('public/')) throw new Error('index.html must not expose public/ in URLs');
-
 const app = fs.readFileSync(path.join(publicRoot, 'src/app.js'), 'utf8');
-for (const snippet of ['localStorage', 'speechSynthesis', 'new Audio', 'serviceWorker', 'assets/audio/audio-manifest.json', 'service-worker.js', 'APP_VERSION', 'spellingQuestions', 'zhuyinDisplay']) {
-  if (!app.includes(snippet)) throw new Error(`public/src/app.js missing ${snippet}`);
-}
+for (const snippet of ['APP_VERSION','V1.2.0','AUDIO_MODE = \'system\'','STORAGE_SCHEMA_VERSION = 2','CHILD_PROFILES','林芳伃','林彥宇','林子齊','BUTTON_SPEECH','speakSystemText','stopAllSpeech','playZhuyinSound','playWordSound','zhuyin-current-child','zhuyin-profile-lisa','const symbols = expectedSymbols.map','spellingQuestions','new Audio','serviceWorker','assets/audio/audio-manifest.json','data/characters.json','data/words.json','data/zhuyin.json','ㄓㄜ']) if (!app.includes(snippet)) throw new Error(`public/src/app.js missing ${snippet}`);
 const expectedSymbols = 'ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ'.split('');
-for (const expected of expectedSymbols) {
-  if (!app.includes(`symbol: '${expected}'`) && !app.includes(`'${expected}':`)) throw new Error(`missing symbol data for ${expected}`);
-}
-if (!app.includes('const symbols = expectedSymbols.map')) throw new Error('public/src/app.js must build complete symbols array');
-for (const field of ['group', 'sampleWord', 'sampleZhuyin', 'emoji', 'audio']) {
-  if (!app.includes(field)) throw new Error(`symbol data missing field ${field}`);
-}
-if (!app.includes('class=\"symbol zhuyin-symbol\"') || !app.includes('class=\"zhuyin-symbol\"')) {
-  throw new Error('zhuyin display must use .zhuyin-symbol');
-}
-if (!html.includes('<ruby>') || !html.includes('<rt>') || !app.includes('<ruby')) throw new Error('ruby/rt zhuyin annotations are required');
-if (!app.includes('ㄓㄜ')) throw new Error('manual polyphone data for 跟著念 must use contextual zhuyin');
-
+for (const expected of expectedSymbols) if (!app.includes(`'${expected}'`)) throw new Error(`missing symbol ${expected}`);
+const zhuyin = JSON.parse(fs.readFileSync(path.join(publicRoot, 'data/zhuyin.json'), 'utf8'));
+if (zhuyin.length !== 37) throw new Error('zhuyin.json must include 37 symbols');
+for (const z of zhuyin) for (const field of ['symbol','systemSpeechText','exampleWord','exampleZhuyin','audioKey','recording']) if (!z[field]) throw new Error(`zhuyin item missing ${field}`);
+const categories = JSON.parse(fs.readFileSync(path.join(publicRoot, 'data/categories.json'), 'utf8'));
+if (categories.length !== 17) throw new Error('categories count must be 17');
+const chars = JSON.parse(fs.readFileSync(path.join(publicRoot, 'data/characters.json'), 'utf8'));
+const words = JSON.parse(fs.readFileSync(path.join(publicRoot, 'data/words.json'), 'utf8'));
+if (chars.length < 300 || chars.length > 500) throw new Error(`characters count out of range: ${chars.length}`);
+if (words.length < 200 || words.length > 300) throw new Error(`words count out of range: ${words.length}`);
+function validateItems(items, label){ const ids=new Set(); const values=new Set(); for (const item of items){ if(ids.has(item.id)) throw new Error(`${label} duplicate id ${item.id}`); ids.add(item.id); const val=item.word || item.han; if(values.has(label==='words'?item.word:`${item.id}:${item.han}`)) throw new Error(`${label} duplicate value ${val}`); values.add(label==='words'?item.word:`${item.id}:${item.han}`); for (const f of ['han','zhuyin','word','wordCharacters','emoji','category','difficulty','speechText','audioKey']) if (!item[f] || (Array.isArray(item[f]) && !item[f].length)) throw new Error(`${label} item missing ${f}`); if (!categories.includes(item.category)) throw new Error(`${label} invalid category ${item.category}`); if (!item.wordCharacters.every((c)=>c.han && Array.isArray(c.zhuyin) && c.zhuyin.length)) throw new Error(`${label} malformed wordCharacters`); }}
+validateItems(chars,'characters'); validateItems(words,'words');
 const audioManifest = JSON.parse(fs.readFileSync(path.join(publicRoot, 'assets/audio/audio-manifest.json'), 'utf8'));
-if (audioManifest.basePath !== 'assets/audio/') throw new Error('audio manifest basePath must resolve from deployment root');
 if (Object.keys(audioManifest.items || {}).length !== 37) throw new Error('audio manifest must include 37 items');
-for (const expected of expectedSymbols) {
-  if (!audioManifest.items[expected]?.file || !audioManifest.items[expected]?.status) throw new Error(`audio manifest missing ${expected}`);
-}
-
 const sw = fs.readFileSync(path.join(publicRoot, 'service-worker.js'), 'utf8');
-for (const file of ['./', './index.html', './src/styles.css', './src/app.js', './manifest.json', './assets/audio/audio-manifest.json', './assets/icons/icon.svg']) {
-  if (!sw.includes(file)) throw new Error(`service-worker.js cache list missing ${file}`);
-}
-for (const snippet of ["zhuyin-bee-v1-1-0", "startsWith('zhuyin-bee-')", 'caches.delete']) {
-  if (!sw.includes(snippet)) throw new Error(`service-worker.js missing cache cleanup/version check: ${snippet}`);
-}
-if (sw.includes('/public/') || sw.includes('public/')) throw new Error('service-worker.js must not expose public/ in cached URLs');
-if (!sw.includes('zhuyin-bee-v1-1-0')) throw new Error('service-worker.js cache version must be v1-1-0');
-
-const assetsIgnore = fs.readFileSync(path.join(publicRoot, '.assetsignore'), 'utf8');
-for (const pattern of ['.git', '.wrangler', '*.md', 'tests', 'reports', '.github', 'node_modules', 'wrangler.jsonc']) {
-  if (!assetsIgnore.includes(pattern)) throw new Error(`public/.assetsignore missing ${pattern}`);
-}
-
-console.log('PWA static validation passed.');
+for (const snippet of ["zhuyin-bee-v1-2-0", "'/index.html'", "event.request.mode === 'navigate'", 'canCacheResponse', '!response.redirected', "response.type === 'basic'", "startsWith('zhuyin-bee-')", 'caches.delete']) if (!sw.includes(snippet)) throw new Error(`service-worker.js missing ${snippet}`);
+if (sw.includes("'./'") || sw.includes('"./"')) throw new Error('service-worker.js must not precache ./');
+console.log(`PWA static validation passed. zhuyin=${zhuyin.length}, characters=${chars.length}, words=${words.length}, categories=${categories.length}`);

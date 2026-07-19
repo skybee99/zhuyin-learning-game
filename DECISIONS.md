@@ -1,25 +1,29 @@
-# DECISIONS.md
-
-## D010：注音符號使用專用字型 class
+## D014：V1.2.0 正式語音固定系統語音
 
 - 日期：2026-07-19
-- 決策：新增 `.zhuyin-symbol`，注音字重固定 600，禁止傾斜、旋轉、直排與超粗合成。
-- 原因：降低 iPhone Safari 使用替代字型或合成 900 字重造成的變形風險。
+- 決策：`AUDIO_MODE = system`，所有播放統一走 `speakSystemText()`。
+- 原因：目前沒有真人錄音檔，避免兒童等待 MP3 失敗或看見技術錯誤。
 
-## D011：37 個符號以五組呈現
-
-- 日期：2026-07-19
-- 決策：分成聲母一、聲母二、結合韻、韻母一、韻母二。
-- 原因：避免手機一次顯示 37 張大型卡片造成長頁面疲勞。
-
-## D012：點讀同步先採估算高亮
+## D015：保留真人錄音入口但不載入 missing MP3
 
 - 日期：2026-07-19
-- 決策：文字點讀時停止舊音訊並用合理分段時間逐字高亮。
-- 原因：尚無真人錄音逐字時間戳，不宣稱精準同步。
+- 決策：保留 audio manifest、audioKey 與 planned recording path；V1.2.0 不嘗試載入 missing MP3。
+- 原因：支援未來錄音替換，同時維持目前穩定體驗。
 
-## D013：版本資訊集中在 JavaScript 單一設定
+## D016：三位小孩獨立 profile
 
 - 日期：2026-07-19
-- 決策：使用 `APP_VERSION` 管理版本、修改時間與時區。
-- 原因：避免多處手動維護造成版本資訊不一致。
+- 決策：固定 Lisa、Jack、Kyky，使用 `zhuyin-profile-lisa`、`zhuyin-profile-jack`、`zhuyin-profile-kyky`。
+- 原因：避免兄弟姊妹共用星星、錯題與設定。
+
+## D017：台灣課本式直排注音元件
+
+- 日期：2026-07-19
+- 決策：不用一般橫排 ruby 作主顯示，改用 `.phonetic-word`、`.phonetic-char`、`.bopomofo-vertical`。
+- 原因：讓注音位於國字右側並由上往下，降低 Safari 字形錯位。
+
+## D018：Service Worker 不快取 redirect
+
+- 日期：2026-07-19
+- 決策：導覽 Network First，`canCacheResponse()` 排除 redirect、opaque、跨來源與非 ok response。
+- 原因：修正 iPhone Safari 可能出現的 service worker redirections 錯誤。

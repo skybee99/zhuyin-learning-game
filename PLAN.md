@@ -1,21 +1,19 @@
-# PLAN.md
+## V1.2.0 目標
 
-## V1.1.0 目標
-
-建立更適合 iPhone／iPad Safari 的兒童注音學習體驗：標準注音字型、完整 37 符號、分組卡片、點讀、聲音備援、拼音與聲調練習。
+建立三位小孩獨立學習檔案、全面系統語音、認識注音、台灣課本式直排注音與更大的本機字庫，並修正 Safari Service Worker redirect 快取問題。
 
 ## 設計原則
 
 - 使用 HTML、CSS、JavaScript，不加入框架。
-- 兒童介面以圖片、Emoji、符號與短文字優先，每個畫面只放一個主要任務。
-- 注音符號統一使用 `.zhuyin-symbol`，避免 `font-weight: 900`、斜體、旋轉、直排與 Emoji 字型混用。
-- 主要兒童中文使用人工確認 ruby／rt 注音，不自動猜多音字。
-- 聲音採真人錄音優先，缺檔或失敗時才用 `zh-TW` 語音合成備援。
-- 學習紀錄與設定只存在 localStorage，更新版本不得無故清空。
+- 兒童介面使用繁體中文、台灣常用注音、大按鈕與單指觸控。
+- V1.2.0 正式語音固定 `AUDIO_MODE = system`，所有注音、國字、詞語、按鈕與提示走 `speakSystemText()`。
+- 保留 `audio-manifest.json`、`audioKey` 與預定錄音路徑，但不嘗試載入不存在 MP3。
+- localStorage 以三位小孩獨立 key 保存，V1.1.0 舊資料一次遷移到 Lisa。
+- Service Worker 不預快取 `./`，導覽使用 Network First，不快取 redirect、opaque、跨來源或非成功回應。
 
 ## 後續版本方向
 
-- 補齊真人錄音檔並更新 audio manifest。
-- 擴充詞庫與題型，但避免第一畫面塞入過多難度。
-- 補正式 PNG PWA icon 與正式授權圖片素材。
-- 在實體 iPhone／iPad Safari 驗收離線、加入主畫面、安全區與音訊行為。
+- 補齊真人錄音檔並切換 `recorded`／`auto` 模式。
+- 製作正式圖片素材與 PNG PWA icons。
+- 在實體 iPhone／iPad Safari 驗收直排注音、離線、加入主畫面與音訊。
+- 補真人錄音逐字時間戳以支援精準同步。
