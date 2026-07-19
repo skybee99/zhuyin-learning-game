@@ -1,19 +1,19 @@
-## V1.2.0 目標
+## V1.3.0 目標
 
-建立三位小孩獨立學習檔案、全面系統語音、認識注音、台灣課本式直排注音與更大的本機字庫，並修正 Safari Service Worker redirect 快取問題。
+穩定 iOS / iPadOS Safari PWA、重製「拼一拼」清楚度與判定、放大兒童閱讀介面、建立家長字庫管理入口，並規劃 Cloudflare D1 永久字庫。
 
-## 設計原則
+## Phase 狀態
 
-- 使用 HTML、CSS、JavaScript，不加入框架。
-- 兒童介面使用繁體中文、台灣常用注音、大按鈕與單指觸控。
-- V1.2.0 正式語音固定 `AUDIO_MODE = system`，所有注音、國字、詞語、按鈕與提示走 `speakSystemText()`。
-- 保留 `audio-manifest.json`、`audioKey` 與預定錄音路徑，但不嘗試載入不存在 MP3。
-- localStorage 以三位小孩獨立 key 保存，V1.1.0 舊資料一次遷移到 Lisa。
-- Service Worker 不預快取 `./`，導覽使用 Network First，不快取 redirect、opaque、跨來源或非成功回應。
+- Phase 1 P0 穩定性：完成 Service Worker redirect 修正、獨立 `offline.html`、V1.3.0 cache、更新提示與家長快取修復。
+- Phase 2 P0 學習正確性：完成拼一拼固定題目結構、圖片/詞語/目標字/答案檢查、ID 判定、初級/進階區分與下一題顯示時機。
+- Phase 3 P1 可讀性與語音：完成主功能文字放大、注音答案元件、按鈕語音分類與家長入口靜音。
+- Phase 4 P1 字庫管理：完成家長模式本機字庫查看、搜尋入口、統計、手動新增、資料檢查、匯出入口與停用/變更紀錄資料結構。
+- Phase 5 P1 D1 與文件匯入：完成 D1 schema、Worker API 最小骨架與文件匯入待確認流程說明；正式 Cloudflare database id、完整 DOCX/PDF 解析與安全登入需後續 PR。
+- Phase 6 P2 個人化主題：完成 Lisa、Jack、Kyky 原創 CSS/Emoji 主題與簡潔模式。
 
 ## 後續版本方向
 
-- 補齊真人錄音檔並切換 `recorded`／`auto` 模式。
-- 製作正式圖片素材與 PNG PWA icons。
-- 在實體 iPhone／iPad Safari 驗收直排注音、離線、加入主畫面與音訊。
-- 補真人錄音逐字時間戳以支援精準同步。
+- 連接正式 Cloudflare D1 database id，執行 seed migration，補完整 API 測試。
+- 完成真正 DOCX 與文字型 PDF parser；掃描 PDF OCR 仍不宣稱支援。
+- 製作正式原創插圖、PNG PWA icons 與真人錄音。
+- 實體 iPhone／iPad Safari 驗收加入主畫面、離線與更新流程。

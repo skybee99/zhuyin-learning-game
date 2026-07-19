@@ -1,6 +1,7 @@
-const CACHE_NAME = 'zhuyin-bee-v1-2-0';
+const CACHE_NAME = 'zhuyin-bee-v1-3-0';
+const OLD_CACHE_NAMES = ['zhuyin-bee-v1-0-0','zhuyin-bee-v1-1-0','zhuyin-bee-v1-2-0','zhuyin-bee-v1-2-1'];
 const APP_SHELL = [
-  '/index.html',
+  '/offline.html',
   '/src/styles.css',
   '/src/app.js',
   '/manifest.json',
@@ -11,38 +12,43 @@ const APP_SHELL = [
   '/data/words.json',
   '/data/categories.json'
 ];
-function canCacheResponse(response, request) {
-  return (
+function canCacheStaticResponse(response, request) {
+  const requestUrl = new URL(request.url);
+  return Boolean(
     response &&
     response.ok &&
     !response.redirected &&
     response.type === 'basic' &&
-    new URL(request.url).origin === self.location.origin
+    requestUrl.origin === self.location.origin &&
+    request.mode !== 'navigate'
   );
 }
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
-  self.skipWaiting();
+});
+self.addEventListener('message', (event) => {
+  if (event.data?.type === 'SKIP_WAITING') self.skipWaiting();
 });
 self.addEventListener('activate', (event) => {
-  event.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((key) => key.startsWith('zhuyin-bee-') && key !== CACHE_NAME).map((key) => caches.delete(key)))));
-  self.clients.claim();
+  event.waitUntil(
+    caches.keys().then((keys) => Promise.all(keys
+      .filter((key) => (key.startsWith('zhuyin-bee-') || OLD_CACHE_NAMES.includes(key)) && key !== CACHE_NAME)
+      .map((key) => caches.delete(key))))
+      .then(() => self.clients.claim())
+  );
 });
 async function networkFirstNavigate(request) {
-  const cache = await caches.open(CACHE_NAME);
   try {
-    const response = await fetch(request);
-    if (canCacheResponse(response, request)) await cache.put('/index.html', response.clone());
-    return response;
+    return await fetch(request);
   } catch {
-    return (await cache.match('/index.html')) || Response.error();
+    return (await caches.match('/offline.html')) || Response.error();
   }
 }
-async function cacheFirst(request) {
+async function cacheFirstStatic(request) {
   const cached = await caches.match(request);
   if (cached) return cached;
   const response = await fetch(request);
-  if (canCacheResponse(response, request)) {
+  if (canCacheStaticResponse(response, request)) {
     const cache = await caches.open(CACHE_NAME);
     await cache.put(request, response.clone());
   }
@@ -54,5 +60,5 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(networkFirstNavigate(event.request));
     return;
   }
-  event.respondWith(cacheFirst(event.request).catch(() => caches.match('/index.html')));
+  event.respondWith(cacheFirstStatic(event.request).catch(() => caches.match('/offline.html')));
 });

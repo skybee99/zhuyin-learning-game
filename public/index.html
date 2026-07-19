@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="src/styles.css" />
     <title>注音小蜜蜂</title>
   </head>
-  <body data-zhuyin-display="all">
+  <body data-zhuyin-display="all" data-child-theme="simple" data-text-size="standard" data-zhuyin-size="standard">
     <div class="app-shell">
       <section class="profile-gate panel active" id="profileView" aria-labelledby="profileTitle">
         <p class="eyebrow">🐝</p>
@@ -21,7 +21,7 @@
         <div class="profile-grid" id="profileCards"></div>
       </section>
       <header class="hero hidden" id="home">
-        <p class="eyebrow">🐝</p>
+        <p class="eyebrow" id="themeTitle">🐝</p>
         <h1 id="appTitle"></h1>
         <section class="record-card" aria-live="polite"><span id="childBadge">👧 Lisa</span><span>⭐</span><strong id="starsCount">0</strong><span>✅</span><strong id="answersCount">0</strong></section>
         <button class="small-action" id="switchChild" type="button" aria-label="換人" data-speech="換人">🔄 換人</button>
@@ -42,7 +42,7 @@
         <section class="panel" id="wordView"><h2>🖼️ 看圖認字</h2><div class="quiz-card picture-card"><div class="picture" id="picturePrompt">🐝</div><p class="hint" id="wordHint">👇 選答案</p><div class="choice-grid" id="wordChoices"></div><div class="feedback" id="wordFeedback">🌱 再試一次也很棒</div></div></section>
         <section class="panel" id="parentView"><h2>家長模式</h2><div class="parent-box" id="parentBox"></div></section>
       </main>
-      <footer class="version" id="versionLine">V1.2.0</footer>
+      <footer class="version" id="versionLine">V1.3.0</footer>
     </div>
     <template id="rubyRequirement"><ruby>聽<rt>ㄊㄧㄥ</rt></ruby></template>
     <script src="src/app.js" type="module"></script>
