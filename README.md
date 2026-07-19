@@ -1,31 +1,32 @@
-# 注音小蜜蜂
+# 注音動物園
 
 適合 Apple iPhone 與 Apple iPad 的注音、認字與語音學習 PWA。介面使用繁體中文、台灣常用注音符號、大按鈕與本機學習紀錄，不加入廣告、不加入第三方追蹤、不收集兒童個人資料。
 
 ## 版本
 
-- App：V1.3.0
-- 修改時間：2026-07-19 16:39
+- App：V1.3.1
+- 修改時間：2026-07-19 19:37
 - 時區：Asia/Ho_Chi_Minh
 
-## V1.3.0 重點
+## V1.3.1 重點
 
-- iOS / iPadOS Safari Service Worker redirect 修正：導覽 request 不快取，離線 fallback 使用獨立 `offline.html`。
-- 「拼一拼」重製：固定顯示圖片/詞語/目標字/聽題目/操作指令，答案用 ID 判定。
-- 初級選第一個注音，進階選完整注音。
-- 首頁、功能卡、國字、注音與答案卡放大。
-- 按鈕語音分類：聽題目、聽注音、聽例字只播放內容；家長入口不朗讀。
-- 家長模式新增字庫管理、手動新增、資料檢查、文件匯入待確認流程、清除 App 快取。
-- 新增 Cloudflare D1 schema 與 Worker API 骨架。
-- Lisa、Jack、Kyky 使用原創 CSS/Emoji 兒童主題。
+- 注音聲調拆為注音本體與獨立聲調元素，修正二聲、三聲、四聲與輕聲位置。
+- 「看圖認字」只使用已審核且驗證通過的詞語媒體物件，避免詞語、圖片與目標字索引錯位。
+- 修正文字大小設定污染題目文字的風險，`textSize` 只影響 class/設定，不改變 word。
+- 37 個注音例字完成審核欄位；ㄢ → 山 → ㄕㄢ → ⛰️，ㄣ → 門 → ㄇㄣˊ → 🚪。
+- 品牌改為「注音動物園」，Lisa、Jack、Kyky 共用同一套童話動物園 UI。
+- 功能動物配對：🐰 注音卡、🦉 認識注音、🐘 聽一聽、🦊 拼一拼、🐼 看圖認字、🦁 獎勵、🐻 家長。
+- Service Worker cache 更新為 `zhuyin-zoo-v1-3-1`，只清除本專案 `zhuyin-bee-*` 與 `zhuyin-zoo-*` cache。
 
-## 開發
+## 開發與測試
 
 ```bash
 node --check public/src/app.js
 node --check public/service-worker.js
 node --check src/worker.js
 node tests/validate-app.js
+node tests/validate-zhuyin-tones.js
+node tests/validate-dictionary-media.js
 ```
 
 ## PWA 注意事項
@@ -35,17 +36,16 @@ node tests/validate-app.js
 - 靜態資源更新時同步更新 Service Worker cache 名稱。
 - 不得預快取 `/`、`./` 或導覽 response。
 
-## 字庫與資料庫
+## 圖片與字庫規則
 
-- `public/data/*.json` 是內建 seed 與離線備援。
-- Cloudflare D1 schema 位於 `migrations/0001_dictionary.sql`。
-- D1、migration、backup、restore 與禁止直接刪除正式資料規則見 `DATABASE.md`。
-- API endpoint、驗證、錯誤碼與家長權限見 `API.md`。
+- 兒童題目不得執行時即時 Google 搜圖、隨機抓網路圖片、hotlink 不明授權圖片。
+- 圖片優先順序：本地已確認圖片、家長上傳確認圖片、已記錄授權圖片、正確 Emoji 備援。
+- 未審核或驗證失敗的詞語圖片不得進入兒童題庫。
 
 ## 尚待實體驗收
 
 - Safari 一般分頁第一次開啟與重新整理。
 - Safari 私密分頁。
 - 加入主畫面第一次開啟與關閉後再次開啟。
-- 舊 V1.2.0 升級到 V1.3.0。
+- 舊 V1.3.0 升級到 V1.3.1。
 - 離線進入、網路恢復後重新進入與 Service Worker 更新後重新開啟。

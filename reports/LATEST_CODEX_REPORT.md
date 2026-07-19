@@ -1,162 +1,58 @@
-# Codex Report — V1.3.0
+# Codex Report — V1.3.1 注音動物園
 
+- 日期：2026-07-19 19:37 Asia/Ho_Chi_Minh
+- 分支：codex/v1.3.1-zhuyin-tone-and-zoo-theme-fixes
+- 版本：V1.3.1
+- Service Worker cache：`zhuyin-zoo-v1-3-1`
 
-## 2026-07-19 Cloudflare V1.3.0 部署修復紀錄
+## 修改摘要
 
-- 分支：`codex/restore-cloudflare-deployment-v1.3.0`，起點為最新 main merge commit `f7e99a2529089aef0c64a37ef220860f17091008`。
-- Repository workflow 檢查：`.github/workflows/validate.yml` 是唯一 workflow，名稱 `Validate PWA`，沒有自動部署 workflow。
-- Cloudflare 部署方式：`wrangler.jsonc` 使用 `main: src/worker.js`，Workers Assets 使用 `assets.directory: ./public` 與 `assets.binding: ASSETS`，目前需手動 `npx wrangler deploy`。
-- 修復：暫時移除尚未正式建立的 D1 `d1_databases` placeholder，避免 `database_id: replace-with-cloudflare-d1-database-id` 阻擋部署。
-- Worker 行為：沒有 `DB` binding 時，一般靜態網站仍交由 `ASSETS` 提供；`/api/dictionary/*` 回傳 503 `d1_binding_missing`；其他未支援 API 維持 404。
-- 部署嘗試：`npx wrangler deploy` 失敗，錯誤為 `npm error 403 403 Forbidden - GET https://registry.npmjs.org/wrangler`。因此 Deployment ID、部署時間與正式網址尚無可記錄值，正式網址驗證也尚未完成。
+### 注音聲調
 
-## PR #8 merged metadata 已補寫
+- 建立 `parseZhuyinSyllable()`，回傳 `symbols`、`tone`、`toneMark`。
+- DOM 改為 `.zhuyin-group`、`.zhuyin-symbols`、`.zhuyin-tone`。
+- CSS 獨立定位二聲、三聲、四聲與輕聲；一聲不顯示符號。
 
-- PR：#8
-- 狀態：Merged
-- Head：codex/update-zhuyin-learning-game-to-v1.3.0
-- Base：main
-- 程式 Commit：d493aba993e709f823af86c6bd039f177529a842
-- Merge Commit：f7e99a2529089aef0c64a37ef220860f17091008
-- 合併時間：2026-07-19T09:50:12Z
-- GitHub Actions：Validate PWA，Workflow Run #24，success
+### 字詞與圖片
 
-## PR #7 merged metadata 已補寫
+- 詞語資料補 `targetCharacter`、`targetIndex`、`speechText`、`image`、`emojiFallback`、`reviewed`、`validationStatus`、`enabled`。
+- 出題池只使用審核與驗證通過資料。
+- 明確禁止兒童題目即時 Google 搜圖、隨機外部圖片與不明授權 hotlink。
 
-- PR：#7
-- 狀態：Merged
-- 標題：feat: V1.2.0 — add child profiles, system TTS, vertical zhuyin layout and expanded data
-- Head：codex/v1.2.0
-- Base：main
-- 程式 Commit：4fe1e128980981b4b11ef33953a37859043be6e9
-- Merge Commit：f0f824ed99c87735a8affc5d42b957b3e8f41d23
-- 合併時間：2026-07-19T09:11:19Z
-- GitHub Actions：Validate PWA，Workflow Run #20，success
+### 37 注音例字
 
-## 1. 修改摘要
+- 37/37 筆補上 reviewed/status/imageDescription。
+- ㄢ 最終資料：山｜ㄕㄢ｜⛰️｜一座山。
+- ㄣ 最終資料：門｜ㄇㄣˊ｜🚪｜一扇門。
 
-### Phase 1：P0 穩定性
+### 注音動物園 UI
 
-- Service Worker cache：`zhuyin-bee-v1-3-0`。
-- APP_SHELL 不包含 `/`、`./` 或導覽 URL。
-- 導覽請求 Network First，成功直接回傳，失敗才回 `/offline.html`。
-- `canCacheStaticResponse()` 排除 redirect、opaque、跨來源、非 ok 與 navigate request。
-- 新增等待中 Service Worker 更新提示，使用者按「立即更新」才 `skipWaiting`，且最多 reload 一次。
-- 家長模式新增「清除 App 快取」，保留 localStorage 與家長設定。
+- 正式品牌：「注音動物園」。
+- Lisa、Jack、Kyky 共用 `storybook-zoo`。
+- 功能配對：🐰 注音卡、🦉 認識注音、🐘 聽一聽、🦊 拼一拼、🐼 看圖認字、🦁 獎勵、🐻 家長。
 
-### Phase 2：P0 學習正確性
+## 資料檢查結果
 
-- 拼一拼固定顯示圖片/Emoji、完整詞語、目標字、聽題目、操作指令與答案區。
-- 新增資料一致檢查，錯配題不進核心題庫。
-- 初級選第一個注音；進階選完整注音。
-- 答案判定使用 `correctOptionId` 與 `data-option-id`。
-- 未作答前隱藏「下一題」。
+| 項目 | 結果 |
+|---|---:|
+| 37 注音通過數量 | 37 |
+| 圖片詞語一致數量 | 240 |
+| 修正的錯配/污染數量 | 240 |
+| 缺圖數量 | 0 |
+| 未審核數量 | 0 |
 
-### Phase 3：P1 可讀性與語音
-
-- 放大首頁功能卡、主文字、注音與答案卡。
-- 新增 `.zhuyin-answer-syllable` 與 `.zhuyin-answer-single`。
-- 內容播放按鈕不朗讀按鈕名稱。
-- 家長入口直接開啟，不播放語音。
-
-### Phase 4：P1 字庫管理
-
-- 家長模式新增字庫管理統計、搜尋入口、覆蓋率、手動新增國字/詞語、資料檢查、匯出與匯入入口。
-- 本機新增資料保存於 localStorage，正式永久保存交由 D1 API 後續接線。
-
-### Phase 5：P1 D1 與文件匯入
-
-- 新增 `migrations/0001_dictionary.sql`。
-- 新增 `src/worker.js` API 骨架。
-- 新增 `DATABASE.md` 與 `API.md`。
-- 文件匯入明確採候選資料與家長確認流程；掃描 PDF/OCR 尚未完成。
-
-### Phase 6：P2 個人化主題
-
-- Lisa：原創童話魔法森林主題。
-- Jack：原創蜘蛛系英雄主題。
-- Kyky：原創小勇者主題。
-- 簡潔模式保留。
-
-## 2. 檔案異動
-
-### 新增
-
-- `public/offline.html`
-- `migrations/0001_dictionary.sql`
-- `src/worker.js`
-- `DATABASE.md`
-- `API.md`
-
-### 修改
-
-- `public/src/app.js`
-- `public/src/styles.css`
-- `public/service-worker.js`
-- `public/index.html`
-- `public/manifest.json`
-- `wrangler.jsonc`
-- `tests/validate-app.js`
-- `PLAN.md`
-- `PROGRESS.md`
-- `DECISIONS.md`
-- `TASKS.md`
-- `MEMORY.md`
-- `ARCHITECTURE.md`
-- `CHANGELOG.md`
-- `README.md`
-- `reports/LATEST_CODEX_REPORT.md`
-
-## 3. 資料統計
-
-- 注音符號數：37
-- 國字數：內建 JSON 360 筆範圍內，家長本機新增另計
-- 詞語數：內建 JSON 240 筆範圍內，家長本機新增另計
-- 分類數：17
-- D1 資料數：schema 已建立，正式 Cloudflare D1 尚待部署與 seed migration
-- 待確認匯入數：本機候選區支援，正式 D1 import candidates 尚待部署
-
-## 4. 測試
+## 測試
 
 - 通過：`node --check public/src/app.js`
 - 通過：`node --check public/service-worker.js`
 - 通過：`node --check src/worker.js`
 - 通過：`node tests/validate-app.js`
-- 未執行：實體 iPhone／iPad 驗收，尚待使用者實體 iPhone／iPad 驗收。
+- 通過：`node tests/validate-zhuyin-tones.js`
+- 通過：`node tests/validate-dictionary-media.js`
 
-## 5. Service Worker
+## 尚未完成
 
-- cache name：`zhuyin-bee-v1-3-0`
-- precache：`/offline.html`、CSS、JS、manifest、icon、audio manifest、內建 JSON 字庫
-- navigate 策略：Network First，不寫入 cache
-- offline fallback：`/offline.html`
-- 舊 cache 清理：刪除 `zhuyin-bee-*` 舊版本與已知 V1.1.0/V1.2.0/V1.2.1 名稱，不刪其他網站 cache
-- 實體裝置驗收：尚待使用者實體 iPhone／iPad 驗收
-
-## 6. 字庫與匯入
-
-- D1：schema 與 Worker API 骨架完成；正式 database id、seed migration 與完整權限尚待後續。
-- DOCX：流程入口與限制文件完成；真正 parser 尚待後續。
-- 文字 PDF：流程入口與限制文件完成；真正 parser 尚待後續。
-- 掃描 PDF/OCR：未完成，明確顯示需要 OCR。
-- 家長確認流程：UI 與 API 文件規劃完成，正式 D1 confirm endpoint 待後續。
-- 變更紀錄：本機 change log 與 D1 `change_logs` schema 完成。
-
-## 7. Git
-
-- Branch：codex/v1.3.0-stability-dictionary-and-child-ui
-- Commit：提交後補於 PR metadata
-- PR：建立後補於平台 metadata
-- Base：main
-- Head：codex/v1.3.0-stability-dictionary-and-child-ui
-- 不自動合併。
-
-## 8. 尚未完成
-
-- 實體 iPhone／iPad 驗收。
-- 掃描 PDF OCR。
-- 真人錄音。
-- 正式原創插圖與 PNG icons。
-- 精準逐字音訊同步。
-- 完整家長登入權限。
-- 正式 Cloudflare D1 database id、部署與 seed migration。
+- 實體 iPhone／iPad Safari、Chrome、PWA 驗收未執行。
+- 正式原創動物插圖尚未完成。
+- 圖片授權來源補登尚未完成。
+- 真人錄音、OCR、完整 D1 正式部署尚未完成。

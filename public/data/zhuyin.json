@@ -10,7 +10,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3105.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "爸 的圖片"
   },
   {
     "symbol": "ㄆ",
@@ -23,7 +26,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3106.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "泡 的圖片"
   },
   {
     "symbol": "ㄇ",
@@ -36,7 +42,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3107.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "馬 的圖片"
   },
   {
     "symbol": "ㄈ",
@@ -49,7 +58,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3108.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "飛 的圖片"
   },
   {
     "symbol": "ㄉ",
@@ -62,7 +74,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3109.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "燈 的圖片"
   },
   {
     "symbol": "ㄊ",
@@ -75,7 +90,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/310a.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "兔 的圖片"
   },
   {
     "symbol": "ㄋ",
@@ -88,7 +106,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/310b.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "鳥 的圖片"
   },
   {
     "symbol": "ㄌ",
@@ -101,7 +122,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/310c.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "鹿 的圖片"
   },
   {
     "symbol": "ㄍ",
@@ -114,7 +138,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/310d.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "狗 的圖片"
   },
   {
     "symbol": "ㄎ",
@@ -127,7 +154,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/310e.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "口 的圖片"
   },
   {
     "symbol": "ㄏ",
@@ -140,7 +170,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/310f.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "河 的圖片"
   },
   {
     "symbol": "ㄐ",
@@ -153,7 +186,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3110.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "雞 的圖片"
   },
   {
     "symbol": "ㄑ",
@@ -166,7 +202,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3111.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "旗 的圖片"
   },
   {
     "symbol": "ㄒ",
@@ -179,7 +218,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3112.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "西 的圖片"
   },
   {
     "symbol": "ㄓ",
@@ -192,7 +234,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3113.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "竹 的圖片"
   },
   {
     "symbol": "ㄔ",
@@ -205,7 +250,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3114.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "車 的圖片"
   },
   {
     "symbol": "ㄕ",
@@ -218,7 +266,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3115.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "書 的圖片"
   },
   {
     "symbol": "ㄖ",
@@ -231,7 +282,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3116.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "日 的圖片"
   },
   {
     "symbol": "ㄗ",
@@ -244,7 +298,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3117.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "字 的圖片"
   },
   {
     "symbol": "ㄘ",
@@ -257,7 +314,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3118.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "草 的圖片"
   },
   {
     "symbol": "ㄙ",
@@ -270,7 +330,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3119.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "傘 的圖片"
   },
   {
     "symbol": "ㄧ",
@@ -283,7 +346,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3127.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "衣 的圖片"
   },
   {
     "symbol": "ㄨ",
@@ -296,7 +362,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3128.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "屋 的圖片"
   },
   {
     "symbol": "ㄩ",
@@ -309,7 +378,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3129.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "魚 的圖片"
   },
   {
     "symbol": "ㄚ",
@@ -322,7 +394,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/311a.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "鴨 的圖片"
   },
   {
     "symbol": "ㄛ",
@@ -335,7 +410,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/311b.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "喔 的圖片"
   },
   {
     "symbol": "ㄜ",
@@ -348,7 +426,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/311c.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "鵝 的圖片"
   },
   {
     "symbol": "ㄝ",
@@ -361,7 +442,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/311d.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "欸 的圖片"
   },
   {
     "symbol": "ㄞ",
@@ -374,7 +458,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/311e.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "愛 的圖片"
   },
   {
     "symbol": "ㄟ",
@@ -387,7 +474,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/311f.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "杯 的圖片"
   },
   {
     "symbol": "ㄠ",
@@ -400,7 +490,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3120.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "凹 的圖片"
   },
   {
     "symbol": "ㄡ",
@@ -413,33 +506,42 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3121.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "藕 的圖片"
   },
   {
     "symbol": "ㄢ",
     "systemSpeechText": "ㄢ",
     "group": "韻母二",
-    "exampleWord": "安",
-    "exampleZhuyin": "ㄢ",
-    "emoji": "🛏️",
+    "exampleWord": "山",
+    "exampleZhuyin": "ㄕㄢ",
+    "emoji": "⛰️",
     "audioKey": "ㄢ",
     "recording": {
       "status": "planned",
       "path": "assets/audio/3122.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "一座山"
   },
   {
     "symbol": "ㄣ",
     "systemSpeechText": "ㄣ",
     "group": "韻母二",
-    "exampleWord": "恩",
-    "exampleZhuyin": "ㄣ",
-    "emoji": "🙏",
+    "exampleWord": "門",
+    "exampleZhuyin": "ㄇㄣˊ",
+    "emoji": "🚪",
     "audioKey": "ㄣ",
     "recording": {
       "status": "planned",
       "path": "assets/audio/3123.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "一扇門"
   },
   {
     "symbol": "ㄤ",
@@ -452,7 +554,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3124.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "羊 的圖片"
   },
   {
     "symbol": "ㄥ",
@@ -465,7 +570,10 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3125.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "風 的圖片"
   },
   {
     "symbol": "ㄦ",
@@ -478,6 +586,9 @@
     "recording": {
       "status": "planned",
       "path": "assets/audio/3126.mp3"
-    }
+    },
+    "reviewed": true,
+    "status": "valid",
+    "imageDescription": "兒 的圖片"
   }
 ]

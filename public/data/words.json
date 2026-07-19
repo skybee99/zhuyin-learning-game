@@ -7,7 +7,7 @@
       "ㄚ",
       "ˋ"
     ],
-    "word": "爸爸大",
+    "word": "爸爸",
     "wordCharacters": [
       {
         "han": "爸",
@@ -24,22 +24,25 @@
           "ㄠ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄇ",
-          "ㄚ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "👨",
     "category": "家人",
     "difficulty": "beginner",
-    "speechText": "爸爸大",
+    "speechText": "爸爸",
     "audioKey": "word-1",
-    "primarySymbol": "ㄅ"
+    "primarySymbol": "ㄅ",
+    "targetCharacter": "爸",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👨",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "爸爸 的清楚圖像"
+    }
   },
   {
     "id": "word-2",
@@ -49,7 +52,7 @@
       "ㄠ",
       "ˋ"
     ],
-    "word": "媽媽大",
+    "word": "媽媽",
     "wordCharacters": [
       {
         "han": "媽",
@@ -66,21 +69,25 @@
           "ㄚ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄈ",
-          "ㄟ"
-        ]
       }
     ],
     "emoji": "🫧",
     "category": "身體",
     "difficulty": "beginner",
-    "speechText": "媽媽大",
+    "speechText": "媽媽",
     "audioKey": "word-2",
-    "primarySymbol": "ㄆ"
+    "primarySymbol": "ㄆ",
+    "targetCharacter": "媽",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👩",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "媽媽 的清楚圖像"
+    }
   },
   {
     "id": "word-3",
@@ -90,7 +97,7 @@
       "ㄚ",
       "ˇ"
     ],
-    "word": "哥哥大",
+    "word": "哥哥",
     "wordCharacters": [
       {
         "han": "哥",
@@ -106,21 +113,25 @@
           "ㄈ",
           "ㄟ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄉ",
-          "ㄥ"
-        ]
       }
     ],
     "emoji": "🐴",
     "category": "動物",
     "difficulty": "beginner",
-    "speechText": "哥哥大",
+    "speechText": "哥哥",
     "audioKey": "word-3",
-    "primarySymbol": "ㄇ"
+    "primarySymbol": "ㄇ",
+    "targetCharacter": "哥",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👦",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "哥哥 的清楚圖像"
+    }
   },
   {
     "id": "word-4",
@@ -129,7 +140,7 @@
       "ㄈ",
       "ㄟ"
     ],
-    "word": "姐姐大",
+    "word": "姐姐",
     "wordCharacters": [
       {
         "han": "姐",
@@ -144,22 +155,25 @@
           "ㄉ",
           "ㄥ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄊ",
-          "ㄨ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🪽",
     "category": "水果",
     "difficulty": "beginner",
-    "speechText": "姐姐大",
+    "speechText": "姐姐",
     "audioKey": "word-4",
-    "primarySymbol": "ㄈ"
+    "primarySymbol": "ㄈ",
+    "targetCharacter": "姐",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪽",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "姐姐 的清楚圖像"
+    }
   },
   {
     "id": "word-5",
@@ -168,7 +182,7 @@
       "ㄉ",
       "ㄥ"
     ],
-    "word": "弟弟大",
+    "word": "弟弟",
     "wordCharacters": [
       {
         "han": "弟",
@@ -184,23 +198,25 @@
           "ㄨ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄋ",
-          "ㄧ",
-          "ㄠ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "💡",
     "category": "食物",
     "difficulty": "beginner",
-    "speechText": "弟弟大",
+    "speechText": "弟弟",
     "audioKey": "word-5",
-    "primarySymbol": "ㄉ"
+    "primarySymbol": "ㄉ",
+    "targetCharacter": "弟",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "💡",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "弟弟 的清楚圖像"
+    }
   },
   {
     "id": "word-6",
@@ -210,7 +226,7 @@
       "ㄨ",
       "ˋ"
     ],
-    "word": "妹妹大",
+    "word": "妹妹",
     "wordCharacters": [
       {
         "han": "妹",
@@ -228,22 +244,25 @@
           "ㄠ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄌ",
-          "ㄨ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🐰",
     "category": "顏色",
     "difficulty": "beginner",
-    "speechText": "妹妹大",
+    "speechText": "妹妹",
     "audioKey": "word-6",
-    "primarySymbol": "ㄊ"
+    "primarySymbol": "ㄊ",
+    "targetCharacter": "妹",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐰",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "妹妹 的清楚圖像"
+    }
   },
   {
     "id": "word-7",
@@ -254,7 +273,7 @@
       "ㄠ",
       "ˇ"
     ],
-    "word": "爺爺大",
+    "word": "爺爺",
     "wordCharacters": [
       {
         "han": "爺",
@@ -272,22 +291,25 @@
           "ㄨ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄍ",
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🐦",
     "category": "數字",
     "difficulty": "beginner",
-    "speechText": "爺爺大",
+    "speechText": "爺爺",
     "audioKey": "word-7",
-    "primarySymbol": "ㄋ"
+    "primarySymbol": "ㄋ",
+    "targetCharacter": "爺",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐦",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "爺爺 的清楚圖像"
+    }
   },
   {
     "id": "word-8",
@@ -297,7 +319,7 @@
       "ㄨ",
       "ˋ"
     ],
-    "word": "奶奶大",
+    "word": "奶奶",
     "wordCharacters": [
       {
         "han": "奶",
@@ -314,22 +336,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄎ",
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🦌",
     "category": "學校",
     "difficulty": "beginner",
-    "speechText": "奶奶大",
+    "speechText": "奶奶",
     "audioKey": "word-8",
-    "primarySymbol": "ㄌ"
+    "primarySymbol": "ㄌ",
+    "targetCharacter": "奶",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦌",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "奶奶 的清楚圖像"
+    }
   },
   {
     "id": "word-9",
@@ -339,7 +364,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "老師大",
+    "word": "老師",
     "wordCharacters": [
       {
         "han": "老",
@@ -356,22 +381,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄏ",
-          "ㄜ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🐶",
     "category": "日用品",
     "difficulty": "beginner",
-    "speechText": "老師大",
+    "speechText": "老師",
     "audioKey": "word-9",
-    "primarySymbol": "ㄍ"
+    "primarySymbol": "ㄍ",
+    "targetCharacter": "老",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐶",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "老師 的清楚圖像"
+    }
   },
   {
     "id": "word-10",
@@ -381,7 +409,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "同學大",
+    "word": "同學",
     "wordCharacters": [
       {
         "han": "同",
@@ -398,21 +426,25 @@
           "ㄜ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄐ",
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "👄",
     "category": "交通工具",
     "difficulty": "beginner",
-    "speechText": "同學大",
+    "speechText": "同學",
     "audioKey": "word-10",
-    "primarySymbol": "ㄎ"
+    "primarySymbol": "ㄎ",
+    "targetCharacter": "同",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👄",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "同學 的清楚圖像"
+    }
   },
   {
     "id": "word-11",
@@ -422,7 +454,7 @@
       "ㄜ",
       "ˊ"
     ],
-    "word": "書包大",
+    "word": "書包",
     "wordCharacters": [
       {
         "han": "書",
@@ -438,22 +470,25 @@
           "ㄐ",
           "ㄧ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄑ",
-          "ㄧ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🏞️",
     "category": "自然",
     "difficulty": "beginner",
-    "speechText": "書包大",
+    "speechText": "書包",
     "audioKey": "word-11",
-    "primarySymbol": "ㄏ"
+    "primarySymbol": "ㄏ",
+    "targetCharacter": "書",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏞️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "書包 的清楚圖像"
+    }
   },
   {
     "id": "word-12",
@@ -462,7 +497,7 @@
       "ㄐ",
       "ㄧ"
     ],
-    "word": "鉛筆大",
+    "word": "鉛筆",
     "wordCharacters": [
       {
         "han": "鉛",
@@ -478,21 +513,25 @@
           "ㄧ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄒ",
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "🐔",
     "category": "動作",
     "difficulty": "beginner",
-    "speechText": "鉛筆大",
+    "speechText": "鉛筆",
     "audioKey": "word-12",
-    "primarySymbol": "ㄐ"
+    "primarySymbol": "ㄐ",
+    "targetCharacter": "鉛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐔",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "鉛筆 的清楚圖像"
+    }
   },
   {
     "id": "word-13",
@@ -502,7 +541,7 @@
       "ㄧ",
       "ˊ"
     ],
-    "word": "橡皮大",
+    "word": "橡皮",
     "wordCharacters": [
       {
         "han": "橡",
@@ -518,22 +557,25 @@
           "ㄒ",
           "ㄧ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄓ",
-          "ㄨ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🚩",
     "category": "情緒",
     "difficulty": "beginner",
-    "speechText": "橡皮大",
+    "speechText": "橡皮",
     "audioKey": "word-13",
-    "primarySymbol": "ㄑ"
+    "primarySymbol": "ㄑ",
+    "targetCharacter": "橡",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚩",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "橡皮 的清楚圖像"
+    }
   },
   {
     "id": "word-14",
@@ -542,7 +584,7 @@
       "ㄒ",
       "ㄧ"
     ],
-    "word": "桌子大",
+    "word": "桌子",
     "wordCharacters": [
       {
         "han": "桌",
@@ -558,21 +600,25 @@
           "ㄨ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄔ",
-          "ㄜ"
-        ]
       }
     ],
     "emoji": "🌅",
     "category": "時間",
     "difficulty": "beginner",
-    "speechText": "桌子大",
+    "speechText": "桌子",
     "audioKey": "word-14",
-    "primarySymbol": "ㄒ"
+    "primarySymbol": "ㄒ",
+    "targetCharacter": "桌",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌅",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "桌子 的清楚圖像"
+    }
   },
   {
     "id": "word-15",
@@ -582,7 +628,7 @@
       "ㄨ",
       "ˊ"
     ],
-    "word": "椅子大",
+    "word": "椅子",
     "wordCharacters": [
       {
         "han": "椅",
@@ -598,21 +644,25 @@
           "ㄔ",
           "ㄜ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄕ",
-          "ㄨ"
-        ]
       }
     ],
     "emoji": "🎋",
     "category": "地點",
     "difficulty": "beginner",
-    "speechText": "椅子大",
+    "speechText": "椅子",
     "audioKey": "word-15",
-    "primarySymbol": "ㄓ"
+    "primarySymbol": "ㄓ",
+    "targetCharacter": "椅",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🎋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "椅子 的清楚圖像"
+    }
   },
   {
     "id": "word-16",
@@ -621,7 +671,7 @@
       "ㄔ",
       "ㄜ"
     ],
-    "word": "學校大",
+    "word": "學校",
     "wordCharacters": [
       {
         "han": "學",
@@ -636,21 +686,25 @@
           "ㄕ",
           "ㄨ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄖ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🚗",
     "category": "衣物",
     "difficulty": "beginner",
-    "speechText": "學校大",
+    "speechText": "學校",
     "audioKey": "word-16",
-    "primarySymbol": "ㄔ"
+    "primarySymbol": "ㄔ",
+    "targetCharacter": "學",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚗",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "學校 的清楚圖像"
+    }
   },
   {
     "id": "word-17",
@@ -659,7 +713,7 @@
       "ㄕ",
       "ㄨ"
     ],
-    "word": "教室大",
+    "word": "教室",
     "wordCharacters": [
       {
         "han": "教",
@@ -674,21 +728,25 @@
           "ㄖ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄗ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "📖",
     "category": "家中用品",
     "difficulty": "beginner",
-    "speechText": "教室大",
+    "speechText": "教室",
     "audioKey": "word-17",
-    "primarySymbol": "ㄕ"
+    "primarySymbol": "ㄕ",
+    "targetCharacter": "教",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "📖",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "教室 的清楚圖像"
+    }
   },
   {
     "id": "word-18",
@@ -697,7 +755,7 @@
       "ㄖ",
       "ˋ"
     ],
-    "word": "操場大",
+    "word": "操場",
     "wordCharacters": [
       {
         "han": "操",
@@ -712,22 +770,25 @@
           "ㄗ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄘ",
-          "ㄠ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "☀️",
     "category": "家人",
     "difficulty": "beginner",
-    "speechText": "操場大",
+    "speechText": "操場",
     "audioKey": "word-18",
-    "primarySymbol": "ㄖ"
+    "primarySymbol": "ㄖ",
+    "targetCharacter": "操",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☀️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "操場 的清楚圖像"
+    }
   },
   {
     "id": "word-19",
@@ -736,7 +797,7 @@
       "ㄗ",
       "ˋ"
     ],
-    "word": "跑步大",
+    "word": "跑步",
     "wordCharacters": [
       {
         "han": "跑",
@@ -752,22 +813,25 @@
           "ㄠ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄙ",
-          "ㄢ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🔤",
     "category": "身體",
     "difficulty": "beginner",
-    "speechText": "跑步大",
+    "speechText": "跑步",
     "audioKey": "word-19",
-    "primarySymbol": "ㄗ"
+    "primarySymbol": "ㄗ",
+    "targetCharacter": "跑",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🔤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "跑步 的清楚圖像"
+    }
   },
   {
     "id": "word-20",
@@ -777,7 +841,7 @@
       "ㄠ",
       "ˇ"
     ],
-    "word": "跳高大",
+    "word": "跳高",
     "wordCharacters": [
       {
         "han": "跳",
@@ -794,20 +858,25 @@
           "ㄢ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "🌱",
     "category": "動物",
     "difficulty": "beginner",
-    "speechText": "跳高大",
+    "speechText": "跳高",
     "audioKey": "word-20",
-    "primarySymbol": "ㄘ"
+    "primarySymbol": "ㄘ",
+    "targetCharacter": "跳",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌱",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "跳高 的清楚圖像"
+    }
   },
   {
     "id": "word-21",
@@ -817,7 +886,7 @@
       "ㄢ",
       "ˇ"
     ],
-    "word": "唱歌大",
+    "word": "唱歌",
     "wordCharacters": [
       {
         "han": "唱",
@@ -832,20 +901,25 @@
         "zhuyin": [
           "ㄧ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄨ"
-        ]
       }
     ],
     "emoji": "☂️",
     "category": "水果",
     "difficulty": "beginner",
-    "speechText": "唱歌大",
+    "speechText": "唱歌",
     "audioKey": "word-21",
-    "primarySymbol": "ㄙ"
+    "primarySymbol": "ㄙ",
+    "targetCharacter": "唱",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☂️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "唱歌 的清楚圖像"
+    }
   },
   {
     "id": "word-22",
@@ -853,7 +927,7 @@
     "zhuyin": [
       "ㄧ"
     ],
-    "word": "說話大",
+    "word": "說話",
     "wordCharacters": [
       {
         "han": "說",
@@ -866,21 +940,25 @@
         "zhuyin": [
           "ㄨ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄩ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "👕",
     "category": "食物",
     "difficulty": "beginner",
-    "speechText": "說話大",
+    "speechText": "說話",
     "audioKey": "word-22",
-    "primarySymbol": "ㄧ"
+    "primarySymbol": "ㄧ",
+    "targetCharacter": "說",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👕",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "說話 的清楚圖像"
+    }
   },
   {
     "id": "word-23",
@@ -888,7 +966,7 @@
     "zhuyin": [
       "ㄨ"
     ],
-    "word": "聽話大",
+    "word": "聽話",
     "wordCharacters": [
       {
         "han": "聽",
@@ -902,21 +980,25 @@
           "ㄩ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄧ",
-          "ㄚ"
-        ]
       }
     ],
     "emoji": "🏠",
     "category": "顏色",
     "difficulty": "beginner",
-    "speechText": "聽話大",
+    "speechText": "聽話",
     "audioKey": "word-23",
-    "primarySymbol": "ㄨ"
+    "primarySymbol": "ㄨ",
+    "targetCharacter": "聽",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏠",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "聽話 的清楚圖像"
+    }
   },
   {
     "id": "word-24",
@@ -925,7 +1007,7 @@
       "ㄩ",
       "ˊ"
     ],
-    "word": "看書大",
+    "word": "看書",
     "wordCharacters": [
       {
         "han": "看",
@@ -940,20 +1022,25 @@
           "ㄧ",
           "ㄚ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄛ"
-        ]
       }
     ],
     "emoji": "🐟",
     "category": "數字",
     "difficulty": "beginner",
-    "speechText": "看書大",
+    "speechText": "看書",
     "audioKey": "word-24",
-    "primarySymbol": "ㄩ"
+    "primarySymbol": "ㄩ",
+    "targetCharacter": "看",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐟",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "看書 的清楚圖像"
+    }
   },
   {
     "id": "word-25",
@@ -962,7 +1049,7 @@
       "ㄧ",
       "ㄚ"
     ],
-    "word": "吃飯大",
+    "word": "吃飯",
     "wordCharacters": [
       {
         "han": "吃",
@@ -976,21 +1063,25 @@
         "zhuyin": [
           "ㄛ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄜ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🦆",
     "category": "學校",
     "difficulty": "beginner",
-    "speechText": "吃飯大",
+    "speechText": "吃飯",
     "audioKey": "word-25",
-    "primarySymbol": "ㄚ"
+    "primarySymbol": "ㄚ",
+    "targetCharacter": "吃",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦆",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "吃飯 的清楚圖像"
+    }
   },
   {
     "id": "word-26",
@@ -998,7 +1089,7 @@
     "zhuyin": [
       "ㄛ"
     ],
-    "word": "喝水大",
+    "word": "喝水",
     "wordCharacters": [
       {
         "han": "喝",
@@ -1012,20 +1103,25 @@
           "ㄜ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄝ"
-        ]
       }
     ],
     "emoji": "⭕",
     "category": "日用品",
     "difficulty": "beginner",
-    "speechText": "喝水大",
+    "speechText": "喝水",
     "audioKey": "word-26",
-    "primarySymbol": "ㄛ"
+    "primarySymbol": "ㄛ",
+    "targetCharacter": "喝",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🥤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "喝水 的清楚圖像"
+    }
   },
   {
     "id": "word-27",
@@ -1034,7 +1130,7 @@
       "ㄜ",
       "ˊ"
     ],
-    "word": "牛奶大",
+    "word": "牛奶",
     "wordCharacters": [
       {
         "han": "牛",
@@ -1048,21 +1144,25 @@
         "zhuyin": [
           "ㄝ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄞ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🪿",
     "category": "交通工具",
     "difficulty": "beginner",
-    "speechText": "牛奶大",
+    "speechText": "牛奶",
     "audioKey": "word-27",
-    "primarySymbol": "ㄜ"
+    "primarySymbol": "ㄜ",
+    "targetCharacter": "牛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪿",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "牛奶 的清楚圖像"
+    }
   },
   {
     "id": "word-28",
@@ -1070,7 +1170,7 @@
     "zhuyin": [
       "ㄝ"
     ],
-    "word": "雞蛋大",
+    "word": "雞蛋",
     "wordCharacters": [
       {
         "han": "雞",
@@ -1084,21 +1184,25 @@
           "ㄞ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄅ",
-          "ㄟ"
-        ]
       }
     ],
     "emoji": "🙋",
     "category": "自然",
     "difficulty": "beginner",
-    "speechText": "雞蛋大",
+    "speechText": "雞蛋",
     "audioKey": "word-28",
-    "primarySymbol": "ㄝ"
+    "primarySymbol": "ㄝ",
+    "targetCharacter": "雞",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🙋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "雞蛋 的清楚圖像"
+    }
   },
   {
     "id": "word-29",
@@ -1107,7 +1211,7 @@
       "ㄞ",
       "ˋ"
     ],
-    "word": "水果大",
+    "word": "水果",
     "wordCharacters": [
       {
         "han": "水",
@@ -1122,20 +1226,25 @@
           "ㄅ",
           "ㄟ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄠ"
-        ]
       }
     ],
     "emoji": "❤️",
     "category": "動作",
     "difficulty": "beginner",
-    "speechText": "水果大",
+    "speechText": "水果",
     "audioKey": "word-29",
-    "primarySymbol": "ㄞ"
+    "primarySymbol": "ㄞ",
+    "targetCharacter": "水",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "❤️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "水果 的清楚圖像"
+    }
   },
   {
     "id": "word-30",
@@ -1144,7 +1253,7 @@
       "ㄅ",
       "ㄟ"
     ],
-    "word": "香蕉大",
+    "word": "香蕉",
     "wordCharacters": [
       {
         "han": "香",
@@ -1158,21 +1267,25 @@
         "zhuyin": [
           "ㄠ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🥤",
     "category": "情緒",
     "difficulty": "beginner",
-    "speechText": "香蕉大",
+    "speechText": "香蕉",
     "audioKey": "word-30",
-    "primarySymbol": "ㄟ"
+    "primarySymbol": "ㄟ",
+    "targetCharacter": "香",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🥤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "香蕉 的清楚圖像"
+    }
   },
   {
     "id": "word-31",
@@ -1180,7 +1293,7 @@
     "zhuyin": [
       "ㄠ"
     ],
-    "word": "蘋果大",
+    "word": "蘋果",
     "wordCharacters": [
       {
         "han": "蘋",
@@ -1194,20 +1307,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄢ"
-        ]
       }
     ],
     "emoji": "🕳️",
     "category": "時間",
     "difficulty": "beginner",
-    "speechText": "蘋果大",
+    "speechText": "蘋果",
     "audioKey": "word-31",
-    "primarySymbol": "ㄠ"
+    "primarySymbol": "ㄠ",
+    "targetCharacter": "蘋",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🕳️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "蘋果 的清楚圖像"
+    }
   },
   {
     "id": "word-32",
@@ -1216,7 +1334,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "西瓜大",
+    "word": "西瓜",
     "wordCharacters": [
       {
         "han": "西",
@@ -1230,20 +1348,25 @@
         "zhuyin": [
           "ㄢ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄣ"
-        ]
       }
     ],
     "emoji": "🪷",
     "category": "地點",
     "difficulty": "beginner",
-    "speechText": "西瓜大",
+    "speechText": "西瓜",
     "audioKey": "word-32",
-    "primarySymbol": "ㄡ"
+    "primarySymbol": "ㄡ",
+    "targetCharacter": "西",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪷",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "西瓜 的清楚圖像"
+    }
   },
   {
     "id": "word-33",
@@ -1251,7 +1374,7 @@
     "zhuyin": [
       "ㄢ"
     ],
-    "word": "葡萄大",
+    "word": "葡萄",
     "wordCharacters": [
       {
         "han": "葡",
@@ -1264,22 +1387,25 @@
         "zhuyin": [
           "ㄣ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄧ",
-          "ㄤ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🛏️",
     "category": "衣物",
     "difficulty": "beginner",
-    "speechText": "葡萄大",
+    "speechText": "葡萄",
     "audioKey": "word-33",
-    "primarySymbol": "ㄢ"
+    "primarySymbol": "ㄢ",
+    "targetCharacter": "葡",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🛏️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "葡萄 的清楚圖像"
+    }
   },
   {
     "id": "word-34",
@@ -1287,7 +1413,7 @@
     "zhuyin": [
       "ㄣ"
     ],
-    "word": "小狗大",
+    "word": "小狗",
     "wordCharacters": [
       {
         "han": "小",
@@ -1302,21 +1428,25 @@
           "ㄤ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄈ",
-          "ㄥ"
-        ]
       }
     ],
     "emoji": "🙏",
     "category": "家中用品",
     "difficulty": "beginner",
-    "speechText": "小狗大",
+    "speechText": "小狗",
     "audioKey": "word-34",
-    "primarySymbol": "ㄣ"
+    "primarySymbol": "ㄣ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🙏",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小狗 的清楚圖像"
+    }
   },
   {
     "id": "word-35",
@@ -1326,7 +1456,7 @@
       "ㄤ",
       "ˊ"
     ],
-    "word": "小貓大",
+    "word": "小貓",
     "wordCharacters": [
       {
         "han": "小",
@@ -1342,21 +1472,25 @@
           "ㄈ",
           "ㄥ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄦ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🐑",
     "category": "家人",
     "difficulty": "beginner",
-    "speechText": "小貓大",
+    "speechText": "小貓",
     "audioKey": "word-35",
-    "primarySymbol": "ㄤ"
+    "primarySymbol": "ㄤ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐑",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小貓 的清楚圖像"
+    }
   },
   {
     "id": "word-36",
@@ -1365,7 +1499,7 @@
       "ㄈ",
       "ㄥ"
     ],
-    "word": "小鳥大",
+    "word": "小鳥",
     "wordCharacters": [
       {
         "han": "小",
@@ -1380,22 +1514,25 @@
           "ㄦ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄅ",
-          "ㄚ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🌬️",
     "category": "身體",
     "difficulty": "beginner",
-    "speechText": "小鳥大",
+    "speechText": "小鳥",
     "audioKey": "word-36",
-    "primarySymbol": "ㄥ"
+    "primarySymbol": "ㄥ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌬️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小鳥 的清楚圖像"
+    }
   },
   {
     "id": "word-37",
@@ -1404,7 +1541,7 @@
       "ㄦ",
       "ˊ"
     ],
-    "word": "小魚大",
+    "word": "小魚",
     "wordCharacters": [
       {
         "han": "小",
@@ -1420,22 +1557,25 @@
           "ㄚ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄆ",
-          "ㄠ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🧒",
     "category": "動物",
     "difficulty": "beginner",
-    "speechText": "小魚大",
+    "speechText": "小魚",
     "audioKey": "word-37",
-    "primarySymbol": "ㄦ"
+    "primarySymbol": "ㄦ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🧒",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小魚 的清楚圖像"
+    }
   },
   {
     "id": "word-38",
@@ -1445,7 +1585,7 @@
       "ㄚ",
       "ˋ"
     ],
-    "word": "白兔大",
+    "word": "白兔",
     "wordCharacters": [
       {
         "han": "白",
@@ -1462,22 +1602,25 @@
           "ㄠ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄇ",
-          "ㄚ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "👨",
     "category": "水果",
     "difficulty": "beginner",
-    "speechText": "白兔大",
+    "speechText": "白兔",
     "audioKey": "word-38",
-    "primarySymbol": "ㄅ"
+    "primarySymbol": "ㄅ",
+    "targetCharacter": "白",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👨",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "白兔 的清楚圖像"
+    }
   },
   {
     "id": "word-39",
@@ -1487,7 +1630,7 @@
       "ㄠ",
       "ˋ"
     ],
-    "word": "公車大",
+    "word": "公車",
     "wordCharacters": [
       {
         "han": "公",
@@ -1504,21 +1647,25 @@
           "ㄚ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄈ",
-          "ㄟ"
-        ]
       }
     ],
     "emoji": "🫧",
     "category": "食物",
     "difficulty": "beginner",
-    "speechText": "公車大",
+    "speechText": "公車",
     "audioKey": "word-39",
-    "primarySymbol": "ㄆ"
+    "primarySymbol": "ㄆ",
+    "targetCharacter": "公",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🫧",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "公車 的清楚圖像"
+    }
   },
   {
     "id": "word-40",
@@ -1528,7 +1675,7 @@
       "ㄚ",
       "ˇ"
     ],
-    "word": "火車大",
+    "word": "火車",
     "wordCharacters": [
       {
         "han": "火",
@@ -1544,21 +1691,25 @@
           "ㄈ",
           "ㄟ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄉ",
-          "ㄥ"
-        ]
       }
     ],
     "emoji": "🐴",
     "category": "顏色",
     "difficulty": "beginner",
-    "speechText": "火車大",
+    "speechText": "火車",
     "audioKey": "word-40",
-    "primarySymbol": "ㄇ"
+    "primarySymbol": "ㄇ",
+    "targetCharacter": "火",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐴",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "火車 的清楚圖像"
+    }
   },
   {
     "id": "word-41",
@@ -1567,7 +1718,7 @@
       "ㄈ",
       "ㄟ"
     ],
-    "word": "飛機大",
+    "word": "飛機",
     "wordCharacters": [
       {
         "han": "飛",
@@ -1582,22 +1733,25 @@
           "ㄉ",
           "ㄥ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄊ",
-          "ㄨ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🪽",
     "category": "數字",
     "difficulty": "beginner",
-    "speechText": "飛機大",
+    "speechText": "飛機",
     "audioKey": "word-41",
-    "primarySymbol": "ㄈ"
+    "primarySymbol": "ㄈ",
+    "targetCharacter": "飛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪽",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "飛機 的清楚圖像"
+    }
   },
   {
     "id": "word-42",
@@ -1606,7 +1760,7 @@
       "ㄉ",
       "ㄥ"
     ],
-    "word": "雨傘大",
+    "word": "雨傘",
     "wordCharacters": [
       {
         "han": "雨",
@@ -1622,23 +1776,25 @@
           "ㄨ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄋ",
-          "ㄧ",
-          "ㄠ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "💡",
     "category": "學校",
     "difficulty": "beginner",
-    "speechText": "雨傘大",
+    "speechText": "雨傘",
     "audioKey": "word-42",
-    "primarySymbol": "ㄉ"
+    "primarySymbol": "ㄉ",
+    "targetCharacter": "雨",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "💡",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "雨傘 的清楚圖像"
+    }
   },
   {
     "id": "word-43",
@@ -1648,7 +1804,7 @@
       "ㄨ",
       "ˋ"
     ],
-    "word": "帽子大",
+    "word": "帽子",
     "wordCharacters": [
       {
         "han": "帽",
@@ -1666,22 +1822,25 @@
           "ㄠ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄌ",
-          "ㄨ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🐰",
     "category": "日用品",
     "difficulty": "beginner",
-    "speechText": "帽子大",
+    "speechText": "帽子",
     "audioKey": "word-43",
-    "primarySymbol": "ㄊ"
+    "primarySymbol": "ㄊ",
+    "targetCharacter": "帽",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐰",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "帽子 的清楚圖像"
+    }
   },
   {
     "id": "word-44",
@@ -1692,7 +1851,7 @@
       "ㄠ",
       "ˇ"
     ],
-    "word": "衣服大",
+    "word": "衣服",
     "wordCharacters": [
       {
         "han": "衣",
@@ -1710,22 +1869,25 @@
           "ㄨ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄍ",
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🐦",
     "category": "交通工具",
     "difficulty": "beginner",
-    "speechText": "衣服大",
+    "speechText": "衣服",
     "audioKey": "word-44",
-    "primarySymbol": "ㄋ"
+    "primarySymbol": "ㄋ",
+    "targetCharacter": "衣",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐦",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "衣服 的清楚圖像"
+    }
   },
   {
     "id": "word-45",
@@ -1735,7 +1897,7 @@
       "ㄨ",
       "ˋ"
     ],
-    "word": "褲子大",
+    "word": "褲子",
     "wordCharacters": [
       {
         "han": "褲",
@@ -1752,22 +1914,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄎ",
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🦌",
     "category": "自然",
     "difficulty": "beginner",
-    "speechText": "褲子大",
+    "speechText": "褲子",
     "audioKey": "word-45",
-    "primarySymbol": "ㄌ"
+    "primarySymbol": "ㄌ",
+    "targetCharacter": "褲",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦌",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "褲子 的清楚圖像"
+    }
   },
   {
     "id": "word-46",
@@ -1777,7 +1942,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "鞋子大",
+    "word": "鞋子",
     "wordCharacters": [
       {
         "han": "鞋",
@@ -1794,22 +1959,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄏ",
-          "ㄜ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🐶",
     "category": "動作",
     "difficulty": "beginner",
-    "speechText": "鞋子大",
+    "speechText": "鞋子",
     "audioKey": "word-46",
-    "primarySymbol": "ㄍ"
+    "primarySymbol": "ㄍ",
+    "targetCharacter": "鞋",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐶",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "鞋子 的清楚圖像"
+    }
   },
   {
     "id": "word-47",
@@ -1819,7 +1987,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "襪子大",
+    "word": "襪子",
     "wordCharacters": [
       {
         "han": "襪",
@@ -1836,21 +2004,25 @@
           "ㄜ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄐ",
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "👄",
     "category": "情緒",
     "difficulty": "beginner",
-    "speechText": "襪子大",
+    "speechText": "襪子",
     "audioKey": "word-47",
-    "primarySymbol": "ㄎ"
+    "primarySymbol": "ㄎ",
+    "targetCharacter": "襪",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👄",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "襪子 的清楚圖像"
+    }
   },
   {
     "id": "word-48",
@@ -1860,7 +2032,7 @@
       "ㄜ",
       "ˊ"
     ],
-    "word": "房間大",
+    "word": "房間",
     "wordCharacters": [
       {
         "han": "房",
@@ -1876,22 +2048,25 @@
           "ㄐ",
           "ㄧ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄑ",
-          "ㄧ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🏞️",
     "category": "時間",
     "difficulty": "beginner",
-    "speechText": "房間大",
+    "speechText": "房間",
     "audioKey": "word-48",
-    "primarySymbol": "ㄏ"
+    "primarySymbol": "ㄏ",
+    "targetCharacter": "房",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏞️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "房間 的清楚圖像"
+    }
   },
   {
     "id": "word-49",
@@ -1900,7 +2075,7 @@
       "ㄐ",
       "ㄧ"
     ],
-    "word": "客廳大",
+    "word": "客廳",
     "wordCharacters": [
       {
         "han": "客",
@@ -1916,21 +2091,25 @@
           "ㄧ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄒ",
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "🐔",
     "category": "地點",
     "difficulty": "beginner",
-    "speechText": "客廳大",
+    "speechText": "客廳",
     "audioKey": "word-49",
-    "primarySymbol": "ㄐ"
+    "primarySymbol": "ㄐ",
+    "targetCharacter": "客",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐔",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "客廳 的清楚圖像"
+    }
   },
   {
     "id": "word-50",
@@ -1940,7 +2119,7 @@
       "ㄧ",
       "ˊ"
     ],
-    "word": "廚房大",
+    "word": "廚房",
     "wordCharacters": [
       {
         "han": "廚",
@@ -1956,22 +2135,25 @@
           "ㄒ",
           "ㄧ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄓ",
-          "ㄨ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🚩",
     "category": "衣物",
     "difficulty": "beginner",
-    "speechText": "廚房大",
+    "speechText": "廚房",
     "audioKey": "word-50",
-    "primarySymbol": "ㄑ"
+    "primarySymbol": "ㄑ",
+    "targetCharacter": "廚",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚩",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "廚房 的清楚圖像"
+    }
   },
   {
     "id": "word-51",
@@ -1980,7 +2162,7 @@
       "ㄒ",
       "ㄧ"
     ],
-    "word": "杯子大",
+    "word": "杯子",
     "wordCharacters": [
       {
         "han": "杯",
@@ -1996,21 +2178,25 @@
           "ㄨ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄔ",
-          "ㄜ"
-        ]
       }
     ],
     "emoji": "🌅",
     "category": "家中用品",
     "difficulty": "beginner",
-    "speechText": "杯子大",
+    "speechText": "杯子",
     "audioKey": "word-51",
-    "primarySymbol": "ㄒ"
+    "primarySymbol": "ㄒ",
+    "targetCharacter": "杯",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌅",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "杯子 的清楚圖像"
+    }
   },
   {
     "id": "word-52",
@@ -2020,7 +2206,7 @@
       "ㄨ",
       "ˊ"
     ],
-    "word": "碗盤大",
+    "word": "碗盤",
     "wordCharacters": [
       {
         "han": "碗",
@@ -2036,21 +2222,25 @@
           "ㄔ",
           "ㄜ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄕ",
-          "ㄨ"
-        ]
       }
     ],
     "emoji": "🎋",
     "category": "家人",
     "difficulty": "beginner",
-    "speechText": "碗盤大",
+    "speechText": "碗盤",
     "audioKey": "word-52",
-    "primarySymbol": "ㄓ"
+    "primarySymbol": "ㄓ",
+    "targetCharacter": "碗",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🎋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "碗盤 的清楚圖像"
+    }
   },
   {
     "id": "word-53",
@@ -2059,7 +2249,7 @@
       "ㄔ",
       "ㄜ"
     ],
-    "word": "牙刷大",
+    "word": "牙刷",
     "wordCharacters": [
       {
         "han": "牙",
@@ -2074,21 +2264,25 @@
           "ㄕ",
           "ㄨ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄖ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🚗",
     "category": "身體",
     "difficulty": "beginner",
-    "speechText": "牙刷大",
+    "speechText": "牙刷",
     "audioKey": "word-53",
-    "primarySymbol": "ㄔ"
+    "primarySymbol": "ㄔ",
+    "targetCharacter": "牙",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚗",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "牙刷 的清楚圖像"
+    }
   },
   {
     "id": "word-54",
@@ -2097,7 +2291,7 @@
       "ㄕ",
       "ㄨ"
     ],
-    "word": "毛巾大",
+    "word": "毛巾",
     "wordCharacters": [
       {
         "han": "毛",
@@ -2112,21 +2306,25 @@
           "ㄖ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄗ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "📖",
     "category": "動物",
     "difficulty": "beginner",
-    "speechText": "毛巾大",
+    "speechText": "毛巾",
     "audioKey": "word-54",
-    "primarySymbol": "ㄕ"
+    "primarySymbol": "ㄕ",
+    "targetCharacter": "毛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "📖",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "毛巾 的清楚圖像"
+    }
   },
   {
     "id": "word-55",
@@ -2135,7 +2333,7 @@
       "ㄖ",
       "ˋ"
     ],
-    "word": "太陽大",
+    "word": "太陽",
     "wordCharacters": [
       {
         "han": "太",
@@ -2150,22 +2348,25 @@
           "ㄗ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄘ",
-          "ㄠ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "☀️",
     "category": "水果",
     "difficulty": "beginner",
-    "speechText": "太陽大",
+    "speechText": "太陽",
     "audioKey": "word-55",
-    "primarySymbol": "ㄖ"
+    "primarySymbol": "ㄖ",
+    "targetCharacter": "太",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☀️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "太陽 的清楚圖像"
+    }
   },
   {
     "id": "word-56",
@@ -2174,7 +2375,7 @@
       "ㄗ",
       "ˋ"
     ],
-    "word": "月亮大",
+    "word": "月亮",
     "wordCharacters": [
       {
         "han": "月",
@@ -2190,22 +2391,25 @@
           "ㄠ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄙ",
-          "ㄢ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🔤",
     "category": "食物",
     "difficulty": "beginner",
-    "speechText": "月亮大",
+    "speechText": "月亮",
     "audioKey": "word-56",
-    "primarySymbol": "ㄗ"
+    "primarySymbol": "ㄗ",
+    "targetCharacter": "月",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🔤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "月亮 的清楚圖像"
+    }
   },
   {
     "id": "word-57",
@@ -2215,7 +2419,7 @@
       "ㄠ",
       "ˇ"
     ],
-    "word": "星星大",
+    "word": "星星",
     "wordCharacters": [
       {
         "han": "星",
@@ -2232,20 +2436,25 @@
           "ㄢ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "🌱",
     "category": "顏色",
     "difficulty": "beginner",
-    "speechText": "星星大",
+    "speechText": "星星",
     "audioKey": "word-57",
-    "primarySymbol": "ㄘ"
+    "primarySymbol": "ㄘ",
+    "targetCharacter": "星",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌱",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "星星 的清楚圖像"
+    }
   },
   {
     "id": "word-58",
@@ -2255,7 +2464,7 @@
       "ㄢ",
       "ˇ"
     ],
-    "word": "白雲大",
+    "word": "白雲",
     "wordCharacters": [
       {
         "han": "白",
@@ -2270,20 +2479,25 @@
         "zhuyin": [
           "ㄧ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄨ"
-        ]
       }
     ],
     "emoji": "☂️",
     "category": "數字",
     "difficulty": "beginner",
-    "speechText": "白雲大",
+    "speechText": "白雲",
     "audioKey": "word-58",
-    "primarySymbol": "ㄙ"
+    "primarySymbol": "ㄙ",
+    "targetCharacter": "白",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☂️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "白雲 的清楚圖像"
+    }
   },
   {
     "id": "word-59",
@@ -2291,7 +2505,7 @@
     "zhuyin": [
       "ㄧ"
     ],
-    "word": "下雨大",
+    "word": "下雨",
     "wordCharacters": [
       {
         "han": "下",
@@ -2304,21 +2518,25 @@
         "zhuyin": [
           "ㄨ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄩ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "👕",
     "category": "學校",
     "difficulty": "beginner",
-    "speechText": "下雨大",
+    "speechText": "下雨",
     "audioKey": "word-59",
-    "primarySymbol": "ㄧ"
+    "primarySymbol": "ㄧ",
+    "targetCharacter": "下",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👕",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "下雨 的清楚圖像"
+    }
   },
   {
     "id": "word-60",
@@ -2326,7 +2544,7 @@
     "zhuyin": [
       "ㄨ"
     ],
-    "word": "大風大",
+    "word": "大風",
     "wordCharacters": [
       {
         "han": "大",
@@ -2340,21 +2558,25 @@
           "ㄩ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄧ",
-          "ㄚ"
-        ]
       }
     ],
     "emoji": "🏠",
     "category": "日用品",
     "difficulty": "beginner",
-    "speechText": "大風大",
+    "speechText": "大風",
     "audioKey": "word-60",
-    "primarySymbol": "ㄨ"
+    "primarySymbol": "ㄨ",
+    "targetCharacter": "大",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏠",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "大風 的清楚圖像"
+    }
   },
   {
     "id": "word-61",
@@ -2363,7 +2585,7 @@
       "ㄩ",
       "ˊ"
     ],
-    "word": "花園大",
+    "word": "花園",
     "wordCharacters": [
       {
         "han": "花",
@@ -2378,20 +2600,25 @@
           "ㄧ",
           "ㄚ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄛ"
-        ]
       }
     ],
     "emoji": "🐟",
     "category": "交通工具",
     "difficulty": "beginner",
-    "speechText": "花園大",
+    "speechText": "花園",
     "audioKey": "word-61",
-    "primarySymbol": "ㄩ"
+    "primarySymbol": "ㄩ",
+    "targetCharacter": "花",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐟",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "花園 的清楚圖像"
+    }
   },
   {
     "id": "word-62",
@@ -2400,7 +2627,7 @@
       "ㄧ",
       "ㄚ"
     ],
-    "word": "大樹大",
+    "word": "大樹",
     "wordCharacters": [
       {
         "han": "大",
@@ -2414,21 +2641,25 @@
         "zhuyin": [
           "ㄛ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄜ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🦆",
     "category": "自然",
     "difficulty": "beginner",
-    "speechText": "大樹大",
+    "speechText": "大樹",
     "audioKey": "word-62",
-    "primarySymbol": "ㄚ"
+    "primarySymbol": "ㄚ",
+    "targetCharacter": "大",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦆",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "大樹 的清楚圖像"
+    }
   },
   {
     "id": "word-63",
@@ -2436,7 +2667,7 @@
     "zhuyin": [
       "ㄛ"
     ],
-    "word": "小草大",
+    "word": "小草",
     "wordCharacters": [
       {
         "han": "小",
@@ -2450,20 +2681,25 @@
           "ㄜ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄝ"
-        ]
       }
     ],
     "emoji": "⭕",
     "category": "動作",
     "difficulty": "beginner",
-    "speechText": "小草大",
+    "speechText": "小草",
     "audioKey": "word-63",
-    "primarySymbol": "ㄛ"
+    "primarySymbol": "ㄛ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "⭕",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小草 的清楚圖像"
+    }
   },
   {
     "id": "word-64",
@@ -2472,7 +2708,7 @@
       "ㄜ",
       "ˊ"
     ],
-    "word": "高山大",
+    "word": "高山",
     "wordCharacters": [
       {
         "han": "高",
@@ -2486,21 +2722,25 @@
         "zhuyin": [
           "ㄝ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄞ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🪿",
     "category": "情緒",
     "difficulty": "beginner",
-    "speechText": "高山大",
+    "speechText": "高山",
     "audioKey": "word-64",
-    "primarySymbol": "ㄜ"
+    "primarySymbol": "ㄜ",
+    "targetCharacter": "高",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪿",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "高山 的清楚圖像"
+    }
   },
   {
     "id": "word-65",
@@ -2508,7 +2748,7 @@
     "zhuyin": [
       "ㄝ"
     ],
-    "word": "河水大",
+    "word": "河水",
     "wordCharacters": [
       {
         "han": "河",
@@ -2522,21 +2762,25 @@
           "ㄞ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄅ",
-          "ㄟ"
-        ]
       }
     ],
     "emoji": "🙋",
     "category": "時間",
     "difficulty": "beginner",
-    "speechText": "河水大",
+    "speechText": "河水",
     "audioKey": "word-65",
-    "primarySymbol": "ㄝ"
+    "primarySymbol": "ㄝ",
+    "targetCharacter": "河",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🙋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "河水 的清楚圖像"
+    }
   },
   {
     "id": "word-66",
@@ -2545,7 +2789,7 @@
       "ㄞ",
       "ˋ"
     ],
-    "word": "海邊大",
+    "word": "海邊",
     "wordCharacters": [
       {
         "han": "海",
@@ -2560,20 +2804,25 @@
           "ㄅ",
           "ㄟ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄠ"
-        ]
       }
     ],
     "emoji": "❤️",
     "category": "地點",
     "difficulty": "beginner",
-    "speechText": "海邊大",
+    "speechText": "海邊",
     "audioKey": "word-66",
-    "primarySymbol": "ㄞ"
+    "primarySymbol": "ㄞ",
+    "targetCharacter": "海",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "❤️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "海邊 的清楚圖像"
+    }
   },
   {
     "id": "word-67",
@@ -2582,7 +2831,7 @@
       "ㄅ",
       "ㄟ"
     ],
-    "word": "紅色大",
+    "word": "紅色",
     "wordCharacters": [
       {
         "han": "紅",
@@ -2596,21 +2845,25 @@
         "zhuyin": [
           "ㄠ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🥤",
     "category": "衣物",
     "difficulty": "beginner",
-    "speechText": "紅色大",
+    "speechText": "紅色",
     "audioKey": "word-67",
-    "primarySymbol": "ㄟ"
+    "primarySymbol": "ㄟ",
+    "targetCharacter": "紅",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🥤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "紅色 的清楚圖像"
+    }
   },
   {
     "id": "word-68",
@@ -2618,7 +2871,7 @@
     "zhuyin": [
       "ㄠ"
     ],
-    "word": "黃色大",
+    "word": "黃色",
     "wordCharacters": [
       {
         "han": "黃",
@@ -2632,20 +2885,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄢ"
-        ]
       }
     ],
     "emoji": "🕳️",
     "category": "家中用品",
     "difficulty": "beginner",
-    "speechText": "黃色大",
+    "speechText": "黃色",
     "audioKey": "word-68",
-    "primarySymbol": "ㄠ"
+    "primarySymbol": "ㄠ",
+    "targetCharacter": "黃",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🕳️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "黃色 的清楚圖像"
+    }
   },
   {
     "id": "word-69",
@@ -2654,7 +2912,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "綠色大",
+    "word": "綠色",
     "wordCharacters": [
       {
         "han": "綠",
@@ -2668,20 +2926,25 @@
         "zhuyin": [
           "ㄢ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄣ"
-        ]
       }
     ],
     "emoji": "🪷",
     "category": "家人",
     "difficulty": "beginner",
-    "speechText": "綠色大",
+    "speechText": "綠色",
     "audioKey": "word-69",
-    "primarySymbol": "ㄡ"
+    "primarySymbol": "ㄡ",
+    "targetCharacter": "綠",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪷",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "綠色 的清楚圖像"
+    }
   },
   {
     "id": "word-70",
@@ -2689,7 +2952,7 @@
     "zhuyin": [
       "ㄢ"
     ],
-    "word": "藍色大",
+    "word": "藍色",
     "wordCharacters": [
       {
         "han": "藍",
@@ -2702,22 +2965,25 @@
         "zhuyin": [
           "ㄣ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄧ",
-          "ㄤ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🛏️",
     "category": "身體",
     "difficulty": "beginner",
-    "speechText": "藍色大",
+    "speechText": "藍色",
     "audioKey": "word-70",
-    "primarySymbol": "ㄢ"
+    "primarySymbol": "ㄢ",
+    "targetCharacter": "藍",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🛏️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "藍色 的清楚圖像"
+    }
   },
   {
     "id": "word-71",
@@ -2725,7 +2991,7 @@
     "zhuyin": [
       "ㄣ"
     ],
-    "word": "黑色大",
+    "word": "黑色",
     "wordCharacters": [
       {
         "han": "黑",
@@ -2740,21 +3006,25 @@
           "ㄤ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄈ",
-          "ㄥ"
-        ]
       }
     ],
     "emoji": "🙏",
     "category": "動物",
     "difficulty": "beginner",
-    "speechText": "黑色大",
+    "speechText": "黑色",
     "audioKey": "word-71",
-    "primarySymbol": "ㄣ"
+    "primarySymbol": "ㄣ",
+    "targetCharacter": "黑",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🙏",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "黑色 的清楚圖像"
+    }
   },
   {
     "id": "word-72",
@@ -2764,7 +3034,7 @@
       "ㄤ",
       "ˊ"
     ],
-    "word": "白色大",
+    "word": "白色",
     "wordCharacters": [
       {
         "han": "白",
@@ -2780,21 +3050,25 @@
           "ㄈ",
           "ㄥ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄦ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🐑",
     "category": "水果",
     "difficulty": "beginner",
-    "speechText": "白色大",
+    "speechText": "白色",
     "audioKey": "word-72",
-    "primarySymbol": "ㄤ"
+    "primarySymbol": "ㄤ",
+    "targetCharacter": "白",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐑",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "白色 的清楚圖像"
+    }
   },
   {
     "id": "word-73",
@@ -2803,7 +3077,7 @@
       "ㄈ",
       "ㄥ"
     ],
-    "word": "開心大",
+    "word": "開心",
     "wordCharacters": [
       {
         "han": "開",
@@ -2818,22 +3092,25 @@
           "ㄦ",
           "ˊ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄅ",
-          "ㄚ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🌬️",
     "category": "食物",
     "difficulty": "beginner",
-    "speechText": "開心大",
+    "speechText": "開心",
     "audioKey": "word-73",
-    "primarySymbol": "ㄥ"
+    "primarySymbol": "ㄥ",
+    "targetCharacter": "開",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌬️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "開心 的清楚圖像"
+    }
   },
   {
     "id": "word-74",
@@ -2842,7 +3119,7 @@
       "ㄦ",
       "ˊ"
     ],
-    "word": "生氣大",
+    "word": "生氣",
     "wordCharacters": [
       {
         "han": "生",
@@ -2858,22 +3135,25 @@
           "ㄚ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄆ",
-          "ㄠ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🧒",
     "category": "顏色",
     "difficulty": "beginner",
-    "speechText": "生氣大",
+    "speechText": "生氣",
     "audioKey": "word-74",
-    "primarySymbol": "ㄦ"
+    "primarySymbol": "ㄦ",
+    "targetCharacter": "生",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🧒",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "生氣 的清楚圖像"
+    }
   },
   {
     "id": "word-75",
@@ -2883,7 +3163,7 @@
       "ㄚ",
       "ˋ"
     ],
-    "word": "害怕大",
+    "word": "害怕",
     "wordCharacters": [
       {
         "han": "害",
@@ -2900,22 +3180,25 @@
           "ㄠ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄇ",
-          "ㄚ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "👨",
     "category": "數字",
     "difficulty": "beginner",
-    "speechText": "害怕大",
+    "speechText": "害怕",
     "audioKey": "word-75",
-    "primarySymbol": "ㄅ"
+    "primarySymbol": "ㄅ",
+    "targetCharacter": "害",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👨",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "害怕 的清楚圖像"
+    }
   },
   {
     "id": "word-76",
@@ -2925,7 +3208,7 @@
       "ㄠ",
       "ˋ"
     ],
-    "word": "難過大",
+    "word": "難過",
     "wordCharacters": [
       {
         "han": "難",
@@ -2942,21 +3225,25 @@
           "ㄚ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄈ",
-          "ㄟ"
-        ]
       }
     ],
     "emoji": "🫧",
     "category": "學校",
     "difficulty": "beginner",
-    "speechText": "難過大",
+    "speechText": "難過",
     "audioKey": "word-76",
-    "primarySymbol": "ㄆ"
+    "primarySymbol": "ㄆ",
+    "targetCharacter": "難",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🫧",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "難過 的清楚圖像"
+    }
   },
   {
     "id": "word-77",
@@ -2966,7 +3253,7 @@
       "ㄚ",
       "ˇ"
     ],
-    "word": "早安大",
+    "word": "早安",
     "wordCharacters": [
       {
         "han": "早",
@@ -2982,21 +3269,25 @@
           "ㄈ",
           "ㄟ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄉ",
-          "ㄥ"
-        ]
       }
     ],
     "emoji": "🐴",
     "category": "日用品",
     "difficulty": "beginner",
-    "speechText": "早安大",
+    "speechText": "早安",
     "audioKey": "word-77",
-    "primarySymbol": "ㄇ"
+    "primarySymbol": "ㄇ",
+    "targetCharacter": "早",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐴",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "早安 的清楚圖像"
+    }
   },
   {
     "id": "word-78",
@@ -3005,7 +3296,7 @@
       "ㄈ",
       "ㄟ"
     ],
-    "word": "午安大",
+    "word": "午安",
     "wordCharacters": [
       {
         "han": "午",
@@ -3020,22 +3311,25 @@
           "ㄉ",
           "ㄥ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄊ",
-          "ㄨ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🪽",
     "category": "交通工具",
     "difficulty": "beginner",
-    "speechText": "午安大",
+    "speechText": "午安",
     "audioKey": "word-78",
-    "primarySymbol": "ㄈ"
+    "primarySymbol": "ㄈ",
+    "targetCharacter": "午",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪽",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "午安 的清楚圖像"
+    }
   },
   {
     "id": "word-79",
@@ -3044,7 +3338,7 @@
       "ㄉ",
       "ㄥ"
     ],
-    "word": "晚安大",
+    "word": "晚安",
     "wordCharacters": [
       {
         "han": "晚",
@@ -3060,23 +3354,25 @@
           "ㄨ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄋ",
-          "ㄧ",
-          "ㄠ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "💡",
     "category": "自然",
     "difficulty": "beginner",
-    "speechText": "晚安大",
+    "speechText": "晚安",
     "audioKey": "word-79",
-    "primarySymbol": "ㄉ"
+    "primarySymbol": "ㄉ",
+    "targetCharacter": "晚",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "💡",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "晚安 的清楚圖像"
+    }
   },
   {
     "id": "word-80",
@@ -3086,7 +3382,7 @@
       "ㄨ",
       "ˋ"
     ],
-    "word": "今天大",
+    "word": "今天",
     "wordCharacters": [
       {
         "han": "今",
@@ -3104,22 +3400,25 @@
           "ㄠ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄌ",
-          "ㄨ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🐰",
     "category": "動作",
     "difficulty": "beginner",
-    "speechText": "今天大",
+    "speechText": "今天",
     "audioKey": "word-80",
-    "primarySymbol": "ㄊ"
+    "primarySymbol": "ㄊ",
+    "targetCharacter": "今",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐰",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "今天 的清楚圖像"
+    }
   },
   {
     "id": "word-81",
@@ -3130,7 +3429,7 @@
       "ㄠ",
       "ˇ"
     ],
-    "word": "明天大",
+    "word": "明天",
     "wordCharacters": [
       {
         "han": "明",
@@ -3148,22 +3447,25 @@
           "ㄨ",
           "ˋ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄍ",
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🐦",
     "category": "情緒",
     "difficulty": "beginner",
-    "speechText": "明天大",
+    "speechText": "明天",
     "audioKey": "word-81",
-    "primarySymbol": "ㄋ"
+    "primarySymbol": "ㄋ",
+    "targetCharacter": "明",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐦",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "明天 的清楚圖像"
+    }
   },
   {
     "id": "word-82",
@@ -3173,7 +3475,7 @@
       "ㄨ",
       "ˋ"
     ],
-    "word": "昨天大",
+    "word": "昨天",
     "wordCharacters": [
       {
         "han": "昨",
@@ -3190,22 +3492,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "大",
-        "zhuyin": [
-          "ㄎ",
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🦌",
     "category": "時間",
     "difficulty": "beginner",
-    "speechText": "昨天大",
+    "speechText": "昨天",
     "audioKey": "word-82",
-    "primarySymbol": "ㄌ"
+    "primarySymbol": "ㄌ",
+    "targetCharacter": "昨",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦌",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "昨天 的清楚圖像"
+    }
   },
   {
     "id": "word-83",
@@ -3215,7 +3520,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "爸爸小",
+    "word": "爸爸",
     "wordCharacters": [
       {
         "han": "爸",
@@ -3232,22 +3537,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄏ",
-          "ㄜ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🐶",
     "category": "地點",
     "difficulty": "beginner",
-    "speechText": "爸爸小",
+    "speechText": "爸爸",
     "audioKey": "word-83",
-    "primarySymbol": "ㄍ"
+    "primarySymbol": "ㄍ",
+    "targetCharacter": "爸",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👨",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "爸爸 的清楚圖像"
+    }
   },
   {
     "id": "word-84",
@@ -3257,7 +3565,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "媽媽小",
+    "word": "媽媽",
     "wordCharacters": [
       {
         "han": "媽",
@@ -3274,21 +3582,25 @@
           "ㄜ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄐ",
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "👄",
     "category": "衣物",
     "difficulty": "beginner",
-    "speechText": "媽媽小",
+    "speechText": "媽媽",
     "audioKey": "word-84",
-    "primarySymbol": "ㄎ"
+    "primarySymbol": "ㄎ",
+    "targetCharacter": "媽",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👩",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "媽媽 的清楚圖像"
+    }
   },
   {
     "id": "word-85",
@@ -3298,7 +3610,7 @@
       "ㄜ",
       "ˊ"
     ],
-    "word": "哥哥小",
+    "word": "哥哥",
     "wordCharacters": [
       {
         "han": "哥",
@@ -3314,22 +3626,25 @@
           "ㄐ",
           "ㄧ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄑ",
-          "ㄧ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🏞️",
     "category": "家中用品",
     "difficulty": "beginner",
-    "speechText": "哥哥小",
+    "speechText": "哥哥",
     "audioKey": "word-85",
-    "primarySymbol": "ㄏ"
+    "primarySymbol": "ㄏ",
+    "targetCharacter": "哥",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👦",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "哥哥 的清楚圖像"
+    }
   },
   {
     "id": "word-86",
@@ -3338,7 +3653,7 @@
       "ㄐ",
       "ㄧ"
     ],
-    "word": "姐姐小",
+    "word": "姐姐",
     "wordCharacters": [
       {
         "han": "姐",
@@ -3354,21 +3669,25 @@
           "ㄧ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄒ",
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "🐔",
     "category": "家人",
     "difficulty": "beginner",
-    "speechText": "姐姐小",
+    "speechText": "姐姐",
     "audioKey": "word-86",
-    "primarySymbol": "ㄐ"
+    "primarySymbol": "ㄐ",
+    "targetCharacter": "姐",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐔",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "姐姐 的清楚圖像"
+    }
   },
   {
     "id": "word-87",
@@ -3378,7 +3697,7 @@
       "ㄧ",
       "ˊ"
     ],
-    "word": "弟弟小",
+    "word": "弟弟",
     "wordCharacters": [
       {
         "han": "弟",
@@ -3394,22 +3713,25 @@
           "ㄒ",
           "ㄧ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄓ",
-          "ㄨ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🚩",
     "category": "身體",
     "difficulty": "beginner",
-    "speechText": "弟弟小",
+    "speechText": "弟弟",
     "audioKey": "word-87",
-    "primarySymbol": "ㄑ"
+    "primarySymbol": "ㄑ",
+    "targetCharacter": "弟",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚩",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "弟弟 的清楚圖像"
+    }
   },
   {
     "id": "word-88",
@@ -3418,7 +3740,7 @@
       "ㄒ",
       "ㄧ"
     ],
-    "word": "妹妹小",
+    "word": "妹妹",
     "wordCharacters": [
       {
         "han": "妹",
@@ -3434,21 +3756,25 @@
           "ㄨ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄔ",
-          "ㄜ"
-        ]
       }
     ],
     "emoji": "🌅",
     "category": "動物",
     "difficulty": "beginner",
-    "speechText": "妹妹小",
+    "speechText": "妹妹",
     "audioKey": "word-88",
-    "primarySymbol": "ㄒ"
+    "primarySymbol": "ㄒ",
+    "targetCharacter": "妹",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌅",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "妹妹 的清楚圖像"
+    }
   },
   {
     "id": "word-89",
@@ -3458,7 +3784,7 @@
       "ㄨ",
       "ˊ"
     ],
-    "word": "爺爺小",
+    "word": "爺爺",
     "wordCharacters": [
       {
         "han": "爺",
@@ -3474,21 +3800,25 @@
           "ㄔ",
           "ㄜ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄕ",
-          "ㄨ"
-        ]
       }
     ],
     "emoji": "🎋",
     "category": "水果",
     "difficulty": "beginner",
-    "speechText": "爺爺小",
+    "speechText": "爺爺",
     "audioKey": "word-89",
-    "primarySymbol": "ㄓ"
+    "primarySymbol": "ㄓ",
+    "targetCharacter": "爺",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🎋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "爺爺 的清楚圖像"
+    }
   },
   {
     "id": "word-90",
@@ -3497,7 +3827,7 @@
       "ㄔ",
       "ㄜ"
     ],
-    "word": "奶奶小",
+    "word": "奶奶",
     "wordCharacters": [
       {
         "han": "奶",
@@ -3512,21 +3842,25 @@
           "ㄕ",
           "ㄨ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄖ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🚗",
     "category": "食物",
     "difficulty": "beginner",
-    "speechText": "奶奶小",
+    "speechText": "奶奶",
     "audioKey": "word-90",
-    "primarySymbol": "ㄔ"
+    "primarySymbol": "ㄔ",
+    "targetCharacter": "奶",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚗",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "奶奶 的清楚圖像"
+    }
   },
   {
     "id": "word-91",
@@ -3535,7 +3869,7 @@
       "ㄕ",
       "ㄨ"
     ],
-    "word": "老師小",
+    "word": "老師",
     "wordCharacters": [
       {
         "han": "老",
@@ -3550,21 +3884,25 @@
           "ㄖ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄗ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "📖",
     "category": "顏色",
     "difficulty": "beginner",
-    "speechText": "老師小",
+    "speechText": "老師",
     "audioKey": "word-91",
-    "primarySymbol": "ㄕ"
+    "primarySymbol": "ㄕ",
+    "targetCharacter": "老",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "📖",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "老師 的清楚圖像"
+    }
   },
   {
     "id": "word-92",
@@ -3573,7 +3911,7 @@
       "ㄖ",
       "ˋ"
     ],
-    "word": "同學小",
+    "word": "同學",
     "wordCharacters": [
       {
         "han": "同",
@@ -3588,22 +3926,25 @@
           "ㄗ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄘ",
-          "ㄠ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "☀️",
     "category": "數字",
     "difficulty": "beginner",
-    "speechText": "同學小",
+    "speechText": "同學",
     "audioKey": "word-92",
-    "primarySymbol": "ㄖ"
+    "primarySymbol": "ㄖ",
+    "targetCharacter": "同",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☀️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "同學 的清楚圖像"
+    }
   },
   {
     "id": "word-93",
@@ -3612,7 +3953,7 @@
       "ㄗ",
       "ˋ"
     ],
-    "word": "書包小",
+    "word": "書包",
     "wordCharacters": [
       {
         "han": "書",
@@ -3628,22 +3969,25 @@
           "ㄠ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄙ",
-          "ㄢ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🔤",
     "category": "學校",
     "difficulty": "beginner",
-    "speechText": "書包小",
+    "speechText": "書包",
     "audioKey": "word-93",
-    "primarySymbol": "ㄗ"
+    "primarySymbol": "ㄗ",
+    "targetCharacter": "書",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🔤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "書包 的清楚圖像"
+    }
   },
   {
     "id": "word-94",
@@ -3653,7 +3997,7 @@
       "ㄠ",
       "ˇ"
     ],
-    "word": "鉛筆小",
+    "word": "鉛筆",
     "wordCharacters": [
       {
         "han": "鉛",
@@ -3670,20 +4014,25 @@
           "ㄢ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "🌱",
     "category": "日用品",
     "difficulty": "beginner",
-    "speechText": "鉛筆小",
+    "speechText": "鉛筆",
     "audioKey": "word-94",
-    "primarySymbol": "ㄘ"
+    "primarySymbol": "ㄘ",
+    "targetCharacter": "鉛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌱",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "鉛筆 的清楚圖像"
+    }
   },
   {
     "id": "word-95",
@@ -3693,7 +4042,7 @@
       "ㄢ",
       "ˇ"
     ],
-    "word": "橡皮小",
+    "word": "橡皮",
     "wordCharacters": [
       {
         "han": "橡",
@@ -3708,20 +4057,25 @@
         "zhuyin": [
           "ㄧ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄨ"
-        ]
       }
     ],
     "emoji": "☂️",
     "category": "交通工具",
     "difficulty": "beginner",
-    "speechText": "橡皮小",
+    "speechText": "橡皮",
     "audioKey": "word-95",
-    "primarySymbol": "ㄙ"
+    "primarySymbol": "ㄙ",
+    "targetCharacter": "橡",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☂️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "橡皮 的清楚圖像"
+    }
   },
   {
     "id": "word-96",
@@ -3729,7 +4083,7 @@
     "zhuyin": [
       "ㄧ"
     ],
-    "word": "桌子小",
+    "word": "桌子",
     "wordCharacters": [
       {
         "han": "桌",
@@ -3742,21 +4096,25 @@
         "zhuyin": [
           "ㄨ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄩ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "👕",
     "category": "自然",
     "difficulty": "beginner",
-    "speechText": "桌子小",
+    "speechText": "桌子",
     "audioKey": "word-96",
-    "primarySymbol": "ㄧ"
+    "primarySymbol": "ㄧ",
+    "targetCharacter": "桌",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👕",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "桌子 的清楚圖像"
+    }
   },
   {
     "id": "word-97",
@@ -3764,7 +4122,7 @@
     "zhuyin": [
       "ㄨ"
     ],
-    "word": "椅子小",
+    "word": "椅子",
     "wordCharacters": [
       {
         "han": "椅",
@@ -3778,21 +4136,25 @@
           "ㄩ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄧ",
-          "ㄚ"
-        ]
       }
     ],
     "emoji": "🏠",
     "category": "動作",
     "difficulty": "beginner",
-    "speechText": "椅子小",
+    "speechText": "椅子",
     "audioKey": "word-97",
-    "primarySymbol": "ㄨ"
+    "primarySymbol": "ㄨ",
+    "targetCharacter": "椅",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏠",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "椅子 的清楚圖像"
+    }
   },
   {
     "id": "word-98",
@@ -3801,7 +4163,7 @@
       "ㄩ",
       "ˊ"
     ],
-    "word": "學校小",
+    "word": "學校",
     "wordCharacters": [
       {
         "han": "學",
@@ -3816,20 +4178,25 @@
           "ㄧ",
           "ㄚ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄛ"
-        ]
       }
     ],
     "emoji": "🐟",
     "category": "情緒",
     "difficulty": "beginner",
-    "speechText": "學校小",
+    "speechText": "學校",
     "audioKey": "word-98",
-    "primarySymbol": "ㄩ"
+    "primarySymbol": "ㄩ",
+    "targetCharacter": "學",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐟",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "學校 的清楚圖像"
+    }
   },
   {
     "id": "word-99",
@@ -3838,7 +4205,7 @@
       "ㄧ",
       "ㄚ"
     ],
-    "word": "教室小",
+    "word": "教室",
     "wordCharacters": [
       {
         "han": "教",
@@ -3852,21 +4219,25 @@
         "zhuyin": [
           "ㄛ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄜ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🦆",
     "category": "時間",
     "difficulty": "beginner",
-    "speechText": "教室小",
+    "speechText": "教室",
     "audioKey": "word-99",
-    "primarySymbol": "ㄚ"
+    "primarySymbol": "ㄚ",
+    "targetCharacter": "教",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦆",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "教室 的清楚圖像"
+    }
   },
   {
     "id": "word-100",
@@ -3874,7 +4245,7 @@
     "zhuyin": [
       "ㄛ"
     ],
-    "word": "操場小",
+    "word": "操場",
     "wordCharacters": [
       {
         "han": "操",
@@ -3888,20 +4259,25 @@
           "ㄜ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄝ"
-        ]
       }
     ],
     "emoji": "⭕",
     "category": "地點",
     "difficulty": "beginner",
-    "speechText": "操場小",
+    "speechText": "操場",
     "audioKey": "word-100",
-    "primarySymbol": "ㄛ"
+    "primarySymbol": "ㄛ",
+    "targetCharacter": "操",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "⭕",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "操場 的清楚圖像"
+    }
   },
   {
     "id": "word-101",
@@ -3910,7 +4286,7 @@
       "ㄜ",
       "ˊ"
     ],
-    "word": "跑步小",
+    "word": "跑步",
     "wordCharacters": [
       {
         "han": "跑",
@@ -3924,21 +4300,25 @@
         "zhuyin": [
           "ㄝ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄞ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🪿",
     "category": "衣物",
     "difficulty": "beginner",
-    "speechText": "跑步小",
+    "speechText": "跑步",
     "audioKey": "word-101",
-    "primarySymbol": "ㄜ"
+    "primarySymbol": "ㄜ",
+    "targetCharacter": "跑",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪿",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "跑步 的清楚圖像"
+    }
   },
   {
     "id": "word-102",
@@ -3946,7 +4326,7 @@
     "zhuyin": [
       "ㄝ"
     ],
-    "word": "跳高小",
+    "word": "跳高",
     "wordCharacters": [
       {
         "han": "跳",
@@ -3960,21 +4340,25 @@
           "ㄞ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄅ",
-          "ㄟ"
-        ]
       }
     ],
     "emoji": "🙋",
     "category": "家中用品",
     "difficulty": "beginner",
-    "speechText": "跳高小",
+    "speechText": "跳高",
     "audioKey": "word-102",
-    "primarySymbol": "ㄝ"
+    "primarySymbol": "ㄝ",
+    "targetCharacter": "跳",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🙋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "跳高 的清楚圖像"
+    }
   },
   {
     "id": "word-103",
@@ -3983,7 +4367,7 @@
       "ㄞ",
       "ˋ"
     ],
-    "word": "唱歌小",
+    "word": "唱歌",
     "wordCharacters": [
       {
         "han": "唱",
@@ -3998,20 +4382,25 @@
           "ㄅ",
           "ㄟ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄠ"
-        ]
       }
     ],
     "emoji": "❤️",
     "category": "家人",
     "difficulty": "beginner",
-    "speechText": "唱歌小",
+    "speechText": "唱歌",
     "audioKey": "word-103",
-    "primarySymbol": "ㄞ"
+    "primarySymbol": "ㄞ",
+    "targetCharacter": "唱",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "❤️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "唱歌 的清楚圖像"
+    }
   },
   {
     "id": "word-104",
@@ -4020,7 +4409,7 @@
       "ㄅ",
       "ㄟ"
     ],
-    "word": "說話小",
+    "word": "說話",
     "wordCharacters": [
       {
         "han": "說",
@@ -4034,21 +4423,25 @@
         "zhuyin": [
           "ㄠ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🥤",
     "category": "身體",
     "difficulty": "beginner",
-    "speechText": "說話小",
+    "speechText": "說話",
     "audioKey": "word-104",
-    "primarySymbol": "ㄟ"
+    "primarySymbol": "ㄟ",
+    "targetCharacter": "說",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🥤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "說話 的清楚圖像"
+    }
   },
   {
     "id": "word-105",
@@ -4056,7 +4449,7 @@
     "zhuyin": [
       "ㄠ"
     ],
-    "word": "聽話小",
+    "word": "聽話",
     "wordCharacters": [
       {
         "han": "聽",
@@ -4070,20 +4463,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄢ"
-        ]
       }
     ],
     "emoji": "🕳️",
     "category": "動物",
     "difficulty": "beginner",
-    "speechText": "聽話小",
+    "speechText": "聽話",
     "audioKey": "word-105",
-    "primarySymbol": "ㄠ"
+    "primarySymbol": "ㄠ",
+    "targetCharacter": "聽",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🕳️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "聽話 的清楚圖像"
+    }
   },
   {
     "id": "word-106",
@@ -4092,7 +4490,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "看書小",
+    "word": "看書",
     "wordCharacters": [
       {
         "han": "看",
@@ -4106,20 +4504,25 @@
         "zhuyin": [
           "ㄢ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄣ"
-        ]
       }
     ],
     "emoji": "🪷",
     "category": "水果",
     "difficulty": "beginner",
-    "speechText": "看書小",
+    "speechText": "看書",
     "audioKey": "word-106",
-    "primarySymbol": "ㄡ"
+    "primarySymbol": "ㄡ",
+    "targetCharacter": "看",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪷",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "看書 的清楚圖像"
+    }
   },
   {
     "id": "word-107",
@@ -4127,7 +4530,7 @@
     "zhuyin": [
       "ㄢ"
     ],
-    "word": "吃飯小",
+    "word": "吃飯",
     "wordCharacters": [
       {
         "han": "吃",
@@ -4140,22 +4543,25 @@
         "zhuyin": [
           "ㄣ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄧ",
-          "ㄤ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🛏️",
     "category": "食物",
     "difficulty": "beginner",
-    "speechText": "吃飯小",
+    "speechText": "吃飯",
     "audioKey": "word-107",
-    "primarySymbol": "ㄢ"
+    "primarySymbol": "ㄢ",
+    "targetCharacter": "吃",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🛏️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "吃飯 的清楚圖像"
+    }
   },
   {
     "id": "word-108",
@@ -4163,7 +4569,7 @@
     "zhuyin": [
       "ㄣ"
     ],
-    "word": "喝水小",
+    "word": "喝水",
     "wordCharacters": [
       {
         "han": "喝",
@@ -4178,21 +4584,25 @@
           "ㄤ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄈ",
-          "ㄥ"
-        ]
       }
     ],
     "emoji": "🙏",
     "category": "顏色",
     "difficulty": "beginner",
-    "speechText": "喝水小",
+    "speechText": "喝水",
     "audioKey": "word-108",
-    "primarySymbol": "ㄣ"
+    "primarySymbol": "ㄣ",
+    "targetCharacter": "喝",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🥤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "喝水 的清楚圖像"
+    }
   },
   {
     "id": "word-109",
@@ -4202,7 +4612,7 @@
       "ㄤ",
       "ˊ"
     ],
-    "word": "牛奶小",
+    "word": "牛奶",
     "wordCharacters": [
       {
         "han": "牛",
@@ -4218,21 +4628,25 @@
           "ㄈ",
           "ㄥ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄦ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🐑",
     "category": "數字",
     "difficulty": "beginner",
-    "speechText": "牛奶小",
+    "speechText": "牛奶",
     "audioKey": "word-109",
-    "primarySymbol": "ㄤ"
+    "primarySymbol": "ㄤ",
+    "targetCharacter": "牛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐑",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "牛奶 的清楚圖像"
+    }
   },
   {
     "id": "word-110",
@@ -4241,7 +4655,7 @@
       "ㄈ",
       "ㄥ"
     ],
-    "word": "雞蛋小",
+    "word": "雞蛋",
     "wordCharacters": [
       {
         "han": "雞",
@@ -4256,22 +4670,25 @@
           "ㄦ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄅ",
-          "ㄚ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🌬️",
     "category": "學校",
     "difficulty": "beginner",
-    "speechText": "雞蛋小",
+    "speechText": "雞蛋",
     "audioKey": "word-110",
-    "primarySymbol": "ㄥ"
+    "primarySymbol": "ㄥ",
+    "targetCharacter": "雞",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌬️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "雞蛋 的清楚圖像"
+    }
   },
   {
     "id": "word-111",
@@ -4280,7 +4697,7 @@
       "ㄦ",
       "ˊ"
     ],
-    "word": "水果小",
+    "word": "水果",
     "wordCharacters": [
       {
         "han": "水",
@@ -4296,22 +4713,25 @@
           "ㄚ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄆ",
-          "ㄠ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🧒",
     "category": "日用品",
     "difficulty": "beginner",
-    "speechText": "水果小",
+    "speechText": "水果",
     "audioKey": "word-111",
-    "primarySymbol": "ㄦ"
+    "primarySymbol": "ㄦ",
+    "targetCharacter": "水",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🧒",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "水果 的清楚圖像"
+    }
   },
   {
     "id": "word-112",
@@ -4321,7 +4741,7 @@
       "ㄚ",
       "ˋ"
     ],
-    "word": "香蕉小",
+    "word": "香蕉",
     "wordCharacters": [
       {
         "han": "香",
@@ -4338,22 +4758,25 @@
           "ㄠ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄇ",
-          "ㄚ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "👨",
     "category": "交通工具",
     "difficulty": "beginner",
-    "speechText": "香蕉小",
+    "speechText": "香蕉",
     "audioKey": "word-112",
-    "primarySymbol": "ㄅ"
+    "primarySymbol": "ㄅ",
+    "targetCharacter": "香",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👨",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "香蕉 的清楚圖像"
+    }
   },
   {
     "id": "word-113",
@@ -4363,7 +4786,7 @@
       "ㄠ",
       "ˋ"
     ],
-    "word": "蘋果小",
+    "word": "蘋果",
     "wordCharacters": [
       {
         "han": "蘋",
@@ -4380,21 +4803,25 @@
           "ㄚ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄈ",
-          "ㄟ"
-        ]
       }
     ],
     "emoji": "🫧",
     "category": "自然",
     "difficulty": "beginner",
-    "speechText": "蘋果小",
+    "speechText": "蘋果",
     "audioKey": "word-113",
-    "primarySymbol": "ㄆ"
+    "primarySymbol": "ㄆ",
+    "targetCharacter": "蘋",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🫧",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "蘋果 的清楚圖像"
+    }
   },
   {
     "id": "word-114",
@@ -4404,7 +4831,7 @@
       "ㄚ",
       "ˇ"
     ],
-    "word": "西瓜小",
+    "word": "西瓜",
     "wordCharacters": [
       {
         "han": "西",
@@ -4420,21 +4847,25 @@
           "ㄈ",
           "ㄟ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄉ",
-          "ㄥ"
-        ]
       }
     ],
     "emoji": "🐴",
     "category": "動作",
     "difficulty": "beginner",
-    "speechText": "西瓜小",
+    "speechText": "西瓜",
     "audioKey": "word-114",
-    "primarySymbol": "ㄇ"
+    "primarySymbol": "ㄇ",
+    "targetCharacter": "西",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐴",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "西瓜 的清楚圖像"
+    }
   },
   {
     "id": "word-115",
@@ -4443,7 +4874,7 @@
       "ㄈ",
       "ㄟ"
     ],
-    "word": "葡萄小",
+    "word": "葡萄",
     "wordCharacters": [
       {
         "han": "葡",
@@ -4458,22 +4889,25 @@
           "ㄉ",
           "ㄥ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄊ",
-          "ㄨ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🪽",
     "category": "情緒",
     "difficulty": "beginner",
-    "speechText": "葡萄小",
+    "speechText": "葡萄",
     "audioKey": "word-115",
-    "primarySymbol": "ㄈ"
+    "primarySymbol": "ㄈ",
+    "targetCharacter": "葡",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪽",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "葡萄 的清楚圖像"
+    }
   },
   {
     "id": "word-116",
@@ -4482,7 +4916,7 @@
       "ㄉ",
       "ㄥ"
     ],
-    "word": "小狗小",
+    "word": "小狗",
     "wordCharacters": [
       {
         "han": "小",
@@ -4498,23 +4932,25 @@
           "ㄨ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄋ",
-          "ㄧ",
-          "ㄠ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "💡",
     "category": "時間",
     "difficulty": "beginner",
-    "speechText": "小狗小",
+    "speechText": "小狗",
     "audioKey": "word-116",
-    "primarySymbol": "ㄉ"
+    "primarySymbol": "ㄉ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "💡",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小狗 的清楚圖像"
+    }
   },
   {
     "id": "word-117",
@@ -4524,7 +4960,7 @@
       "ㄨ",
       "ˋ"
     ],
-    "word": "小貓小",
+    "word": "小貓",
     "wordCharacters": [
       {
         "han": "小",
@@ -4542,22 +4978,25 @@
           "ㄠ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄌ",
-          "ㄨ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🐰",
     "category": "地點",
     "difficulty": "beginner",
-    "speechText": "小貓小",
+    "speechText": "小貓",
     "audioKey": "word-117",
-    "primarySymbol": "ㄊ"
+    "primarySymbol": "ㄊ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐰",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小貓 的清楚圖像"
+    }
   },
   {
     "id": "word-118",
@@ -4568,7 +5007,7 @@
       "ㄠ",
       "ˇ"
     ],
-    "word": "小鳥小",
+    "word": "小鳥",
     "wordCharacters": [
       {
         "han": "小",
@@ -4586,22 +5025,25 @@
           "ㄨ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄍ",
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🐦",
     "category": "衣物",
     "difficulty": "beginner",
-    "speechText": "小鳥小",
+    "speechText": "小鳥",
     "audioKey": "word-118",
-    "primarySymbol": "ㄋ"
+    "primarySymbol": "ㄋ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐦",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小鳥 的清楚圖像"
+    }
   },
   {
     "id": "word-119",
@@ -4611,7 +5053,7 @@
       "ㄨ",
       "ˋ"
     ],
-    "word": "小魚小",
+    "word": "小魚",
     "wordCharacters": [
       {
         "han": "小",
@@ -4628,22 +5070,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄎ",
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🦌",
     "category": "家中用品",
     "difficulty": "beginner",
-    "speechText": "小魚小",
+    "speechText": "小魚",
     "audioKey": "word-119",
-    "primarySymbol": "ㄌ"
+    "primarySymbol": "ㄌ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦌",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小魚 的清楚圖像"
+    }
   },
   {
     "id": "word-120",
@@ -4653,7 +5098,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "白兔小",
+    "word": "白兔",
     "wordCharacters": [
       {
         "han": "白",
@@ -4670,22 +5115,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄏ",
-          "ㄜ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🐶",
     "category": "家人",
     "difficulty": "beginner",
-    "speechText": "白兔小",
+    "speechText": "白兔",
     "audioKey": "word-120",
-    "primarySymbol": "ㄍ"
+    "primarySymbol": "ㄍ",
+    "targetCharacter": "白",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐶",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "白兔 的清楚圖像"
+    }
   },
   {
     "id": "word-121",
@@ -4695,7 +5143,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "公車小",
+    "word": "公車",
     "wordCharacters": [
       {
         "han": "公",
@@ -4712,21 +5160,25 @@
           "ㄜ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄐ",
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "👄",
     "category": "身體",
     "difficulty": "beginner",
-    "speechText": "公車小",
+    "speechText": "公車",
     "audioKey": "word-121",
-    "primarySymbol": "ㄎ"
+    "primarySymbol": "ㄎ",
+    "targetCharacter": "公",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👄",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "公車 的清楚圖像"
+    }
   },
   {
     "id": "word-122",
@@ -4736,7 +5188,7 @@
       "ㄜ",
       "ˊ"
     ],
-    "word": "火車小",
+    "word": "火車",
     "wordCharacters": [
       {
         "han": "火",
@@ -4752,22 +5204,25 @@
           "ㄐ",
           "ㄧ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄑ",
-          "ㄧ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🏞️",
     "category": "動物",
     "difficulty": "beginner",
-    "speechText": "火車小",
+    "speechText": "火車",
     "audioKey": "word-122",
-    "primarySymbol": "ㄏ"
+    "primarySymbol": "ㄏ",
+    "targetCharacter": "火",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏞️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "火車 的清楚圖像"
+    }
   },
   {
     "id": "word-123",
@@ -4776,7 +5231,7 @@
       "ㄐ",
       "ㄧ"
     ],
-    "word": "飛機小",
+    "word": "飛機",
     "wordCharacters": [
       {
         "han": "飛",
@@ -4792,21 +5247,25 @@
           "ㄧ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄒ",
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "🐔",
     "category": "水果",
     "difficulty": "beginner",
-    "speechText": "飛機小",
+    "speechText": "飛機",
     "audioKey": "word-123",
-    "primarySymbol": "ㄐ"
+    "primarySymbol": "ㄐ",
+    "targetCharacter": "飛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐔",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "飛機 的清楚圖像"
+    }
   },
   {
     "id": "word-124",
@@ -4816,7 +5275,7 @@
       "ㄧ",
       "ˊ"
     ],
-    "word": "雨傘小",
+    "word": "雨傘",
     "wordCharacters": [
       {
         "han": "雨",
@@ -4832,22 +5291,25 @@
           "ㄒ",
           "ㄧ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄓ",
-          "ㄨ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🚩",
     "category": "食物",
     "difficulty": "beginner",
-    "speechText": "雨傘小",
+    "speechText": "雨傘",
     "audioKey": "word-124",
-    "primarySymbol": "ㄑ"
+    "primarySymbol": "ㄑ",
+    "targetCharacter": "雨",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚩",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "雨傘 的清楚圖像"
+    }
   },
   {
     "id": "word-125",
@@ -4856,7 +5318,7 @@
       "ㄒ",
       "ㄧ"
     ],
-    "word": "帽子小",
+    "word": "帽子",
     "wordCharacters": [
       {
         "han": "帽",
@@ -4872,21 +5334,25 @@
           "ㄨ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄔ",
-          "ㄜ"
-        ]
       }
     ],
     "emoji": "🌅",
     "category": "顏色",
     "difficulty": "beginner",
-    "speechText": "帽子小",
+    "speechText": "帽子",
     "audioKey": "word-125",
-    "primarySymbol": "ㄒ"
+    "primarySymbol": "ㄒ",
+    "targetCharacter": "帽",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌅",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "帽子 的清楚圖像"
+    }
   },
   {
     "id": "word-126",
@@ -4896,7 +5362,7 @@
       "ㄨ",
       "ˊ"
     ],
-    "word": "衣服小",
+    "word": "衣服",
     "wordCharacters": [
       {
         "han": "衣",
@@ -4912,21 +5378,25 @@
           "ㄔ",
           "ㄜ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄕ",
-          "ㄨ"
-        ]
       }
     ],
     "emoji": "🎋",
     "category": "數字",
     "difficulty": "beginner",
-    "speechText": "衣服小",
+    "speechText": "衣服",
     "audioKey": "word-126",
-    "primarySymbol": "ㄓ"
+    "primarySymbol": "ㄓ",
+    "targetCharacter": "衣",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🎋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "衣服 的清楚圖像"
+    }
   },
   {
     "id": "word-127",
@@ -4935,7 +5405,7 @@
       "ㄔ",
       "ㄜ"
     ],
-    "word": "褲子小",
+    "word": "褲子",
     "wordCharacters": [
       {
         "han": "褲",
@@ -4950,21 +5420,25 @@
           "ㄕ",
           "ㄨ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄖ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🚗",
     "category": "學校",
     "difficulty": "beginner",
-    "speechText": "褲子小",
+    "speechText": "褲子",
     "audioKey": "word-127",
-    "primarySymbol": "ㄔ"
+    "primarySymbol": "ㄔ",
+    "targetCharacter": "褲",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚗",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "褲子 的清楚圖像"
+    }
   },
   {
     "id": "word-128",
@@ -4973,7 +5447,7 @@
       "ㄕ",
       "ㄨ"
     ],
-    "word": "鞋子小",
+    "word": "鞋子",
     "wordCharacters": [
       {
         "han": "鞋",
@@ -4988,21 +5462,25 @@
           "ㄖ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄗ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "📖",
     "category": "日用品",
     "difficulty": "beginner",
-    "speechText": "鞋子小",
+    "speechText": "鞋子",
     "audioKey": "word-128",
-    "primarySymbol": "ㄕ"
+    "primarySymbol": "ㄕ",
+    "targetCharacter": "鞋",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "📖",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "鞋子 的清楚圖像"
+    }
   },
   {
     "id": "word-129",
@@ -5011,7 +5489,7 @@
       "ㄖ",
       "ˋ"
     ],
-    "word": "襪子小",
+    "word": "襪子",
     "wordCharacters": [
       {
         "han": "襪",
@@ -5026,22 +5504,25 @@
           "ㄗ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄘ",
-          "ㄠ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "☀️",
     "category": "交通工具",
     "difficulty": "beginner",
-    "speechText": "襪子小",
+    "speechText": "襪子",
     "audioKey": "word-129",
-    "primarySymbol": "ㄖ"
+    "primarySymbol": "ㄖ",
+    "targetCharacter": "襪",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☀️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "襪子 的清楚圖像"
+    }
   },
   {
     "id": "word-130",
@@ -5050,7 +5531,7 @@
       "ㄗ",
       "ˋ"
     ],
-    "word": "房間小",
+    "word": "房間",
     "wordCharacters": [
       {
         "han": "房",
@@ -5066,22 +5547,25 @@
           "ㄠ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄙ",
-          "ㄢ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🔤",
     "category": "自然",
     "difficulty": "beginner",
-    "speechText": "房間小",
+    "speechText": "房間",
     "audioKey": "word-130",
-    "primarySymbol": "ㄗ"
+    "primarySymbol": "ㄗ",
+    "targetCharacter": "房",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🔤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "房間 的清楚圖像"
+    }
   },
   {
     "id": "word-131",
@@ -5091,7 +5575,7 @@
       "ㄠ",
       "ˇ"
     ],
-    "word": "客廳小",
+    "word": "客廳",
     "wordCharacters": [
       {
         "han": "客",
@@ -5108,20 +5592,25 @@
           "ㄢ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "🌱",
     "category": "動作",
     "difficulty": "beginner",
-    "speechText": "客廳小",
+    "speechText": "客廳",
     "audioKey": "word-131",
-    "primarySymbol": "ㄘ"
+    "primarySymbol": "ㄘ",
+    "targetCharacter": "客",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌱",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "客廳 的清楚圖像"
+    }
   },
   {
     "id": "word-132",
@@ -5131,7 +5620,7 @@
       "ㄢ",
       "ˇ"
     ],
-    "word": "廚房小",
+    "word": "廚房",
     "wordCharacters": [
       {
         "han": "廚",
@@ -5146,20 +5635,25 @@
         "zhuyin": [
           "ㄧ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄨ"
-        ]
       }
     ],
     "emoji": "☂️",
     "category": "情緒",
     "difficulty": "beginner",
-    "speechText": "廚房小",
+    "speechText": "廚房",
     "audioKey": "word-132",
-    "primarySymbol": "ㄙ"
+    "primarySymbol": "ㄙ",
+    "targetCharacter": "廚",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☂️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "廚房 的清楚圖像"
+    }
   },
   {
     "id": "word-133",
@@ -5167,7 +5661,7 @@
     "zhuyin": [
       "ㄧ"
     ],
-    "word": "杯子小",
+    "word": "杯子",
     "wordCharacters": [
       {
         "han": "杯",
@@ -5180,21 +5674,25 @@
         "zhuyin": [
           "ㄨ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄩ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "👕",
     "category": "時間",
     "difficulty": "beginner",
-    "speechText": "杯子小",
+    "speechText": "杯子",
     "audioKey": "word-133",
-    "primarySymbol": "ㄧ"
+    "primarySymbol": "ㄧ",
+    "targetCharacter": "杯",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👕",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "杯子 的清楚圖像"
+    }
   },
   {
     "id": "word-134",
@@ -5202,7 +5700,7 @@
     "zhuyin": [
       "ㄨ"
     ],
-    "word": "碗盤小",
+    "word": "碗盤",
     "wordCharacters": [
       {
         "han": "碗",
@@ -5216,21 +5714,25 @@
           "ㄩ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄧ",
-          "ㄚ"
-        ]
       }
     ],
     "emoji": "🏠",
     "category": "地點",
     "difficulty": "beginner",
-    "speechText": "碗盤小",
+    "speechText": "碗盤",
     "audioKey": "word-134",
-    "primarySymbol": "ㄨ"
+    "primarySymbol": "ㄨ",
+    "targetCharacter": "碗",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏠",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "碗盤 的清楚圖像"
+    }
   },
   {
     "id": "word-135",
@@ -5239,7 +5741,7 @@
       "ㄩ",
       "ˊ"
     ],
-    "word": "牙刷小",
+    "word": "牙刷",
     "wordCharacters": [
       {
         "han": "牙",
@@ -5254,20 +5756,25 @@
           "ㄧ",
           "ㄚ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄛ"
-        ]
       }
     ],
     "emoji": "🐟",
     "category": "衣物",
     "difficulty": "beginner",
-    "speechText": "牙刷小",
+    "speechText": "牙刷",
     "audioKey": "word-135",
-    "primarySymbol": "ㄩ"
+    "primarySymbol": "ㄩ",
+    "targetCharacter": "牙",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐟",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "牙刷 的清楚圖像"
+    }
   },
   {
     "id": "word-136",
@@ -5276,7 +5783,7 @@
       "ㄧ",
       "ㄚ"
     ],
-    "word": "毛巾小",
+    "word": "毛巾",
     "wordCharacters": [
       {
         "han": "毛",
@@ -5290,21 +5797,25 @@
         "zhuyin": [
           "ㄛ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄜ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🦆",
     "category": "家中用品",
     "difficulty": "beginner",
-    "speechText": "毛巾小",
+    "speechText": "毛巾",
     "audioKey": "word-136",
-    "primarySymbol": "ㄚ"
+    "primarySymbol": "ㄚ",
+    "targetCharacter": "毛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦆",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "毛巾 的清楚圖像"
+    }
   },
   {
     "id": "word-137",
@@ -5312,7 +5823,7 @@
     "zhuyin": [
       "ㄛ"
     ],
-    "word": "太陽小",
+    "word": "太陽",
     "wordCharacters": [
       {
         "han": "太",
@@ -5326,20 +5837,25 @@
           "ㄜ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄝ"
-        ]
       }
     ],
     "emoji": "⭕",
     "category": "家人",
     "difficulty": "beginner",
-    "speechText": "太陽小",
+    "speechText": "太陽",
     "audioKey": "word-137",
-    "primarySymbol": "ㄛ"
+    "primarySymbol": "ㄛ",
+    "targetCharacter": "太",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "⭕",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "太陽 的清楚圖像"
+    }
   },
   {
     "id": "word-138",
@@ -5348,7 +5864,7 @@
       "ㄜ",
       "ˊ"
     ],
-    "word": "月亮小",
+    "word": "月亮",
     "wordCharacters": [
       {
         "han": "月",
@@ -5362,21 +5878,25 @@
         "zhuyin": [
           "ㄝ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄞ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🪿",
     "category": "身體",
     "difficulty": "beginner",
-    "speechText": "月亮小",
+    "speechText": "月亮",
     "audioKey": "word-138",
-    "primarySymbol": "ㄜ"
+    "primarySymbol": "ㄜ",
+    "targetCharacter": "月",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪿",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "月亮 的清楚圖像"
+    }
   },
   {
     "id": "word-139",
@@ -5384,7 +5904,7 @@
     "zhuyin": [
       "ㄝ"
     ],
-    "word": "星星小",
+    "word": "星星",
     "wordCharacters": [
       {
         "han": "星",
@@ -5398,21 +5918,25 @@
           "ㄞ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄅ",
-          "ㄟ"
-        ]
       }
     ],
     "emoji": "🙋",
     "category": "動物",
     "difficulty": "beginner",
-    "speechText": "星星小",
+    "speechText": "星星",
     "audioKey": "word-139",
-    "primarySymbol": "ㄝ"
+    "primarySymbol": "ㄝ",
+    "targetCharacter": "星",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🙋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "星星 的清楚圖像"
+    }
   },
   {
     "id": "word-140",
@@ -5421,7 +5945,7 @@
       "ㄞ",
       "ˋ"
     ],
-    "word": "白雲小",
+    "word": "白雲",
     "wordCharacters": [
       {
         "han": "白",
@@ -5436,20 +5960,25 @@
           "ㄅ",
           "ㄟ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄠ"
-        ]
       }
     ],
     "emoji": "❤️",
     "category": "水果",
     "difficulty": "beginner",
-    "speechText": "白雲小",
+    "speechText": "白雲",
     "audioKey": "word-140",
-    "primarySymbol": "ㄞ"
+    "primarySymbol": "ㄞ",
+    "targetCharacter": "白",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "❤️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "白雲 的清楚圖像"
+    }
   },
   {
     "id": "word-141",
@@ -5458,7 +5987,7 @@
       "ㄅ",
       "ㄟ"
     ],
-    "word": "下雨小",
+    "word": "下雨",
     "wordCharacters": [
       {
         "han": "下",
@@ -5472,21 +6001,25 @@
         "zhuyin": [
           "ㄠ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🥤",
     "category": "食物",
     "difficulty": "beginner",
-    "speechText": "下雨小",
+    "speechText": "下雨",
     "audioKey": "word-141",
-    "primarySymbol": "ㄟ"
+    "primarySymbol": "ㄟ",
+    "targetCharacter": "下",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🥤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "下雨 的清楚圖像"
+    }
   },
   {
     "id": "word-142",
@@ -5494,7 +6027,7 @@
     "zhuyin": [
       "ㄠ"
     ],
-    "word": "大風小",
+    "word": "大風",
     "wordCharacters": [
       {
         "han": "大",
@@ -5508,20 +6041,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄢ"
-        ]
       }
     ],
     "emoji": "🕳️",
     "category": "顏色",
     "difficulty": "beginner",
-    "speechText": "大風小",
+    "speechText": "大風",
     "audioKey": "word-142",
-    "primarySymbol": "ㄠ"
+    "primarySymbol": "ㄠ",
+    "targetCharacter": "大",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🕳️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "大風 的清楚圖像"
+    }
   },
   {
     "id": "word-143",
@@ -5530,7 +6068,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "花園小",
+    "word": "花園",
     "wordCharacters": [
       {
         "han": "花",
@@ -5544,20 +6082,25 @@
         "zhuyin": [
           "ㄢ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄣ"
-        ]
       }
     ],
     "emoji": "🪷",
     "category": "數字",
     "difficulty": "beginner",
-    "speechText": "花園小",
+    "speechText": "花園",
     "audioKey": "word-143",
-    "primarySymbol": "ㄡ"
+    "primarySymbol": "ㄡ",
+    "targetCharacter": "花",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪷",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "花園 的清楚圖像"
+    }
   },
   {
     "id": "word-144",
@@ -5565,7 +6108,7 @@
     "zhuyin": [
       "ㄢ"
     ],
-    "word": "大樹小",
+    "word": "大樹",
     "wordCharacters": [
       {
         "han": "大",
@@ -5578,22 +6121,25 @@
         "zhuyin": [
           "ㄣ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄧ",
-          "ㄤ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🛏️",
     "category": "學校",
     "difficulty": "beginner",
-    "speechText": "大樹小",
+    "speechText": "大樹",
     "audioKey": "word-144",
-    "primarySymbol": "ㄢ"
+    "primarySymbol": "ㄢ",
+    "targetCharacter": "大",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🛏️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "大樹 的清楚圖像"
+    }
   },
   {
     "id": "word-145",
@@ -5601,7 +6147,7 @@
     "zhuyin": [
       "ㄣ"
     ],
-    "word": "小草小",
+    "word": "小草",
     "wordCharacters": [
       {
         "han": "小",
@@ -5616,21 +6162,25 @@
           "ㄤ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄈ",
-          "ㄥ"
-        ]
       }
     ],
     "emoji": "🙏",
     "category": "日用品",
     "difficulty": "beginner",
-    "speechText": "小草小",
+    "speechText": "小草",
     "audioKey": "word-145",
-    "primarySymbol": "ㄣ"
+    "primarySymbol": "ㄣ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🙏",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小草 的清楚圖像"
+    }
   },
   {
     "id": "word-146",
@@ -5640,7 +6190,7 @@
       "ㄤ",
       "ˊ"
     ],
-    "word": "高山小",
+    "word": "高山",
     "wordCharacters": [
       {
         "han": "高",
@@ -5656,21 +6206,25 @@
           "ㄈ",
           "ㄥ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄦ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🐑",
     "category": "交通工具",
     "difficulty": "beginner",
-    "speechText": "高山小",
+    "speechText": "高山",
     "audioKey": "word-146",
-    "primarySymbol": "ㄤ"
+    "primarySymbol": "ㄤ",
+    "targetCharacter": "高",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐑",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "高山 的清楚圖像"
+    }
   },
   {
     "id": "word-147",
@@ -5679,7 +6233,7 @@
       "ㄈ",
       "ㄥ"
     ],
-    "word": "河水小",
+    "word": "河水",
     "wordCharacters": [
       {
         "han": "河",
@@ -5694,22 +6248,25 @@
           "ㄦ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄅ",
-          "ㄚ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🌬️",
     "category": "自然",
     "difficulty": "beginner",
-    "speechText": "河水小",
+    "speechText": "河水",
     "audioKey": "word-147",
-    "primarySymbol": "ㄥ"
+    "primarySymbol": "ㄥ",
+    "targetCharacter": "河",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌬️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "河水 的清楚圖像"
+    }
   },
   {
     "id": "word-148",
@@ -5718,7 +6275,7 @@
       "ㄦ",
       "ˊ"
     ],
-    "word": "海邊小",
+    "word": "海邊",
     "wordCharacters": [
       {
         "han": "海",
@@ -5734,22 +6291,25 @@
           "ㄚ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄆ",
-          "ㄠ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🧒",
     "category": "動作",
     "difficulty": "beginner",
-    "speechText": "海邊小",
+    "speechText": "海邊",
     "audioKey": "word-148",
-    "primarySymbol": "ㄦ"
+    "primarySymbol": "ㄦ",
+    "targetCharacter": "海",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🧒",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "海邊 的清楚圖像"
+    }
   },
   {
     "id": "word-149",
@@ -5759,7 +6319,7 @@
       "ㄚ",
       "ˋ"
     ],
-    "word": "紅色小",
+    "word": "紅色",
     "wordCharacters": [
       {
         "han": "紅",
@@ -5776,22 +6336,25 @@
           "ㄠ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄇ",
-          "ㄚ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "👨",
     "category": "情緒",
     "difficulty": "beginner",
-    "speechText": "紅色小",
+    "speechText": "紅色",
     "audioKey": "word-149",
-    "primarySymbol": "ㄅ"
+    "primarySymbol": "ㄅ",
+    "targetCharacter": "紅",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👨",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "紅色 的清楚圖像"
+    }
   },
   {
     "id": "word-150",
@@ -5801,7 +6364,7 @@
       "ㄠ",
       "ˋ"
     ],
-    "word": "黃色小",
+    "word": "黃色",
     "wordCharacters": [
       {
         "han": "黃",
@@ -5818,21 +6381,25 @@
           "ㄚ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄈ",
-          "ㄟ"
-        ]
       }
     ],
     "emoji": "🫧",
     "category": "時間",
     "difficulty": "beginner",
-    "speechText": "黃色小",
+    "speechText": "黃色",
     "audioKey": "word-150",
-    "primarySymbol": "ㄆ"
+    "primarySymbol": "ㄆ",
+    "targetCharacter": "黃",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🫧",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "黃色 的清楚圖像"
+    }
   },
   {
     "id": "word-151",
@@ -5842,7 +6409,7 @@
       "ㄚ",
       "ˇ"
     ],
-    "word": "綠色小",
+    "word": "綠色",
     "wordCharacters": [
       {
         "han": "綠",
@@ -5858,21 +6425,25 @@
           "ㄈ",
           "ㄟ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄉ",
-          "ㄥ"
-        ]
       }
     ],
     "emoji": "🐴",
     "category": "地點",
     "difficulty": "beginner",
-    "speechText": "綠色小",
+    "speechText": "綠色",
     "audioKey": "word-151",
-    "primarySymbol": "ㄇ"
+    "primarySymbol": "ㄇ",
+    "targetCharacter": "綠",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐴",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "綠色 的清楚圖像"
+    }
   },
   {
     "id": "word-152",
@@ -5881,7 +6452,7 @@
       "ㄈ",
       "ㄟ"
     ],
-    "word": "藍色小",
+    "word": "藍色",
     "wordCharacters": [
       {
         "han": "藍",
@@ -5896,22 +6467,25 @@
           "ㄉ",
           "ㄥ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄊ",
-          "ㄨ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🪽",
     "category": "衣物",
     "difficulty": "beginner",
-    "speechText": "藍色小",
+    "speechText": "藍色",
     "audioKey": "word-152",
-    "primarySymbol": "ㄈ"
+    "primarySymbol": "ㄈ",
+    "targetCharacter": "藍",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪽",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "藍色 的清楚圖像"
+    }
   },
   {
     "id": "word-153",
@@ -5920,7 +6494,7 @@
       "ㄉ",
       "ㄥ"
     ],
-    "word": "黑色小",
+    "word": "黑色",
     "wordCharacters": [
       {
         "han": "黑",
@@ -5936,23 +6510,25 @@
           "ㄨ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄋ",
-          "ㄧ",
-          "ㄠ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "💡",
     "category": "家中用品",
     "difficulty": "beginner",
-    "speechText": "黑色小",
+    "speechText": "黑色",
     "audioKey": "word-153",
-    "primarySymbol": "ㄉ"
+    "primarySymbol": "ㄉ",
+    "targetCharacter": "黑",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "💡",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "黑色 的清楚圖像"
+    }
   },
   {
     "id": "word-154",
@@ -5962,7 +6538,7 @@
       "ㄨ",
       "ˋ"
     ],
-    "word": "白色小",
+    "word": "白色",
     "wordCharacters": [
       {
         "han": "白",
@@ -5980,22 +6556,25 @@
           "ㄠ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄌ",
-          "ㄨ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🐰",
     "category": "家人",
     "difficulty": "beginner",
-    "speechText": "白色小",
+    "speechText": "白色",
     "audioKey": "word-154",
-    "primarySymbol": "ㄊ"
+    "primarySymbol": "ㄊ",
+    "targetCharacter": "白",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐰",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "白色 的清楚圖像"
+    }
   },
   {
     "id": "word-155",
@@ -6006,7 +6585,7 @@
       "ㄠ",
       "ˇ"
     ],
-    "word": "開心小",
+    "word": "開心",
     "wordCharacters": [
       {
         "han": "開",
@@ -6024,22 +6603,25 @@
           "ㄨ",
           "ˋ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄍ",
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🐦",
     "category": "身體",
     "difficulty": "beginner",
-    "speechText": "開心小",
+    "speechText": "開心",
     "audioKey": "word-155",
-    "primarySymbol": "ㄋ"
+    "primarySymbol": "ㄋ",
+    "targetCharacter": "開",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐦",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "開心 的清楚圖像"
+    }
   },
   {
     "id": "word-156",
@@ -6049,7 +6631,7 @@
       "ㄨ",
       "ˋ"
     ],
-    "word": "生氣小",
+    "word": "生氣",
     "wordCharacters": [
       {
         "han": "生",
@@ -6066,22 +6648,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄎ",
-          "ㄡ",
-          "ˇ"
-        ]
       }
     ],
     "emoji": "🦌",
     "category": "動物",
     "difficulty": "beginner",
-    "speechText": "生氣小",
+    "speechText": "生氣",
     "audioKey": "word-156",
-    "primarySymbol": "ㄌ"
+    "primarySymbol": "ㄌ",
+    "targetCharacter": "生",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦌",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "生氣 的清楚圖像"
+    }
   },
   {
     "id": "word-157",
@@ -6091,7 +6676,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "害怕小",
+    "word": "害怕",
     "wordCharacters": [
       {
         "han": "害",
@@ -6108,22 +6693,25 @@
           "ㄡ",
           "ˇ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄏ",
-          "ㄜ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🐶",
     "category": "水果",
     "difficulty": "beginner",
-    "speechText": "害怕小",
+    "speechText": "害怕",
     "audioKey": "word-157",
-    "primarySymbol": "ㄍ"
+    "primarySymbol": "ㄍ",
+    "targetCharacter": "害",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐶",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "害怕 的清楚圖像"
+    }
   },
   {
     "id": "word-158",
@@ -6133,7 +6721,7 @@
       "ㄡ",
       "ˇ"
     ],
-    "word": "難過小",
+    "word": "難過",
     "wordCharacters": [
       {
         "han": "難",
@@ -6150,21 +6738,25 @@
           "ㄜ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄐ",
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "👄",
     "category": "食物",
     "difficulty": "beginner",
-    "speechText": "難過小",
+    "speechText": "難過",
     "audioKey": "word-158",
-    "primarySymbol": "ㄎ"
+    "primarySymbol": "ㄎ",
+    "targetCharacter": "難",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👄",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "難過 的清楚圖像"
+    }
   },
   {
     "id": "word-159",
@@ -6174,7 +6766,7 @@
       "ㄜ",
       "ˊ"
     ],
-    "word": "早安小",
+    "word": "早安",
     "wordCharacters": [
       {
         "han": "早",
@@ -6190,22 +6782,25 @@
           "ㄐ",
           "ㄧ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄑ",
-          "ㄧ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🏞️",
     "category": "顏色",
     "difficulty": "beginner",
-    "speechText": "早安小",
+    "speechText": "早安",
     "audioKey": "word-159",
-    "primarySymbol": "ㄏ"
+    "primarySymbol": "ㄏ",
+    "targetCharacter": "早",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏞️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "早安 的清楚圖像"
+    }
   },
   {
     "id": "word-160",
@@ -6214,7 +6809,7 @@
       "ㄐ",
       "ㄧ"
     ],
-    "word": "午安小",
+    "word": "午安",
     "wordCharacters": [
       {
         "han": "午",
@@ -6230,21 +6825,25 @@
           "ㄧ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄒ",
-          "ㄧ"
-        ]
       }
     ],
     "emoji": "🐔",
     "category": "數字",
     "difficulty": "beginner",
-    "speechText": "午安小",
+    "speechText": "午安",
     "audioKey": "word-160",
-    "primarySymbol": "ㄐ"
+    "primarySymbol": "ㄐ",
+    "targetCharacter": "午",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐔",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "午安 的清楚圖像"
+    }
   },
   {
     "id": "word-161",
@@ -6254,7 +6853,7 @@
       "ㄧ",
       "ˊ"
     ],
-    "word": "晚安小",
+    "word": "晚安",
     "wordCharacters": [
       {
         "han": "晚",
@@ -6270,22 +6869,25 @@
           "ㄒ",
           "ㄧ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄓ",
-          "ㄨ",
-          "ˊ"
-        ]
       }
     ],
     "emoji": "🚩",
     "category": "學校",
     "difficulty": "advanced",
-    "speechText": "晚安小",
+    "speechText": "晚安",
     "audioKey": "word-161",
-    "primarySymbol": "ㄑ"
+    "primarySymbol": "ㄑ",
+    "targetCharacter": "晚",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚩",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "晚安 的清楚圖像"
+    }
   },
   {
     "id": "word-162",
@@ -6294,7 +6896,7 @@
       "ㄒ",
       "ㄧ"
     ],
-    "word": "今天小",
+    "word": "今天",
     "wordCharacters": [
       {
         "han": "今",
@@ -6310,21 +6912,25 @@
           "ㄨ",
           "ˊ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄔ",
-          "ㄜ"
-        ]
       }
     ],
     "emoji": "🌅",
     "category": "日用品",
     "difficulty": "advanced",
-    "speechText": "今天小",
+    "speechText": "今天",
     "audioKey": "word-162",
-    "primarySymbol": "ㄒ"
+    "primarySymbol": "ㄒ",
+    "targetCharacter": "今",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌅",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "今天 的清楚圖像"
+    }
   },
   {
     "id": "word-163",
@@ -6334,7 +6940,7 @@
       "ㄨ",
       "ˊ"
     ],
-    "word": "明天小",
+    "word": "明天",
     "wordCharacters": [
       {
         "han": "明",
@@ -6350,21 +6956,25 @@
           "ㄔ",
           "ㄜ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄕ",
-          "ㄨ"
-        ]
       }
     ],
     "emoji": "🎋",
     "category": "交通工具",
     "difficulty": "advanced",
-    "speechText": "明天小",
+    "speechText": "明天",
     "audioKey": "word-163",
-    "primarySymbol": "ㄓ"
+    "primarySymbol": "ㄓ",
+    "targetCharacter": "明",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🎋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "明天 的清楚圖像"
+    }
   },
   {
     "id": "word-164",
@@ -6373,7 +6983,7 @@
       "ㄔ",
       "ㄜ"
     ],
-    "word": "昨天小",
+    "word": "昨天",
     "wordCharacters": [
       {
         "han": "昨",
@@ -6388,21 +6998,25 @@
           "ㄕ",
           "ㄨ"
         ]
-      },
-      {
-        "han": "小",
-        "zhuyin": [
-          "ㄖ",
-          "ˋ"
-        ]
       }
     ],
     "emoji": "🚗",
     "category": "自然",
     "difficulty": "advanced",
-    "speechText": "昨天小",
+    "speechText": "昨天",
     "audioKey": "word-164",
-    "primarySymbol": "ㄔ"
+    "primarySymbol": "ㄔ",
+    "targetCharacter": "昨",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚗",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "昨天 的清楚圖像"
+    }
   },
   {
     "id": "word-165",
@@ -6440,7 +7054,18 @@
     "difficulty": "advanced",
     "speechText": "爸爸好",
     "audioKey": "word-165",
-    "primarySymbol": "ㄕ"
+    "primarySymbol": "ㄕ",
+    "targetCharacter": "爸",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "📖",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "爸爸好 的清楚圖像"
+    }
   },
   {
     "id": "word-166",
@@ -6479,7 +7104,18 @@
     "difficulty": "advanced",
     "speechText": "媽媽好",
     "audioKey": "word-166",
-    "primarySymbol": "ㄖ"
+    "primarySymbol": "ㄖ",
+    "targetCharacter": "媽",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☀️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "媽媽好 的清楚圖像"
+    }
   },
   {
     "id": "word-167",
@@ -6519,7 +7155,18 @@
     "difficulty": "advanced",
     "speechText": "哥哥好",
     "audioKey": "word-167",
-    "primarySymbol": "ㄗ"
+    "primarySymbol": "ㄗ",
+    "targetCharacter": "哥",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🔤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "哥哥好 的清楚圖像"
+    }
   },
   {
     "id": "word-168",
@@ -6559,7 +7206,18 @@
     "difficulty": "advanced",
     "speechText": "姐姐好",
     "audioKey": "word-168",
-    "primarySymbol": "ㄘ"
+    "primarySymbol": "ㄘ",
+    "targetCharacter": "姐",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌱",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "姐姐好 的清楚圖像"
+    }
   },
   {
     "id": "word-169",
@@ -6597,7 +7255,18 @@
     "difficulty": "advanced",
     "speechText": "弟弟好",
     "audioKey": "word-169",
-    "primarySymbol": "ㄙ"
+    "primarySymbol": "ㄙ",
+    "targetCharacter": "弟",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☂️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "弟弟好 的清楚圖像"
+    }
   },
   {
     "id": "word-170",
@@ -6632,7 +7301,18 @@
     "difficulty": "advanced",
     "speechText": "妹妹好",
     "audioKey": "word-170",
-    "primarySymbol": "ㄧ"
+    "primarySymbol": "ㄧ",
+    "targetCharacter": "妹",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👕",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "妹妹好 的清楚圖像"
+    }
   },
   {
     "id": "word-171",
@@ -6668,7 +7348,18 @@
     "difficulty": "advanced",
     "speechText": "爺爺好",
     "audioKey": "word-171",
-    "primarySymbol": "ㄨ"
+    "primarySymbol": "ㄨ",
+    "targetCharacter": "爺",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏠",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "爺爺好 的清楚圖像"
+    }
   },
   {
     "id": "word-172",
@@ -6705,7 +7396,18 @@
     "difficulty": "advanced",
     "speechText": "奶奶好",
     "audioKey": "word-172",
-    "primarySymbol": "ㄩ"
+    "primarySymbol": "ㄩ",
+    "targetCharacter": "奶",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐟",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "奶奶好 的清楚圖像"
+    }
   },
   {
     "id": "word-173",
@@ -6742,7 +7444,18 @@
     "difficulty": "advanced",
     "speechText": "老師好",
     "audioKey": "word-173",
-    "primarySymbol": "ㄚ"
+    "primarySymbol": "ㄚ",
+    "targetCharacter": "老",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦆",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "老師好 的清楚圖像"
+    }
   },
   {
     "id": "word-174",
@@ -6777,7 +7490,18 @@
     "difficulty": "advanced",
     "speechText": "同學好",
     "audioKey": "word-174",
-    "primarySymbol": "ㄛ"
+    "primarySymbol": "ㄛ",
+    "targetCharacter": "同",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "⭕",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "同學好 的清楚圖像"
+    }
   },
   {
     "id": "word-175",
@@ -6814,7 +7538,18 @@
     "difficulty": "advanced",
     "speechText": "書包好",
     "audioKey": "word-175",
-    "primarySymbol": "ㄜ"
+    "primarySymbol": "ㄜ",
+    "targetCharacter": "書",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪿",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "書包好 的清楚圖像"
+    }
   },
   {
     "id": "word-176",
@@ -6850,7 +7585,18 @@
     "difficulty": "advanced",
     "speechText": "鉛筆好",
     "audioKey": "word-176",
-    "primarySymbol": "ㄝ"
+    "primarySymbol": "ㄝ",
+    "targetCharacter": "鉛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🙋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "鉛筆好 的清楚圖像"
+    }
   },
   {
     "id": "word-177",
@@ -6887,7 +7633,18 @@
     "difficulty": "advanced",
     "speechText": "橡皮好",
     "audioKey": "word-177",
-    "primarySymbol": "ㄞ"
+    "primarySymbol": "ㄞ",
+    "targetCharacter": "橡",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "❤️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "橡皮好 的清楚圖像"
+    }
   },
   {
     "id": "word-178",
@@ -6924,7 +7681,18 @@
     "difficulty": "advanced",
     "speechText": "桌子好",
     "audioKey": "word-178",
-    "primarySymbol": "ㄟ"
+    "primarySymbol": "ㄟ",
+    "targetCharacter": "桌",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🥤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "桌子好 的清楚圖像"
+    }
   },
   {
     "id": "word-179",
@@ -6959,7 +7727,18 @@
     "difficulty": "advanced",
     "speechText": "椅子好",
     "audioKey": "word-179",
-    "primarySymbol": "ㄠ"
+    "primarySymbol": "ㄠ",
+    "targetCharacter": "椅",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🕳️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "椅子好 的清楚圖像"
+    }
   },
   {
     "id": "word-180",
@@ -6995,7 +7774,18 @@
     "difficulty": "advanced",
     "speechText": "學校好",
     "audioKey": "word-180",
-    "primarySymbol": "ㄡ"
+    "primarySymbol": "ㄡ",
+    "targetCharacter": "學",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪷",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "學校好 的清楚圖像"
+    }
   },
   {
     "id": "word-181",
@@ -7031,7 +7821,18 @@
     "difficulty": "advanced",
     "speechText": "教室好",
     "audioKey": "word-181",
-    "primarySymbol": "ㄢ"
+    "primarySymbol": "ㄢ",
+    "targetCharacter": "教",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🛏️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "教室好 的清楚圖像"
+    }
   },
   {
     "id": "word-182",
@@ -7068,7 +7869,18 @@
     "difficulty": "advanced",
     "speechText": "操場好",
     "audioKey": "word-182",
-    "primarySymbol": "ㄣ"
+    "primarySymbol": "ㄣ",
+    "targetCharacter": "操",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🙏",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "操場好 的清楚圖像"
+    }
   },
   {
     "id": "word-183",
@@ -7108,7 +7920,18 @@
     "difficulty": "advanced",
     "speechText": "跑步好",
     "audioKey": "word-183",
-    "primarySymbol": "ㄤ"
+    "primarySymbol": "ㄤ",
+    "targetCharacter": "跑",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐑",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "跑步好 的清楚圖像"
+    }
   },
   {
     "id": "word-184",
@@ -7147,7 +7970,18 @@
     "difficulty": "advanced",
     "speechText": "跳高好",
     "audioKey": "word-184",
-    "primarySymbol": "ㄥ"
+    "primarySymbol": "ㄥ",
+    "targetCharacter": "跳",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌬️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "跳高好 的清楚圖像"
+    }
   },
   {
     "id": "word-185",
@@ -7187,7 +8021,18 @@
     "difficulty": "advanced",
     "speechText": "唱歌好",
     "audioKey": "word-185",
-    "primarySymbol": "ㄦ"
+    "primarySymbol": "ㄦ",
+    "targetCharacter": "唱",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🧒",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "唱歌好 的清楚圖像"
+    }
   },
   {
     "id": "word-186",
@@ -7229,7 +8074,18 @@
     "difficulty": "advanced",
     "speechText": "說話好",
     "audioKey": "word-186",
-    "primarySymbol": "ㄅ"
+    "primarySymbol": "ㄅ",
+    "targetCharacter": "說",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👨",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "說話好 的清楚圖像"
+    }
   },
   {
     "id": "word-187",
@@ -7270,7 +8126,18 @@
     "difficulty": "advanced",
     "speechText": "聽話好",
     "audioKey": "word-187",
-    "primarySymbol": "ㄆ"
+    "primarySymbol": "ㄆ",
+    "targetCharacter": "聽",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🫧",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "聽話好 的清楚圖像"
+    }
   },
   {
     "id": "word-188",
@@ -7310,7 +8177,18 @@
     "difficulty": "advanced",
     "speechText": "看書好",
     "audioKey": "word-188",
-    "primarySymbol": "ㄇ"
+    "primarySymbol": "ㄇ",
+    "targetCharacter": "看",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐴",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "看書好 的清楚圖像"
+    }
   },
   {
     "id": "word-189",
@@ -7349,7 +8227,18 @@
     "difficulty": "advanced",
     "speechText": "吃飯好",
     "audioKey": "word-189",
-    "primarySymbol": "ㄈ"
+    "primarySymbol": "ㄈ",
+    "targetCharacter": "吃",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪽",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "吃飯好 的清楚圖像"
+    }
   },
   {
     "id": "word-190",
@@ -7390,7 +8279,18 @@
     "difficulty": "advanced",
     "speechText": "喝水好",
     "audioKey": "word-190",
-    "primarySymbol": "ㄉ"
+    "primarySymbol": "ㄉ",
+    "targetCharacter": "喝",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "💡",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "喝水好 的清楚圖像"
+    }
   },
   {
     "id": "word-191",
@@ -7433,7 +8333,18 @@
     "difficulty": "advanced",
     "speechText": "牛奶好",
     "audioKey": "word-191",
-    "primarySymbol": "ㄊ"
+    "primarySymbol": "ㄊ",
+    "targetCharacter": "牛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐰",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "牛奶好 的清楚圖像"
+    }
   },
   {
     "id": "word-192",
@@ -7477,7 +8388,18 @@
     "difficulty": "advanced",
     "speechText": "雞蛋好",
     "audioKey": "word-192",
-    "primarySymbol": "ㄋ"
+    "primarySymbol": "ㄋ",
+    "targetCharacter": "雞",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐦",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "雞蛋好 的清楚圖像"
+    }
   },
   {
     "id": "word-193",
@@ -7519,7 +8441,18 @@
     "difficulty": "advanced",
     "speechText": "水果好",
     "audioKey": "word-193",
-    "primarySymbol": "ㄌ"
+    "primarySymbol": "ㄌ",
+    "targetCharacter": "水",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦌",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "水果好 的清楚圖像"
+    }
   },
   {
     "id": "word-194",
@@ -7561,7 +8494,18 @@
     "difficulty": "advanced",
     "speechText": "香蕉好",
     "audioKey": "word-194",
-    "primarySymbol": "ㄍ"
+    "primarySymbol": "ㄍ",
+    "targetCharacter": "香",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐶",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "香蕉好 的清楚圖像"
+    }
   },
   {
     "id": "word-195",
@@ -7602,7 +8546,18 @@
     "difficulty": "advanced",
     "speechText": "蘋果好",
     "audioKey": "word-195",
-    "primarySymbol": "ㄎ"
+    "primarySymbol": "ㄎ",
+    "targetCharacter": "蘋",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👄",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "蘋果好 的清楚圖像"
+    }
   },
   {
     "id": "word-196",
@@ -7643,7 +8598,18 @@
     "difficulty": "advanced",
     "speechText": "西瓜好",
     "audioKey": "word-196",
-    "primarySymbol": "ㄏ"
+    "primarySymbol": "ㄏ",
+    "targetCharacter": "西",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏞️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "西瓜好 的清楚圖像"
+    }
   },
   {
     "id": "word-197",
@@ -7682,7 +8648,18 @@
     "difficulty": "advanced",
     "speechText": "葡萄好",
     "audioKey": "word-197",
-    "primarySymbol": "ㄐ"
+    "primarySymbol": "ㄐ",
+    "targetCharacter": "葡",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐔",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "葡萄好 的清楚圖像"
+    }
   },
   {
     "id": "word-198",
@@ -7723,7 +8700,18 @@
     "difficulty": "advanced",
     "speechText": "小狗好",
     "audioKey": "word-198",
-    "primarySymbol": "ㄑ"
+    "primarySymbol": "ㄑ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚩",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小狗好 的清楚圖像"
+    }
   },
   {
     "id": "word-199",
@@ -7762,7 +8750,18 @@
     "difficulty": "advanced",
     "speechText": "小貓好",
     "audioKey": "word-199",
-    "primarySymbol": "ㄒ"
+    "primarySymbol": "ㄒ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌅",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小貓好 的清楚圖像"
+    }
   },
   {
     "id": "word-200",
@@ -7802,7 +8801,18 @@
     "difficulty": "advanced",
     "speechText": "小鳥好",
     "audioKey": "word-200",
-    "primarySymbol": "ㄓ"
+    "primarySymbol": "ㄓ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🎋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小鳥好 的清楚圖像"
+    }
   },
   {
     "id": "word-201",
@@ -7840,7 +8850,18 @@
     "difficulty": "advanced",
     "speechText": "小魚好",
     "audioKey": "word-201",
-    "primarySymbol": "ㄔ"
+    "primarySymbol": "ㄔ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚗",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小魚好 的清楚圖像"
+    }
   },
   {
     "id": "word-202",
@@ -7878,7 +8899,18 @@
     "difficulty": "advanced",
     "speechText": "白兔好",
     "audioKey": "word-202",
-    "primarySymbol": "ㄕ"
+    "primarySymbol": "ㄕ",
+    "targetCharacter": "白",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "📖",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "白兔好 的清楚圖像"
+    }
   },
   {
     "id": "word-203",
@@ -7917,7 +8949,18 @@
     "difficulty": "advanced",
     "speechText": "公車好",
     "audioKey": "word-203",
-    "primarySymbol": "ㄖ"
+    "primarySymbol": "ㄖ",
+    "targetCharacter": "公",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☀️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "公車好 的清楚圖像"
+    }
   },
   {
     "id": "word-204",
@@ -7957,7 +9000,18 @@
     "difficulty": "advanced",
     "speechText": "火車好",
     "audioKey": "word-204",
-    "primarySymbol": "ㄗ"
+    "primarySymbol": "ㄗ",
+    "targetCharacter": "火",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🔤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "火車好 的清楚圖像"
+    }
   },
   {
     "id": "word-205",
@@ -7997,7 +9051,18 @@
     "difficulty": "advanced",
     "speechText": "飛機好",
     "audioKey": "word-205",
-    "primarySymbol": "ㄘ"
+    "primarySymbol": "ㄘ",
+    "targetCharacter": "飛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌱",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "飛機好 的清楚圖像"
+    }
   },
   {
     "id": "word-206",
@@ -8035,7 +9100,18 @@
     "difficulty": "advanced",
     "speechText": "雨傘好",
     "audioKey": "word-206",
-    "primarySymbol": "ㄙ"
+    "primarySymbol": "ㄙ",
+    "targetCharacter": "雨",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☂️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "雨傘好 的清楚圖像"
+    }
   },
   {
     "id": "word-207",
@@ -8070,7 +9146,18 @@
     "difficulty": "advanced",
     "speechText": "帽子好",
     "audioKey": "word-207",
-    "primarySymbol": "ㄧ"
+    "primarySymbol": "ㄧ",
+    "targetCharacter": "帽",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👕",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "帽子好 的清楚圖像"
+    }
   },
   {
     "id": "word-208",
@@ -8106,7 +9193,18 @@
     "difficulty": "advanced",
     "speechText": "衣服好",
     "audioKey": "word-208",
-    "primarySymbol": "ㄨ"
+    "primarySymbol": "ㄨ",
+    "targetCharacter": "衣",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏠",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "衣服好 的清楚圖像"
+    }
   },
   {
     "id": "word-209",
@@ -8143,7 +9241,18 @@
     "difficulty": "advanced",
     "speechText": "褲子好",
     "audioKey": "word-209",
-    "primarySymbol": "ㄩ"
+    "primarySymbol": "ㄩ",
+    "targetCharacter": "褲",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐟",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "褲子好 的清楚圖像"
+    }
   },
   {
     "id": "word-210",
@@ -8180,7 +9289,18 @@
     "difficulty": "advanced",
     "speechText": "鞋子好",
     "audioKey": "word-210",
-    "primarySymbol": "ㄚ"
+    "primarySymbol": "ㄚ",
+    "targetCharacter": "鞋",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦆",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "鞋子好 的清楚圖像"
+    }
   },
   {
     "id": "word-211",
@@ -8215,7 +9335,18 @@
     "difficulty": "advanced",
     "speechText": "襪子好",
     "audioKey": "word-211",
-    "primarySymbol": "ㄛ"
+    "primarySymbol": "ㄛ",
+    "targetCharacter": "襪",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "⭕",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "襪子好 的清楚圖像"
+    }
   },
   {
     "id": "word-212",
@@ -8252,7 +9383,18 @@
     "difficulty": "advanced",
     "speechText": "房間好",
     "audioKey": "word-212",
-    "primarySymbol": "ㄜ"
+    "primarySymbol": "ㄜ",
+    "targetCharacter": "房",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪿",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "房間好 的清楚圖像"
+    }
   },
   {
     "id": "word-213",
@@ -8288,7 +9430,18 @@
     "difficulty": "advanced",
     "speechText": "客廳好",
     "audioKey": "word-213",
-    "primarySymbol": "ㄝ"
+    "primarySymbol": "ㄝ",
+    "targetCharacter": "客",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🙋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "客廳好 的清楚圖像"
+    }
   },
   {
     "id": "word-214",
@@ -8325,7 +9478,18 @@
     "difficulty": "advanced",
     "speechText": "廚房好",
     "audioKey": "word-214",
-    "primarySymbol": "ㄞ"
+    "primarySymbol": "ㄞ",
+    "targetCharacter": "廚",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "❤️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "廚房好 的清楚圖像"
+    }
   },
   {
     "id": "word-215",
@@ -8362,7 +9526,18 @@
     "difficulty": "advanced",
     "speechText": "杯子好",
     "audioKey": "word-215",
-    "primarySymbol": "ㄟ"
+    "primarySymbol": "ㄟ",
+    "targetCharacter": "杯",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🥤",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "杯子好 的清楚圖像"
+    }
   },
   {
     "id": "word-216",
@@ -8397,7 +9572,18 @@
     "difficulty": "advanced",
     "speechText": "碗盤好",
     "audioKey": "word-216",
-    "primarySymbol": "ㄠ"
+    "primarySymbol": "ㄠ",
+    "targetCharacter": "碗",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🕳️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "碗盤好 的清楚圖像"
+    }
   },
   {
     "id": "word-217",
@@ -8433,7 +9619,18 @@
     "difficulty": "advanced",
     "speechText": "牙刷好",
     "audioKey": "word-217",
-    "primarySymbol": "ㄡ"
+    "primarySymbol": "ㄡ",
+    "targetCharacter": "牙",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪷",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "牙刷好 的清楚圖像"
+    }
   },
   {
     "id": "word-218",
@@ -8469,7 +9666,18 @@
     "difficulty": "advanced",
     "speechText": "毛巾好",
     "audioKey": "word-218",
-    "primarySymbol": "ㄢ"
+    "primarySymbol": "ㄢ",
+    "targetCharacter": "毛",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🛏️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "毛巾好 的清楚圖像"
+    }
   },
   {
     "id": "word-219",
@@ -8506,7 +9714,18 @@
     "difficulty": "advanced",
     "speechText": "太陽好",
     "audioKey": "word-219",
-    "primarySymbol": "ㄣ"
+    "primarySymbol": "ㄣ",
+    "targetCharacter": "太",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🙏",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "太陽好 的清楚圖像"
+    }
   },
   {
     "id": "word-220",
@@ -8546,7 +9765,18 @@
     "difficulty": "advanced",
     "speechText": "月亮好",
     "audioKey": "word-220",
-    "primarySymbol": "ㄤ"
+    "primarySymbol": "ㄤ",
+    "targetCharacter": "月",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐑",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "月亮好 的清楚圖像"
+    }
   },
   {
     "id": "word-221",
@@ -8585,7 +9815,18 @@
     "difficulty": "advanced",
     "speechText": "星星好",
     "audioKey": "word-221",
-    "primarySymbol": "ㄥ"
+    "primarySymbol": "ㄥ",
+    "targetCharacter": "星",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌬️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "星星好 的清楚圖像"
+    }
   },
   {
     "id": "word-222",
@@ -8625,7 +9866,18 @@
     "difficulty": "advanced",
     "speechText": "白雲好",
     "audioKey": "word-222",
-    "primarySymbol": "ㄦ"
+    "primarySymbol": "ㄦ",
+    "targetCharacter": "白",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🧒",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "白雲好 的清楚圖像"
+    }
   },
   {
     "id": "word-223",
@@ -8667,7 +9919,18 @@
     "difficulty": "advanced",
     "speechText": "下雨好",
     "audioKey": "word-223",
-    "primarySymbol": "ㄅ"
+    "primarySymbol": "ㄅ",
+    "targetCharacter": "下",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👨",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "下雨好 的清楚圖像"
+    }
   },
   {
     "id": "word-224",
@@ -8708,7 +9971,18 @@
     "difficulty": "advanced",
     "speechText": "大風好",
     "audioKey": "word-224",
-    "primarySymbol": "ㄆ"
+    "primarySymbol": "ㄆ",
+    "targetCharacter": "大",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🫧",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "大風好 的清楚圖像"
+    }
   },
   {
     "id": "word-225",
@@ -8748,7 +10022,18 @@
     "difficulty": "advanced",
     "speechText": "花園好",
     "audioKey": "word-225",
-    "primarySymbol": "ㄇ"
+    "primarySymbol": "ㄇ",
+    "targetCharacter": "花",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐴",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "花園好 的清楚圖像"
+    }
   },
   {
     "id": "word-226",
@@ -8787,7 +10072,18 @@
     "difficulty": "advanced",
     "speechText": "大樹好",
     "audioKey": "word-226",
-    "primarySymbol": "ㄈ"
+    "primarySymbol": "ㄈ",
+    "targetCharacter": "大",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🪽",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "大樹好 的清楚圖像"
+    }
   },
   {
     "id": "word-227",
@@ -8828,7 +10124,18 @@
     "difficulty": "advanced",
     "speechText": "小草好",
     "audioKey": "word-227",
-    "primarySymbol": "ㄉ"
+    "primarySymbol": "ㄉ",
+    "targetCharacter": "小",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "💡",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "小草好 的清楚圖像"
+    }
   },
   {
     "id": "word-228",
@@ -8871,7 +10178,18 @@
     "difficulty": "advanced",
     "speechText": "高山好",
     "audioKey": "word-228",
-    "primarySymbol": "ㄊ"
+    "primarySymbol": "ㄊ",
+    "targetCharacter": "高",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐰",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "高山好 的清楚圖像"
+    }
   },
   {
     "id": "word-229",
@@ -8915,7 +10233,18 @@
     "difficulty": "advanced",
     "speechText": "河水好",
     "audioKey": "word-229",
-    "primarySymbol": "ㄋ"
+    "primarySymbol": "ㄋ",
+    "targetCharacter": "河",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐦",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "河水好 的清楚圖像"
+    }
   },
   {
     "id": "word-230",
@@ -8957,7 +10286,18 @@
     "difficulty": "advanced",
     "speechText": "海邊好",
     "audioKey": "word-230",
-    "primarySymbol": "ㄌ"
+    "primarySymbol": "ㄌ",
+    "targetCharacter": "海",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🦌",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "海邊好 的清楚圖像"
+    }
   },
   {
     "id": "word-231",
@@ -8999,7 +10339,18 @@
     "difficulty": "advanced",
     "speechText": "紅色好",
     "audioKey": "word-231",
-    "primarySymbol": "ㄍ"
+    "primarySymbol": "ㄍ",
+    "targetCharacter": "紅",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐶",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "紅色好 的清楚圖像"
+    }
   },
   {
     "id": "word-232",
@@ -9040,7 +10391,18 @@
     "difficulty": "advanced",
     "speechText": "黃色好",
     "audioKey": "word-232",
-    "primarySymbol": "ㄎ"
+    "primarySymbol": "ㄎ",
+    "targetCharacter": "黃",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "👄",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "黃色好 的清楚圖像"
+    }
   },
   {
     "id": "word-233",
@@ -9081,7 +10443,18 @@
     "difficulty": "advanced",
     "speechText": "綠色好",
     "audioKey": "word-233",
-    "primarySymbol": "ㄏ"
+    "primarySymbol": "ㄏ",
+    "targetCharacter": "綠",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🏞️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "綠色好 的清楚圖像"
+    }
   },
   {
     "id": "word-234",
@@ -9120,7 +10493,18 @@
     "difficulty": "advanced",
     "speechText": "藍色好",
     "audioKey": "word-234",
-    "primarySymbol": "ㄐ"
+    "primarySymbol": "ㄐ",
+    "targetCharacter": "藍",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🐔",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "藍色好 的清楚圖像"
+    }
   },
   {
     "id": "word-235",
@@ -9161,7 +10545,18 @@
     "difficulty": "advanced",
     "speechText": "黑色好",
     "audioKey": "word-235",
-    "primarySymbol": "ㄑ"
+    "primarySymbol": "ㄑ",
+    "targetCharacter": "黑",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚩",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "黑色好 的清楚圖像"
+    }
   },
   {
     "id": "word-236",
@@ -9200,7 +10595,18 @@
     "difficulty": "advanced",
     "speechText": "白色好",
     "audioKey": "word-236",
-    "primarySymbol": "ㄒ"
+    "primarySymbol": "ㄒ",
+    "targetCharacter": "白",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🌅",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "白色好 的清楚圖像"
+    }
   },
   {
     "id": "word-237",
@@ -9240,7 +10646,18 @@
     "difficulty": "advanced",
     "speechText": "開心好",
     "audioKey": "word-237",
-    "primarySymbol": "ㄓ"
+    "primarySymbol": "ㄓ",
+    "targetCharacter": "開",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🎋",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "開心好 的清楚圖像"
+    }
   },
   {
     "id": "word-238",
@@ -9278,7 +10695,18 @@
     "difficulty": "advanced",
     "speechText": "生氣好",
     "audioKey": "word-238",
-    "primarySymbol": "ㄔ"
+    "primarySymbol": "ㄔ",
+    "targetCharacter": "生",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "🚗",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "生氣好 的清楚圖像"
+    }
   },
   {
     "id": "word-239",
@@ -9316,7 +10744,18 @@
     "difficulty": "advanced",
     "speechText": "害怕好",
     "audioKey": "word-239",
-    "primarySymbol": "ㄕ"
+    "primarySymbol": "ㄕ",
+    "targetCharacter": "害",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "📖",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "害怕好 的清楚圖像"
+    }
   },
   {
     "id": "word-240",
@@ -9355,6 +10794,17 @@
     "difficulty": "advanced",
     "speechText": "難過好",
     "audioKey": "word-240",
-    "primarySymbol": "ㄖ"
+    "primarySymbol": "ㄖ",
+    "targetCharacter": "難",
+    "targetIndex": 0,
+    "reviewed": true,
+    "validationStatus": "valid",
+    "enabled": true,
+    "emojiFallback": "☀️",
+    "image": {
+      "type": "emoji",
+      "src": "",
+      "alt": "難過好 的清楚圖像"
+    }
   }
 ]

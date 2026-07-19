@@ -64,3 +64,25 @@
 - `node --check src/worker.js`：通過。
 - `node tests/validate-app.js`：通過。
 - 尚待使用者實體 iPhone／iPad 驗收加入主畫面、離線進入與舊 V1.2.0 升級。
+
+## 2026-07-19 V1.3.1
+
+### 已完成
+
+- App 版本更新為 `V1.3.1`，修改時間 `2026-07-19 19:37`，時區 `Asia/Ho_Chi_Minh`。
+- 品牌統一為「注音動物園」，Lisa、Jack、Kyky 共用 `storybook-zoo` 童話動物園 UI。
+- 功能動物配對：🐰 注音卡、🦉 認識注音、🐘 聽一聽、🦊 拼一拼、🐼 看圖認字、🦁 獎勵、🐻 家長。
+- 新增注音聲調解析與獨立定位，避免把 ˊˇˋ˙ 放在直列最後。
+- 看圖認字題庫只使用通過審核與驗證的詞語物件，不執行即時 Google 搜圖或外部 hotlink。
+- 37 個注音例字補上 reviewed/status/imageDescription；ㄢ 使用「山」⛰️，ㄣ 使用「門」🚪。
+- 新增 `tests/validate-zhuyin-tones.js` 與 `tests/validate-dictionary-media.js`。
+
+### 測試結果
+
+- `node --check public/src/app.js`：通過。
+- `node --check public/service-worker.js`：通過。
+- `node --check src/worker.js`：通過。
+- `node tests/validate-app.js`：通過。
+- `node tests/validate-zhuyin-tones.js`：通過。
+- `node tests/validate-dictionary-media.js`：通過。
+- 實體 iPhone／iPad Safari、Chrome、PWA 驗收尚未執行。
