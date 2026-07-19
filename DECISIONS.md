@@ -41,3 +41,15 @@
 - 日期：2026-07-19
 - 決策：本次為確保 GitHub 推送相容性，暫時移除 PNG icon 引用，只保留文字格式 SVG icon；192×192、512×512 與 Apple 180×180 PNG icon 改列下一階段待辦。
 - 原因：目前推送環境不支援二進位檔案，先避免 manifest、HTML 與 Service Worker 引用不存在的 PNG。
+
+## D008：Cloudflare Workers 只部署 public 目錄
+
+- 日期：2026-07-19
+- 決策：將網站執行需要的靜態檔案集中到 `public/`，並讓 `wrangler.jsonc` 的 `assets.directory` 指向 `./public`。
+- 原因：避免 Repository 根目錄、Git metadata、報告、測試與專案管理文件被當成公開靜態資源上傳。
+
+## D009：純靜態 Workers 部署不啟用 nodejs_compat
+
+- 日期：2026-07-19
+- 決策：Cloudflare Workers 設定只保留靜態 assets，不加入 `compatibility_flags` 或 `nodejs_compat`。
+- 原因：目前網站沒有 Worker server-side 程式依賴，移除不必要相容旗標可降低部署面與維護成本。

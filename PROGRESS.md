@@ -35,3 +35,12 @@
 - 將 192×192、512×512 與 Apple 180×180 PNG icon 改列下一階段待辦，本次保留 SVG icon。
 - 更新 `manifest.json`、Apple touch icon 與 Service Worker cache 版本。
 - 新增 GitHub Actions 驗證 workflow。
+
+### 2026-07-19 Cloudflare Workers 靜態部署修正
+
+- 建立 `public/` 作為唯一公開靜態網站根目錄。
+- 將 `index.html`、`manifest.json`、`service-worker.js`、`src/`、`assets/` 移入 `public/`。
+- 新增 `wrangler.jsonc`，將 Cloudflare Workers Assets 目錄限制為 `./public`，且不啟用 `nodejs_compat`。
+- 新增 `public/.assetsignore` 作為第二層部署排除防護。
+- 更新 Service Worker 快取名稱為 `zhuyin-bee-v2`，並確認快取清單只包含公開網站檔案。
+- 更新驗證腳本與 GitHub Actions，使檢查目標改為 `public/` 部署根目錄。
