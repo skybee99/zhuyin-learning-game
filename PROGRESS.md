@@ -14,9 +14,18 @@
 - Workflow Run：#8
 - 結果：success
 
-### 本次功能分支進度
+### 已完成並合併的 PR #5 V1.1.0 功能更新 metadata
 
-- 本次功能分支尚未合併，最終 Merge Commit 不適用。
+- PR：#5
+- PR 狀態：Merged
+- PR 標題：`feat: improve zhuyin fonts, audio, grouping, ruby annotations and PWA versioning (V1.1.0)`
+- Head 分支：`codex/update-zhuyin-learning-game-features-and-metadata`
+- Base 分支：`main`
+- 程式 Commit：`f7297d43c575061d681971df844df298265d80e2`
+- Merge Commit：`12dc2e204f17e48358f6da8e9a23b27339048c22`
+- 合併時間：`2026-07-19T07:05:02Z`
+
+### PR #5 V1.1.0 功能更新進度
 - 完成 iPhone／iPad Safari 注音專用字型與 `.zhuyin-symbol` 套用。
 - 完成 37 個注音符號資料欄位標準化與五組分組：聲母一、聲母二、結合韻、韻母一、韻母二。
 - 完成真人錄音優先、語音合成備援、停止重疊播放與兒童簡短提示策略。
