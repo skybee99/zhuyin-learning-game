@@ -2,30 +2,29 @@
 
 ## 系統概覽
 
-「注音小蜜蜂」是純前端靜態 PWA，不使用前端框架、不連接後端、不收集兒童個人資料。核心檔案如下：
+「注音小蜜蜂」是純前端靜態 PWA，不使用框架、不連接後端、不收集兒童個人資料。
 
-- `public/index.html`：PWA 入口、iOS meta、Apple touch icon、四個學習模式區塊。
-- `public/src/styles.css`：iPhone 直式優先的觸控版面，並提供 iPad 直式與橫式自適應。
-- `public/src/app.js`：37 個注音資料、遊戲互動、音訊播放、本機紀錄與 Service Worker 註冊。
-- `public/assets/audio/audio-manifest.json`：統一音訊清單，標示真人錄音是否已提供。
-- `public/manifest.json`：PWA 名稱、啟動畫面與目前存在的 SVG icon。
-- `public/service-worker.js`：核心檔案離線快取、版本化與舊快取清除。
-- `tests/validate-app.js`：靜態檔案、PWA、注音資料、音訊 manifest、快取策略與 `public/` 部署安全檢查。
-- `wrangler.jsonc`：Cloudflare Workers Assets 設定，公開目錄固定為 `./public`。
-- `public/.assetsignore`：第二層部署排除防護，避免內部檔案被公開。
+- `public/index.html`：PWA 入口、iOS meta、兒童首頁、五個模式、家長模式與版本顯示。
+- `public/src/styles.css`：iPhone 直式優先、iPad 自適應、安全區 padding、ruby 排版與 `.zhuyin-symbol` 注音字型。
+- `public/src/app.js`：`APP_VERSION`、37 注音資料、分組、拼音題庫、點讀、音訊控制、localStorage 與 Service Worker 註冊。
+- `public/assets/audio/audio-manifest.json`：真人錄音狀態清單；音訊不存在時不進入 App Shell cache。
+- `public/manifest.json`：PWA metadata、standalone、start_url 與 scope。
+- `public/service-worker.js`：`zhuyin-bee-v1-1-0` 核心快取、舊快取清除、離線 fallback。
+- `tests/validate-app.js`：檢查公開檔案、PWA、37 注音、ruby、音訊 manifest、SW cache 與部署安全。
+- `wrangler.jsonc`：Cloudflare Workers Assets 目錄固定 `./public`，網站 URL 不包含 `/public/`。
 
-## 資料與隱私
+## 注音資料與分組
 
-學習紀錄只存在瀏覽器 `localStorage`，目前包含星星數、答題數與最後練習時間。沒有伺服器同步、廣告、第三方追蹤或帳號系統。
+37 個台灣常用注音符號都有 `symbol`、`group`、`sampleWord`、`sampleZhuyin`、`emoji`、`audio` 與 `audioKey`。分組為聲母一、聲母二、結合韻、韻母一、韻母二。
 
-## 聲音架構
+## 聲音與點讀
 
-App 先讀取 `assets/audio/audio-manifest.json`，只有該注音項目 `status` 為 `recorded` 時才播放真人錄音。缺少真人錄音時，畫面會明確說明改用瀏覽器語音合成唸例字作為備援，且不宣稱為標準單一注音發音。
+播放新聲音前會停止前一段真人錄音與語音合成，避免快速連點時重疊。真人錄音優先，缺檔或失敗後以 `zh-TW` 語音合成朗讀例字或文字。點讀高亮目前為估算分段，不是精準音訊同步。
 
-## PWA 架構
+## localStorage
 
-Service Worker 使用版本化 `CACHE_NAME`（例如 `zhuyin-bee-v2`）管理快取。更新核心靜態資源時應同步調整版本，啟用階段會刪除同前綴的舊快取。
+沿用 `zhuyinBeeProgressV1` 並向下相容新增設定：星星、答題數、最後練習時間、注音顯示、聲音開關、音量、背景音樂狀態、難度、最近學習分組與拼音進度。
 
-## Cloudflare Workers 靜態部署
+## Cloudflare 公開範圍
 
-正式公開根目錄為 `public/`。Workers Assets 的 `directory` 設為 `./public`，因此網站網址仍由部署根目錄開啟，HTML、manifest、Service Worker、音訊與 icon 路徑都不可包含 `/public/`。Repository 根目錄的專案管理文件、測試、報告、GitHub workflow 與 Git metadata 不屬於公開資源。
+只有 `public/` 是公開網站目錄；專案 Markdown、reports、tests、GitHub workflow、`.git`、`.wrangler` 與 `node_modules` 不應被部署。
