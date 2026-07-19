@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffcf4a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="注音小蜜蜂" />
+    <meta name="description" content="適合 iPhone 與 iPad 的注音、認字與語音學習遊戲。" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="assets/icons/icon.svg" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>注音小蜜蜂</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero" id="home">
+        <p class="eyebrow">小學生注音與認字練習</p>
+        <h1>注音小蜜蜂</h1>
+        <p class="hero-text">聽一聽、點一點、認一認，答對就收集星星！</p>
+        <section class="record-card" aria-live="polite">
+          <span>⭐ 星星</span><strong id="starsCount">0</strong>
+          <span>答題</span><strong id="answersCount">0</strong>
+        </section>
+      </header>
+
+      <main>
+        <nav class="mode-grid" aria-label="學習模式">
+          <button class="mode-card" type="button" data-view="cardsView">ㄅ 注音卡</button>
+          <button class="mode-card" type="button" data-view="listenView">👂 聽音選注音</button>
+          <button class="mode-card" type="button" data-view="wordView">🖼️ 看圖認字</button>
+          <button class="mode-card parent" type="button" data-view="parentView">👨‍👩‍👧 家長模式</button>
+        </nav>
+
+        <section class="panel active" id="cardsView" aria-labelledby="cardsTitle">
+          <h2 id="cardsTitle">注音符號學習卡</h2>
+          <p>點卡片聽發音。未來可將真人錄音放入 <code>assets/audio/</code>。</p>
+          <div class="card-grid" id="symbolCards"></div>
+        </section>
+
+        <section class="panel" id="listenView" aria-labelledby="listenTitle">
+          <h2 id="listenTitle">聽聲音選注音</h2>
+          <div class="quiz-card">
+            <button class="primary-action" id="playPrompt" type="button">🔊 播放題目</button>
+            <div class="choice-grid" id="listenChoices"></div>
+            <p class="feedback" id="listenFeedback" aria-live="polite">請先聽聲音，再選正確注音。</p>
+          </div>
+        </section>
+
+        <section class="panel" id="wordView" aria-labelledby="wordTitle">
+          <h2 id="wordTitle">看圖認字</h2>
+          <div class="quiz-card picture-card">
+            <div class="picture" id="picturePrompt" aria-hidden="true">🐝</div>
+            <p class="hint" id="wordHint">這是什麼字？</p>
+            <div class="choice-grid" id="wordChoices"></div>
+            <p class="feedback" id="wordFeedback" aria-live="polite">看圖片，選出正確的國字。</p>
+          </div>
+        </section>
+
+        <section class="panel" id="parentView" aria-labelledby="parentTitle">
+          <h2 id="parentTitle">家長模式</h2>
+          <div class="parent-box">
+            <p>本遊戲不放廣告、不收集兒童個人資料。學習紀錄只保存在這台裝置。</p>
+            <p id="lastPlayed">尚未開始練習。</p>
+            <button class="danger-action" id="resetProgress" type="button">重置本機學習紀錄</button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="src/app.js" type="module"></script>
+  </body>
+</html>

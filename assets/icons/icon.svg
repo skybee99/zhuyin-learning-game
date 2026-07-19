@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="注音小蜜蜂 icon">
+  <rect width="512" height="512" rx="112" fill="#ffcf4a"/>
+  <circle cx="256" cy="264" r="132" fill="#fff9e8"/>
+  <path d="M162 244h188M168 304h176" stroke="#263238" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="210" cy="230" r="18" fill="#263238"/>
+  <circle cx="302" cy="230" r="18" fill="#263238"/>
+  <path d="M226 300c22 20 44 20 66 0" fill="none" stroke="#263238" stroke-width="18" stroke-linecap="round"/>
+  <text x="256" y="118" text-anchor="middle" font-size="86" font-family="sans-serif" font-weight="800" fill="#263238">ㄅ</text>
+  <path d="M122 216c-54-28-72-82-44-112 38-40 94 14 116 86" fill="#dff6ff" stroke="#263238" stroke-width="12" opacity=".85"/>
+  <path d="M390 216c54-28 72-82 44-112-38-40-94 14-116 86" fill="#dff6ff" stroke="#263238" stroke-width="12" opacity=".85"/>
+</svg>
