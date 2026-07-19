@@ -1,5 +1,23 @@
 # CHANGELOG
 
+
+## Deployment fix pending — 2026-07-19
+
+- Removed the temporary Cloudflare D1 placeholder binding from `wrangler.jsonc` so the Worker can deploy before the production D1 database is created.
+- Kept `src/worker.js` as the Worker entrypoint and `./public` bound as `ASSETS`.
+- Limited missing-DB failures to `/api/dictionary/*` with 503 responses while static app routes continue through Workers Assets.
+- Updated validation to require the `ASSETS` binding and reject temporary D1 placeholders.
+- Attempted `npx wrangler deploy`, but deployment did not complete because npm registry access to `wrangler` returned 403 in this environment.
+
+## PR #8 — Merged 2026-07-19T09:50:12Z
+
+- PR: #8
+- Head: codex/update-zhuyin-learning-game-to-v1.3.0
+- Base: main
+- Code commit: d493aba993e709f823af86c6bd039f177529a842
+- Merge commit: f7e99a2529089aef0c64a37ef220860f17091008
+- GitHub Actions: Validate PWA, Workflow Run #24, success
+
 ## V1.3.0 — 2026-07-19 16:39 Asia/Ho_Chi_Minh
 
 - Fixed iOS PWA navigation caching by removing all navigation response writes and adding `offline.html` as the only navigation fallback.
