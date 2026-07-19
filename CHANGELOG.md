@@ -44,3 +44,13 @@
 ## V1.2.0 — 2026-07-19 16:00 Asia/Ho_Chi_Minh
 
 - Added child profiles, system TTS, zhuyin learning mode, vertical zhuyin layout, expanded JSON data, and initial Service Worker redirect safeguards.
+
+## V1.3.1 — 2026-07-19 19:37 Asia/Ho_Chi_Minh
+
+- Updated app brand to 「注音動物園」 with one shared storybook-zoo theme for Lisa, Jack, and Kyky.
+- Split zhuyin tone data/rendering into base symbols plus independent tone marks using `parseZhuyinSyllable()` and `.zhuyin-tone` positioning.
+- Updated Service Worker cache to `zhuyin-zoo-v1-3-1` and cleanup for old `zhuyin-bee-*` / `zhuyin-zoo-*` project caches only.
+- Re-reviewed 37 zhuyin examples; fixed ㄢ → 山 → ㄕㄢ → ⛰️ and ㄣ → 門 → ㄇㄣˊ → 🚪.
+- Sanitized word media records so reviewed child questions bind word, target character, speech text, image metadata, and emoji fallback in the same object.
+- Added validators for tone rendering, dictionary media consistency, text pollution, and 37-symbol coverage.
+- Physical iPhone/iPad validation remains not executed in this environment.

@@ -6,22 +6,22 @@
     <meta name="theme-color" content="#ffcf4a" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="注音小蜜蜂" />
-    <meta name="description" content="適合 iPhone 與 iPad 的注音、認字與語音學習遊戲。" />
+    <meta name="apple-mobile-web-app-title" content="注音動物園" />
+    <meta name="description" content="和動物朋友一起學注音，適合 iPhone 與 iPad 的注音、認字與語音學習遊戲。" />
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="assets/icons/icon.svg" />
     <link rel="stylesheet" href="src/styles.css" />
-    <title>注音小蜜蜂</title>
+    <title>注音動物園</title>
   </head>
-  <body data-zhuyin-display="all" data-child-theme="simple" data-text-size="standard" data-zhuyin-size="standard">
+  <body data-zhuyin-display="all" data-child-theme="storybook-zoo" data-theme="storybook-zoo" data-text-size="standard" data-zhuyin-size="standard">
     <div class="app-shell">
       <section class="profile-gate panel active" id="profileView" aria-labelledby="profileTitle">
-        <p class="eyebrow">🐝</p>
+        <p class="eyebrow">🌈</p>
         <h1 id="profileTitle">👋 你是誰？</h1>
         <div class="profile-grid" id="profileCards"></div>
       </section>
       <header class="hero hidden" id="home">
-        <p class="eyebrow" id="themeTitle">🐝</p>
+        <p class="eyebrow" id="themeTitle">🌈</p>
         <h1 id="appTitle"></h1>
         <section class="record-card" aria-live="polite"><span id="childBadge">👧 Lisa</span><span>⭐</span><strong id="starsCount">0</strong><span>✅</span><strong id="answersCount">0</strong></section>
         <button class="small-action" id="switchChild" type="button" aria-label="換人" data-speech="換人">🔄 換人</button>
@@ -33,16 +33,16 @@
           <button class="mode-card" id="listenBtn" type="button" data-view="listenView" data-speech="聽一聽" aria-label="進入聽一聽"></button>
           <button class="mode-card" id="spellBtn" type="button" data-view="spellView" data-speech="拼一拼" aria-label="進入拼一拼"></button>
           <button class="mode-card" id="wordBtn" type="button" data-view="wordView" data-speech="看圖認字" aria-label="進入看圖認字"></button>
-          <button class="mode-card parent" type="button" data-view="parentView" aria-label="進入家長模式">👨‍👩‍👧 家長</button>
+          <button class="mode-card parent" type="button" data-view="parentView" aria-label="進入家長模式">🐻 家長</button>
         </nav>
         <section class="panel active" id="cardsView"><h2>ㄅ 注音卡</h2><div class="group-bar"><button id="prevGroup" type="button" data-speech="上一組">⬅️ 上一組</button><strong id="groupName">聲母一</strong><span id="groupPager">1 / 5</span><button id="nextGroup" type="button" data-speech="下一組">下一組 ➡️</button></div><p class="audio-notice" id="audioNotice" aria-live="polite">目前語音：系統語音</p><div class="card-grid" id="symbolCards"></div></section>
         <section class="panel" id="learnView"><h2>🔤 認識注音</h2><div class="card-grid all-symbols" id="learnCards"></div></section>
         <section class="panel" id="listenView"><h2>🔊 聽一聽</h2><div class="quiz-card"><button class="primary-action" id="playPrompt" type="button" data-speech="聽一聽">🔊 聽一聽</button><div class="choice-grid" id="listenChoices"></div><div class="feedback" id="listenFeedback">👇 選答案</div></div></section>
         <section class="panel" id="spellView"><h2>🧩 拼一拼</h2><div class="quiz-card"><label>難度 <select id="difficulty"><option value="beginner">🌱 初級</option><option value="advanced">🌟 進階</option></select></label><div class="spell-prompt" id="spellPrompt"></div><div class="choice-grid" id="spellChoices"></div><button class="primary-action" id="nextSpell" type="button" data-speech="下一題">➡️ 下一題</button><div class="feedback" id="spellFeedback">👇 選答案</div></div></section>
-        <section class="panel" id="wordView"><h2>🖼️ 看圖認字</h2><div class="quiz-card picture-card"><div class="picture" id="picturePrompt">🐝</div><p class="hint" id="wordHint">👇 選答案</p><div class="choice-grid" id="wordChoices"></div><div class="feedback" id="wordFeedback">🌱 再試一次也很棒</div></div></section>
+        <section class="panel" id="wordView"><h2>🖼️ 看圖認字</h2><div class="quiz-card picture-card"><div class="picture" id="picturePrompt">🌈</div><p class="hint" id="wordHint">👇 選答案</p><div class="choice-grid" id="wordChoices"></div><div class="feedback" id="wordFeedback">🌱 再試一次也很棒</div></div></section>
         <section class="panel" id="parentView"><h2>家長模式</h2><div class="parent-box" id="parentBox"></div></section>
       </main>
-      <footer class="version" id="versionLine">V1.3.0</footer>
+      <footer class="version" id="versionLine">V1.3.1</footer>
     </div>
     <template id="rubyRequirement"><ruby>聽<rt>ㄊㄧㄥ</rt></ruby></template>
     <script src="src/app.js" type="module"></script>

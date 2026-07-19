@@ -1,7 +1,7 @@
 {
-  "name": "注音小蜜蜂：注音認字學習遊戲",
-  "short_name": "注音小蜜蜂",
-  "description": "V1.3.0：改善 iOS PWA 離線穩定性、拼一拼清楚度、字庫管理與兒童主題。",
+  "name": "注音動物園：注音認字學習遊戲",
+  "short_name": "注音動物園",
+  "description": "V1.3.1：修正注音聲調、字詞圖片審核與童話動物園統一介面。",
   "lang": "zh-Hant-TW",
   "start_url": "/index.html",
   "scope": "/",
@@ -9,13 +9,6 @@
   "orientation": "any",
   "background_color": "#fff9e8",
   "theme_color": "#ffcf4a",
-  "icons": [
-    {
-      "src": "assets/icons/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
-  ],
-  "version": "V1.3.0"
+  "icons": [{"src":"assets/icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}],
+  "version": "V1.3.1"
 }

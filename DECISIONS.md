@@ -51,3 +51,21 @@
 - 日期：2026-07-19
 - 決策：新增 D1 schema、Worker API 與 parent session gate；正式 database id、完整登入、DOCX/PDF parser 與 seed migration 執行列為後續。
 - 原因：避免用假 UI 冒充已完成永久保存，同時保留可安全演進的資料模型。
+
+## D023：注音聲調獨立定位
+
+- 日期：2026-07-19
+- 決策：用 `parseZhuyinSyllable()` 拆出 `symbols`、`tone`、`toneMark`，DOM 中以 `.zhuyin-symbols` 與 `.zhuyin-tone` 分離。
+- 原因：避免二、三、四聲與輕聲被當作直排最後一格，改善 iOS Safari/PWA 顯示一致性。
+
+## D024：統一注音動物園主題
+
+- 日期：2026-07-19
+- 決策：Lisa、Jack、Kyky 共用 `storybook-zoo`，僅保留名字、頭像與本機學習紀錄差異。
+- 原因：降低兒童操作混淆，移除小蜜蜂、公主、蜘蛛英雄與小勇者個別主題。
+
+## D025：兒童題庫只使用已審核媒體
+
+- 日期：2026-07-19
+- 決策：詞語題目必須同筆資料包含 word、targetCharacter、targetIndex、speechText、image/emojiFallback、reviewed 與 validationStatus。
+- 原因：避免陣列索引錯位與不明授權/不適齡圖片進入兒童模式。
