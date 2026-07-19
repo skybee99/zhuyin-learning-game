@@ -1,0 +1,156 @@
+[
+  {
+    "id": "media-word-dog",
+    "targetType": "word",
+    "targetId": "word-dog",
+    "imageRef": "emoji-word-dog",
+    "altText": "狗狗 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-cat",
+    "targetType": "word",
+    "targetId": "word-cat",
+    "imageRef": "emoji-word-cat",
+    "altText": "小貓 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-sheep",
+    "targetType": "word",
+    "targetId": "word-sheep",
+    "imageRef": "emoji-word-sheep",
+    "altText": "小羊 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-fish",
+    "targetType": "word",
+    "targetId": "word-fish",
+    "imageRef": "emoji-word-fish",
+    "altText": "小魚 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-bird",
+    "targetType": "word",
+    "targetId": "word-bird",
+    "imageRef": "emoji-word-bird",
+    "altText": "小鳥 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-rabbit",
+    "targetType": "word",
+    "targetId": "word-rabbit",
+    "imageRef": "emoji-word-rabbit",
+    "altText": "兔子 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-drink-water",
+    "targetType": "word",
+    "targetId": "word-drink-water",
+    "imageRef": "emoji-word-drink-water",
+    "altText": "喝水 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-mountain",
+    "targetType": "word",
+    "targetId": "word-mountain",
+    "imageRef": "emoji-word-mountain",
+    "altText": "高山 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-door",
+    "targetType": "word",
+    "targetId": "word-door",
+    "imageRef": "emoji-word-door",
+    "altText": "大門 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-book",
+    "targetType": "word",
+    "targetId": "word-book",
+    "imageRef": "emoji-word-book",
+    "altText": "看書 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-car",
+    "targetType": "word",
+    "targetId": "word-car",
+    "imageRef": "emoji-word-car",
+    "altText": "汽車 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-plane",
+    "targetType": "word",
+    "targetId": "word-plane",
+    "imageRef": "emoji-word-plane",
+    "altText": "飛機 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-mouth",
+    "targetType": "word",
+    "targetId": "word-mouth",
+    "imageRef": "emoji-word-mouth",
+    "altText": "嘴巴 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  },
+  {
+    "id": "media-word-pants",
+    "targetType": "word",
+    "targetId": "word-pants",
+    "imageRef": "emoji-word-pants",
+    "altText": "褲子 的圖案",
+    "source": "built-in emoji",
+    "license": "Unicode emoji",
+    "author": "Unicode Consortium / platform font",
+    "verified": true
+  }
+]

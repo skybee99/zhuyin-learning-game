@@ -54,3 +54,13 @@
 - Sanitized word media records so reviewed child questions bind word, target character, speech text, image metadata, and emoji fallback in the same object.
 - Added validators for tone rendering, dictionary media consistency, text pollution, and 37-symbol coverage.
 - Physical iPhone/iPad validation remains not executed in this environment.
+
+## V1.3.2 — 2026-07-19 21:10 Asia/Ho_Chi_Minh
+
+- Added strict dictionary/media/question data files for verified picture-word questions.
+- Rebuilt the built-in picture-word set with reviewed emoji mappings, per-character zhuyin, and future image/audio replacement fields.
+- Changed picture-word quiz selection to use only verified question items that resolve to approved word/media data.
+- Simplified home feature cards to animal emoji + feature name, with dog included in the zoo visual language.
+- Enlarged custom zhuyin tone marks and improved narrow iPhone portrait spacing.
+- Added a parent backup center for full, dictionary, media, progress, and usage JSON exports plus import summary preview with automatic current-data backup.
+- Updated app/version references and Service Worker cache to `zhuyin-zoo-v1-3-2`.

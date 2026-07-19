@@ -1,5 +1,5 @@
-const CACHE_NAME = 'zhuyin-zoo-v1-3-1';
-const APP_SHELL = ['/offline.html','/src/styles.css','/src/app.js','/manifest.json','/assets/icons/icon.svg','/assets/audio/audio-manifest.json','/data/zhuyin.json','/data/characters.json','/data/words.json','/data/categories.json'];
+const CACHE_NAME = 'zhuyin-zoo-v1-3-2';
+const APP_SHELL = ['/offline.html','/src/styles.css','/src/app.js','/manifest.json','/assets/icons/icon.svg','/assets/audio/audio-manifest.json','/data/zhuyin.json','/data/characters.json','/data/words.json','/data/categories.json','/data/media-map.json','/data/questions.json'];
 function canCacheStaticResponse(response, request) { const requestUrl = new URL(request.url); return Boolean(response && response.ok && !response.redirected && response.type === 'basic' && requestUrl.origin === self.location.origin && request.mode !== 'navigate'); }
 self.addEventListener('install', (event) => { event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL))); });
 self.addEventListener('message', (event) => { if (event.data?.type === 'SKIP_WAITING') self.skipWaiting(); });

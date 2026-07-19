@@ -86,3 +86,24 @@
 - `node tests/validate-zhuyin-tones.js`：通過。
 - `node tests/validate-dictionary-media.js`：通過。
 - 實體 iPhone／iPad Safari、Chrome、PWA 驗收尚未執行。
+
+## 2026-07-19 V1.3.2
+
+### 已完成
+
+- 建立嚴格字庫資料模型欄位：注音卡、國字、詞語、圖片關聯與題庫題目，新增 `media-map.json` 與 `questions.json` 作為正式看圖認字題庫來源。
+- 將看圖認字改為 `buildVerifiedQuestionPool('看圖認字')`，只從 `verified: true` 題目與通過審核的詞語/媒體關聯出題，不再讓錯配資料進入兒童模式。
+- 重建內建詞語資料為人工審核的 14 筆核心題庫，確保圖片 Emoji、詞語與逐字注音一致；保留未來替換本地圖片與錄音的欄位。
+- 首頁功能卡改為動物圖案加功能名稱，移除「兔子花園」「狐狸拼圖屋」等長副標題，並以狗狗作為主視覺之一。
+- 加大注音與聲調視覺尺寸，補強手機直式版面、看圖認字題目與答案按鈕間距。
+- 家長模式新增備份中心，可匯出全部資料、字庫、圖片關聯、小孩成績與使用紀錄，匯入前可預覽摘要並先建立自動備份。
+- 更新 App 版本為 V1.3.2，Service Worker cache 更新為 `zhuyin-zoo-v1-3-2` 並離線快取新增資料檔。
+
+### 測試結果
+
+- `node --check public/src/app.js`：通過。
+- `node --check public/service-worker.js`：通過。
+- `node tests/validate-app.js`：通過。
+- `node tests/validate-zhuyin-tones.js`：通過。
+- `node tests/validate-dictionary-media.js`：通過。
+- 實體 iPhone Safari、iPhone Chrome、Zalo WebView、iPad Safari 尚待人工裝置驗收。

@@ -1,58 +1,56 @@
-# Codex Report — V1.3.1 注音動物園
+# LATEST CODEX REPORT — V1.3.2
 
-- 日期：2026-07-19 19:37 Asia/Ho_Chi_Minh
-- 分支：codex/v1.3.1-zhuyin-tone-and-zoo-theme-fixes
-- 版本：V1.3.1
-- Service Worker cache：`zhuyin-zoo-v1-3-1`
+## 修正檔案
 
-## 修改摘要
+- `public/src/app.js`：資料載入、已驗證題池、功能卡、家長備份中心、匯入摘要與版本資訊。
+- `public/src/styles.css`：手機直式、功能卡、看圖認字卡片、注音與聲調尺寸。
+- `public/data/characters.json`：人工審核核心國字資料。
+- `public/data/words.json`：人工審核核心詞語資料。
+- `public/data/media-map.json`：圖片/Emoji 與字詞關聯資料。
+- `public/data/questions.json`：正式模式可用題庫題目。
+- `public/service-worker.js`、`public/manifest.json`、`public/index.html`：V1.3.2 與離線資料快取。
+- `tests/validate-app.js`：更新 V1.3.2 與新資料檔驗證。
+- 專案管理文件：`PROGRESS.md`、`TASKS.md`、`DECISIONS.md`、`CHANGELOG.md`。
 
-### 注音聲調
+## 看圖認字資料一致性
 
-- 建立 `parseZhuyinSyllable()`，回傳 `symbols`、`tone`、`toneMark`。
-- DOM 改為 `.zhuyin-group`、`.zhuyin-symbols`、`.zhuyin-tone`。
-- CSS 獨立定位二聲、三聲、四聲與輕聲；一聲不顯示符號。
+- 一題對應一筆 `questions.json` 題目，題目以 `correctAnswerId` 反查 `words.json`。
+- 詞語需通過 `validWordQuestion()`：approved/reviewed/verified、speechText 等於詞語、targetCharacter 對應 targetIndex、逐字注音存在，且有已驗證媒體或 Emoji。
+- `media-map.json` 預留 source、license、author、verified 欄位；目前使用內建 Emoji，不抓隨機外部圖片。
 
-### 字詞與圖片
+## 注音與聲調顯示
 
-- 詞語資料補 `targetCharacter`、`targetIndex`、`speechText`、`image`、`emojiFallback`、`reviewed`、`validationStatus`、`enabled`。
-- 出題池只使用審核與驗證通過資料。
-- 明確禁止兒童題目即時 Google 搜圖、隨機外部圖片與不明授權 hotlink。
+- 持續使用自訂直排注音元件，聲調由 `.zhuyin-tone` 獨立定位。
+- V1.3.2 加大 `.bopomofo-vertical` 與 `.zhuyin-tone`，避免聲調太小或貼近其他字。
 
-### 37 注音例字
+## 手機版面
 
-- 37/37 筆補上 reviewed/status/imageDescription。
-- ㄢ 最終資料：山｜ㄕㄢ｜⛰️｜一座山。
-- ㄣ 最終資料：門｜ㄇㄣˊ｜🚪｜一扇門。
+- 主容器縮至更適合直式閱讀的寬度。
+- 首頁功能卡保持 2 欄、降低卡片高度與文字壓力。
+- 看圖認字圖片、提示文字與答案區加大間距，手機保留清楚觸控區。
 
-### 注音動物園 UI
+## 主題卡
 
-- 正式品牌：「注音動物園」。
-- Lisa、Jack、Kyky 共用 `storybook-zoo`。
-- 功能配對：🐰 注音卡、🦉 認識注音、🐘 聽一聽、🦊 拼一拼、🐼 看圖認字、🦁 獎勵、🐻 家長。
+- 功能卡只顯示：🐶 注音卡、🦉 認識注音、🐘 聽一聽、🦊 拼一拼、🐼 看圖認字、🐻 家長。
+- 移除「兔子花園」「狐狸拼圖屋」「大象音樂池」等長副標題。
+- Lisa、Jack、Kyky 維持相同 `storybook-zoo` 視覺風格。
 
-## 資料檢查結果
+## 字庫與備份
 
-| 項目 | 結果 |
-|---|---:|
-| 37 注音通過數量 | 37 |
-| 圖片詞語一致數量 | 240 |
-| 修正的錯配/污染數量 | 240 |
-| 缺圖數量 | 0 |
-| 未審核數量 | 0 |
+- 家長字庫管理保留查看搜尋、新增國字、新增詞語、文件匯入、資料檢查、清除 App 快取。
+- 新增備份中心：匯出全部資料、字庫、圖片關聯、小孩成績、使用紀錄。
+- JSON 匯入會顯示版本、備份日期與各類筆數，並先自動備份目前資料；合併/覆蓋寫入仍列為後續待辦。
 
-## 測試
+## 測試結果
 
-- 通過：`node --check public/src/app.js`
-- 通過：`node --check public/service-worker.js`
-- 通過：`node --check src/worker.js`
-- 通過：`node tests/validate-app.js`
-- 通過：`node tests/validate-zhuyin-tones.js`
-- 通過：`node tests/validate-dictionary-media.js`
+- `node --check public/src/app.js`：通過。
+- `node --check public/service-worker.js`：通過。
+- `node tests/validate-app.js`：通過。
+- `node tests/validate-zhuyin-tones.js`：通過。
+- `node tests/validate-dictionary-media.js`：通過。
 
-## 尚未完成
+## 已知限制
 
-- 實體 iPhone／iPad Safari、Chrome、PWA 驗收未執行。
-- 正式原創動物插圖尚未完成。
-- 圖片授權來源補登尚未完成。
-- 真人錄音、OCR、完整 D1 正式部署尚未完成。
+- 本環境無法執行實體 iPhone Safari、iPhone Chrome、Zalo WebView、iPad Safari 驗收。
+- 匯入目前完成安全摘要與自動備份，尚未直接覆寫正式資料。
+- 正式本地圖片與真人錄音仍待後續補檔。
