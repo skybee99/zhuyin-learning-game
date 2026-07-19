@@ -1,0 +1,156 @@
+[
+  {
+    "id": "q-picture-word-dog",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-dog",
+    "promptText": "狗狗",
+    "promptZhuyin": "ㄍㄡˇ ㄍㄡˇ",
+    "correctAnswerId": "word-dog",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-cat",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-cat",
+    "promptText": "小貓",
+    "promptZhuyin": "ㄒㄧㄠˇ ㄇㄠ",
+    "correctAnswerId": "word-cat",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-sheep",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-sheep",
+    "promptText": "小羊",
+    "promptZhuyin": "ㄒㄧㄠˇ ㄧㄤˊ",
+    "correctAnswerId": "word-sheep",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-fish",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-fish",
+    "promptText": "小魚",
+    "promptZhuyin": "ㄒㄧㄠˇ ㄩˊ",
+    "correctAnswerId": "word-fish",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-bird",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-bird",
+    "promptText": "小鳥",
+    "promptZhuyin": "ㄒㄧㄠˇ ㄋㄧㄠˇ",
+    "correctAnswerId": "word-bird",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-rabbit",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-rabbit",
+    "promptText": "兔子",
+    "promptZhuyin": "ㄊㄨˋ ˙ㄗ",
+    "correctAnswerId": "word-rabbit",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-drink-water",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-drink-water",
+    "promptText": "喝水",
+    "promptZhuyin": "ㄏㄜ ㄕㄨㄟˇ",
+    "correctAnswerId": "word-drink-water",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-mountain",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-mountain",
+    "promptText": "高山",
+    "promptZhuyin": "ㄍㄠ ㄕㄢ",
+    "correctAnswerId": "word-mountain",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-door",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-door",
+    "promptText": "大門",
+    "promptZhuyin": "ㄉㄚˋ ㄇㄣˊ",
+    "correctAnswerId": "word-door",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-book",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-book",
+    "promptText": "看書",
+    "promptZhuyin": "ㄎㄢˋ ㄕㄨ",
+    "correctAnswerId": "word-book",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-car",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-car",
+    "promptText": "汽車",
+    "promptZhuyin": "ㄑㄧˋ ㄔㄜ",
+    "correctAnswerId": "word-car",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-plane",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-plane",
+    "promptText": "飛機",
+    "promptZhuyin": "ㄈㄟ ㄐㄧ",
+    "correctAnswerId": "word-plane",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-mouth",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-mouth",
+    "promptText": "嘴巴",
+    "promptZhuyin": "ㄗㄨㄟˇ ˙ㄅㄚ",
+    "correctAnswerId": "word-mouth",
+    "optionIds": [],
+    "verified": true
+  },
+  {
+    "id": "q-picture-word-pants",
+    "mode": "看圖認字",
+    "promptType": "image",
+    "promptImageRef": "emoji-word-pants",
+    "promptText": "褲子",
+    "promptZhuyin": "ㄎㄨˋ ˙ㄗ",
+    "correctAnswerId": "word-pants",
+    "optionIds": [],
+    "verified": true
+  }
+]

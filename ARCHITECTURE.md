@@ -9,7 +9,7 @@
 
 ## PWA
 
-- `public/service-worker.js` uses cache `zhuyin-zoo-v1-3-1`.
+- `public/service-worker.js` uses cache `zhuyin-zoo-v1-3-2`.
 - Static app shell excludes `/`, `./`, and navigation requests.
 - Navigation strategy: Network First → `/offline.html` fallback; never `cache.put()` navigation responses.
 - Activate cleanup only removes this project caches with `zhuyin-bee-*` or `zhuyin-zoo-*` prefixes.
