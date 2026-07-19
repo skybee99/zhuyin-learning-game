@@ -57,6 +57,7 @@ for (const snippet of [
   'cardsView',
   'listenView',
   'wordView',
+  'spellView',
   'parentView'
 ]) {
   if (!html.includes(snippet)) throw new Error(`index.html missing ${snippet}`);
@@ -64,18 +65,22 @@ for (const snippet of [
 if (html.includes('/public/') || html.includes('public/')) throw new Error('index.html must not expose public/ in URLs');
 
 const app = fs.readFileSync(path.join(publicRoot, 'src/app.js'), 'utf8');
-for (const snippet of ['localStorage', 'speechSynthesis', 'new Audio', 'serviceWorker', 'assets/audio/audio-manifest.json', 'service-worker.js', '不代表標準單一注音發音']) {
+for (const snippet of ['localStorage', 'speechSynthesis', 'new Audio', 'serviceWorker', 'assets/audio/audio-manifest.json', 'service-worker.js', 'APP_VERSION', 'spellingQuestions', 'zhuyinDisplay']) {
   if (!app.includes(snippet)) throw new Error(`public/src/app.js missing ${snippet}`);
 }
-const symbolBlock = app.match(/const symbols = \[([\s\S]*?)\];/);
-if (!symbolBlock) throw new Error('public/src/app.js missing symbols array');
-const symbols = vm.runInNewContext(`[${symbolBlock[1]}]`);
 const expectedSymbols = 'ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ'.split('');
-if (symbols.length !== 37) throw new Error(`expected 37 symbols, found ${symbols.length}`);
 for (const expected of expectedSymbols) {
-  const item = symbols.find((entry) => entry.symbol === expected);
-  if (!item?.word || !item?.emoji || !item?.audioKey) throw new Error(`missing symbol data for ${expected}`);
+  if (!app.includes(`symbol: '${expected}'`) && !app.includes(`'${expected}':`)) throw new Error(`missing symbol data for ${expected}`);
 }
+if (!app.includes('const symbols = expectedSymbols.map')) throw new Error('public/src/app.js must build complete symbols array');
+for (const field of ['group', 'sampleWord', 'sampleZhuyin', 'emoji', 'audio']) {
+  if (!app.includes(field)) throw new Error(`symbol data missing field ${field}`);
+}
+if (!app.includes('class=\"symbol zhuyin-symbol\"') || !app.includes('class=\"zhuyin-symbol\"')) {
+  throw new Error('zhuyin display must use .zhuyin-symbol');
+}
+if (!html.includes('<ruby>') || !html.includes('<rt>') || !app.includes('<ruby')) throw new Error('ruby/rt zhuyin annotations are required');
+if (!app.includes('ㄓㄜ')) throw new Error('manual polyphone data for 跟著念 must use contextual zhuyin');
 
 const audioManifest = JSON.parse(fs.readFileSync(path.join(publicRoot, 'assets/audio/audio-manifest.json'), 'utf8'));
 if (audioManifest.basePath !== 'assets/audio/') throw new Error('audio manifest basePath must resolve from deployment root');
@@ -88,10 +93,11 @@ const sw = fs.readFileSync(path.join(publicRoot, 'service-worker.js'), 'utf8');
 for (const file of ['./', './index.html', './src/styles.css', './src/app.js', './manifest.json', './assets/audio/audio-manifest.json', './assets/icons/icon.svg']) {
   if (!sw.includes(file)) throw new Error(`service-worker.js cache list missing ${file}`);
 }
-for (const snippet of ["zhuyin-bee-v2", "startsWith('zhuyin-bee-')", 'caches.delete']) {
+for (const snippet of ["zhuyin-bee-v1-1-0", "startsWith('zhuyin-bee-')", 'caches.delete']) {
   if (!sw.includes(snippet)) throw new Error(`service-worker.js missing cache cleanup/version check: ${snippet}`);
 }
 if (sw.includes('/public/') || sw.includes('public/')) throw new Error('service-worker.js must not expose public/ in cached URLs');
+if (!sw.includes('zhuyin-bee-v1-1-0')) throw new Error('service-worker.js cache version must be v1-1-0');
 
 const assetsIgnore = fs.readFileSync(path.join(publicRoot, '.assetsignore'), 'utf8');
 for (const pattern of ['.git', '.wrangler', '*.md', 'tests', 'reports', '.github', 'node_modules', 'wrangler.jsonc']) {

@@ -1,231 +1,57 @@
+const APP_VERSION = { version: 'V1.1.0', modifiedAt: '2026-07-19 13:49', timezone: 'Asia/Ho_Chi_Minh' };
 const STORAGE_KEY = 'zhuyinBeeProgressV1';
-
 const AUDIO_MANIFEST_URL = 'assets/audio/audio-manifest.json';
-let audioManifest = null;
-
-const symbols = [
-  { symbol: 'ㄅ', sound: 'ㄅ', word: '爸', emoji: '👨', audioKey: 'ㄅ' },
-  { symbol: 'ㄆ', sound: 'ㄆ', word: '泡', emoji: '🫧', audioKey: 'ㄆ' },
-  { symbol: 'ㄇ', sound: 'ㄇ', word: '馬', emoji: '🐴', audioKey: 'ㄇ' },
-  { symbol: 'ㄈ', sound: 'ㄈ', word: '飛', emoji: '🪽', audioKey: 'ㄈ' },
-  { symbol: 'ㄉ', sound: 'ㄉ', word: '燈', emoji: '💡', audioKey: 'ㄉ' },
-  { symbol: 'ㄊ', sound: 'ㄊ', word: '兔', emoji: '🐰', audioKey: 'ㄊ' },
-  { symbol: 'ㄋ', sound: 'ㄋ', word: '鳥', emoji: '🐦', audioKey: 'ㄋ' },
-  { symbol: 'ㄌ', sound: 'ㄌ', word: '鹿', emoji: '🦌', audioKey: 'ㄌ' },
-  { symbol: 'ㄍ', sound: 'ㄍ', word: '狗', emoji: '🐶', audioKey: 'ㄍ' },
-  { symbol: 'ㄎ', sound: 'ㄎ', word: '口', emoji: '👄', audioKey: 'ㄎ' },
-  { symbol: 'ㄏ', sound: 'ㄏ', word: '河', emoji: '🏞️', audioKey: 'ㄏ' },
-  { symbol: 'ㄐ', sound: 'ㄐ', word: '雞', emoji: '🐔', audioKey: 'ㄐ' },
-  { symbol: 'ㄑ', sound: 'ㄑ', word: '旗', emoji: '🚩', audioKey: 'ㄑ' },
-  { symbol: 'ㄒ', sound: 'ㄒ', word: '西', emoji: '🌅', audioKey: 'ㄒ' },
-  { symbol: 'ㄓ', sound: 'ㄓ', word: '竹', emoji: '🎋', audioKey: 'ㄓ' },
-  { symbol: 'ㄔ', sound: 'ㄔ', word: '車', emoji: '🚗', audioKey: 'ㄔ' },
-  { symbol: 'ㄕ', sound: 'ㄕ', word: '書', emoji: '📖', audioKey: 'ㄕ' },
-  { symbol: 'ㄖ', sound: 'ㄖ', word: '日', emoji: '☀️', audioKey: 'ㄖ' },
-  { symbol: 'ㄗ', sound: 'ㄗ', word: '字', emoji: '🔤', audioKey: 'ㄗ' },
-  { symbol: 'ㄘ', sound: 'ㄘ', word: '草', emoji: '🌱', audioKey: 'ㄘ' },
-  { symbol: 'ㄙ', sound: 'ㄙ', word: '傘', emoji: '☂️', audioKey: 'ㄙ' },
-  { symbol: 'ㄧ', sound: 'ㄧ', word: '衣', emoji: '👕', audioKey: 'ㄧ' },
-  { symbol: 'ㄨ', sound: 'ㄨ', word: '屋', emoji: '🏠', audioKey: 'ㄨ' },
-  { symbol: 'ㄩ', sound: 'ㄩ', word: '魚', emoji: '🐟', audioKey: 'ㄩ' },
-  { symbol: 'ㄚ', sound: 'ㄚ', word: '鴨', emoji: '🦆', audioKey: 'ㄚ' },
-  { symbol: 'ㄛ', sound: 'ㄛ', word: '喔', emoji: '⭕', audioKey: 'ㄛ' },
-  { symbol: 'ㄜ', sound: 'ㄜ', word: '鵝', emoji: '🪿', audioKey: 'ㄜ' },
-  { symbol: 'ㄝ', sound: 'ㄝ', word: '欸', emoji: '🙋', audioKey: 'ㄝ' },
-  { symbol: 'ㄞ', sound: 'ㄞ', word: '愛', emoji: '❤️', audioKey: 'ㄞ' },
-  { symbol: 'ㄟ', sound: 'ㄟ', word: '杯', emoji: '🥤', audioKey: 'ㄟ' },
-  { symbol: 'ㄠ', sound: 'ㄠ', word: '凹', emoji: '🕳️', audioKey: 'ㄠ' },
-  { symbol: 'ㄡ', sound: 'ㄡ', word: '藕', emoji: '🪷', audioKey: 'ㄡ' },
-  { symbol: 'ㄢ', sound: 'ㄢ', word: '安', emoji: '🛏️', audioKey: 'ㄢ' },
-  { symbol: 'ㄣ', sound: 'ㄣ', word: '恩', emoji: '🙏', audioKey: 'ㄣ' },
-  { symbol: 'ㄤ', sound: 'ㄤ', word: '羊', emoji: '🐑', audioKey: 'ㄤ' },
-  { symbol: 'ㄥ', sound: 'ㄥ', word: '風', emoji: '🌬️', audioKey: 'ㄥ' },
-  { symbol: 'ㄦ', sound: 'ㄦ', word: '兒', emoji: '🧒', audioKey: 'ㄦ' },
+const expectedSymbols = 'ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ'.split('');
+const groupDefs = [
+  { id: 'g1', name: '聲母一', symbols: 'ㄅㄆㄇㄈㄉㄊㄋㄌ'.split('') },
+  { id: 'g2', name: '聲母二', symbols: ['ㄍ','ㄎ','ㄏ','ㄐ','ㄑ','ㄒ','ㄓ','ㄔ','ㄕ','ㄖ','ㄗ','ㄘ','ㄙ'] },
+  { id: 'g3', name: '結合韻', symbols: 'ㄧㄨㄩ'.split('') },
+  { id: 'g4', name: '韻母一', symbols: ['ㄚ','ㄛ','ㄜ','ㄝ','ㄞ','ㄟ','ㄠ','ㄡ'] },
+  { id: 'g5', name: '韻母二', symbols: ['ㄢ','ㄣ','ㄤ','ㄥ','ㄦ'] }
 ];
-
-const wordItems = symbols.map(({ word, emoji, sound, symbol }) => ({ word, emoji, sound, symbol }));
-let progress = loadProgress();
-let currentListen = symbols[0];
-let currentWord = wordItems[0];
-
-const $ = (selector) => document.querySelector(selector);
-
-function loadProgress() {
-  try {
-    return { stars: 0, answers: 0, lastPlayedAt: '', ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') };
-  } catch {
-    return { stars: 0, answers: 0, lastPlayedAt: '' };
-  }
-}
-
-function saveProgress() {
-  progress.lastPlayedAt = new Date().toISOString();
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-  renderProgress();
-}
-
-function renderProgress() {
-  $('#starsCount').textContent = String(progress.stars);
-  $('#answersCount').textContent = String(progress.answers);
-  $('#lastPlayed').textContent = progress.lastPlayedAt
-    ? `最後練習時間：${new Date(progress.lastPlayedAt).toLocaleString('zh-TW')}`
-    : '尚未開始練習。';
-}
-
-async function playSound(item) {
-  const audioItem = await getAudioItem(item);
-  const recordingPlayed = audioItem?.status === 'recorded' && await playRecording(`${audioManifest.basePath}${audioItem.file}`);
-  showAudioNotice(recordingPlayed, item);
-  if (!recordingPlayed) speak(item.word || item.symbol);
-}
-
-async function getAudioManifest() {
-  if (audioManifest) return audioManifest;
-  const response = await fetch(AUDIO_MANIFEST_URL);
-  audioManifest = await response.json();
-  return audioManifest;
-}
-
-async function getAudioItem(item) {
-  try {
-    const manifest = await getAudioManifest();
-    return manifest.items[item.audioKey || item.symbol];
-  } catch {
-    return null;
-  }
-}
-
-function showAudioNotice(recordingPlayed, item) {
-  const message = recordingPlayed
-    ? `正在播放 ${item.symbol} 的真人錄音。`
-    : `${item.symbol} 目前沒有真人錄音，改用瀏覽器語音合成唸例字「${item.word}」作為備援，不代表標準單一注音發音。`;
-  const notice = $('#audioNotice');
-  if (notice) notice.textContent = message;
-}
-
-function playRecording(src) {
-  return new Promise((resolve) => {
-    if (!src) return resolve(false);
-    const audio = new Audio(src);
-    audio.addEventListener('ended', () => resolve(true), { once: true });
-    audio.addEventListener('error', () => resolve(false), { once: true });
-    audio.play().catch(() => resolve(false));
-  });
-}
-
-function speak(text) {
-  if (!('speechSynthesis' in window)) return;
-  window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = 'zh-TW';
-  utterance.rate = 0.72;
-  utterance.pitch = 1.15;
-  window.speechSynthesis.speak(utterance);
-}
-
-function shuffle(items) {
-  return [...items].sort(() => Math.random() - 0.5);
-}
-
-function makeChoices(correct, pool, key, count = 4) {
-  const others = shuffle(pool.filter((item) => item[key] !== correct[key])).slice(0, count - 1);
-  return shuffle([correct, ...others]);
-}
-
-function reward(feedbackElement, message) {
-  progress.stars += 1;
-  progress.answers += 1;
-  saveProgress();
-  feedbackElement.textContent = `答對了！${message} ⭐`;
-}
-
-function miss(feedbackElement, answer) {
-  progress.answers += 1;
-  saveProgress();
-  feedbackElement.textContent = `再試一次，正確答案是 ${answer}。`;
-}
-
-function renderCards() {
-  $('#symbolCards').innerHTML = symbols.map((item) => `
-    <button class="symbol-card" type="button" data-symbol="${item.symbol}" aria-label="播放 ${item.symbol} 的發音">
-      <span class="symbol">${item.symbol}</span>
-      <span class="sample">${item.emoji} ${item.word}</span>
-      <span class="audio-state">真人錄音待補，將使用備援</span>
-    </button>
-  `).join('');
-  $('#symbolCards').addEventListener('click', (event) => {
-    const button = event.target.closest('button[data-symbol]');
-    if (!button) return;
-    const item = symbols.find((entry) => entry.symbol === button.dataset.symbol);
-    playSound(item);
-  });
-}
-
-function renderListenQuiz() {
-  currentListen = symbols[Math.floor(Math.random() * symbols.length)];
-  $('#listenChoices').innerHTML = makeChoices(currentListen, symbols, 'symbol').map((item) => `
-    <button class="choice" type="button" data-answer="${item.symbol}">${item.symbol}</button>
-  `).join('');
-}
-
-function renderWordQuiz() {
-  currentWord = wordItems[Math.floor(Math.random() * wordItems.length)];
-  $('#picturePrompt').textContent = currentWord.emoji;
-  $('#wordHint').textContent = `聽起來像：${currentWord.sound}`;
-  $('#wordChoices').innerHTML = makeChoices(currentWord, wordItems, 'word').map((item) => `
-    <button class="choice" type="button" data-word="${item.word}">${item.word}</button>
-  `).join('');
-}
-
-function bindNavigation() {
-  document.querySelectorAll('[data-view]').forEach((button) => {
-    button.addEventListener('click', () => {
-      document.querySelectorAll('.panel').forEach((panel) => panel.classList.remove('active'));
-      document.getElementById(button.dataset.view).classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-}
-
-function bindQuizzes() {
-  $('#playPrompt').addEventListener('click', () => playSound(currentListen));
-  $('#listenChoices').addEventListener('click', (event) => {
-    const button = event.target.closest('button[data-answer]');
-    if (!button) return;
-    if (button.dataset.answer === currentListen.symbol) {
-      reward($('#listenFeedback'), `這是 ${currentListen.symbol}`);
-      renderListenQuiz();
-    } else {
-      miss($('#listenFeedback'), currentListen.symbol);
-    }
-  });
-  $('#wordChoices').addEventListener('click', (event) => {
-    const button = event.target.closest('button[data-word]');
-    if (!button) return;
-    if (button.dataset.word === currentWord.word) {
-      reward($('#wordFeedback'), `這是「${currentWord.word}」`);
-      renderWordQuiz();
-    } else {
-      miss($('#wordFeedback'), currentWord.word);
-    }
-  });
-  $('#resetProgress').addEventListener('click', () => {
-    progress = { stars: 0, answers: 0, lastPlayedAt: '' };
-    localStorage.removeItem(STORAGE_KEY);
-    renderProgress();
-  });
-}
-
-function registerServiceWorker() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js');
-  }
-}
-
-renderProgress();
-renderCards();
-renderListenQuiz();
-renderWordQuiz();
-bindNavigation();
-bindQuizzes();
-registerServiceWorker();
+const samples = {
+  'ㄅ':['爸','ㄅㄚˋ','👨','bo.mp3'],'ㄆ':['泡','ㄆㄠˋ','🫧','po.mp3'],'ㄇ':['馬','ㄇㄚˇ','🐴','mo.mp3'],'ㄈ':['飛','ㄈㄟ','🪽','fo.mp3'],'ㄉ':['燈','ㄉㄥ','💡','de.mp3'],'ㄊ':['兔','ㄊㄨˋ','🐰','tu.mp3'],'ㄋ':['鳥','ㄋㄧㄠˇ','🐦','nu.mp3'],'ㄌ':['鹿','ㄌㄨˋ','🦌','lu.mp3'],'ㄍ':['狗','ㄍㄡˇ','🐶','ge.mp3'],'ㄎ':['口','ㄎㄡˇ','👄','ke.mp3'],'ㄏ':['河','ㄏㄜˊ','🏞️','he.mp3'],'ㄐ':['雞','ㄐㄧ','🐔','ji.mp3'],'ㄑ':['旗','ㄑㄧˊ','🚩','qi.mp3'],'ㄒ':['西','ㄒㄧ','🌅','xi.mp3'],'ㄓ':['竹','ㄓㄨˊ','🎋','zhi.mp3'],'ㄔ':['車','ㄔㄜ','🚗','chi.mp3'],'ㄕ':['書','ㄕㄨ','📖','shi.mp3'],'ㄖ':['日','ㄖˋ','☀️','ri.mp3'],'ㄗ':['字','ㄗˋ','🔤','zi.mp3'],'ㄘ':['草','ㄘㄠˇ','🌱','ci.mp3'],'ㄙ':['傘','ㄙㄢˇ','☂️','si.mp3'],'ㄧ':['衣','ㄧ','👕','yi.mp3'],'ㄨ':['屋','ㄨ','🏠','wu.mp3'],'ㄩ':['魚','ㄩˊ','🐟','yu.mp3'],'ㄚ':['鴨','ㄧㄚ','🦆','a.mp3'],'ㄛ':['喔','ㄛ','⭕','o.mp3'],'ㄜ':['鵝','ㄜˊ','🪿','e.mp3'],'ㄝ':['欸','ㄝ','🙋','eh.mp3'],'ㄞ':['愛','ㄞˋ','❤️','ai.mp3'],'ㄟ':['杯','ㄅㄟ','🥤','ei.mp3'],'ㄠ':['凹','ㄠ','🕳️','ao.mp3'],'ㄡ':['藕','ㄡˇ','🪷','ou.mp3'],'ㄢ':['安','ㄢ','🛏️','an.mp3'],'ㄣ':['恩','ㄣ','🙏','en.mp3'],'ㄤ':['羊','ㄧㄤˊ','🐑','ang.mp3'],'ㄥ':['風','ㄈㄥ','🌬️','eng.mp3'],'ㄦ':['兒','ㄦˊ','🧒','er.mp3']
+};
+const symbols = expectedSymbols.map((symbol) => { const group = groupDefs.find((g) => g.symbols.includes(symbol)).name; const [sampleWord, sampleZhuyin, emoji, file] = samples[symbol]; return { symbol, group, sampleWord, sampleZhuyin, word: sampleWord, emoji, audio: `assets/audio/${file}`, audioKey: symbol }; });
+const textBank = {
+  title: { text: '注音小蜜蜂', characters: [{han:'注',zhuyin:'ㄓㄨˋ'},{han:'音',zhuyin:'ㄧㄣ'},{han:'小',zhuyin:'ㄒㄧㄠˇ'},{han:'蜜',zhuyin:'ㄇㄧˋ'},{han:'蜂',zhuyin:'ㄈㄥ'}], speechText: '注音小蜜蜂' },
+  listen: { text: '聽一聽', characters: [{han:'聽',zhuyin:'ㄊㄧㄥ'},{han:'一',zhuyin:'ㄧ'},{han:'聽',zhuyin:'ㄊㄧㄥ'}], speechText: '聽一聽' },
+  cards: { text: '注音卡', characters: [{han:'注',zhuyin:'ㄓㄨˋ'},{han:'音',zhuyin:'ㄧㄣ'},{han:'卡',zhuyin:'ㄎㄚˇ'}], speechText: '注音卡' },
+  spell: { text: '拼一拼', characters: [{han:'拼',zhuyin:'ㄆㄧㄣ'},{han:'一',zhuyin:'ㄧ'},{han:'拼',zhuyin:'ㄆㄧㄣ'}], speechText: '拼一拼' },
+  picture: { text: '看圖認字', characters: [{han:'看',zhuyin:'ㄎㄢˋ'},{han:'圖',zhuyin:'ㄊㄨˊ'},{han:'認',zhuyin:'ㄖㄣˋ'},{han:'字',zhuyin:'ㄗˋ'}], speechText: '看圖認字' },
+  again: { text: '再聽一次', characters: [{han:'再',zhuyin:'ㄗㄞˋ'},{han:'聽',zhuyin:'ㄊㄧㄥ'},{han:'一',zhuyin:'ㄧˊ'},{han:'次',zhuyin:'ㄘˋ'}], speechText: '再聽一次' },
+  say: { text: '跟著念', characters: [{han:'跟',zhuyin:'ㄍㄣ'},{han:'著',zhuyin:'ㄓㄜ'},{han:'念',zhuyin:'ㄋㄧㄢˋ'}], speechText: '跟著念' }
+};
+const spellingQuestions = [
+  { level:'beginner', emoji:'👨', word:'爸', zhuyin:'ㄅㄚˋ', parts:['ㄅ','ㄚ','ˋ'], choices:['ㄅㄚˋ','ㄆㄚˋ','ㄇㄚˇ'], type:'picture' },
+  { level:'beginner', emoji:'🐴', word:'馬', zhuyin:'ㄇㄚˇ', parts:['ㄇ','ㄚ','ˇ'], choices:['ㄇㄚˇ','ㄅㄚˋ','ㄉㄧ'], type:'word' },
+  { level:'beginner', emoji:'💡', word:'低', zhuyin:'ㄉㄧ', parts:['ㄉ','ㄧ'], choices:['ㄉㄧ','ㄊㄧ','ㄐㄧ'], type:'audio' },
+  { level:'advanced', emoji:'🐦', word:'鳥', zhuyin:'ㄋㄧㄠˇ', parts:['ㄋ','ㄧ','ㄠ','ˇ'], choices:['ㄋㄧㄠˇ','ㄌㄧㄠˇ','ㄋㄧㄡˇ','ㄋㄧㄢˇ'], type:'build' },
+  { level:'advanced', emoji:'❤️', word:'愛', zhuyin:'ㄞˋ', parts:['ㄞ','ˋ'], choices:['ㄞˋ','ㄞˊ','ㄟˋ','ㄠˋ'], type:'tone' }
+];
+let progress = loadProgress(); let audioManifest = null; let activeAudio = null; let currentListen = symbols[0]; let currentWord = symbols[0]; let currentSpell = spellingQuestions[0]; let answeredSpell = false; let currentGroupIndex = progress.lastGroupIndex || 0;
+const $ = (s) => document.querySelector(s);
+function ruby(entry) { return `<span class="readable" tabindex="0" data-speech="${entry.speechText}">${entry.characters.map((c,i)=>`<ruby data-char-index="${i}">${c.han}<rt>${c.zhuyin}</rt></ruby>`).join('')}</span>`; }
+function loadProgress(){ try { return { stars:0, answers:0, lastPlayedAt:'', zhuyinDisplay:'all', soundOn:true, volume:0.9, musicOn:false, difficulty:'beginner', lastGroupIndex:0, spellingIndex:0, ...JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}') }; } catch { return { stars:0, answers:0, lastPlayedAt:'', zhuyinDisplay:'all', soundOn:true, volume:0.9, musicOn:false, difficulty:'beginner', lastGroupIndex:0, spellingIndex:0 }; } }
+function saveProgress(){ progress.lastPlayedAt = new Date().toISOString(); localStorage.setItem(STORAGE_KEY, JSON.stringify(progress)); renderProgress(); }
+function renderProgress(){ $('#starsCount').textContent=progress.stars; $('#answersCount').textContent=progress.answers; $('#lastPlayed').textContent=progress.lastPlayedAt ? `最後練習時間：${new Date(progress.lastPlayedAt).toLocaleString('zh-TW')}`:'尚未開始練習。'; $('#versionLine').textContent=APP_VERSION.version; $('#versionDetail').textContent=`目前版本：${APP_VERSION.version}｜版本修改時間：${APP_VERSION.modifiedAt}｜時區：${APP_VERSION.timezone}`; document.body.dataset.zhuyinDisplay=progress.zhuyinDisplay; if($('#zhuyinDisplay')) $('#zhuyinDisplay').value=progress.zhuyinDisplay; if($('#soundOn')) $('#soundOn').checked=Boolean(progress.soundOn); if($('#volume')) $('#volume').value=progress.volume; if($('#difficulty')) $('#difficulty').value=progress.difficulty; }
+async function getAudioManifest(){ if(audioManifest) return audioManifest; const r=await fetch(AUDIO_MANIFEST_URL); audioManifest=await r.json(); return audioManifest; }
+function stopSound(){ if(activeAudio){ activeAudio.pause(); activeAudio.currentTime=0; activeAudio=null; } if('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+async function playSound(item){ if(!progress.soundOn) return childNotice('🔇 聲音關'); stopSound(); const manifest=await getAudioManifest().catch(()=>null); const data=manifest?.items?.[item.audioKey||item.symbol]; if(data?.status==='recorded'){ const ok=await playRecording(`${manifest.basePath}${data.file}`); if(ok) return; } speak(item.sampleWord || item.word || item.symbol, item); }
+function playRecording(src){ return new Promise((resolve)=>{ activeAudio=new Audio(src); activeAudio.volume=Number(progress.volume)||0.9; activeAudio.onended=()=>resolve(true); activeAudio.onerror=()=>resolve(false); activeAudio.play().catch(()=>resolve(false)); }); }
+function speak(text, item){ if(!('speechSynthesis' in window)) return childNotice('👂 再聽一次'); const u=new SpeechSynthesisUtterance(text); u.lang='zh-TW'; u.rate=.72; u.pitch=1.08; u.volume=Number(progress.volume)||0.9; u.onend=()=>clearHighlights(); window.speechSynthesis.speak(u); simulateHighlight(item?.characters?.length || String(text).length); }
+function childNotice(text){ ['audioNotice','listenFeedback','wordFeedback','spellFeedback'].forEach(id=>{ const el=$('#'+id); if(el) el.textContent=text; }); }
+function simulateHighlight(count){ clearHighlights(); let i=0; const timer=setInterval(()=>{ clearHighlights(); document.querySelectorAll(`[data-char-index="${i}"]`).forEach(el=>el.classList.add('speaking')); i++; if(i>=count){ clearInterval(timer); setTimeout(clearHighlights,350); } },380); }
+function clearHighlights(){ document.querySelectorAll('.speaking').forEach(el=>el.classList.remove('speaking')); }
+function shuffle(a){ return [...a].sort(()=>Math.random()-0.5); }
+function makeChoices(correct,pool,key,count=4){ return shuffle([correct,...shuffle(pool.filter(i=>i[key]!==correct[key])).slice(0,count-1)]); }
+function reward(el,msg){ progress.stars++; progress.answers++; saveProgress(); el.textContent=`⭐ 答對了 ${msg}`; }
+function miss(el){ progress.answers++; saveProgress(); el.textContent='🌱 再試一次'; }
+function renderCards(){ const group=groupDefs[currentGroupIndex]; $('#groupName').textContent=group.name; $('#groupPager').textContent=`${currentGroupIndex+1} / ${groupDefs.length}`; $('#symbolCards').innerHTML=symbols.filter(s=>s.group===group.name).map(item=>`<button class="symbol-card" type="button" data-symbol="${item.symbol}"><span class="symbol zhuyin-symbol">${item.symbol}</span><span class="emoji">${item.emoji}</span><span class="sample"><span class="zhuyin-symbol">${item.sampleZhuyin}</span> ${item.sampleWord}</span></button>`).join(''); progress.lastGroupIndex=currentGroupIndex; saveProgress(); }
+function renderListenQuiz(){ currentListen=symbols[Math.floor(Math.random()*symbols.length)]; $('#listenChoices').innerHTML=makeChoices(currentListen,symbols,'symbol').map(i=>`<button class="choice" type="button" data-answer="${i.symbol}"><span class="zhuyin-symbol">${i.symbol}</span></button>`).join(''); }
+function renderWordQuiz(){ currentWord=symbols[Math.floor(Math.random()*symbols.length)]; $('#picturePrompt').textContent=currentWord.emoji; $('#wordHint').innerHTML=`${currentWord.sampleZhuyin} ${currentWord.sampleWord}`; $('#wordChoices').innerHTML=makeChoices(currentWord,symbols,'sampleWord').map(i=>`<button class="choice word-choice" type="button" data-word="${i.sampleWord}">${i.sampleWord}<small>${i.sampleZhuyin}</small></button>`).join(''); }
+function renderSpell(){ const pool=spellingQuestions.filter(q=>q.level===progress.difficulty); currentSpell=pool[progress.spellingIndex%pool.length]; answeredSpell=false; $('#spellPrompt').innerHTML=`<div class="picture">${currentSpell.emoji}</div><strong>${currentSpell.word}</strong><span class="zhuyin-symbol">${currentSpell.parts.join(' ＋ ')}</span><span>↓</span>`; $('#spellChoices').innerHTML=currentSpell.choices.map(c=>`<button class="choice" type="button" data-spell="${c}"><span class="zhuyin-symbol">${c}</span></button>`).join(''); $('#spellFeedback').textContent='👇 選答案'; }
+function bind(){ document.body.addEventListener('click',(e)=>{ const r=e.target.closest('.readable'); if(r) speak(r.dataset.speech); const card=e.target.closest('[data-symbol]'); if(card) playSound(symbols.find(s=>s.symbol===card.dataset.symbol)); }); document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{ document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active')); $('#'+b.dataset.view).classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }); $('#prevGroup').onclick=()=>{ currentGroupIndex=(currentGroupIndex+4)%5; renderCards(); $('#cardsTitle').scrollIntoView({block:'start'}); }; $('#nextGroup').onclick=()=>{ currentGroupIndex=(currentGroupIndex+1)%5; renderCards(); $('#cardsTitle').scrollIntoView({block:'start'}); }; $('#playPrompt').onclick=()=>playSound(currentListen); $('#listenChoices').onclick=e=>{ const b=e.target.closest('[data-answer]'); if(!b)return; b.dataset.answer===currentListen.symbol?(reward($('#listenFeedback'),currentListen.symbol),renderListenQuiz()):miss($('#listenFeedback')); }; $('#wordChoices').onclick=e=>{ const b=e.target.closest('[data-word]'); if(!b)return; b.dataset.word===currentWord.sampleWord?(reward($('#wordFeedback'),currentWord.sampleWord),renderWordQuiz()):miss($('#wordFeedback')); }; $('#spellChoices').onclick=e=>{ const b=e.target.closest('[data-spell]'); if(!b||answeredSpell)return; answeredSpell=true; if(b.dataset.spell===currentSpell.zhuyin){ reward($('#spellFeedback'),currentSpell.zhuyin); playSound({sampleWord:currentSpell.word, audioKey:currentSpell.zhuyin}); } else { miss($('#spellFeedback')); } }; $('#nextSpell').onclick=()=>{ progress.spellingIndex++; saveProgress(); renderSpell(); }; $('#difficulty').onchange=e=>{ progress.difficulty=e.target.value; progress.spellingIndex=0; saveProgress(); renderSpell(); }; $('#zhuyinDisplay').onchange=e=>{ progress.zhuyinDisplay=e.target.value; saveProgress(); }; $('#soundOn').onchange=e=>{ progress.soundOn=e.target.checked; saveProgress(); }; $('#volume').oninput=e=>{ progress.volume=e.target.value; saveProgress(); }; $('#resetProgress').onclick=()=>{ if(confirm('確定要重新開始嗎？')){ localStorage.removeItem(STORAGE_KEY); progress=loadProgress(); renderProgress(); } }; }
+function initLabels(){ $('#appTitle').innerHTML=ruby(textBank.title); $('#cardsBtn').innerHTML=`ㄅ ${ruby(textBank.cards)}`; $('#listenBtn').innerHTML=`👂 ${ruby(textBank.listen)}`; $('#spellBtn').innerHTML=`🧩 ${ruby(textBank.spell)}`; $('#wordBtn').innerHTML=`🖼️ ${ruby(textBank.picture)}` }
+function registerServiceWorker(){ if('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js'); }
+initLabels(); renderProgress(); renderCards(); renderListenQuiz(); renderWordQuiz(); renderSpell(); bind(); registerServiceWorker();

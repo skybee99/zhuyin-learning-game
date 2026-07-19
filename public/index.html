@@ -13,62 +13,36 @@
     <link rel="stylesheet" href="src/styles.css" />
     <title>注音小蜜蜂</title>
   </head>
-  <body>
+  <body data-zhuyin-display="all">
     <div class="app-shell">
       <header class="hero" id="home">
-        <p class="eyebrow">小學生注音與認字練習</p>
-        <h1>注音小蜜蜂</h1>
-        <p class="hero-text">聽一聽、點一點、認一認，答對就收集星星！</p>
-        <section class="record-card" aria-live="polite">
-          <span>⭐ 星星</span><strong id="starsCount">0</strong>
-          <span>答題</span><strong id="answersCount">0</strong>
-        </section>
+        <p class="eyebrow">🐝</p>
+        <h1 id="appTitle">注音小蜜蜂</h1>
+        <section class="record-card" aria-live="polite"><span>⭐</span><strong id="starsCount">0</strong><span>✅</span><strong id="answersCount">0</strong></section>
       </header>
-
       <main>
         <nav class="mode-grid" aria-label="學習模式">
-          <button class="mode-card" type="button" data-view="cardsView">ㄅ 注音卡</button>
-          <button class="mode-card" type="button" data-view="listenView">👂 聽音選注音</button>
-          <button class="mode-card" type="button" data-view="wordView">🖼️ 看圖認字</button>
-          <button class="mode-card parent" type="button" data-view="parentView">👨‍👩‍👧 家長模式</button>
+          <button class="mode-card" id="cardsBtn" type="button" data-view="cardsView">ㄅ 注音卡</button>
+          <button class="mode-card" id="listenBtn" type="button" data-view="listenView">👂 聽一聽</button>
+          <button class="mode-card" id="spellBtn" type="button" data-view="spellView">🧩 拼一拼</button>
+          <button class="mode-card" id="wordBtn" type="button" data-view="wordView">🖼️ 看圖認字</button>
+          <button class="mode-card parent" type="button" data-view="parentView">👨‍👩‍👧 家長</button>
         </nav>
-
         <section class="panel active" id="cardsView" aria-labelledby="cardsTitle">
-          <h2 id="cardsTitle">注音符號學習卡</h2>
-          <p>點卡片聽發音。真人錄音尚未補齊時，系統只會使用瀏覽器語音合成唸例字作為備援，不會宣稱是標準單一注音發音。</p>
-          <p class="audio-notice" id="audioNotice" aria-live="polite">目前尚未內建真人錄音；播放時會標示備援狀態。</p>
+          <h2 id="cardsTitle">ㄅ 注音卡</h2>
+          <div class="group-bar"><button id="prevGroup" type="button">⬅️ 上一組</button><strong id="groupName">聲母一</strong><span id="groupPager">1 / 5</span><button id="nextGroup" type="button">下一組 ➡️</button></div>
+          <p class="audio-notice" id="audioNotice" aria-live="polite">🔊 聲音　🔁 再聽一次　🗣️ 跟著念</p>
           <div class="card-grid" id="symbolCards"></div>
+          <a class="top-link" href="#home">⬆️ 回上面</a>
         </section>
-
-        <section class="panel" id="listenView" aria-labelledby="listenTitle">
-          <h2 id="listenTitle">聽聲音選注音</h2>
-          <div class="quiz-card">
-            <button class="primary-action" id="playPrompt" type="button">🔊 播放題目</button>
-            <div class="choice-grid" id="listenChoices"></div>
-            <p class="feedback" id="listenFeedback" aria-live="polite">請先聽聲音，再選正確注音。</p>
-          </div>
-        </section>
-
-        <section class="panel" id="wordView" aria-labelledby="wordTitle">
-          <h2 id="wordTitle">看圖認字</h2>
-          <div class="quiz-card picture-card">
-            <div class="picture" id="picturePrompt" aria-hidden="true">🐝</div>
-            <p class="hint" id="wordHint">這是什麼字？</p>
-            <div class="choice-grid" id="wordChoices"></div>
-            <p class="feedback" id="wordFeedback" aria-live="polite">看圖片，選出正確的國字。</p>
-          </div>
-        </section>
-
-        <section class="panel" id="parentView" aria-labelledby="parentTitle">
-          <h2 id="parentTitle">家長模式</h2>
-          <div class="parent-box">
-            <p>本遊戲不放廣告、不收集兒童個人資料。學習紀錄只保存在這台裝置。</p>
-            <p id="lastPlayed">尚未開始練習。</p>
-            <button class="danger-action" id="resetProgress" type="button">重置本機學習紀錄</button>
-          </div>
-        </section>
+        <section class="panel" id="listenView" aria-labelledby="listenTitle"><h2 id="listenTitle">🔊 聽一聽</h2><div class="quiz-card"><button class="primary-action" id="playPrompt" type="button">🔊 聽一聽</button><div class="choice-grid" id="listenChoices"></div><p class="feedback" id="listenFeedback" aria-live="polite">👇 選答案</p></div></section>
+        <section class="panel" id="spellView" aria-labelledby="spellTitle"><h2 id="spellTitle">🧩 拼一拼</h2><div class="quiz-card"><label class="short-select">🌱 / 🌟 <select id="difficulty"><option value="beginner">🌱 初級</option><option value="advanced">🌟 進階</option></select></label><div class="spell-prompt" id="spellPrompt"></div><div class="choice-grid" id="spellChoices"></div><button class="primary-action" id="nextSpell" type="button">➡️ 下一題</button><p class="feedback" id="spellFeedback" aria-live="polite">👇 選答案</p></div></section>
+        <section class="panel" id="wordView" aria-labelledby="wordTitle"><h2 id="wordTitle">🖼️ 看圖認字</h2><div class="quiz-card picture-card"><div class="picture" id="picturePrompt" aria-hidden="true">🐝</div><p class="hint" id="wordHint">👇 選答案</p><div class="choice-grid" id="wordChoices"></div><p class="feedback" id="wordFeedback" aria-live="polite">🌱 再試一次也很棒</p></div></section>
+        <section class="panel" id="parentView" aria-labelledby="parentTitle"><h2 id="parentTitle">家長模式</h2><div class="parent-box"><p>本遊戲不放廣告、不收集兒童個人資料。學習紀錄只保存在這台裝置。</p><p>真人錄音狀態：目前 audio manifest 皆為 missing，會使用國語語音備援朗讀例字。</p><p>備援語音狀態：第一次使用者點擊後才播放，避免 iPhone Safari 自動播放限制。</p><label>注音顯示 <select id="zhuyinDisplay"><option value="all">全部顯示</option><option value="needed">需要時顯示</option><option value="hidden">隱藏注音</option></select></label><label><input id="soundOn" type="checkbox" checked /> 聲音開／關</label><label>音量 <input id="volume" type="range" min="0" max="1" step="0.1" value="0.9" /></label><p>背景音樂：關（第一版不自動播放背景音樂）</p><p id="lastPlayed">尚未開始練習。</p><p id="versionDetail"></p><button class="danger-action" id="resetProgress" type="button">重置本機學習紀錄</button></div></section>
       </main>
+      <footer class="version" id="versionLine">V1.1.0</footer>
     </div>
+    <template id="rubyRequirement"><ruby>聽<rt>ㄊㄧㄥ</rt></ruby></template>
     <script src="src/app.js" type="module"></script>
   </body>
 </html>

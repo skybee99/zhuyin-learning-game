@@ -1,46 +1,40 @@
 # PROGRESS.md
 
-## 2026-07-19
+## 2026-07-19 V1.1.0
 
-### 完成
+### 已完成並合併的 PR #4 metadata
 
-- 檢查目前儲存庫：起始狀態僅有 `README.md`。
-- 建立第一版靜態 PWA 架構。
-- 建立首頁、注音卡、聽音選注音、看圖認字、家長模式。
-- 建立語音播放服務：真人錄音檔優先，瀏覽器語音合成備援。
-- 建立本機學習紀錄：星星、答題數與最後練習時間。
-- 建立 `manifest.json` 與 Service Worker 離線快取。
-- 建立 Node.js 靜態檢查腳本。
+- PR：#4
+- PR 狀態：Merged
+- Head 分支：`codex/-cloudflare-workers`
+- Base 分支：`main`
+- 程式 Commit：`85f83e9f7d5f4fe477ab21042581df67ca77cf42`
+- Merge Commit：`60217f8293424eae8f64d663a845b21b3a5266d9`
+- GitHub Actions：Validate PWA
+- Workflow Run：#8
+- 結果：success
 
-### 測試
+### 本次功能分支進度
 
-- 已執行 `node tests/validate-app.js`，確認核心檔案、PWA 設定與資料結構存在。
-- 已執行 `node --check src/app.js` 與 `node --check service-worker.js`，確認 JavaScript 語法。
-- 已執行 `python3 -m http.server 4173` 搭配 `curl -I http://127.0.0.1:4173/index.html`，確認靜態首頁可由本機伺服器回應。
+- 本次功能分支尚未合併，最終 Merge Commit 不適用。
+- 完成 iPhone／iPad Safari 注音專用字型與 `.zhuyin-symbol` 套用。
+- 完成 37 個注音符號資料欄位標準化與五組分組：聲母一、聲母二、結合韻、韻母一、韻母二。
+- 完成真人錄音優先、語音合成備援、停止重疊播放與兒童簡短提示策略。
+- 完成拼音與聲調練習第一版：聽拼音、看圖片、看國字、組合符號、聲母韻母聲調組答、完整與分段提示。
+- 完成兒童圖像化短文字、ruby 注音、主要文字點讀與估算逐字高亮。
+- 完成 localStorage 新設定：注音顯示、聲音開關、音量、難度、最近分組、拼音進度。
+- 完成版本資訊 `V1.1.0`，修改時間 `2026-07-19 13:49`，時區 `Asia/Ho_Chi_Minh`。
+- 完成 Service Worker cache version `zhuyin-bee-v1-1-0`。
 
-### 已知限制
+### 測試結果
 
-- 第一版尚未提供真人錄音檔，會使用瀏覽器語音合成。
-- 語音合成在 iOS / iPadOS Safari 需由使用者點擊後觸發。
-- PWA icon 目前使用 SVG 檔，部分舊版 iOS 可能仍偏好 PNG icon。
-- 離線與加入主畫面仍需在實體 iPhone / iPad Safari 做最終驗證。
+- 已執行 `node --check public/src/app.js`。
+- 已執行 `node --check public/service-worker.js`。
+- 已執行 `node tests/validate-app.js`。
+- 已完成程式與響應式設計檢查，但尚未完成實體裝置人工驗收。
 
-### 2026-07-19 補強
+### 尚未完成
 
-- 建立 `reports/` 報告架構、`CHANGELOG.md`、`ARCHITECTURE.md` 與 `MEMORY.md`。
-- 補齊完整 37 個台灣常用注音符號資料。
-- 為每個注音加入例字與 emoji 暫代圖像。
-- 建立 `assets/audio/audio-manifest.json` 統一標示真人錄音狀態。
-- 修正聲音備援文案，不再假設瀏覽器語音合成可正確發出單一注音。
-- 將 192×192、512×512 與 Apple 180×180 PNG icon 改列下一階段待辦，本次保留 SVG icon。
-- 更新 `manifest.json`、Apple touch icon 與 Service Worker cache 版本。
-- 新增 GitHub Actions 驗證 workflow。
-
-### 2026-07-19 Cloudflare Workers 靜態部署修正
-
-- 建立 `public/` 作為唯一公開靜態網站根目錄。
-- 將 `index.html`、`manifest.json`、`service-worker.js`、`src/`、`assets/` 移入 `public/`。
-- 新增 `wrangler.jsonc`，將 Cloudflare Workers Assets 目錄限制為 `./public`，且不啟用 `nodejs_compat`。
-- 新增 `public/.assetsignore` 作為第二層部署排除防護。
-- 更新 Service Worker 快取名稱為 `zhuyin-bee-v2`，並確認快取清單只包含公開網站檔案。
-- 更新驗證腳本與 GitHub Actions，使檢查目標改為 `public/` 部署根目錄。
+- 尚缺真人錄音檔，現階段不可宣稱真人標準錄音已完成。
+- 尚未完成實體 iPhone／iPad Safari 人工驗收。
+- 尚未完成正式圖片素材與精準逐字音訊同步。
