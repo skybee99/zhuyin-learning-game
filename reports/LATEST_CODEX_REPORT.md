@@ -1,5 +1,26 @@
 # Codex Report — V1.3.0
 
+
+## 2026-07-19 Cloudflare V1.3.0 部署修復紀錄
+
+- 分支：`codex/restore-cloudflare-deployment-v1.3.0`，起點為最新 main merge commit `f7e99a2529089aef0c64a37ef220860f17091008`。
+- Repository workflow 檢查：`.github/workflows/validate.yml` 是唯一 workflow，名稱 `Validate PWA`，沒有自動部署 workflow。
+- Cloudflare 部署方式：`wrangler.jsonc` 使用 `main: src/worker.js`，Workers Assets 使用 `assets.directory: ./public` 與 `assets.binding: ASSETS`，目前需手動 `npx wrangler deploy`。
+- 修復：暫時移除尚未正式建立的 D1 `d1_databases` placeholder，避免 `database_id: replace-with-cloudflare-d1-database-id` 阻擋部署。
+- Worker 行為：沒有 `DB` binding 時，一般靜態網站仍交由 `ASSETS` 提供；`/api/dictionary/*` 回傳 503 `d1_binding_missing`；其他未支援 API 維持 404。
+- 部署嘗試：`npx wrangler deploy` 失敗，錯誤為 `npm error 403 403 Forbidden - GET https://registry.npmjs.org/wrangler`。因此 Deployment ID、部署時間與正式網址尚無可記錄值，正式網址驗證也尚未完成。
+
+## PR #8 merged metadata 已補寫
+
+- PR：#8
+- 狀態：Merged
+- Head：codex/update-zhuyin-learning-game-to-v1.3.0
+- Base：main
+- 程式 Commit：d493aba993e709f823af86c6bd039f177529a842
+- Merge Commit：f7e99a2529089aef0c64a37ef220860f17091008
+- 合併時間：2026-07-19T09:50:12Z
+- GitHub Actions：Validate PWA，Workflow Run #24，success
+
 ## PR #7 merged metadata 已補寫
 
 - PR：#7

@@ -6,7 +6,8 @@ const requiredFiles = ['public/index.html','public/offline.html','public/src/app
 for (const file of requiredFiles) if (!fs.existsSync(path.join(root, file))) throw new Error(`Missing required file: ${file}`);
 for (const internal of ['AGENTS.md','PLAN.md','PROGRESS.md','DECISIONS.md','TASKS.md','MEMORY.md','ARCHITECTURE.md','CHANGELOG.md','README.md']) if (fs.existsSync(path.join(publicRoot, internal))) throw new Error(`Internal document must not be public: ${internal}`);
 const wrangler = fs.readFileSync(path.join(root, 'wrangler.jsonc'), 'utf8');
-for (const snippet of ['"directory": "./public"','"main": "src/worker.js"','"binding": "DB"']) if (!wrangler.includes(snippet)) throw new Error(`wrangler missing ${snippet}`);
+for (const snippet of ['"directory": "./public"','"main": "src/worker.js"','"binding": "ASSETS"']) if (!wrangler.includes(snippet)) throw new Error(`wrangler missing ${snippet}`);
+if (wrangler.includes('replace-with-cloudflare-d1-database-id') || wrangler.includes('"d1_databases"')) throw new Error('wrangler must not include temporary D1 placeholders before production D1 is created');
 const manifest = JSON.parse(fs.readFileSync(path.join(publicRoot, 'manifest.json'), 'utf8'));
 if (manifest.display !== 'standalone') throw new Error('manifest display must be standalone');
 if (manifest.version !== 'V1.3.0') throw new Error('manifest version must be V1.3.0');
