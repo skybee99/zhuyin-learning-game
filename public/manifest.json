@@ -1,15 +1,21 @@
 {
   "name": "注音小蜜蜂：注音認字學習遊戲",
   "short_name": "注音小蜜蜂",
-  "description": "適合 iPhone 與 iPad 的小學生注音、認字與語音學習 PWA。",
+  "description": "V1.3.0：改善 iOS PWA 離線穩定性、拼一拼清楚度、字庫管理與兒童主題。",
   "lang": "zh-Hant-TW",
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "/index.html",
+  "scope": "/",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#fff9e8",
   "theme_color": "#ffcf4a",
   "icons": [
-    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
-  ]
+    {
+      "src": "assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "version": "V1.3.0"
 }
