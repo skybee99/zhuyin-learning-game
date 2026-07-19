@@ -5,14 +5,16 @@
 ## 第一版功能
 
 - 首頁與大型觸控模式入口
-- 注音符號學習卡
-- 點擊播放注音聲音
+- 完整 37 個台灣常用注音符號學習卡
+- 每個注音都有例字與 emoji 暫代圖像資料
+- 點擊播放聲音：真人錄音優先，缺檔時明確標示語音合成備援
 - 聽聲音選注音
 - 看圖認字
 - 答對獲得星星
 - 學習紀錄保存在本機 `localStorage`
 - 家長模式入口、隱私說明與重置紀錄
-- `manifest.json` 與 Service Worker 離線快取
+- `manifest.json`、SVG icon 與 Service Worker 離線快取
+- GitHub Actions 自動執行靜態與 JavaScript 檢查
 
 ## 使用方式
 
@@ -35,13 +37,22 @@ python3 -m http.server 4173
 
 ## 聲音與真人錄音替換機制
 
-第一版會先嘗試播放 `assets/audio/*.mp3` 真人錄音檔。如果檔案不存在或播放失敗，會改用瀏覽器 Web Speech API，以 `zh-TW` 語音合成朗讀。
+音訊資料統一記錄於 `assets/audio/audio-manifest.json`。只有當某個注音項目的 `status` 設為 `recorded` 時，App 才會播放對應真人錄音檔。若真人錄音不存在或尚未標示完成，App 會清楚顯示目前使用瀏覽器語音合成唸例字作為備援，且不宣稱為標準單一注音發音。
 
-未來要替換真人錄音時，可依 `src/app.js` 中每個注音資料的 `audio` 路徑加入對應檔案，例如：
+新增真人錄音時：
 
-- `assets/audio/bo.mp3`
-- `assets/audio/po.mp3`
-- `assets/audio/mo.mp3`
+1. 將音檔放入 `assets/audio/`。
+2. 更新 `assets/audio/audio-manifest.json` 中對應項目的 `file` 與 `status`。
+3. 若音檔需要離線快取，更新 `service-worker.js` 的 `APP_SHELL` 與 `CACHE_VERSION`。
+4. 執行測試命令。
+
+## 測試
+
+```bash
+node tests/validate-app.js
+node --check src/app.js
+node --check service-worker.js
+```
 
 ## 隱私
 
@@ -52,13 +63,7 @@ python3 -m http.server 4173
 
 ## 已知限制
 
-- 第一版尚未內建真人錄音檔，主要依賴瀏覽器語音合成。
+- 第一版尚未內建真人錄音檔。
 - iOS / iPadOS Safari 通常需要使用者點擊後才允許播放聲音。
-- PWA icon 目前使用 SVG；部分舊版 iOS 可能偏好 PNG icon。
+- emoji 尚非正式美術素材；PNG icon 改列下一階段待辦。
 - 實體裝置上的加入主畫面與長時間離線體驗仍需進一步驗證。
-
-## 測試
-
-```bash
-node tests/validate-app.js
-```

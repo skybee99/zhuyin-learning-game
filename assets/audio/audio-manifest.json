@@ -1,0 +1,271 @@
+{
+  "version": "2026-07-19",
+  "description": "真人錄音檔清單。status=missing 表示尚未提供標準真人發音，App 會清楚標示並改用瀏覽器語音合成備援。",
+  "basePath": "assets/audio/",
+  "fallback": {
+    "type": "web-speech-api",
+    "lang": "zh-TW",
+    "notice": "目前使用瀏覽器語音合成備援，不代表標準真人注音發音。"
+  },
+  "items": {
+    "ㄅ": {
+      "file": "bo.mp3",
+      "word": "爸",
+      "emoji": "👨",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄆ": {
+      "file": "po.mp3",
+      "word": "泡",
+      "emoji": "🫧",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄇ": {
+      "file": "mo.mp3",
+      "word": "馬",
+      "emoji": "🐴",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄈ": {
+      "file": "fo.mp3",
+      "word": "飛",
+      "emoji": "🪽",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄉ": {
+      "file": "de.mp3",
+      "word": "燈",
+      "emoji": "💡",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄊ": {
+      "file": "te.mp3",
+      "word": "兔",
+      "emoji": "🐰",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄋ": {
+      "file": "ne.mp3",
+      "word": "鳥",
+      "emoji": "🐦",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄌ": {
+      "file": "le.mp3",
+      "word": "鹿",
+      "emoji": "🦌",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄍ": {
+      "file": "ge.mp3",
+      "word": "狗",
+      "emoji": "🐶",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄎ": {
+      "file": "ke.mp3",
+      "word": "口",
+      "emoji": "👄",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄏ": {
+      "file": "he.mp3",
+      "word": "河",
+      "emoji": "🏞️",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄐ": {
+      "file": "ji.mp3",
+      "word": "雞",
+      "emoji": "🐔",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄑ": {
+      "file": "qi.mp3",
+      "word": "旗",
+      "emoji": "🚩",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄒ": {
+      "file": "xi.mp3",
+      "word": "西",
+      "emoji": "🌅",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄓ": {
+      "file": "zhi.mp3",
+      "word": "竹",
+      "emoji": "🎋",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄔ": {
+      "file": "chi.mp3",
+      "word": "車",
+      "emoji": "🚗",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄕ": {
+      "file": "shi.mp3",
+      "word": "書",
+      "emoji": "📖",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄖ": {
+      "file": "ri.mp3",
+      "word": "日",
+      "emoji": "☀️",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄗ": {
+      "file": "zi.mp3",
+      "word": "字",
+      "emoji": "🔤",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄘ": {
+      "file": "ci.mp3",
+      "word": "草",
+      "emoji": "🌱",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄙ": {
+      "file": "si.mp3",
+      "word": "傘",
+      "emoji": "☂️",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄧ": {
+      "file": "yi.mp3",
+      "word": "衣",
+      "emoji": "👕",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄨ": {
+      "file": "wu.mp3",
+      "word": "屋",
+      "emoji": "🏠",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄩ": {
+      "file": "yu.mp3",
+      "word": "魚",
+      "emoji": "🐟",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄚ": {
+      "file": "a.mp3",
+      "word": "鴨",
+      "emoji": "🦆",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄛ": {
+      "file": "o.mp3",
+      "word": "喔",
+      "emoji": "⭕",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄜ": {
+      "file": "e.mp3",
+      "word": "鵝",
+      "emoji": "🪿",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄝ": {
+      "file": "eh.mp3",
+      "word": "欸",
+      "emoji": "🙋",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄞ": {
+      "file": "ai.mp3",
+      "word": "愛",
+      "emoji": "❤️",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄟ": {
+      "file": "ei.mp3",
+      "word": "杯",
+      "emoji": "🥤",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄠ": {
+      "file": "ao.mp3",
+      "word": "凹",
+      "emoji": "🕳️",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄡ": {
+      "file": "ou.mp3",
+      "word": "藕",
+      "emoji": "🪷",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄢ": {
+      "file": "an.mp3",
+      "word": "安",
+      "emoji": "🛏️",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄣ": {
+      "file": "en.mp3",
+      "word": "恩",
+      "emoji": "🙏",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄤ": {
+      "file": "ang.mp3",
+      "word": "羊",
+      "emoji": "🐑",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄥ": {
+      "file": "eng.mp3",
+      "word": "風",
+      "emoji": "🌬️",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    },
+    "ㄦ": {
+      "file": "er.mp3",
+      "word": "兒",
+      "emoji": "🧒",
+      "status": "missing",
+      "credit": "待補真人錄音"
+    }
+  }
+}
