@@ -31,3 +31,13 @@
 - [ ] 將暫代 emoji 圖像替換為正式授權圖片。
 
 - [ ] PNG icon 二進位素材以 GitHub 可接受方式補交後，再更新 `manifest.json`、iOS touch icon 與 Service Worker 快取清單。
+
+## 2026-07-19 Cloudflare Workers 部署修正
+
+- [x] 建立 `public/` 正式公開目錄。
+- [x] 將網站執行檔案移入 `public/`，專案管理文件保留在 Repository 根目錄。
+- [x] 將 `wrangler.jsonc` assets directory 改為 `./public`。
+- [x] 移除不需要的 `nodejs_compat` 設定。
+- [x] 新增 `public/.assetsignore` 第二層安全排除。
+- [x] 更新 Service Worker cache name 為 `zhuyin-bee-v2`。
+- [x] 更新測試腳本，確認 `public/` 不包含 `.git`、`.wrangler` 或內部 Markdown 文件。

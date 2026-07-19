@@ -17,6 +17,6 @@ jobs:
       - name: Validate app files and PWA settings
         run: node tests/validate-app.js
       - name: Check app JavaScript syntax
-        run: node --check src/app.js
+        run: node --check public/src/app.js
       - name: Check service worker syntax
-        run: node --check service-worker.js
+        run: node --check public/service-worker.js

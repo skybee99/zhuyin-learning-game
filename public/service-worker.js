@@ -1,5 +1,4 @@
-const CACHE_VERSION = '20260719-03';
-const CACHE_NAME = `zhuyin-bee-${CACHE_VERSION}`;
+const CACHE_NAME = 'zhuyin-bee-v2';
 const APP_SHELL = [
   './',
   './index.html',

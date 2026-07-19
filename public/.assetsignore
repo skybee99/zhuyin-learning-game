@@ -1,0 +1,8 @@
+.git
+.wrangler
+*.md
+tests
+reports
+.github
+node_modules
+wrangler.jsonc
