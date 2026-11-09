@@ -1,39 +1,51 @@
-const fs = require('fs');
-const path = require('path');
+'use strict';
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
-const publicRoot = path.join(root, 'public');
-const requiredFiles = ['public/index.html','public/offline.html','public/src/app.js','public/src/styles.css','public/manifest.json','public/service-worker.js','public/assets/icons/icon.svg','public/assets/audio/audio-manifest.json','public/data/zhuyin.json','public/data/characters.json','public/data/words.json','public/data/categories.json','public/data/media-map.json','public/data/questions.json','public/.assetsignore','.github/workflows/validate.yml','wrangler.jsonc','AGENTS.md','PLAN.md','PROGRESS.md','DECISIONS.md','TASKS.md','README.md','DATABASE.md','API.md','migrations/0001_dictionary.sql','src/worker.js'];
-for (const file of requiredFiles) if (!fs.existsSync(path.join(root, file))) throw new Error(`Missing required file: ${file}`);
-for (const internal of ['AGENTS.md','PLAN.md','PROGRESS.md','DECISIONS.md','TASKS.md','MEMORY.md','ARCHITECTURE.md','CHANGELOG.md','README.md']) if (fs.existsSync(path.join(publicRoot, internal))) throw new Error(`Internal document must not be public: ${internal}`);
-const wrangler = fs.readFileSync(path.join(root, 'wrangler.jsonc'), 'utf8');
-for (const snippet of ['"directory": "./public"','"main": "src/worker.js"','"binding": "ASSETS"']) if (!wrangler.includes(snippet)) throw new Error(`wrangler missing ${snippet}`);
-if (wrangler.includes('replace-with-cloudflare-d1-database-id') || wrangler.includes('"d1_databases"')) throw new Error('wrangler must not include temporary D1 placeholders before production D1 is created');
-const manifest = JSON.parse(fs.readFileSync(path.join(publicRoot, 'manifest.json'), 'utf8'));
-if (manifest.display !== 'standalone') throw new Error('manifest display must be standalone');
-if (manifest.version !== 'V1.3.2') throw new Error('manifest version must be V1.3.2');
-if (!manifest.icons?.some((icon) => icon.src === 'assets/icons/icon.svg')) throw new Error('manifest must include SVG icon');
-const html = fs.readFileSync(path.join(publicRoot, 'index.html'), 'utf8');
-for (const snippet of ['profileView','learnView','cardsView','listenView','wordView','spellView','parentView','themeTitle','data-child-theme','data-speech','src="src/app.js"','<ruby>','<rt>']) if (!html.includes(snippet)) throw new Error(`index.html missing ${snippet}`);
-if (html.includes('/public/') || html.includes('public/')) throw new Error('index.html must not expose public/ in URLs');
-const app = fs.readFileSync(path.join(publicRoot, 'src/app.js'), 'utf8');
-for (const snippet of ['APP_VERSION','V1.3.2','Asia/Ho_Chi_Minh','AUDIO_MODE = \'system\'','STORAGE_SCHEMA_VERSION = 3','DICTIONARY_SCHEMA_VERSION = 1','CHILD_PROFILES','林芳伃','林彥宇','林子齊','CHILD_THEMES','ACTIVE_THEME','storybook-zoo','BUTTON_BEHAVIOR','speakSystemText','stopAllSpeech','playZhuyinSound','playWordSound','zhuyin-current-child','zhuyin-profile-lisa','const symbols = expectedSymbols.map','SPELLING_BANK','mouth-zui','plane-fei','drink-he','pants-ku','correctOptionId','normalizeZhuyin','data-option-id','clearAppCache','serviceWorker','assets/audio/audio-manifest.json','data/characters.json','data/words.json','data/zhuyin.json','data/media-map.json','data/questions.json','buildVerifiedQuestionPool','renderParentBackupPanel','ㄓㄜ']) if (!app.includes(snippet)) throw new Error(`public/src/app.js missing ${snippet}`);
-if (app.includes('聽一聽",()=>playZhuyinSound') || app.includes('data-speech="聽注音"')) throw new Error('content playback buttons must not announce button labels first');
-for (const forbidden of ['嘴巴大','褲子大','飛機大','喝水大','喝水小','媽媽小','哥哥小','爸爸小']) if (app.includes(forbidden)) throw new Error(`forbidden spelling text ${forbidden}`);
-const expectedSymbols = 'ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ'.split('');
-for (const expected of expectedSymbols) if (!app.includes(`'${expected}'`)) throw new Error(`missing symbol ${expected}`);
-const zhuyin = JSON.parse(fs.readFileSync(path.join(publicRoot, 'data/zhuyin.json'), 'utf8'));
-if (zhuyin.length !== 37) throw new Error('zhuyin.json must include 37 symbols');
-const categories = JSON.parse(fs.readFileSync(path.join(publicRoot, 'data/categories.json'), 'utf8'));
-if (categories.length !== 17) throw new Error('categories count must be 17');
-const chars = JSON.parse(fs.readFileSync(path.join(publicRoot, 'data/characters.json'), 'utf8'));
-const words = JSON.parse(fs.readFileSync(path.join(publicRoot, 'data/words.json'), 'utf8'));
-if (chars.length < 12 || chars.length > 80) throw new Error(`characters count out of range: ${chars.length}`);
-if (words.length < 12 || words.length > 80) throw new Error(`words count out of range: ${words.length}`);
-const sw = fs.readFileSync(path.join(publicRoot, 'service-worker.js'), 'utf8');
-for (const snippet of ["zhuyin-zoo-v1-3-2", "'/offline.html'", "event.request.mode === 'navigate'", 'canCacheStaticResponse', '!response.redirected', "response.type === 'basic'", "request.mode !== 'navigate'", "startsWith('zhuyin-bee-')", "startsWith('zhuyin-zoo-')", 'SKIP_WAITING', 'clients.claim']) if (!sw.includes(snippet)) throw new Error(`service-worker.js missing ${snippet}`);
-if (sw.includes("'./'") || sw.includes('"./"') || sw.includes("'/'")) throw new Error('service-worker.js must not precache ./ or /');
-if (/cache\.put\(event\.request/.test(sw)) throw new Error('navigate event.request must not be cached');
-if (!sw.includes("caches.match('/offline.html')")) throw new Error('navigate fallback must use offline.html');
-const css = fs.readFileSync(path.join(publicRoot, 'src/styles.css'), 'utf8');
-for (const snippet of ['.menu-label','clamp(1.75rem,5vw,2.35rem)','.zhuyin-answer-syllable','.zhuyin-answer-single','.zhuyin-group','.zhuyin-tone','data-child-theme','max-width:390px','prefers-reduced-motion']) if (!css.includes(snippet)) throw new Error(`styles missing ${snippet}`);
-console.log(`PWA static validation passed. zhuyin=${zhuyin.length}, characters=${chars.length}, words=${words.length}, categories=${categories.length}`);
+const pub = path.join(root, 'public');
+const read = p => fs.readFileSync(path.join(root, p), 'utf8');
+const assert = (condition, message) => { if (!condition) throw new Error(message); };
+const required = [
+  'public/index.html','public/offline.html','public/manifest.json','public/service-worker.js',
+  'public/src/app.js','public/src/version.js','public/src/storage.js','public/src/ticket-ledger.js','public/src/island.js','public/src/island.css','public/src/curriculum.js','public/src/styles.css',
+  'public/assets/icons/icon.svg','public/assets/icons/icon-192.png','public/assets/icons/icon-512.png','public/assets/audio/audio-manifest.json',
+  'public/data/zhuyin.json','public/data/characters.json','public/data/words.json','public/data/categories.json','public/data/media-map.json','public/data/questions.json',
+  'wrangler.jsonc','src/worker.js','migrations/0001_dictionary.sql','scripts/rebuild-shell.cjs'
+];
+required.forEach(file => assert(fs.existsSync(path.join(root, file)), `Missing ${file}`));
+for (const internal of ['AGENTS.md','PLAN.md','PROGRESS.md','DECISIONS.md','TASKS.md','MEMORY.md','ARCHITECTURE.md','CHANGELOG.md','README.md']) assert(!fs.existsSync(path.join(pub, internal)), `Internal file exposed: ${internal}`);
+const wrangler = read('wrangler.jsonc');
+for (const value of ['"directory": "./public"','"main": "src/worker.js"','"binding": "ASSETS"']) assert(wrangler.includes(value), `Wrangler missing ${value}`);
+assert(!wrangler.includes('"d1_databases"') && !wrangler.includes('replace-with-cloudflare-d1-database-id'), 'Unverified D1 binding');
+const manifest = JSON.parse(read('public/manifest.json'));
+assert(manifest.display === 'standalone' && manifest.scope === '/', 'Manifest display or scope invalid');
+for (const size of ['192x192','512x512']) assert(manifest.icons.some(i => i.sizes === size && fs.existsSync(path.join(pub, i.src.replace(/^\//,'')))), `Manifest missing ${size} icon`);
+const html = read('public/index.html').replace(/\?v=V[0-9.]+/g, '');
+for (const id of ['profileView','cardsView','learnView','listenView','wordView','spellView','parentView','islandView','ridesView','collectionView','curriculumView']) assert(html.includes(`id="${id}"`), `Missing ${id}`);
+const scriptOrder = ['version','storage','ticket-ledger','island','curriculum','app'];
+let position = -1;
+for (const name of scriptOrder) {
+  const regex = new RegExp(`<script\\s+src="src/${name}\\.js"\\s+defer></script>`);
+  const match = regex.exec(html);
+  assert(match && match.index > position, `Missing or out-of-order deferred script: ${name}`); position = match.index;
+}
+assert(!html.includes('public/'), 'Public directory exposed in application URL');
+const zhuyin = JSON.parse(read('public/data/zhuyin.json'));
+const expected = [...'ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ'];
+assert(zhuyin.length === 37 && new Set(zhuyin.map(z => z.symbol)).size === 37 && expected.every(s => zhuyin.some(z => z.symbol === s)), '37 distinct Zhuyin symbols required');
+const categories = JSON.parse(read('public/data/categories.json'));
+const chars = JSON.parse(read('public/data/characters.json'));
+const words = JSON.parse(read('public/data/words.json'));
+assert(categories.length === 17 && chars.length >= 12 && words.length >= 12, 'Audited dictionary data unexpectedly small');
+const sw = read('public/service-worker.js');
+for (const token of ["importScripts('/src/version.js')", 'APP_SHELL', 'canCacheStaticResponse', "request.mode !== 'navigate'", "request.mode === 'navigate'", 'SKIP_WAITING', 'clients.claim', "cache.match('/offline.html')"]) assert(sw.includes(token), `Service worker missing ${token}`);
+assert(!/cache\.put\(event\.request/.test(sw), 'Navigation request must not be written to cache');
+const sandbox = { ZHUYIN_RELEASE: {version:'test'}, importScripts() {}, self: { addEventListener() {} }, Set };
+vm.createContext(sandbox);
+vm.runInContext(sw + '\nthis.testShell = APP_SHELL;', sandbox);
+assert(sandbox.testShell.includes('/offline.html') && !sandbox.testShell.includes('/') && !sandbox.testShell.includes('/index.html'), 'Invalid offline shell allowlist');
+for (const asset of sandbox.testShell) assert(asset.startsWith('/') && fs.existsSync(path.join(pub, asset.slice(1))), `Offline asset missing: ${asset}`);
+for (const name of scriptOrder) assert(sandbox.testShell.includes(`/src/${name}.js`), `Offline script missing ${name}`);
+for (const link of html.matchAll(/<link\s+rel="stylesheet"\s+href="([^"]+)"/g)) assert(sandbox.testShell.includes('/' + link[1].replace(/^\//, '')), `Offline stylesheet missing ${link[1]}`);
+console.log(`PWA static validation passed. zhuyin=${zhuyin.length}, characters=${chars.length}, words=${words.length}, categories=${categories.length}, offlineAssets=${sandbox.testShell.length}`);

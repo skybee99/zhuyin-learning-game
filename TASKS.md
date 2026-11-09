@@ -14,7 +14,7 @@
 - [x] 按鈕語音依導航、內容播放與家長功能分類。
 - [x] 家長模式新增字庫管理、統計、搜尋、手動新增、資料檢查與匯入/匯出入口。
 - [x] 新增 D1 schema migration、Worker API 骨架、DATABASE.md、API.md。
-- [x] 新增 Lisa、Jack、Kyky 原創 CSS/Emoji 主題與簡潔模式。
+- [x] 新增 child-1、child-2、child-3 原創 CSS/Emoji 主題與簡潔模式。
 - [x] 更新測試與 Codex Context Engineering 文件。
 
 ## 待辦
@@ -56,3 +56,11 @@
 - [ ] 實體 iPhone Safari、iPhone Chrome、Zalo WebView、iPad Safari 驗收。
 - [ ] 完成真正覆蓋/合併匯入寫入流程，目前先完成摘要、安全自動備份與人工確認入口。
 - [ ] 補正式本地授權圖片與真人錄音檔。
+
+## 2026-11-09 尚待驗證
+
+- 驗證 V2.0.0 候選的全套自動檢查與實際瀏覽器行為，保留各層證據。
+- 在實際 iPhone、iPad 的 Safari 與主畫面版檢查觸控、離線、聲音、儲存及升級。
+- 取得可使用的教材逐課來源與音訊，再逐筆審核，不將候選當正式題庫。
+- 將可匯入交易與課程的完整復原流程列為後續工作；本輪僅支援快照匯出。
+- 以最終交付報告記錄 PR、CI、正式部署與備份實際狀態。

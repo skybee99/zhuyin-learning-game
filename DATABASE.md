@@ -2,9 +2,9 @@
 
 ## Cloudflare D1 binding
 
-V1.3.0 introduces the planned permanent dictionary database through Cloudflare D1.
+A Cloudflare D1 dictionary schema is planned; the checked-in Worker configuration has no DB binding, and this does not establish a provisioned or deployed database.
 
-- Worker binding: `DB`
+- Proposed Worker binding: `DB` (not configured in the checked-in Wrangler file)
 - Wrangler database name: `zhuyin-learning-game-dictionary`
 - Migration directory: `migrations/`
 - Schema version: `DICTIONARY_SCHEMA_VERSION = 1`
@@ -32,7 +32,7 @@ The schema keeps stable IDs, zhuyin, per-word pronunciation context, category, d
 - `public/data/*.json` is the seed source and offline fallback.
 - Migration version `1` must be recorded once in `migration_versions`.
 - Seed import must use stable IDs and `INSERT OR IGNORE` or equivalent idempotent logic.
-- Migration must not duplicate built-in 37 zhuyin, 300+ characters, or 200+ words.
+- The current built-in files contain 37 zhuyin, 15 characters and 14 words; historical larger files are separately staged for review. Do not import or deduplicate them into an active database without review.
 
 ## Backup and restore
 
@@ -45,4 +45,8 @@ The schema keeps stable IDs, zhuyin, per-word pronunciation context, category, d
 - Do not directly delete production dictionary rows from the app.
 - Prefer `enabled = 0` for disable operations.
 - Record create, update, disable, import confirm, and import cancel actions in `change_logs`.
-- D1 migration and dictionary changes must not clear Lisa, Jack, or Kyky localStorage learning records.
+- D1 migration and dictionary changes must not clear child-1, child-2, or child-3 localStorage learning records.
+
+## V2.0.0 candidate local data
+
+Anonymous profiles and local dictionary use a separate localStorage document while the legacy values are retained. Quiz and ride transactions use IndexedDB; staged curriculum uses another localStorage key. Exported ledger and curriculum snapshots are not restored by the scoped profile/dictionary importer. Actual persistence and backups require separate verification on each device.

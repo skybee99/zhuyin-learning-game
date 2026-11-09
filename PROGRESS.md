@@ -55,7 +55,7 @@
 - 按鈕語音依用途分類：功能入口可朗讀，聽題目/聽注音/聽例字直接播放內容，家長入口靜音。
 - 家長模式新增字庫管理統計、搜尋入口、手動新增國字/詞語、資料檢查、匯入/匯出與文件匯入待確認說明。
 - 新增 D1 schema migration、Worker API 骨架、`DATABASE.md` 與 `API.md`。
-- 新增 Lisa 童話、Jack 蜘蛛系英雄、Kyky 小勇者與簡潔主題。
+- 新增 child-1 童話、child-2 蜘蛛系英雄、child-3 小勇者與簡潔主題。
 
 ### 測試結果
 
@@ -70,7 +70,7 @@
 ### 已完成
 
 - App 版本更新為 `V1.3.1`，修改時間 `2026-07-19 19:37`，時區 `Asia/Ho_Chi_Minh`。
-- 品牌統一為「注音動物園」，Lisa、Jack、Kyky 共用 `storybook-zoo` 童話動物園 UI。
+- 品牌統一為「注音動物園」，child-1、child-2、child-3 共用 `storybook-zoo` 童話動物園 UI。
 - 功能動物配對：🐰 注音卡、🦉 認識注音、🐘 聽一聽、🦊 拼一拼、🐼 看圖認字、🦁 獎勵、🐻 家長。
 - 新增注音聲調解析與獨立定位，避免把 ˊˇˋ˙ 放在直列最後。
 - 看圖認字題庫只使用通過審核與驗證的詞語物件，不執行即時 Google 搜圖或外部 hotlink。
@@ -107,3 +107,7 @@
 - `node tests/validate-zhuyin-tones.js`：通過。
 - `node tests/validate-dictionary-media.js`：通過。
 - 實體 iPhone Safari、iPhone Chrome、Zalo WebView、iPad Safari 尚待人工裝置驗收。
+
+## 2026-11-09 候選整合紀錄
+
+V2.0.0 為開發候選，功能、測試、資料保護與發布狀態以本輪最終報告為準。三本教材缺少逐課來源；現行核心字詞與歷史字庫分層保存。本機角色資料、券交易、課程快照各有不同匯入或匯出範圍；不得以快照匯出推定完整還原。

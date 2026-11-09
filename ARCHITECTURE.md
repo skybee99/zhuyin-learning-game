@@ -29,6 +29,12 @@
 
 ## Theme
 
-- `body[data-child-theme="storybook-zoo"]` is shared by Lisa, Jack, and Kyky.
+- `body[data-child-theme="storybook-zoo"]` is shared by child-1, child-2, and child-3.
 - Function animals: 🐰 注音卡、🦉 認識注音、🐘 聽一聽、🦊 拼一拼、🐼 看圖認字、🦁 獎勵、🐻 家長。
 - Themes do not change quiz data, zhuyin rendering semantics, scoring, speech, API, D1 data, or localStorage learning records.
+
+## V2.0.0 candidate architecture
+
+`public/src/version.js` holds the candidate version. `storage.js` reads legacy slots without deleting or overwriting their original values, and writes anonymous profiles and local dictionary to a separate localStorage document. `ticket-ledger.js` uses IndexedDB transactions for quiz rounds, ticket balances, and rides. `curriculum.js` stores staged lesson records separately, with missing textbook sources marked WAITING_FOR_SOURCE; staged entries are not active questions.
+
+Import is scoped to supported profile and local-dictionary data after preview, confirmed action, and a read-back PRE snapshot. Ledger and curriculum snapshots can be exported but are not restored by that import. Their completeness and actual browser persistence must be verified separately. The PWA cache name and static assets follow the current service worker; older cache details above describe the previous release.

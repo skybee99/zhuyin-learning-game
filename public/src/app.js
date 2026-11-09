@@ -1,25 +1,6 @@
-const APP_VERSION = { version: 'V1.3.2', modifiedAt: '2026-07-19 21:10', timezone: 'Asia/Ho_Chi_Minh' };
-const AUDIO_MODE = 'system';
-const STORAGE_SCHEMA_VERSION = 3;
-const CURRENT_CHILD_KEY = 'zhuyin-current-child';
-const LEGACY_STORAGE_KEY = 'zhuyinBeeProgressV1';
-const MIGRATION_KEY = 'zhuyin-storage-migration-v2';
-const AUDIO_MANIFEST_URL = 'assets/audio/audio-manifest.json';
-const PROFILE_STORAGE_EXAMPLE = 'zhuyin-profile-lisa';
-const DATA_URLS = { zhuyin: 'data/zhuyin.json', characters: 'data/characters.json', words: 'data/words.json', categories: 'data/categories.json', media: 'data/media-map.json', questions: 'data/questions.json' };
-const DICTIONARY_SCHEMA_VERSION = 1;
+'use strict';
+
 const expectedSymbols = 'ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ'.split('');
-const CHILD_PROFILES = [
-  { id: 'lisa', chineseName: '林芳伃', englishName: 'Lisa', avatar: '👧', theme: 'storybook-zoo', title: '🌈 注音動物園' },
-  { id: 'jack', chineseName: '林彥宇', englishName: 'Jack', avatar: '👦', theme: 'storybook-zoo', title: '🌈 注音動物園' },
-  { id: 'kyky', chineseName: '林子齊', englishName: 'Kyky', avatar: '🧒', theme: 'storybook-zoo', title: '🌈 注音動物園' }
-];
-const ACTIVE_THEME = 'storybook-zoo';
-const CHILD_THEMES = { lisa: ACTIVE_THEME, jack: ACTIVE_THEME, kyky: ACTIVE_THEME };
-const FEATURE_ANIMALS = { cards:'🐶 注音卡', learn:'🦉 認識注音', listen:'🐘 聽一聽', spell:'🦊 拼一拼', word:'🐼 看圖認字', reward:'🦁 獎勵', parent:'🐻 家長' };
-const REPEAT_ZHUYIN_HINT = 'ㄓㄜ';
-const BUTTON_SPEECH = { zhuyinCards:'注音卡', learnZhuyin:'認識注音', spelling:'拼一拼', pictureWords:'看圖認字', next:'下一題', retry:'再試一次', back:'返回', home:'回首頁', switchChild:'換人', previousGroup:'上一組', nextGroup:'下一組' };
-const BUTTON_BEHAVIOR = { spelling:{announceLabel:true,speechText:'拼一拼'}, listenQuestion:{announceLabel:false}, parent:{announceLabel:false} };
 const groupDefs = [
   { id: 'g1', name: '聲母一', symbols: 'ㄅㄆㄇㄈㄉㄊㄋㄌ'.split('') },
   { id: 'g2', name: '聲母二', symbols: ['ㄍ','ㄎ','ㄏ','ㄐ','ㄑ','ㄒ','ㄓ','ㄔ','ㄕ','ㄖ','ㄗ','ㄘ','ㄙ'] },
@@ -30,7 +11,7 @@ const groupDefs = [
 const samples = { 'ㄅ':['爸','ㄅㄚˋ','👨'],'ㄆ':['泡','ㄆㄠˋ','🫧'],'ㄇ':['馬','ㄇㄚˇ','🐴'],'ㄈ':['飛','ㄈㄟ','🪽'],'ㄉ':['燈','ㄉㄥ','💡'],'ㄊ':['兔','ㄊㄨˋ','🐰'],'ㄋ':['鳥','ㄋㄧㄠˇ','🐦'],'ㄌ':['鹿','ㄌㄨˋ','🦌'],'ㄍ':['狗','ㄍㄡˇ','🐶'],'ㄎ':['口','ㄎㄡˇ','👄'],'ㄏ':['河','ㄏㄜˊ','🏞️'],'ㄐ':['雞','ㄐㄧ','🐔'],'ㄑ':['旗','ㄑㄧˊ','🚩'],'ㄒ':['西','ㄒㄧ','🌅'],'ㄓ':['竹','ㄓㄨˊ','🎋'],'ㄔ':['車','ㄔㄜ','🚗'],'ㄕ':['書','ㄕㄨ','📖'],'ㄖ':['日','ㄖˋ','☀️'],'ㄗ':['字','ㄗˋ','🔤'],'ㄘ':['草','ㄘㄠˇ','🌱'],'ㄙ':['傘','ㄙㄢˇ','☂️'],'ㄧ':['衣','ㄧ','👕'],'ㄨ':['屋','ㄨ','🏠'],'ㄩ':['魚','ㄩˊ','🐟'],'ㄚ':['鴨','ㄧㄚ','🦆'],'ㄛ':['喔','ㄛ','⭕'],'ㄜ':['鵝','ㄜˊ','🪿'],'ㄝ':['欸','ㄝ','🙋'],'ㄞ':['愛','ㄞˋ','❤️'],'ㄟ':['杯','ㄅㄟ','🥤'],'ㄠ':['凹','ㄠ','🕳️'],'ㄡ':['藕','ㄡˇ','🪷'],'ㄢ':['山','ㄕㄢ','⛰️'],'ㄣ':['門','ㄇㄣˊ','🚪'],'ㄤ':['羊','ㄧㄤˊ','🐑'],'ㄥ':['風','ㄈㄥ','🌬️'],'ㄦ':['兒','ㄦˊ','🧒'] };
 const symbols = expectedSymbols.map((symbol) => { const group = groupDefs.find((g) => g.symbols.includes(symbol)).name; const [sampleWord, sampleZhuyin, emoji] = samples[symbol]; return { symbol, systemSpeechText: symbol, group, exampleWord: sampleWord, exampleZhuyin: splitZhuyin(sampleZhuyin), sampleWord, sampleZhuyin, word: sampleWord, emoji, audio: `assets/audio/${symbol}.mp3`, audioKey: symbol, recording: 'planned', recordingStatus: 'planned' }; });
 const textBank = {
-  title:{speechText:'注音動物園',characters:[{han:'注',zhuyin:'ㄓㄨˋ'},{han:'音',zhuyin:'ㄧㄣ'},{han:'動',zhuyin:'ㄉㄨㄥˋ'},{han:'物',zhuyin:'ㄨˋ'},{han:'園',zhuyin:'ㄩㄢˊ'}]},
+  title:{speechText:'注音動物島',characters:[{han:'注',zhuyin:'ㄓㄨˋ'},{han:'音',zhuyin:'ㄧㄣ'},{han:'動',zhuyin:'ㄉㄨㄥˋ'},{han:'物',zhuyin:'ㄨˋ'},{han:'島',zhuyin:'ㄉㄠˇ'}]},
   cards:{speechText:'注音卡',characters:[{han:'注',zhuyin:'ㄓㄨˋ'},{han:'音',zhuyin:'ㄧㄣ'},{han:'卡',zhuyin:'ㄎㄚˇ'}]},
   listen:{speechText:'聽一聽',characters:[{han:'聽',zhuyin:'ㄊㄧㄥ'},{han:'一',zhuyin:'ㄧ'},{han:'聽',zhuyin:'ㄊㄧㄥ'}]},
   spell:{speechText:'拼一拼',characters:[{han:'拼',zhuyin:'ㄆㄧㄣ'},{han:'一',zhuyin:'ㄧ'},{han:'拼',zhuyin:'ㄆㄧㄣ'}]},
@@ -41,90 +22,632 @@ const SPELLING_BANK = [
   { id:'mouth-zui', image:'👄', word:'嘴巴', targetCharacter:'嘴', targetIndex:0, correctZhuyin:['ㄗ','ㄨ','ㄟ','ˇ'], normalizedAnswer:'ㄗㄨㄟˇ', difficulty:'advanced', category:'身體', speechText:'嘴巴' },
   { id:'drink-he', image:'🥤', word:'喝水', targetCharacter:'喝', targetIndex:0, correctZhuyin:['ㄏ','ㄜ'], normalizedAnswer:'ㄏㄜ', difficulty:'beginner', category:'動作', speechText:'喝水' },
   { id:'pants-ku', image:'👖', word:'褲子', targetCharacter:'褲', targetIndex:0, correctZhuyin:['ㄎ','ㄨ','ˋ'], normalizedAnswer:'ㄎㄨˋ', difficulty:'advanced', category:'衣物', speechText:'褲子' }
-].map(makeSpellQuestion);
-let state = { currentChildId: localStorage.getItem(CURRENT_CHILD_KEY) || '', profile: null, data: { zhuyin: symbols, characters: [], words: [], categories: [], media: [], questions: [] }, currentGroupIndex: 0, currentListen: null, currentWord: null, currentSpell: null, spellingAnswered: false, currentAudio: null, dictionary: loadLocalDictionary() };
-const $ = (s) => document.querySelector(s);
-function safeJson(text, fallback){ try{return JSON.parse(text)}catch{return fallback} }
+];
+
+
 function normalizeZhuyin(value){ return String(Array.isArray(value) ? value.join('') : value).normalize('NFC').replace(/\s+/g, '').replace(/[\u200B-\u200D\uFEFF]/g, ''); }
 function parseZhuyinSyllable(value){ const raw=Array.isArray(value)?value.join(''):String(value||''); const chars=Array.from(raw).filter(Boolean); const light=chars.includes('˙'); const mark=light?'˙':(chars.find((c)=>'ˊˇˋ'.includes(c))||''); const symbols=chars.filter((c)=>!'ˊˇˋ˙'.includes(c)); const tone=light?'light':mark==='ˊ'?2:mark==='ˇ'?3:mark==='ˋ'?4:1; return { symbols, tone, toneMark: mark }; }
 function splitZhuyin(value){ return parseZhuyinSyllable(value).symbols.concat(parseZhuyinSyllable(value).toneMark ? [parseZhuyinSyllable(value).toneMark] : []); }
 function optionId(symbols){ return `zhuyin-${normalizeZhuyin(symbols).replace(/[ˊˇˋ˙]/g,(m)=>({ 'ˊ':'2','ˇ':'3','ˋ':'4','˙':'5' }[m]))}`; }
 function makeOption(symbols){ return { id: optionId(symbols), symbols: splitZhuyin(symbols), normalized: normalizeZhuyin(symbols) }; }
-function makeSpellQuestion(raw){ const correct = makeOption(raw.correctZhuyin); return { ...raw, correctOptionId: correct.id, options: buildSpellOptions(raw, correct) }; }
-function buildSpellOptions(q, correct){ const beginnerWrong = ['ㄓ','ㄐ','ㄘ','ㄇ','ㄎ','ㄏ'].filter((s)=>s!==correct.symbols[0]).slice(0,3).map(makeOption); const advancedWrongMap = { 'mouth-zui':['ㄓㄨㄟˇ','ㄗㄟˇ','ㄗㄨㄟˋ'], 'pants-ku':['ㄎㄨ','ㄍㄨˋ','ㄎㄨˇ'], 'plane-fei':['ㄏㄟ','ㄈㄟˇ','ㄈㄣ'], 'drink-he':['ㄎㄜ','ㄏㄜˊ','ㄏㄟ'] }; const wrong = (q.difficulty === 'beginner' ? beginnerWrong : (advancedWrongMap[q.id] || []).map(makeOption)); return [correct, ...wrong].slice(0,4).sort((a,b)=>a.id.localeCompare(b.id)); }
-const profileKey = (id) => `zhuyin-profile-${id}`;
-const defaultProfile = () => ({ schemaVersion: STORAGE_SCHEMA_VERSION, stars:0, answers:0, correct:0, wrong:0, lastPlayedAt:'', recentMode:'cardsView', recentGroupIndex:0, difficulty:'beginner', learnedZhuyin:[], heardZhuyin:[], learnedCharacters:[], wrongItems:[], recentQuestionIds:[], settings:{ audioMode:AUDIO_MODE, soundOn:true, buttonSpeechOn:true, promptSpeechOn:true, feedbackSpeechOn:true, volume:0.9, rate:0.85, zhuyinDisplay:'all', category:'全部', textSize:'standard', zhuyinSize:'standard', themeMode:'auto' } });
-function loadProfile(id){ const p={...defaultProfile(), ...safeJson(localStorage.getItem(profileKey(id))||'{}',{})}; p.settings={...defaultProfile().settings, ...(p.settings||{})}; return p; }
-function saveProfile(){ if(!state.currentChildId || !state.profile) return; state.profile.lastPlayedAt = new Date().toISOString(); localStorage.setItem(profileKey(state.currentChildId), JSON.stringify(state.profile)); renderProgress(); }
-function migrateLegacyStorage(){ if(localStorage.getItem(MIGRATION_KEY)==='2') return; const legacy=safeJson(localStorage.getItem(LEGACY_STORAGE_KEY)||'{}',{}); if(Object.keys(legacy).length){ const lisa={...loadProfile('lisa')}; lisa.stars=Number(legacy.stars ?? lisa.stars) || 0; lisa.answers=Number(legacy.answers ?? lisa.answers) || 0; localStorage.setItem(profileKey('lisa'), JSON.stringify(lisa)); } localStorage.setItem(MIGRATION_KEY,'2'); }
-function stopAllSpeech(){ if('speechSynthesis' in window) window.speechSynthesis.cancel(); if(state.currentAudio){ state.currentAudio.pause(); state.currentAudio.currentTime = 0; state.currentAudio = null; } }
-function speakSystemText(text, options = {}){ return new Promise((resolve) => { if(!state.profile?.settings.soundOn || !('speechSynthesis' in window) || !text) return resolve(); stopAllSpeech(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'zh-TW'; utterance.rate = options.rate ?? state.profile.settings.rate; utterance.volume = options.volume ?? state.profile.settings.volume; utterance.onend = resolve; utterance.onerror = resolve; window.speechSynthesis.speak(utterance); }); }
-async function speakThenRun(text, action){ if(state.profile?.settings.buttonSpeechOn && text) await speakSystemText(text); action(); }
 function verticalSyllable(parts){ const z=parseZhuyinSyllable(parts); return `<span class="zhuyin-answer-syllable zhuyin-group tone-${z.tone}"><span class="zhuyin-symbols">${z.symbols.map((p)=>`<span>${p}</span>`).join('')}</span><span class="zhuyin-tone">${z.toneMark}</span></span>`; }
 function beginnerSymbol(symbol){ return `<span class="zhuyin-answer-single">${symbol}</span>`; }
 function phoneticWord(chars){ return `<span class="phonetic-word">${chars.map((c,i)=>`<span class="phonetic-char" data-char-index="${i}"><span class="hanzi">${c.han}</span>${verticalSyllable(c.zhuyin).replace('zhuyin-answer-syllable zhuyin-group','bopomofo-vertical zhuyin-group')}</span>`).join('')}</span>`; }
 function ruby(entry){ return `<span class="readable" tabindex="0" data-speech="${entry.speechText}">${phoneticWord(entry.characters)}</span><ruby hidden>聽<rt>ㄊㄧㄥ</rt></ruby>`; }
-async function loadData(){ const entries=await Promise.all(Object.values(DATA_URLS).map((url)=>fetch(url).then((r)=>r.json()).catch(()=>[]))); state.data={ zhuyin: entries[0].length ? entries[0] : symbols, characters: entries[1], words: entries[2], categories: entries[3], media: entries[4], questions: entries[5] }; state.data.zhuyin.forEach((item)=>{ if(!item.audioKey) item.audioKey=item.symbol; }); validateDictionaryData(); }
-function chooseQuestion(pool, mode){ const selected = pool[Math.floor(Math.random()*pool.length)]; state.profile.recentQuestionIds.push(`${mode}:${selected.id || selected.symbol}`); state.profile.recentQuestionIds = state.profile.recentQuestionIds.slice(-10); return selected; }
-function makeChoices(correct,pool,key,count=4){ return [correct,...pool.filter((i)=>i[key]!==correct[key]).slice(0,count-1)].sort(()=>Math.random()-0.5); }
-function playZhuyinSound(symbol){ const item = state.data.zhuyin.find((z)=>z.symbol===symbol) || symbols.find((z)=>z.symbol===symbol); if(!state.profile.heardZhuyin.includes(symbol)) state.profile.heardZhuyin.push(symbol); saveProfile(); return speakSystemText(item.systemSpeechText || symbol); }
-function playWordSound(word){ return speakSystemText(word.speechText || word.word || word.exampleWord || word.sampleWord || word.han); }
-function renderProfiles(){ $('#profileCards').innerHTML = CHILD_PROFILES.map((child)=>`<button class="profile-card theme-${child.theme}" type="button" data-child="${child.id}" data-speech="${child.chineseName} ${child.englishName}" aria-label="選擇 ${child.chineseName} ${child.englishName}"><span class="avatar">${child.avatar}</span><strong>${child.chineseName}</strong><span>${child.englishName}</span></button>`).join(''); }
-function applyTheme(){ const theme = ACTIVE_THEME; document.body.dataset.childTheme=theme; document.body.dataset.theme=theme; document.body.dataset.textSize=state.profile?.settings.textSize || 'standard'; document.body.dataset.zhuyinSize=state.profile?.settings.zhuyinSize || 'standard'; }
-function selectChild(id){ const child=CHILD_PROFILES.find((p)=>p.id===id); state.currentChildId=id; localStorage.setItem(CURRENT_CHILD_KEY,id); state.profile=loadProfile(id); state.currentGroupIndex=state.profile.recentGroupIndex || 0; applyTheme(); $('#profileView').classList.remove('active'); $('#profileView').classList.add('hidden'); $('#home').classList.remove('hidden'); $('#mainContent').classList.remove('hidden'); $('#themeTitle').textContent=`${child.title}｜和動物朋友一起學注音`; renderAll(); }
-function renderProgress(){ if(!state.profile) return; const child=CHILD_PROFILES.find((p)=>p.id===state.currentChildId); $('#childBadge').textContent=`${child.avatar} ${child.englishName}`; $('#starsCount').textContent=state.profile.stars; $('#answersCount').textContent=state.profile.answers; $('#versionLine').textContent=`${APP_VERSION.version}｜${APP_VERSION.modifiedAt}`; document.body.dataset.zhuyinDisplay=state.profile.settings.zhuyinDisplay; applyTheme(); }
-function renderCards(){ const group=groupDefs[state.currentGroupIndex]; $('#groupName').textContent=group.name; $('#groupPager').textContent=`${state.currentGroupIndex+1} / ${groupDefs.length}`; $('#symbolCards').innerHTML=state.data.zhuyin.filter((s)=>s.group===group.name).map((item)=>`<article class="symbol-card"><span class="symbol zhuyin-symbol">${item.symbol}</span><span class="emoji">${item.emoji}</span><span class="sample">${phoneticWord([{han:item.exampleWord, zhuyin:item.exampleZhuyin}])}</span><button class="inline-action" type="button" data-play-zhuyin="${item.symbol}">🔊 聽注音</button><button class="inline-action" type="button" data-play-word="${item.exampleWord}">🔊 聽例字</button><button class="inline-action" type="button" data-repeat="${item.systemSpeechText}">👄 跟著念</button></article>`).join(''); state.profile.recentGroupIndex=state.currentGroupIndex; }
+function renderCards(){ const group=groupDefs[state.currentGroupIndex]; $('#groupName').textContent=group.name; $('#groupPager').textContent=`${state.currentGroupIndex+1} / ${groupDefs.length}`; $('#symbolCards').innerHTML=state.data.zhuyin.filter((s)=>s.group===group.name).map((item)=>`<article class="symbol-card"><span class="symbol zhuyin-symbol">${item.symbol}</span><span class="emoji">${item.emoji}</span><span class="sample">${phoneticWord([{han:item.exampleWord, zhuyin:item.exampleZhuyin}])}</span><button class="inline-action" type="button" data-play-zhuyin="${item.symbol}">🔊 聽注音</button><button class="inline-action" type="button" data-play-word="${item.exampleWord}">🔊 聽例字</button><button class="inline-action" type="button" data-repeat="${item.systemSpeechText}">👄 跟著念</button></article>`).join(''); }
 function renderLearn(){ $('#learnCards').innerHTML=state.data.zhuyin.map((item)=>`<article class="symbol-card"><span class="symbol zhuyin-symbol">${item.symbol}</span><button class="inline-action" data-play-zhuyin="${item.symbol}">🔊 聽注音</button><button class="inline-action" data-play-word="${item.exampleWord}">🔊 聽例字</button><small>${item.exampleWord} ${verticalSyllable(item.exampleZhuyin)}</small></article>`).join(''); }
-function renderListenQuiz(){ state.currentListen=chooseQuestion(state.data.zhuyin,'listen'); $('#listenChoices').innerHTML=makeChoices(state.currentListen,state.data.zhuyin,'symbol').map((i)=>`<button class="choice" type="button" data-answer="${i.symbol}"><span class="zhuyin-answer-single">${i.symbol}</span></button>`).join(''); $('#listenFeedback').textContent='👇 選答案'; }
-function safeWordPool(){ const builtIn=buildVerifiedQuestionPool('看圖認字'); return builtIn.length >= 4 ? builtIn : []; }
-function renderWordQuiz(){ const pool=safeWordPool(); state.currentWord=chooseQuestion(pool,'word'); $('#picturePrompt').textContent=state.currentWord.emojiFallback || state.currentWord.emoji || state.currentWord.image?.src || '🧩'; $('#wordHint').innerHTML=state.currentWord.wordCharacters ? phoneticWord(state.currentWord.wordCharacters) : state.currentWord.word; $('#wordChoices').innerHTML=makeChoices(state.currentWord,pool,'word').map((i)=>`<button class="choice word-choice" type="button" data-word="${i.word}">${i.wordCharacters ? phoneticWord(i.wordCharacters) : i.word}</button>`).join(''); $('#wordFeedback').textContent='👇 選答案'; }
-function validWordQuestion(w){ const media=state.data.media?.find((m)=>m.targetType==='word' && m.targetId===w?.id && m.verified===true); return w && w.approved !== false && w.verified !== false && (media || w.emojiFallback || w.emoji || w.image?.src) && w.reviewed === true && (w.validationStatus === 'valid' || w.validationStatus === undefined) && w.enabled !== false && w.word && w.speechText===w.word && w.targetCharacter && w.word[w.targetIndex]===w.targetCharacter && w.wordCharacters?.every((c)=>w.word.includes(c.han)) && !/(小|大|標準)$/.test(w.word); }
 
-function buildVerifiedQuestionPool(mode){
-  const questions=(state.data.questions||[]).filter((q)=>q.mode===mode && q.verified===true);
-  return questions.map((q)=>state.data.words.find((w)=>w.id===q.correctAnswerId && validWordQuestion(w))).filter(Boolean);
-}
-function appSettingsBackup(){ return { currentChildId:state.currentChildId, activeTheme:ACTIVE_THEME, currentProfileSettings:state.profile?.settings || {}, difficulty:state.profile?.difficulty || 'beginner' }; }
-function collectBackup(kind='full'){
-  const progress=CHILD_PROFILES.map((c)=>({ childId:c.id, name:c.englishName, ...loadProfile(c.id) }));
-  const usage=progress.flatMap((p)=>(p.recentQuestionIds||[]).map((qid)=>({ childId:p.childId, mode:qid.split(':')[0], questionId:qid, timestamp:p.lastPlayedAt, version:APP_VERSION.version })));
-  const payload={ backupType:kind, app:'zhuyin-zoo', version:APP_VERSION.version, exportedAt:new Date().toISOString(), dictionary:{ zhuyin:state.data.zhuyin, characters:state.data.characters, words:state.data.words, categories:state.data.categories, local:state.dictionary }, media:state.data.media, questions:state.data.questions, progress, usageHistory:usage, settings:appSettingsBackup() };
-  if(kind==='dictionary') return {...payload, progress:undefined, usageHistory:undefined, settings:undefined};
-  if(kind==='media') return {...payload, dictionary:undefined, progress:undefined, usageHistory:undefined, settings:undefined, questions:undefined};
-  if(kind==='progress') return {...payload, dictionary:undefined, media:undefined, questions:undefined, usageHistory:undefined};
-  if(kind==='usage') return {...payload, dictionary:undefined, media:undefined, questions:undefined, progress:undefined, settings:undefined};
-  return payload;
-}
-function downloadJson(kind){ const data=collectBackup(kind); const stamp=new Date().toISOString().slice(0,16).replace(/[-:T]/g,''); const name=`zhuyin-zoo-${kind}-backup-${stamp}.json`; const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; a.click(); URL.revokeObjectURL(a.href); }
-function renderParentBackupPanel(){ return `<h4>💾 備份中心</h4><p>匯入前會先建立目前資料的自動備份，並顯示檔案摘要。覆蓋還原會替換本機家長字庫與小孩紀錄，請謹慎使用。</p><div class="tool-grid"><button data-export-backup="full">匯出全部資料</button><button data-export-backup="dictionary">匯出字庫</button><button data-export-backup="media">匯出圖片關聯</button><button data-export-backup="progress">匯出小孩成績</button><button data-export-backup="usage">匯出使用紀錄</button></div><input id="backupImportFile" type="file" accept="application/json,.json"><select id="backupImportMode"><option value="merge">合併</option><option value="replace">覆蓋還原</option></select><button type="button" id="previewBackupImport">預覽匯入摘要</button><div id="backupImportPreview">尚未選擇備份檔。</div>`; }
+const APP_VERSION = globalThis.ZHUYIN_RELEASE;
+const $ = (selector) => document.querySelector(selector);
+const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const PROFILES = ['🐱','🐶','🐰'].map((avatar, index) => ({ id:`child-${index + 1}`, name:`島友 ${index + 1}`, avatar }));
+const emptyDictionary = () => ({characters:[],words:[],candidates:[],changeLogs:[]});
+const defaultSettings = { soundOn:true, buttonSpeechOn:true, promptSpeechOn:true, feedbackSpeechOn:true, rideSoundOn:true, volume:0.9, rate:0.85,
+  zhuyinDisplay:'all', textSize:'standard', zhuyinSize:'standard', themeMode:'auto', reducedMotion:false, restMinutes:10 };
+const defaultProfile = { schemaVersion:3, stars:0, answers:0, correct:0, wrong:0, recentGroupIndex:0, difficulty:'beginner',
+  learnedZhuyin:[], heardZhuyin:[], learnedCharacters:[], wrongItems:[], recentQuestionIds:[] };
+const state = {store:null,ledger:null,child:'',profile:null,ticket:null,view:'',epoch:0,currentGroupIndex:0,quiz:null,busy:false,
+  data:{zhuyin:symbols,characters:[],words:[],categories:[],media:[],questions:[]},
+  dictionary:emptyDictionary(),parentUnlocked:false,importPlan:null,previewEpoch:0,startedAt:0};
 
-function textSizeClass(size){ return size === 'small' ? 'text-small' : size === 'large' ? 'text-large' : 'text-default'; }
-function validSpellQuestion(q){ return q.image && q.word && q.speechText === q.word && q.word[q.targetIndex] === q.targetCharacter && q.correctOptionId && q.options.filter((o)=>o.id===q.correctOptionId).length===1 && !/[大↓]/.test(q.word); }
-function renderSpell(){ const desired = state.profile.difficulty; const pool=SPELLING_BANK.filter(validSpellQuestion).filter((q)=> desired === 'beginner' ? q.difficulty === 'beginner' : true); state.currentSpell=chooseQuestion(pool,'spell'); state.spellingAnswered=false; const q=state.currentSpell; const instruction = desired === 'beginner' ? `請選「${q.targetCharacter}」的第一個注音` : `請選出「${q.targetCharacter}」的正確注音`; $('#spellPrompt').innerHTML=`<div class="spell-layout"><div class="picture">${q.image}</div><div class="spell-word">${q.word}</div><div class="target-line">目標字：<strong>${q.targetCharacter}</strong></div><button class="primary-action" id="listenQuestion" type="button">🔊 聽題目</button><p class="instruction">👇 ${instruction}</p></div>`; $('#spellChoices').innerHTML=q.options.map((o)=>`<button class="choice" type="button" data-option-id="${o.id}">${desired === 'beginner' ? beginnerSymbol(o.symbols[0]) : verticalSyllable(o.symbols)}</button>`).join(''); $('#nextSpell').hidden=true; $('#spellFeedback').textContent='👇 選答案'; if(state.profile.settings.promptSpeechOn) speakSystemText(`這是${q.word}。${instruction}。`); }
-function wrongActions(){ return `<div class="wrong-actions"><button class="inline-action" type="button" data-retry>🌱 再試一次</button><button class="inline-action" type="button" data-back>⬅️ 返回</button><button class="inline-action" type="button" data-home>🏠 回首頁</button></div>`; }
-function mark(correct, el, label, item){ state.profile.answers++; if(correct){ state.profile.correct++; state.profile.stars++; if(item?.symbol && !state.profile.learnedZhuyin.includes(item.symbol)) state.profile.learnedZhuyin.push(item.symbol); if(item?.word && !state.profile.learnedCharacters.includes(item.word)) state.profile.learnedCharacters.push(item.word); el.innerHTML=`⭐ 答對了 ${label}`; if(state.profile.settings.feedbackSpeechOn) speakSystemText(`答對了 ${label}`); } else { state.profile.wrong++; state.profile.wrongItems.push(label); el.innerHTML=`🌱 再試一次。正確答案是 ${label}${wrongActions()}`; if(state.profile.settings.feedbackSpeechOn) speakSystemText(`再試一次，正確答案是 ${label}`); } saveProfile(); }
-function markSpell(selectedId){ const q=state.currentSpell; const correct=selectedId===q.correctOptionId; if(!state.spellingAnswered){ state.profile.answers++; state.spellingAnswered=true; if(correct){ state.profile.correct++; state.profile.stars++; } else { state.profile.wrong++; state.profile.wrongItems.push(q.id); } saveProfile(); } const answer=q.normalizedAnswer; if(correct){ $('#spellFeedback').innerHTML=`⭐ 答對了<br>${answer}，${q.word}的${q.targetCharacter}`; $('#nextSpell').hidden=false; if(state.profile.settings.feedbackSpeechOn) speakSystemText(`答對了。${answer}，${q.word}的${q.targetCharacter}`); } else { $('#spellFeedback').innerHTML=`🌱 再試一次<br>正確答案是：${answer}${wrongActions()}`; if(state.profile.settings.feedbackSpeechOn) speakSystemText(`再試一次。正確答案是${answer}`); } }
-function loadLocalDictionary(){ return safeJson(localStorage.getItem('zhuyin-local-dictionary')||'{}',{ characters:[], words:[], candidates:[], changeLogs:[] }); }
-function saveLocalDictionary(){ localStorage.setItem('zhuyin-local-dictionary', JSON.stringify(state.dictionary)); }
-function dictionaryStats(){ const chars=[...state.data.characters, ...(state.dictionary.characters||[]).filter((i)=>i.enabled!==false)]; const words=[...state.data.words, ...(state.dictionary.words||[]).filter((i)=>i.enabled!==false)]; const categories=new Set([...state.data.categories, ...chars.map((i)=>i.category), ...words.map((i)=>i.category)].filter(Boolean)); const issues=validateDictionaryData(false); return { zhuyin: state.data.zhuyin.length, characters: chars.length, words: words.length, categories: categories.size, pending: (state.dictionary.candidates||[]).filter((i)=>i.reviewStatus==='pending').length, issues: issues.length, missingImage: chars.filter((i)=>!i.emoji).length + words.filter((i)=>!i.emoji).length, missingZhuyin: chars.filter((i)=>!normalizeZhuyin(i.zhuyin).length).length } }
-function validateDictionaryData(updateState=true){ const issues=[]; const ids=new Set(); const words=new Set(); [...state.data.characters, ...(state.dictionary.characters||[])].forEach((item)=>{ if(ids.has(item.id)) issues.push(`重複 ID：${item.id}`); ids.add(item.id); if(!item.han) issues.push('缺少國字'); if(!normalizeZhuyin(item.zhuyin).length) issues.push(`${item.han||item.id} 缺注音`); if(!item.emoji) issues.push(`${item.han||item.id} 缺圖片`); if(item.category && state.data.categories.length && !state.data.categories.includes(item.category)) issues.push(`${item.han} 無效分類`); }); [...state.data.words, ...(state.dictionary.words||[])].forEach((item)=>{ if(words.has(item.word)) issues.push(`重複詞語：${item.word}`); words.add(item.word); if(item.wordCharacters && item.wordCharacters.some((c)=>!c.han || !normalizeZhuyin(c.zhuyin).length)) issues.push(`${item.word} 逐字注音錯誤`); if(item.speechText && item.word && item.speechText !== item.word) issues.push(`${item.word} speechText 與詞語不一致`); }); SPELLING_BANK.forEach((q)=>{ if(!validSpellQuestion(q)) issues.push(`拼一拼題目異常：${q.id}`); }); if(updateState) state.dictionary.issues=issues; return issues; }
-function coverageHtml(){ return expectedSymbols.map((s)=>{ const count=[...state.data.characters, ...(state.dictionary.characters||[])].filter((c)=>normalizeZhuyin(c.zhuyin).startsWith(s)).length; return `<span class="coverage-item">${s}：${count} 字${count<3?' ⚠️':''}</span>`; }).join(''); }
-function addCharacter(form){ const han=form.querySelector('[name="han"]').value.trim(); const zhuyin=form.querySelector('[name="zhuyin"]').value.trim(); const word=form.querySelector('[name="word"]').value.trim(); if(!han || !zhuyin || !word) return alert('請填寫國字、完整注音與範例詞語'); if([...state.data.characters, ...(state.dictionary.characters||[])].some((i)=>i.id===`custom-char-${han}`)) return alert('ID 重複'); const entry={ id:`custom-char-${han}-${Date.now()}`, han, zhuyin:splitZhuyin(zhuyin), word, wordCharacters:[{han, zhuyin:splitZhuyin(zhuyin)}], category:form.querySelector('[name="category"]').value, difficulty:form.querySelector('[name="difficulty"]').value, emoji:form.querySelector('[name="emoji"]').value || '🔤', speechText:word, audioKey:`custom-${han}`, enabled:true, source:'家長手動新增', createdAt:new Date().toISOString(), updatedAt:new Date().toISOString() }; state.dictionary.characters.push(entry); state.dictionary.changeLogs.push({type:'create-character', id:entry.id, at:entry.createdAt}); saveLocalDictionary(); renderParent(); }
-function addWord(form){ const word=form.querySelector('[name="newWord"]').value.trim(); if(!word) return alert('請填寫詞語'); if([...state.data.words, ...(state.dictionary.words||[])].some((i)=>i.word===word)) return alert('詞語重複，請改用編輯或新增不同上下文'); const entry={ id:`custom-word-${Date.now()}`, word, speechText:word, wordCharacters:Array.from(word).map((han)=>({han, zhuyin:[]})), category:form.querySelector('[name="wordCategory"]').value, difficulty:form.querySelector('[name="wordDifficulty"]').value, emoji:form.querySelector('[name="wordEmoji"]').value || '🧩', targetCharacter:word[0], enabled:true, source:'家長手動新增', createdAt:new Date().toISOString(), updatedAt:new Date().toISOString() }; state.dictionary.words.push(entry); state.dictionary.changeLogs.push({type:'create-word', id:entry.id, at:entry.createdAt}); saveLocalDictionary(); renderParent(); }
-function renderParent(){ const stats=dictionaryStats(); const rows=CHILD_PROFILES.map((child)=>{ const p=loadProfile(child.id); const rate=p.answers?Math.round(p.correct/p.answers*100):0; return `<section class="parent-child"><h3>${child.avatar} ${child.chineseName} ${child.englishName}</h3><p>⭐ ${p.stars}｜答題 ${p.answers}｜正確率 ${rate}%｜最後練習 ${p.lastPlayedAt || '尚未開始'}</p><button class="danger-action" type="button" data-reset-child="${child.id}">重置 ${child.chineseName}</button></section>`; }).join(''); $('#parentBox').innerHTML=`<p>本遊戲不放廣告、不收集兒童個人資料。學習紀錄只保存在這台裝置。</p><p>App：${APP_VERSION.version}｜修改時間：${APP_VERSION.modifiedAt}｜時區：${APP_VERSION.timezone}｜D1 schema：${DICTIONARY_SCHEMA_VERSION}</p><section class="parent-section"><h3>語音與顯示設定</h3><label>語速 <input id="rate" type="range" min="0.6" max="1.1" step="0.05" value="${state.profile.settings.rate}"></label><label>音量 <input id="volume" type="range" min="0" max="1" step="0.1" value="${state.profile.settings.volume}"></label><label><input id="buttonSpeechOn" type="checkbox" ${state.profile.settings.buttonSpeechOn?'checked':''}> 兒童功能入口語音</label><label>文字大小 <select id="textSize"><option value="standard">標準</option><option value="large">放大</option><option value="xlarge">超大</option></select></label><label>注音大小 <select id="zhuyinSize"><option value="standard">標準</option><option value="large">放大</option><option value="xlarge">超大</option></select></label><label>主題設定 <select id="themeMode"><option value="auto">童話動物園</option><option value="simple">簡潔童話動物園</option></select></label><label>難度 <select id="parentDifficulty"><option value="beginner">初級</option><option value="advanced">進階</option></select></label></section><section class="parent-section"><h3>📚 字庫管理</h3><p>注音符號：${stats.zhuyin}｜國字：${stats.characters}｜詞語：${stats.words}｜分類：${stats.categories}｜待確認：${stats.pending}｜資料異常：${stats.issues}｜缺圖片：${stats.missingImage}｜缺注音：${stats.missingZhuyin}</p><div class="tool-grid"><button type="button" data-dictionary-tab="search">🔍 查看與搜尋</button><button type="button" data-dictionary-tab="addChar">➕ 新增國字</button><button type="button" data-dictionary-tab="addWord">➕ 新增詞語</button><button type="button" data-dictionary-tab="import">📄 文件匯入</button><button type="button" data-dictionary-tab="check">🧪 資料檢查</button><button type="button" data-export-dictionary>📤 匯出字庫</button><button type="button" data-dictionary-tab="backup">💾 備份中心</button><button type="button" data-import-json>📥 匯入 JSON</button><button type="button" data-clear-app-cache>🧹 清除 App 快取</button></div><div id="dictionaryPanel">${renderDictionarySearch()}</div></section>${rows}`; ['textSize','zhuyinSize','themeMode','parentDifficulty'].forEach((id)=>{ const el=$('#'+id); if(el) el.value = id==='parentDifficulty' ? state.profile.difficulty : state.profile.settings[id]; }); }
-function renderDictionarySearch(){ const all=[...state.data.characters.slice(0,80), ...(state.dictionary.characters||[])]; return `<h4>🔍 查看與搜尋</h4><input id="dictionarySearch" placeholder="搜尋國字、注音、詞語、分類" aria-label="搜尋字庫"><div class="coverage">${coverageHtml()}</div><div id="dictionaryResults">${all.map(dictionaryRow).join('')}</div>`; }
-function dictionaryRow(i){ return `<article class="dictionary-row"><strong>${i.han}</strong><span>注音：${normalizeZhuyin(i.zhuyin)}</span><span>詞語：${i.word}</span><span>分類：${i.category}</span><span>難度：${i.difficulty}</span><span>圖片：${i.emoji || '缺圖片'}</span><span>狀態：${i.enabled===false?'停用':'啟用'}</span><span>來源：${i.source || '內建字庫'}</span></article>`; }
-function renderAddCharacter(){ return `<h4>➕ 新增國字</h4><form id="addCharacterForm" class="stack"><input name="han" maxlength="1" placeholder="國字"><input name="zhuyin" placeholder="完整注音，例如 ㄅㄚˋ"><input name="word" placeholder="範例詞語"><select name="category">${state.data.categories.map((c)=>`<option>${c}</option>`).join('')}</select><select name="difficulty"><option value="beginner">初級</option><option value="advanced">進階</option></select><input name="emoji" placeholder="Emoji"><textarea name="note" placeholder="備註／課本名稱／課次"></textarea><button type="submit">儲存國字</button></form>`; }
-function renderAddWord(){ return `<h4>➕ 新增詞語</h4><form id="addWordForm" class="stack"><input name="newWord" placeholder="詞語"><select name="wordCategory">${state.data.categories.map((c)=>`<option>${c}</option>`).join('')}</select><select name="wordDifficulty"><option value="beginner">初級</option><option value="advanced">進階</option></select><input name="wordEmoji" placeholder="代表 Emoji"><fieldset><legend>圖片來源</legend><label><input type="radio" name="imageSource" value="built-in" checked> 內建圖片</label><label><input type="radio" name="imageSource" value="emoji"> Emoji</label><label><input type="radio" name="imageSource" value="upload"> 上傳圖片</label><label><input type="radio" name="imageSource" value="licensed-url"> 授權圖片網址</label></fieldset><input name="imageAlt" placeholder="圖片描述，例如：小朋友拿著水杯喝水"><input name="sourceUrl" placeholder="來源網址（不得 Google 即時搜圖）"><input name="author" placeholder="作者"><input name="license" placeholder="授權方式"><label><input name="imageReviewed" type="checkbox" required> 已人工確認圖片符合詞語</label><textarea name="note" placeholder="逐字注音、來源與備註"></textarea><button type="submit">儲存詞語</button></form>`; }
-function renderImportPanel(){ return `<h4>📄 文件匯入</h4><p>支援 .docx 與可選取文字的 .pdf 建立待確認候選；掃描版 PDF 會標示需要 OCR，不會假裝已完成。</p><input id="documentImport" type="file" accept=".docx,.pdf"><label>課本名稱 <input id="sourceBook" placeholder="國語第一冊"></label><label>課次 <input id="sourceLesson" placeholder="第三課"></label><button type="button" id="parseDocument">建立待確認資料</button><div id="importPreview">候選資料不會直接寫入正式字庫。</div>`; }
-function renderCheckPanel(){ const issues=validateDictionaryData(false); return `<h4>🧪 資料檢查</h4><p>資料異常：${issues.length}</p><ul>${issues.slice(0,50).map((i)=>`<li>${i}</li>`).join('') || '<li>目前核心題庫通過檢查</li>'}</ul>`; }
-async function previewBackupImport(){ const file=$('#backupImportFile')?.files?.[0]; if(!file) return alert('請先選擇 JSON 備份檔'); const current=collectBackup('full'); localStorage.setItem(`zhuyin-auto-backup-${Date.now()}`, JSON.stringify(current)); const text=await file.text(); const data=safeJson(text,null); if(!data) return $('#backupImportPreview').textContent='JSON 格式錯誤，已保留自動備份。'; const counts={zhuyin:data.dictionary?.zhuyin?.length||0, chars:data.dictionary?.characters?.length||0, words:data.dictionary?.words?.length||0, media:data.media?.length||0, progress:data.progress?.length||0, usage:data.usageHistory?.length||0}; $('#backupImportPreview').innerHTML=`<p>備份日期：${data.exportedAt||'未提供'}｜版本：${data.version||'未知'}</p><p>注音 ${counts.zhuyin}、國字 ${counts.chars}、詞語 ${counts.words}、圖片關聯 ${counts.media}、成績 ${counts.progress}、紀錄 ${counts.usage}</p><p>模式：${$('#backupImportMode').value==='replace'?'覆蓋還原':'合併'}。正式寫入功能保留人工確認後執行。</p>`; }
-async function clearAppCache(){ const keys=await caches.keys(); await Promise.all(keys.filter((key)=>key.startsWith('zhuyin-bee-') || key.startsWith('zhuyin-zoo-')).map((key)=>caches.delete(key))); const regs=await navigator.serviceWorker?.getRegistrations?.() || []; await Promise.all(regs.filter((reg)=>reg.scope.includes(location.origin)).map((reg)=>reg.unregister())); alert('已清除本專案 App 快取與 Service Worker。請關閉並重新開啟 App。學習紀錄與家長設定已保留。'); }
-function showView(id){ document.querySelectorAll('main .panel').forEach((p)=>p.classList.remove('active')); $('#'+id).classList.add('active'); state.profile.recentMode=id; saveProfile(); if(id==='parentView') renderParent(); window.scrollTo({top:0,behavior:'smooth'}); }
-function renderFeatureCard(key){ return `<span class="menu-label">${FEATURE_ANIMALS[key]}</span>`; }
-function renderAll(){ $('#appTitle').innerHTML=ruby(textBank.title); $('#cardsBtn').innerHTML=renderFeatureCard('cards'); $('#learnBtn').innerHTML=renderFeatureCard('learn'); $('#listenBtn').innerHTML=renderFeatureCard('listen'); $('#spellBtn').innerHTML=renderFeatureCard('spell'); $('#wordBtn').innerHTML=renderFeatureCard('word'); renderProgress(); renderCards(); renderLearn(); renderListenQuiz(); renderWordQuiz(); renderSpell(); renderParent(); }
-function bind(){ document.body.addEventListener('click',(e)=>{ const profile=e.target.closest('[data-child]'); if(profile) return speakThenRun(profile.dataset.speech,()=>selectChild(profile.dataset.child)); const readable=e.target.closest('.readable'); if(readable) return speakSystemText(readable.dataset.speech); const z=e.target.closest('[data-play-zhuyin]'); if(z) return playZhuyinSound(z.dataset.playZhuyin); const w=e.target.closest('[data-play-word]'); if(w) return playWordSound({word:w.dataset.playWord}); const repeat=e.target.closest('[data-repeat]'); if(repeat) return speakSystemText(repeat.dataset.repeat); const listenQ=e.target.closest('#listenQuestion'); if(listenQ) return speakSystemText(`這是${state.currentSpell.word}。請選出${state.currentSpell.targetCharacter}的正確注音。`); const retry=e.target.closest('[data-retry]'); if(retry) return renderSpell(); const back=e.target.closest('[data-back]'); if(back) return speakThenRun(BUTTON_SPEECH.back,()=>showView('spellView')); const home=e.target.closest('[data-home]'); if(home) return speakThenRun(BUTTON_SPEECH.home,()=>showView('cardsView')); const tab=e.target.closest('[data-dictionary-tab]'); if(tab){ const map={search:renderDictionarySearch,addChar:renderAddCharacter,addWord:renderAddWord,import:renderImportPanel,check:renderCheckPanel,backup:renderParentBackupPanel}; $('#dictionaryPanel').innerHTML=map[tab.dataset.dictionaryTab](); return; } if(e.target.closest('[data-clear-app-cache]')) return clearAppCache(); const exp=e.target.closest('[data-export-backup]'); if(exp) return downloadJson(exp.dataset.exportBackup); if(e.target.closest('[data-export-dictionary]')) return downloadJson('dictionary'); if(e.target.closest('#previewBackupImport')) return previewBackupImport(); const reset=e.target.closest('[data-reset-child]'); if(reset && confirm('確定只重置這一位小孩嗎？') && confirm('再次確認：學習紀錄會歸零。')){ localStorage.setItem(profileKey(reset.dataset.resetChild), JSON.stringify(defaultProfile())); if(reset.dataset.resetChild===state.currentChildId) state.profile=loadProfile(state.currentChildId); renderAll(); } }); document.body.addEventListener('submit',(e)=>{ if(e.target.id==='addCharacterForm'){ e.preventDefault(); addCharacter(e.target); } if(e.target.id==='addWordForm'){ e.preventDefault(); addWord(e.target); } }); document.querySelectorAll('[data-view]').forEach((b)=>b.addEventListener('click',()=>{ if(b.dataset.view==='parentView') return showView('parentView'); const speech=b.dataset.speech || b.textContent.trim(); return speakThenRun(speech,()=>showView(b.dataset.view)); })); $('#switchChild').onclick=()=>speakThenRun(BUTTON_SPEECH.switchChild,()=>{ stopAllSpeech(); $('#profileView').classList.add('active'); $('#profileView').classList.remove('hidden'); $('#home').classList.add('hidden'); $('#mainContent').classList.add('hidden'); }); $('#prevGroup').onclick=()=>speakThenRun(BUTTON_SPEECH.previousGroup,()=>{ state.currentGroupIndex=(state.currentGroupIndex+4)%5; renderCards(); saveProfile(); }); $('#nextGroup').onclick=()=>speakThenRun(BUTTON_SPEECH.nextGroup,()=>{ state.currentGroupIndex=(state.currentGroupIndex+1)%5; renderCards(); saveProfile(); }); $('#playPrompt').onclick=()=>playZhuyinSound(state.currentListen.symbol); $('#listenChoices').onclick=(e)=>{ const b=e.target.closest('[data-answer]'); if(!b) return; mark(b.dataset.answer===state.currentListen.symbol, $('#listenFeedback'), state.currentListen.symbol, state.currentListen); if(b.dataset.answer===state.currentListen.symbol) setTimeout(renderListenQuiz,700); }; $('#wordChoices').onclick=(e)=>{ const b=e.target.closest('[data-word]'); if(!b) return; mark(b.dataset.word===state.currentWord.word, $('#wordFeedback'), state.currentWord.word, state.currentWord); if(b.dataset.word===state.currentWord.word) setTimeout(renderWordQuiz,700); }; $('#spellChoices').onclick=(e)=>{ const b=e.target.closest('[data-option-id]'); if(b) markSpell(b.dataset.optionId); }; $('#nextSpell').onclick=()=>speakThenRun(BUTTON_SPEECH.next,()=>renderSpell()); $('#difficulty').onchange=(e)=>{ state.profile.difficulty=e.target.value; saveProfile(); renderSpell(); }; $('#parentBox').addEventListener('input',(e)=>{ const t=e.target; if(t.id==='volume') state.profile.settings.volume=Number(t.value); if(t.id==='rate') state.profile.settings.rate=Number(t.value); if(t.id==='buttonSpeechOn') state.profile.settings.buttonSpeechOn=t.checked; if(t.id==='textSize') state.profile.settings.textSize=t.value; if(t.id==='zhuyinSize') state.profile.settings.zhuyinSize=t.value; if(t.id==='themeMode') state.profile.settings.themeMode=t.value; if(t.id==='parentDifficulty') state.profile.difficulty=t.value; saveProfile(); }); }
-function showUpdatePrompt(registration){ let bar=$('#updatePrompt'); if(!bar){ bar=document.createElement('div'); bar.id='updatePrompt'; bar.className='update-prompt'; bar.innerHTML='<span>有新版注音動物園可以更新。</span><button type="button" id="updateNow">立即更新</button>'; document.body.appendChild(bar); } $('#updateNow').onclick=()=>registration.waiting?.postMessage({type:'SKIP_WAITING'}); }
-function registerServiceWorker(){ if(!('serviceWorker' in navigator)) return; navigator.serviceWorker.register('service-worker.js').then((registration)=>{ if(registration.waiting) showUpdatePrompt(registration); registration.addEventListener('updatefound',()=>{ const worker=registration.installing; worker?.addEventListener('statechange',()=>{ if(worker.state==='installed' && navigator.serviceWorker.controller) showUpdatePrompt(registration); }); }); }); navigator.serviceWorker.addEventListener('controllerchange',()=>{ if(sessionStorage.getItem('zhuyin-sw-reloaded')==='1') return; sessionStorage.setItem('zhuyin-sw-reloaded','1'); location.reload(); }); }
-async function init(){ migrateLegacyStorage(); renderProfiles(); await loadData(); bind(); const remembered=CHILD_PROFILES.find((p)=>p.id===state.currentChildId); if(remembered) selectChild(remembered.id); $('#versionLine').textContent=`${APP_VERSION.version}｜${APP_VERSION.modifiedAt}`; registerServiceWorker(); }
-init();
+function report(message = '') {
+  $('#appStatus').hidden = !message;
+  $('#appStatus').textContent = message;
+}
+function local() { return state.store?.read() ?? { profiles:{}, dictionary:emptyDictionary() }; }
+function profile(id) {
+  const p = local().profiles[id] ?? {};
+  return { ...defaultProfile, ...p, settings:{ ...defaultSettings, ...p.settings } };
+}
+function number(value) { return Number.isSafeInteger(value) && value >= 0 ? value : 0; }
+function info(id = state.child, ticket = state.ticket) {
+  const base = PROFILES.find((p) => p.id === id);
+  if (!base) return null;
+  const p = profile(id);
+  const display = p.settings.displayName;
+  return { ...base, name:typeof display === 'string' && display.trim() ? display.trim().slice(0,32) : base.name, stars:number(p.stars) + number(ticket?.stars) };
+}
+function stopAllSpeech() {
+  try { globalThis.speechSynthesis?.cancel(); } catch { /* unsupported */ }
+  if (state.currentAudio) {
+    state.currentAudio.pause();
+    state.currentAudio = null;
+  }
+}
+function speakSystemText(text) {
+  const settings = state.profile?.settings;
+  if (!settings?.soundOn || !globalThis.speechSynthesis || !text) return;
+  stopAllSpeech();
+  try {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'zh-TW';
+    const taiwanVoice = speechSynthesis.getVoices().find((voice) => voice.lang.replace('_','-').toLowerCase() === 'zh-tw');
+    if (taiwanVoice) utterance.voice = taiwanVoice;
+    utterance.rate = Math.min(1.1, Math.max(0.6, Number(settings.rate) || 0.85));
+    utterance.volume = Math.min(1, Math.max(0, Number(settings.volume) || 0));
+    speechSynthesis.speak(utterance);
+  } catch { /* practice remains available without speech */ }
+}
+function playZhuyinSound(symbol, example = false) {
+  const item = state.data.zhuyin.find((z) => z.symbol === symbol) || symbols.find((z) => z.symbol === symbol);
+  if (!item || !state.profile) return;
+  speakSystemText(example ? item.exampleWord : (item.systemSpeechText || symbol));
+  if (!state.profile.heardZhuyin?.includes(symbol)) updateProfile((p) => {
+    p.heardZhuyin = [...new Set([...(p.heardZhuyin || []),symbol])];
+  });
+}
+async function updateProfile(change) {
+  const id = state.child;
+  if (!id || !state.store) return;
+  try {
+    await state.store.update((doc) => {
+      const p = doc.profiles[id] ?? {};
+      change(p);
+      doc.profiles[id] = { ...p, lastPlayedAt:new Date().toISOString() };
+    });
+    if (id === state.child) {
+      state.profile = profile(id);
+      renderProgress();
+    }
+  } catch { report('這次設定未能儲存，原本的紀錄仍保留。'); }
+}
+function renderProfiles() {
+  $('#profileCards').innerHTML = PROFILES.map(({id}) => {
+    const child = info(id,null);
+    return `<button class="profile-card" type="button" data-child="${id}" aria-label="選擇 ${esc(child.name)}"><span class="avatar">${child.avatar}</span><strong>${esc(child.name)}</strong></button>`;
+  }).join('');
+}
+function renderProgress() {
+  if (!state.profile) return;
+  const child = info(), p = state.profile, stats = state.ticket?.stats;
+  $('#childBadge').textContent = `${child.avatar} ${child.name}`;
+  $('#starsCount').textContent = child.stars;
+  $('#answersCount').textContent = number(p.answers) + number(stats?.completed) + number(stats?.wrong);
+  document.body.dataset.zhuyinDisplay = p.settings.zhuyinDisplay;
+  document.body.dataset.textSize = p.settings.textSize;
+  document.body.dataset.zhuyinSize = p.settings.zhuyinSize;
+  document.body.dataset.reduceMotion = String(Boolean(p.settings.reducedMotion));
+  AnimalIsland.refresh();
+}
+async function selectChild(id) {
+  if (AnimalIsland.isStarting?.() || !PROFILES.some((p) => p.id === id)) return;
+  exitChild();
+  state.child = id;
+  state.profile = profile(id);
+  const group = state.profile.recentGroupIndex;
+  state.currentGroupIndex = Number.isInteger(group) && group >= 0 && group < groupDefs.length ? group : 0;
+  try { state.store?.remember(id); } catch { report('無法記住目前角色。'); }
+  state.startedAt = Date.now();
+  $('#profileView').classList.add('hidden');
+  $('#profileView').classList.remove('active');
+  $('#home').classList.remove('hidden');
+  $('#mainContent').classList.remove('hidden');
+  renderCards();
+  renderLearn();
+  renderProgress();
+  showView('islandView');
+  await refreshLedger(id);
+}
+function exitChild() {
+  state.epoch++;
+  state.parentUnlocked = false;
+  state.quiz = null;
+  state.busy = false;
+  state.ticket = null;
+  state.child = '';
+  state.profile = null;
+  stopAllSpeech();
+  AnimalIsland.leave();
+}
+function chooseChild() {
+  if (AnimalIsland.isStarting?.()) return;
+  exitChild();
+  renderProfiles();
+  $('#profileView').classList.add('active');
+  $('#profileView').classList.remove('hidden');
+  $('#home').classList.add('hidden');
+  $('#mainContent').classList.add('hidden');
+  $('#profileCards button')?.focus();
+}
+const ISLAND_VIEWS = new Set(['islandView','ridesView','collectionView']);
+const VIEWS = new Set([...ISLAND_VIEWS,'curriculumView','cardsView','learnView','listenView','spellView','wordView','parentView']);
+function showView(id) {
+  if (AnimalIsland.isStarting?.() || !state.child || !VIEWS.has(id)) return;
+  if (id === 'parentView' && !state.parentUnlocked) {
+    if (!$('#parentGate').open) { $('#parentGate').showModal(); $('#cancelParent').focus(); }
+    return;
+  }
+  state.epoch++;
+  state.busy = false;
+  state.quiz = null;
+  state.importPlan = null;
+  state.previewEpoch++;
+  stopAllSpeech();
+  AnimalIsland.leave();
+  if (id !== 'parentView') state.parentUnlocked = false;
+  state.view = id;
+  report();
+  document.querySelectorAll('main .panel').forEach((p) => p.classList.toggle('active', p.id === id));
+  window.scrollTo(0,0);
+  if (ISLAND_VIEWS.has(id)) AnimalIsland.enter(id);
+  if (id === 'curriculumView') Curriculum.mount($('#curriculumView'),null);
+  if (id === 'parentView') renderParent();
+  if (modeForView()) loadQuiz();
+  if (state.profile.settings.buttonSpeechOn && ['cardsView','learnView'].includes(id))
+    speakSystemText(id === 'cardsView' ? '注音卡' : '認識注音');
+}
+async function refreshLedger(id = state.child) {
+  if (!id || !state.ledger) return;
+  try {
+    const snapshot = await state.ledger.get(id);
+    if (state.child !== id) return;
+    state.ticket = snapshot;
+    renderProgress();
+    if (state.view === 'parentView') renderParentStats();
+    const mode = modeForView();
+    const round = snapshot.rounds?.[snapshot.activeRounds?.[mode]];
+    if (mode && !state.busy && round && state.quiz?.mode === mode
+        && (state.quiz.id !== round.id || state.quiz.attemptCount !== round.attemptCount)) drawQuiz(round);
+  } catch { if (state.child === id) report('目前無法讀取遊樂券。學習資料已保留。'); }
+}
+function validWordQuestion(w) {
+  if (!w || w.approved !== true || w.verified !== true || w.reviewed !== true || w.enabled === false
+      || w.validationStatus !== 'valid' || w.word !== w.speechText || /(?:小|大|標準)$/.test(w.word)) return false;
+  const letters = Array.from(w.word);
+  const media = state.data.media.find((m) => m.targetType === 'word' && m.targetId === w.id && m.verified === true);
+  return Boolean(media && media.imageRef === w.imageRef && w.emojiFallback && w.targetCharacter === letters[w.targetIndex]
+    && Array.isArray(w.wordCharacters) && w.wordCharacters.length === letters.length
+    && w.wordCharacters.every((c,i) => c.han === letters[i] && /^(?:[ㄅ-ㄩ]{1,3}[ˊˇˋ˙]?|˙[ㄅ-ㄩ]{1,3})$/.test(normalizeZhuyin(c.zhuyin))));
+}
+function buildVerifiedQuestionPool(mode) {
+  const map = new Map(state.data.words.filter(validWordQuestion).map((w) => [w.id,w]));
+  return state.data.questions.filter((q) => q.mode === mode && q.verified === true).map((q) => map.get(q.correctAnswerId)).filter(Boolean);
+}
+async function loadData() {
+  const keys = ['zhuyin','characters','words','categories','media','questions'];
+  const urls = ['data/zhuyin.json','data/characters.json','data/words.json','data/categories.json','data/media-map.json','data/questions.json'];
+  await Promise.all(urls.map(async (url,i) => {
+    try {
+      const r = await fetch(url + '?v=' + APP_VERSION.version);
+      const value = r.ok ? await r.json() : null;
+      if (Array.isArray(value) && value.length) state.data[keys[i]] = value;
+    } catch { /* embedded symbols still available */ }
+  }));
+}
+function modeForView() {
+  if (state.view === 'listenView') return 'listen';
+  if (state.view === 'wordView') return 'word';
+  if (state.view === 'spellView') return state.profile?.difficulty === 'advanced' ? 'spell:advanced' : 'spell:beginner';
+  return null;
+}
+function itemKey(item) { return item.id ?? item.symbol; }
+function poolFor(mode) {
+  if (mode === 'listen') return state.data.zhuyin;
+  if (mode === 'word') return buildVerifiedQuestionPool('看圖認字');
+  return SPELLING_BANK.filter((q) => mode === 'spell:advanced' || q.difficulty === 'beginner');
+}
+function shuffle(values) {
+  const array = [...values];
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i+1));
+    [array[i],array[j]] = [array[j],array[i]];
+  }
+  return array;
+}
+function draft(mode, prior) {
+  const pool = poolFor(mode);
+  const rest = pool.filter((item) => itemKey(item) !== prior?.question?.item);
+  const q = shuffle(rest.length ? rest : pool)[0];
+  if (!q || (mode === 'word' && pool.length < 4)) throw new Error('沒有可用的已審核題目');
+  let options, correctId;
+  if (mode.startsWith('spell:')) {
+    const full = mode === 'spell:advanced';
+    const correct = makeOption(full ? q.correctZhuyin : q.correctZhuyin[0]);
+    const wrong = full
+      ? ({'plane-fei':['ㄏㄟ','ㄈㄟˇ','ㄈㄣ'],'mouth-zui':['ㄓㄨㄟˇ','ㄗㄟˇ','ㄗㄨㄟˋ'],'drink-he':['ㄎㄜ','ㄏㄜˊ','ㄏㄟ'],'pants-ku':['ㄎㄨ','ㄍㄨˋ','ㄎㄨˇ']}[q.id]).map(makeOption)
+      : shuffle(expectedSymbols.filter((s) => s !== q.correctZhuyin[0])).slice(0,3).map(makeOption);
+    options = shuffle([correct,...wrong]).map((option) => ({id:option.id, symbols:option.symbols}));
+    correctId = correct.id;
+  } else {
+    options = shuffle([q,...shuffle(pool.filter((item) => itemKey(item) !== itemKey(q))).slice(0,3)]).map((item) => ({id:itemKey(item)}));
+    correctId = itemKey(q);
+  }
+  return { mode, questionKey:`${mode}:${itemKey(q)}`, correctId, question:{item:itemKey(q),options,release:APP_VERSION.version} };
+}
+const QUIZ_UI = {listen:['listenChoices','listenFeedback','nextListen','answer'],word:['wordChoices','wordFeedback','nextWord','word'],spell:['spellChoices','spellFeedback','nextSpell','option-id']};
+const family = (mode) => mode.split(':')[0];
+function quizUI(mode) {
+  const [choices,feedback,next,attr] = QUIZ_UI[family(mode)];
+  return { choices:$('#'+choices),feedback:$('#'+feedback),next:$('#'+next),attr };
+}
+function drawQuiz(round) {
+  const mode = modeForView();
+  if (!round || round.mode !== mode) return;
+  const { choices,feedback,next,attr } = quizUI(mode);
+  const bank = poolFor(mode);
+  const item = bank.find((q) => itemKey(q) === round.question?.item);
+  state.quiz = round;
+  if (!item || !Array.isArray(round.question.options) || round.question.release !== APP_VERSION.version) {
+    choices.textContent = '';
+    feedback.textContent = '這一題已不在目前的題庫中。';
+    next.hidden = false;
+    return;
+  }
+  if (mode === 'word') {
+    $('#picturePrompt').textContent = item.emojiFallback;
+    $('#wordHint').textContent = '看圖片，選出正確的詞語';
+  } else if (family(mode) === 'spell') {
+    const instruction = mode === 'spell:beginner' ? '第一個注音' : '完整注音';
+    $('#difficulty').value = state.profile.difficulty;
+    $('#spellPrompt').innerHTML = `<div class="spell-layout"><div class="picture">${esc(item.image)}</div><div class="spell-word">${esc(item.word)}</div><div class="target-line">目標字：<strong>${esc(item.targetCharacter)}</strong></div><button class="primary-action" id="listenQuestion" type="button">🔊 聽題目</button><p class="instruction">請選「${esc(item.targetCharacter)}」的${instruction}</p></div>`;
+  }
+  choices.innerHTML = round.question.options.map((o) => {
+    const choice = bank.find((q) => itemKey(q) === o.id);
+    const label = mode === 'listen' ? beginnerSymbol(esc(choice?.symbol))
+      : mode === 'word' ? (choice?.wordCharacters ? phoneticWord(choice.wordCharacters) : esc(choice?.word))
+      : mode === 'spell:beginner' ? beginnerSymbol(esc(o.symbols?.[0])) : verticalSyllable(o.symbols);
+    return `<button class="choice${mode === 'word' ? ' word-choice' : ''}" type="button" data-${attr}="${esc(o.id)}" ${round.status !== 'active' ? 'disabled' : ''}>${label}</button>`;
+  }).join('');
+  next.hidden = round.status === 'active';
+  feedback.textContent = round.status === 'completed' ? '⭐ 答對了！' : round.attemptCount ? '🌱 再試一次也很棒。' : '👇 選答案';
+}
+async function loadQuiz(advance = false) {
+  const mode = modeForView();
+  if (!mode || state.busy) return;
+  const epoch = state.epoch, id = state.child, old = state.quiz;
+  const {choices,feedback,next} = quizUI(mode);
+  state.busy = true;
+  choices.textContent = '';
+  next.hidden = true;
+  feedback.textContent = '正在準備題目…';
+  try {
+    const candidate = draft(mode,old);
+    if (!state.ledger) throw new Error('目前無法開啟本機題目紀錄。注音卡仍可使用。');
+    if (advance && old?.status === 'active' && (old.question?.release !== APP_VERSION.version || !poolFor(mode).some((q) => itemKey(q) === old.question?.item)))
+      await state.ledger.abandonRound(id,mode,old.id);
+    const result = advance && old ? await state.ledger.advanceRound(id,{...candidate,roundId:old.id}) : await state.ledger.getOrCreateRound(id,candidate);
+    if (state.epoch !== epoch) return;
+    state.ticket = result.state;
+    drawQuiz(result.round);
+    renderProgress();
+  } catch (e) {
+    if (state.epoch === epoch) {
+      feedback.textContent = e.message || '目前無法讀取題目，請重新開啟。';
+      next.hidden = !old;
+    }
+  } finally { if (state.epoch === epoch) state.busy = false; }
+}
+async function answer(optionId) {
+  const round = state.quiz, id = state.child, epoch = state.epoch;
+  if (!round || round.status !== 'active' || state.busy || !state.ledger) return;
+  const {feedback} = quizUI(round.mode);
+  state.busy = true;
+  try {
+    const result = await state.ledger.answer(id,{mode:round.mode,roundId:round.id,attemptId:crypto.randomUUID(),
+      expectedAttemptCount:round.attemptCount,optionId});
+    if (state.epoch !== epoch) return;
+    state.ticket = result.state;
+    drawQuiz(result.round);
+    renderProgress();
+    if (result.correct && !result.duplicate) {
+      feedback.textContent = result.awarded ? '⭐ 答對了，獲得 1 張遊樂券！' : '⭐ 答對了！這是複習題。';
+      if (state.profile.settings.feedbackSpeechOn) speakSystemText('答對了！');
+    } else if (!result.duplicate && state.profile.settings.feedbackSpeechOn) speakSystemText('再試一次也很棒。');
+    const minutes = Number(state.profile.settings.restMinutes);
+    if (minutes > 0 && Date.now() - state.startedAt > minutes * 60000) {
+      report('練習一段時間了，可以休息、喝口水，再回來玩。');
+      state.startedAt = Date.now();
+    }
+  } catch {
+    if (state.epoch === epoch) {
+      state.busy = false;
+      await refreshLedger(id);
+      if (state.epoch === epoch) feedback.textContent = '本機題目已更新或尚未儲存，請確認畫面後再作答。';
+    }
+  } finally { if (state.epoch === epoch) state.busy = false; }
+}
+
+
+function percent(a,b) { return b ? `${Math.round(100*a/b)}%` : '尚無資料'; }
+async function renderParentStats() {
+  const mount = $('#parentStats');
+  if (!mount || state.view !== 'parentView') return;
+  const ledger = state.ledger;
+  const snapshots = await Promise.all(PROFILES.map(({id}) => ledger?.get(id).catch(() => null) ?? null));
+  if (mount !== $('#parentStats') || state.view !== 'parentView') return;
+  mount.innerHTML = PROFILES.map(({id},i) => {
+    const p = profile(id), snapshot = snapshots[i], stats = snapshot?.stats, who = info(id,snapshot);
+    const weak = Object.values(stats?.byMode || {}).flatMap((mode) => Object.entries(mode.byQuestion || {}))
+      .filter(([,v]) => v.wrong > 0).sort((a,b) => b[1].wrong-a[1].wrong).slice(0,5)
+      .map(([key,value]) => `${key.split(':').at(-1)}（${value.wrong} 次）`).join('、');
+    const rides = Object.values(snapshot?.rides || {});
+    const kinds = {quiz_credit:'答對發券',quiz_repeat_limit:'複習，不發券',ride_debit:'搭乘扣券',ride_refund:'未開始退款'};
+    return `<section class="parent-child"><h3>${who.avatar} ${esc(who.name)}</h3><p>⭐ ${who.stars}｜舊版作答 ${number(p.answers)}｜遊樂券 ${snapshot?.balance ?? '無法讀取'}</p>
+      <p>島嶼題數 ${number(stats?.started)}｜首次答對率 ${percent(stats?.firstCorrect,stats?.firstAnswered)}｜重試 ${number(stats?.retries)} 次｜最終完成率 ${percent(stats?.completed,stats?.started)}｜重試後完成率 ${percent((stats?.completed || 0)-(stats?.firstCorrect || 0),(stats?.firstAnswered || 0)-(stats?.firstCorrect || 0))}</p>
+      <p>待練習：${esc(weak || '尚無')}｜搭乘 ${rides.filter((x) => ['started','completed'].includes(x.status)).length} 次｜結束 ${rides.filter((x) => x.status === 'completed').length} 次</p>
+      <details><summary>遊樂券明細（最近 20 筆）</summary><ul>${(snapshot?.transactions || []).slice(-20).reverse().map((entry) => `<li>${esc(new Date(entry.at).toLocaleString('zh-TW'))}｜${esc(kinds[entry.type] || entry.type)}｜${entry.amount > 0 ? '+' : ''}${esc(entry.amount)}</li>`).join('') || '<li>尚無紀錄</li>'}</ul></details></section>`;
+  }).join('');
+}
+function renderParent() {
+  const s = state.profile.settings;
+  const check = (id, label) => `<label class="setting-check"><input type="checkbox" data-setting="${id}" ${s[id] ? 'checked' : ''}>${label}</label>`;
+  const select = (id,label,options) => `<label>${label} <select data-setting="${id}">${Object.entries(options).map(([value,text])=>`<option value="${value}" ${(id === 'difficulty' ? state.profile.difficulty : s[id]) === value ? 'selected' : ''}>${text}</option>`).join('')}</select></label>`;
+  $('#parentBox').innerHTML = `<p>紀錄和暱稱只存在目前的瀏覽器。家長入口用來減少誤觸。</p>
+  <section class="parent-section"><h3>目前島友的設定</h3>
+    <label>暱稱 <input id="displayName" data-setting="displayName" maxlength="32" value="${esc(s.displayName)}" autocomplete="off" placeholder="留空使用匿名代號"></label>
+    <label>語速 <input id="rate" data-setting="rate" type="range" min="0.6" max="1.1" step="0.05" value="${esc(s.rate)}"></label>
+    <label>音量 <input id="volume" data-setting="volume" type="range" min="0" max="1" step="0.1" value="${esc(s.volume)}"></label>
+    ${check('soundOn','啟用語音與音效')}${check('buttonSpeechOn','學習入口語音')}${check('promptSpeechOn','啟用題目語音')}${check('feedbackSpeechOn','作答回饋語音')}${check('rideSoundOn','設施音效')}${check('reducedMotion','減少動畫')}
+    ${select('textSize','文字大小',{standard:'標準',large:'放大',xlarge:'超大'})}${select('zhuyinSize','注音大小',{standard:'標準',large:'放大',xlarge:'超大'})}${select('themeMode','島嶼入口',{auto:'島嶼地圖',simple:'簡潔清單'})}${select('difficulty','拼一拼難度',{beginner:'初級',advanced:'進階'})}
+    <label>休息提示（分鐘，0 關閉）<input type="number" min="0" max="60" data-setting="restMinutes" value="${esc(s.restMinutes)}"></label>
+  </section><section class="parent-section"><h3>學習與設施</h3><div id="parentStats">正在讀取本機紀錄…</div></section>
+  <section class="parent-section"><h3>本機字庫</h3><p>內建：注音 ${state.data.zhuyin.length}、國字 ${state.data.characters.length}、詞語 ${state.data.words.length}。家長新增留在本機，不會直接出題。</p>
+  <label>搜尋國字、注音、詞語或分類 <input id="dictionarySearch"></label><div id="dictionaryResults"></div>
+  <details><summary>新增國字或詞語</summary><form id="dictionaryForm" class="stack">
+    <label>類型 <select name="type"><option value="characters">國字</option><option value="words">詞語</option></select></label>
+    <label>國字／詞語 <input name="text" required maxlength="32"></label>
+    <label>注音（國字必填） <input name="zhuyin" maxlength="32"></label>
+    <label>範例詞語 <input name="sample" maxlength="32"></label>
+    <label>分類 <select name="category">${state.data.categories.map((category) => `<option>${esc(category)}</option>`).join('')}</select></label>
+    <label>難度 <select name="difficulty"><option value="beginner">初級</option><option value="advanced">進階</option></select></label>
+    <label>Emoji <input name="emoji" maxlength="16"></label>
+    <label>來源／備註 <input name="source" maxlength="200"></label>
+    <button type="submit">儲存到本機字庫</button>
+  </form></details><details><summary>查看資料檢查與文件匯入狀態</summary><p>已驗證看圖題 ${buildVerifiedQuestionPool('看圖認字').length} 筆。未驗證的詞語和圖片不出題。DOCX/PDF 解析與掃描 OCR 尚未提供；可使用教材區的待審 JSON。</p></details></section>
+  <section class="parent-section" id="parentCurriculum"></section>
+  <section class="parent-section">${renderParentBackupPanel()}</section>`;
+  renderParentStats();
+  renderDictionary();
+  Curriculum.mount(null,$('#parentCurriculum'));
+}
+function renderDictionary() {
+  const mount = $('#dictionaryResults');
+  if (!mount) return;
+  const search = $('#dictionarySearch').value.trim().toLowerCase();
+  const records = [...state.data.characters,...state.data.words,...(state.dictionary.characters || []),...(state.dictionary.words || [])];
+  const matches = records.filter((row) => [row.han,row.word,normalizeZhuyin(row.zhuyin ?? row.zhuyinText ?? ''),row.category].some((x) => String(x ?? '').toLowerCase().includes(search)));
+  mount.innerHTML = matches.slice(0,60).map((row)=>`<article class="dictionary-row"><strong>${esc(row.han || row.word)}</strong><span>${esc(normalizeZhuyin(row.zhuyin ?? row.zhuyinText ?? ''))}</span><span>${esc(row.han ? row.word : row.category)}</span><span>${esc(row.source || '內建字庫')}</span><span>${row.enabled === false ? '停用' : row.reviewed ? '已審核' : '本機待審'}</span></article>`).join('') || '<p>沒有符合的資料。</p>';
+}
+async function addDictionary(form) {
+  if (!state.parentUnlocked || !state.store) return;
+  const input = new FormData(form), type = input.get('type'), text = input.get('text').trim(), zhuyin = normalizeZhuyin(input.get('zhuyin'));
+  if (!['characters','words'].includes(type) || !text || (type === 'characters' && (!/^\p{Script=Han}$/u.test(text) || !/^(?:[ㄅ-ㄩ]{1,3}[ˊˇˋ˙]?|˙[ㄅ-ㄩ]{1,3})$/.test(zhuyin)))) return report('請填寫國字與有效注音，或選擇新增詞語。');
+  const at = new Date().toISOString(), id = `local-${crypto.randomUUID()}`;
+  const item = { id, ...(type === 'characters' ? {han:text,word:input.get('sample').trim(),zhuyin:splitZhuyin(zhuyin)} : {word:text}),
+    speechText:text, category:input.get('category'), difficulty:input.get('difficulty'), emoji:input.get('emoji').trim(),
+    source:input.get('source').trim() || '家長手動新增', reviewed:false, verified:false, enabled:true, status:'PENDING_REVIEW', createdAt:at };
+  try {
+    await state.store.update((doc) => {
+      const key = type === 'characters' ? 'han' : 'word';
+      if ([...state.data[type],...(doc.dictionary[type] || [])].some((row) => row[key] === text)) throw new Error('已存在同樣的字詞，資料未變更。');
+      (doc.dictionary[type] ??= []).push(item);
+      (doc.dictionary.changeLogs ??= []).push({id,at,type:'create-local-item'});
+    });
+    state.dictionary = local().dictionary;
+    form.reset();
+    renderDictionary();
+    report('已存入本機字庫，尚未加入出題。');
+  } catch(e) { report(e.message || '儲存失敗，原資料已保留。'); }
+}
+async function collectBackup(kind='full') {
+  const doc = local();
+  const progress = PROFILES.map(({id}) => ({...profile(id),childId:id}));
+  const payload = {backupType:kind,app:'zhuyin-island',version:APP_VERSION.version,exportedAt:new Date().toISOString()};
+  const dictionary = {...state.data,local:doc.dictionary};
+  const includeLedger = ['full','progress','usage'].includes(kind);
+  if (includeLedger && (!state.ledger || !state.store)) throw new Error('目前無法讀取完整本機資料，未產生備份。');
+  const ledger = includeLedger ? await state.ledger.exportSnapshot() : undefined;
+  if (kind === 'full') return {...payload,dictionary,media:state.data.media,questions:state.data.questions,progress,ledger,
+    curriculum: JSON.parse(localStorage.getItem('zhuyin-animal-island-curriculum-v1') || 'null'),
+    decorations:Object.fromEntries(PROFILES.map(({id}) => [id,localStorage.getItem('zhuyin-island-decor-'+id)])),
+    settings:{currentChildId:state.child}};
+  if (kind === 'dictionary') return {...payload,dictionary};
+  if (kind === 'media') return {...payload,media:state.data.media};
+  if (kind === 'progress') return {...payload,progress,ledger};
+  return {...payload,usageHistory:progress.map((p) => ({childId:p.childId,recentQuestionIds:p.recentQuestionIds})),ledger};
+}
+function download(name,body) {
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(new Blob([body],{type:'application/json'}));
+  link.download = `${name}-${new Date().toISOString().replace(/[:.]/g,'-')}.json`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(link.href),2000);
+}
+function renderParentBackupPanel() {
+  return `<h3>備份中心</h3><p>匯入可合併或還原角色的舊版進度、設定及本機字庫。遊樂券交易、教材待審和布置可匯出備查，這個匯入功能會保留它們的現況。</p>
+  <div class="tool-grid">${Object.entries({full:'全部資料',dictionary:'字庫',media:'圖片關聯',progress:'角色成績',usage:'使用紀錄'}).map(([id,label]) => `<button type="button" data-export-backup="${id}">匯出${label}</button>`).join('')}</div>
+  <label>選擇備份檔 <input id="backupImportFile" type="file" accept="application/json,.json"></label>
+  <label>還原方式 <select id="backupImportMode"><option value="merge">合併</option><option value="replace">覆蓋檔內選定項目</option></select></label>
+  <button type="button" id="previewBackupImport">預覽匯入摘要</button><div id="backupImportPreview" role="status">尚未選擇備份檔。</div>
+  <button type="button" id="applyBackupImport" hidden>備份目前資料後執行</button>
+  <details><summary>清除 App 快取</summary><p>只移除本遊戲的離線快取；請在連上網路時使用。</p><button type="button" id="clearAppCache">清除離線快取</button></details>`;
+}
+async function previewBackupImport() {
+  const file = $('#backupImportFile')?.files?.[0], target = $('#backupImportPreview'), button = $('#applyBackupImport');
+  state.importPlan = null;
+  const token = ++state.previewEpoch;
+  const mode = $('#backupImportMode').value;
+  button.hidden = true;
+  if (!file || file.size > 8*1024*1024) { target.textContent = '請選擇小於 8 MB 的 JSON 備份。'; return; }
+  try {
+    const data = JSON.parse(await file.text());
+    const plan = await IslandStorage.planImport(data,mode,local());
+    if (token !== state.previewEpoch || target !== $('#backupImportPreview') || file !== $('#backupImportFile').files[0] || mode !== $('#backupImportMode').value) return;
+    state.importPlan = plan;
+    const {profiles,dictionary} = plan.summary;
+    target.innerHTML = `<p>${esc(file.name)}｜備份 ${esc(data.version)}｜${esc(data.exportedAt)}｜${mode === 'merge' ? '合併' : '覆蓋'}</p>
+    <ul>${profiles.map((x)=>`<li>${esc(info(x.id,null).name)}：舊版星星 ${x.beforeStars} → ${x.afterStars}；作答 ${x.beforeAnswers} → ${x.afterAnswers}</li>`).join('')}
+    ${dictionary.map((x)=>`<li>${esc({characters:'國字',words:'詞語',candidates:'候選',changeLogs:'紀錄'}[x.key])}：${x.before} → ${x.after} 筆${x.conflicts ? `，${x.conflicts} 筆衝突保留現況` : ''}</li>`).join('')}</ul><p>核心題庫、現有遊樂券、教材和布置保留。</p>`;
+    button.hidden = false;
+  } catch(e) { if (token !== state.previewEpoch) return; target.textContent = `無法預覽：${e.message}`; }
+}
+async function applyBackupImport() {
+  const plan = state.importPlan, button = $('#applyBackupImport');
+  if (!plan || !state.parentUnlocked || !state.store || button.disabled) return;
+  if (!confirm(`請確認${plan.mode === 'merge' ? '合併' : '覆蓋'}預覽項目。會先保存並驗證本機 PRE 備份。`)) return;
+  button.disabled = true;
+  try {
+    const pre = await collectBackup();
+    if (!state.parentUnlocked || state.importPlan !== plan) return;
+    const receipt = await state.store.applyImport(plan,pre);
+    download('zhuyin-island-pre',receipt.encoded);
+    state.profile = profile(state.child);
+    state.dictionary = local().dictionary;
+    renderParent();
+    renderProgress();
+    report(`已完成還原，PRE SHA-256：${receipt.digest}`);
+  } catch(e) { report(`還原未完成：${e.message}`); }
+  finally { button.disabled = false; }
+}
+async function clearAppCache() {
+  if (!confirm('清除這個遊戲的離線快取？學習紀錄、設定和遊樂券保留。')) return;
+  try {
+    const keys = await caches.keys();
+    await Promise.all(keys.filter((k)=>['zhuyin-bee-','zhuyin-zoo-','zhuyin-island-'].some((p) => k.startsWith(p))).map((k)=>caches.delete(k)));
+    const r = await navigator.serviceWorker?.getRegistration();
+    const script = r?.active?.scriptURL || r?.waiting?.scriptURL;
+    if (script && new URL(script).pathname === '/service-worker.js' && r.scope === location.origin+'/') await r.unregister();
+    report('已清除 App 快取；請在連網時重新開啟。');
+  } catch { report('目前無法清除 App 快取。'); }
+}
+function bind() {
+  document.body.addEventListener('click',(e) => {
+    const target = e.target.closest('button,.readable');
+    if (!target) return;
+    if (target.dataset.child) return selectChild(target.dataset.child);
+    if (!state.child) return;
+    if (target.id === 'switchChild') return chooseChild();
+    if (target.id === 'islandHome') return showView('islandView');
+    if (target.id === 'unlockParent') {
+      $('#parentGate').close();
+      state.parentUnlocked = true;
+      return showView('parentView');
+    }
+    if (target.id === 'cancelParent') return $('#parentGate').close();
+    if (target.id === 'prevGroup' || target.id === 'nextGroup') {
+      state.currentGroupIndex = (state.currentGroupIndex + (target.id === 'prevGroup' ? groupDefs.length-1 : 1)) % groupDefs.length;
+      renderCards();
+      const index = state.currentGroupIndex;
+      return updateProfile((p) => { p.recentGroupIndex = index; });
+    }
+    if (target.dataset.playZhuyin) return playZhuyinSound(target.dataset.playZhuyin);
+    if (target.dataset.playWord) return speakSystemText(target.dataset.playWord);
+    if (target.dataset.repeat) return speakSystemText(target.dataset.repeat);
+    if (target.classList.contains('readable')) return speakSystemText(target.dataset.speech);
+    if (['playPrompt','playExamplePrompt'].includes(target.id) && state.quiz && state.profile.settings.promptSpeechOn) return playZhuyinSound(state.quiz.question.item,target.id === 'playExamplePrompt');
+    if (target.id === 'listenQuestion' && state.quiz && state.profile.settings.promptSpeechOn) {
+      const item = SPELLING_BANK.find((q)=>q.id===state.quiz.question.item);
+      return speakSystemText(item?.word);
+    }
+    if (['nextListen','nextWord','nextSpell'].includes(target.id)) return loadQuiz(true);
+    const mode = modeForView();
+    if (mode) {
+      const ui = quizUI(mode);
+      if (ui.choices.contains(target) && target.hasAttribute('data-'+ui.attr)) return answer(target.getAttribute('data-'+ui.attr));
+    }
+    if (!state.parentUnlocked || state.view !== 'parentView') return;
+    if (target.dataset.exportBackup) {
+      const kind = target.dataset.exportBackup;
+      return collectBackup(kind).then((data)=>download(`zhuyin-island-${kind}`,JSON.stringify(data,null,2))).catch(()=>report('無法完成備份。'));
+    }
+    if (target.id === 'previewBackupImport') return previewBackupImport();
+    if (target.id === 'applyBackupImport') return applyBackupImport();
+    if (target.id === 'clearAppCache') return clearAppCache();
+  });
+  $('#parentBox').addEventListener('input',(e) => { if (e.target.id === 'dictionarySearch') renderDictionary(); });
+  $('#parentBox').addEventListener('submit',(e) => { if (e.target.id === 'dictionaryForm') { e.preventDefault(); addDictionary(e.target); } });
+  document.body.addEventListener('change',async (e) => {
+    const t = e.target, id = state.child;
+    if (!id) return;
+    if (t.id === 'backupImportFile' || t.id === 'backupImportMode') {
+      state.importPlan = null;
+      state.previewEpoch++;
+      $('#applyBackupImport').hidden = true;
+      $('#backupImportPreview').textContent = '請重新預覽。';
+    }
+    if (t.id === 'difficulty' || (t.dataset.setting && state.parentUnlocked)) {
+      const key = t.dataset.setting || 'difficulty';
+      const value = t.type === 'checkbox' ? t.checked : ['volume','rate','restMinutes'].includes(key) ? Number(t.value) : t.value;
+      await updateProfile((p) => {
+        if (key === 'difficulty') p.difficulty = value === 'advanced' ? 'advanced' : 'beginner';
+        else p.settings = {...p.settings,[key]:value};
+      });
+      if (state.child !== id) return;
+      if (key === 'difficulty' && state.view === 'spellView') showView('spellView');
+      if (key === 'displayName' && state.view === 'parentView') { renderProfiles(); renderParentStats(); }
+      if (key === 'soundOn' && !value) stopAllSpeech();
+    }
+  });
+  window.addEventListener('storage',(e) => {
+    if (e.key === IslandStorage.KEY && state.child) {
+      state.profile = profile(state.child);
+      state.dictionary = local().dictionary;
+      renderProgress();
+    }
+  });
+  document.addEventListener('visibilitychange',() => {
+    if (document.hidden) stopAllSpeech();
+    else refreshLedger();
+  });
+  window.addEventListener('pagehide',stopAllSpeech);
+}
+function registerServiceWorker() {
+  if (!navigator.serviceWorker) return;
+  let reloadForUpdate = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (reloadForUpdate) { reloadForUpdate = false; location.reload(); }
+    else if ($('#updatePrompt')) $('#updatePrompt').textContent = '新版已就緒。請重新整理套用。';
+  });
+  const prompt = (r) => {
+    if ($('#updatePrompt')) return;
+    const bar = document.createElement('div');
+    bar.id = 'updatePrompt';
+    bar.className = 'update-prompt';
+    bar.innerHTML = '<span>注音動物島有新版可以更新。</span><button type="button" id="updateNow">立即更新</button>';
+    document.body.append(bar);
+    $('#updateNow').onclick = () => { reloadForUpdate = true; r.waiting?.postMessage({type:'SKIP_WAITING'}); };
+  };
+  navigator.serviceWorker.register('/service-worker.js',{updateViaCache:'none'}).then((r) => {
+    if (r.waiting && navigator.serviceWorker.controller) prompt(r);
+    r.addEventListener('updatefound',()=>r.installing?.addEventListener('statechange',(e) => {
+      if (e.target.state === 'installed' && navigator.serviceWorker.controller && r.waiting) prompt(r);
+    }));
+  }).catch(()=>report('這次未能安裝離線資源，連網時可繼續練習。'));
+}
+async function init() {
+  const [store,ledger] = await Promise.allSettled([IslandStorage.open(),TicketLedger.open(),loadData()]);
+  state.store = store.status === 'fulfilled' ? store.value : null;
+  state.ledger = ledger.status === 'fulfilled' ? ledger.value : null;
+  state.dictionary = local().dictionary;
+  $('#appTitle').innerHTML = ruby(textBank.title);
+  $('#versionLine').textContent = `${APP_VERSION.version}｜${APP_VERSION.modifiedAt}`;
+  AnimalIsland.init({navigate:showView,getProfile:info,getChildId:()=>state.child,getSettings:()=>state.profile?.settings,
+    getBalance:()=>state.ticket?.balance ?? null,ledger:state.ledger,onBalanceChange:()=>refreshLedger()});
+  state.ledger?.subscribe((id) => { if (id === state.child) refreshLedger(id); });
+  renderProfiles();
+  bind();
+  if (state.store?.remembered) await selectChild(state.store.remembered);
+  if (!state.store || !state.ledger) report('部分本機儲存無法開啟，請由家長檢查瀏覽器設定。');
+  registerServiceWorker();
+}
+init().catch(()=>report('無法開啟注音動物島。請重新載入或由家長檢查裝置。'));

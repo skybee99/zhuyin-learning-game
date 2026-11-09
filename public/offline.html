@@ -1,11 +1,61 @@
 <!doctype html>
 <html lang="zh-Hant-TW">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#ffcf4a" />
-  <title>注音小蜜蜂離線中</title>
-  <style>body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;font-family:"PingFang TC","Heiti TC",sans-serif;background:#fff8dc;color:#3b2a12}.card{max-width:520px;border:4px solid #ffd45f;border-radius:28px;background:#fffdf4;box-shadow:0 10px 0 #e9a92f;padding:28px;text-align:center}h1{font-size:2rem}.bee{font-size:4rem}</style>
-</head>
-<body><main class="card"><div class="bee">🐝</div><h1>目前離線中</h1><p>核心檔案已離線保存。請確認網路後重新開啟注音小蜜蜂。</p></main></body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffcf4a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="注音動物島" />
+    <meta name="description" content="和動物朋友一起學注音，適合 iPhone 與 iPad 的注音、認字與語音學習遊戲。" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+    <link rel="stylesheet" href="src/styles.css?v=V2.0.0" />
+    <link rel="stylesheet" href="src/island.css?v=V2.0.0" />
+    <link rel="stylesheet" href="src/curriculum.css?v=V2.0.0" />
+    <title>注音動物島</title>
+  </head>
+  <body data-zhuyin-display="all" data-child-theme="storybook-zoo" data-theme="storybook-zoo" data-text-size="standard" data-zhuyin-size="standard">
+    <div class="app-shell">
+      <p class="offline-status" role="status">目前離線，仍可練習和遊玩。紀錄儲存在這台裝置。</p>
+      <section class="profile-gate panel active" id="profileView" aria-labelledby="profileTitle">
+        <p class="eyebrow">🌈</p>
+        <h1 id="profileTitle">👋 你是誰？</h1>
+        <div class="profile-grid" id="profileCards"></div>
+      </section>
+      <header class="hero hidden" id="home">
+        <p class="eyebrow" id="themeTitle">🌈</p>
+        <h1 id="appTitle"></h1>
+        <section class="record-card" aria-live="polite"><span id="childBadge"></span><span>⭐</span><strong id="starsCount">0</strong><span>✅</span><strong id="answersCount">0</strong></section>
+        <button class="small-action" id="islandHome" type="button">🏝️ 回島上</button>
+        <button class="small-action" id="switchChild" type="button" aria-label="換人" data-speech="換人">🔄 換人</button>
+      </header>
+      <main id="mainContent" class="hidden">
+        <section class="panel active" id="islandView" aria-label="注音動物島地圖"></section>
+        <section class="panel" id="ridesView" aria-label="遊樂園"></section>
+        <section class="panel" id="collectionView" aria-label="動物收藏"></section>
+        <section class="panel" id="curriculumView" aria-label="教材路線"></section>
+        <p id="appStatus" class="app-status" role="status" hidden></p>
+        <section class="panel" id="cardsView"><h2>ㄅ 注音卡</h2><div class="group-bar"><button id="prevGroup" type="button" data-speech="上一組">⬅️ 上一組</button><strong id="groupName">聲母一</strong><span id="groupPager">1 / 5</span><button id="nextGroup" type="button" data-speech="下一組">下一組 ➡️</button></div><p class="audio-notice" id="audioNotice" aria-live="polite">目前使用臺灣華語系統語音備援；單一注音可能不準，可聽例字輔助。</p><div class="card-grid" id="symbolCards"></div></section>
+        <section class="panel" id="learnView"><h2>🔤 認識注音</h2><div class="card-grid all-symbols" id="learnCards"></div></section>
+        <section class="panel" id="listenView"><h2>🔊 聽一聽</h2><div class="quiz-card"><button class="primary-action" id="playPrompt" type="button" data-speech="聽一聽">🔊 聽注音</button><button type="button" class="inline-action" id="playExamplePrompt">🔊 聽例字</button><p class="audio-notice">系統語音可能不準，可聽例字輔助。</p><div class="choice-grid" id="listenChoices"></div><button class="primary-action quiz-next" id="nextListen" type="button" hidden>➡️ 下一題</button><div class="feedback" aria-live="polite" id="listenFeedback">👇 選答案</div></div></section>
+        <section class="panel" id="spellView"><h2>🧩 拼一拼</h2><div class="quiz-card"><label>難度 <select id="difficulty"><option value="beginner">🌱 初級</option><option value="advanced">🌟 進階</option></select></label><div class="spell-prompt" id="spellPrompt"></div><div class="choice-grid" id="spellChoices"></div><button class="primary-action" id="nextSpell" type="button" data-speech="下一題">➡️ 下一題</button><div class="feedback" aria-live="polite" id="spellFeedback">👇 選答案</div></div></section>
+        <section class="panel" id="wordView"><h2>🖼️ 看圖認字</h2><div class="quiz-card picture-card"><div class="picture" id="picturePrompt">🌈</div><p class="hint" id="wordHint">👇 選答案</p><div class="choice-grid" id="wordChoices"></div><button class="primary-action quiz-next" id="nextWord" type="button" hidden>➡️ 下一題</button><div class="feedback" aria-live="polite" id="wordFeedback">🌱 再試一次也很棒</div></div></section>
+        <section class="panel" id="parentView"><h2>家長模式</h2><div class="parent-box" id="parentBox"></div></section>
+      </main>
+      <footer class="version" id="versionLine"></footer>
+    </div>
+    <dialog id="parentGate" aria-labelledby="parentGateTitle">
+      <h2 id="parentGateTitle">這裡由家長操作</h2>
+      <p>裡面有裝置上的學習紀錄與設定。請把裝置交給家長。</p>
+      <div class="tool-grid"><button id="cancelParent" type="button">返回遊戲</button><button id="unlockParent" type="button">我是家長，繼續</button></div>
+    </dialog>
+    <template id="rubyRequirement"><ruby>聽<rt>ㄊㄧㄥ</rt></ruby></template>
+    <script src="src/version.js?v=V2.0.0" defer></script>
+    <script src="src/storage.js?v=V2.0.0" defer></script>
+    <script src="src/ticket-ledger.js?v=V2.0.0" defer></script>
+    <script src="src/island.js?v=V2.0.0" defer></script>
+    <script src="src/curriculum.js?v=V2.0.0" defer></script>
+    <script src="src/app.js?v=V2.0.0" defer></script>
+  </body>
 </html>

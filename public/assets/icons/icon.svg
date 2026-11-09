@@ -1,11 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="注音小蜜蜂 icon">
-  <rect width="512" height="512" rx="112" fill="#ffcf4a"/>
-  <circle cx="256" cy="264" r="132" fill="#fff9e8"/>
-  <path d="M162 244h188M168 304h176" stroke="#263238" stroke-width="28" stroke-linecap="round"/>
-  <circle cx="210" cy="230" r="18" fill="#263238"/>
-  <circle cx="302" cy="230" r="18" fill="#263238"/>
-  <path d="M226 300c22 20 44 20 66 0" fill="none" stroke="#263238" stroke-width="18" stroke-linecap="round"/>
-  <text x="256" y="118" text-anchor="middle" font-size="86" font-family="sans-serif" font-weight="800" fill="#263238">ㄅ</text>
-  <path d="M122 216c-54-28-72-82-44-112 38-40 94 14 116 86" fill="#dff6ff" stroke="#263238" stroke-width="12" opacity=".85"/>
-  <path d="M390 216c54-28 72-82 44-112-38-40-94 14-116 86" fill="#dff6ff" stroke="#263238" stroke-width="12" opacity=".85"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="注音動物島圖示：海上的小島與動物朋友">
+  <rect width="512" height="512" fill="#a9e7ed"/>
+  <circle cx="256" cy="256" r="204" fill="#fff4cc"/>
+  <path d="M61 300c50-23 87-20 130 0s88 22 132 0 85-21 128 0v83H61z" fill="#66c9d7"/>
+  <path d="M93 345c40-15 71-13 106 1s74 15 109-1 73-16 111 0" fill="none" stroke="#d9f7f4" stroke-width="12" stroke-linecap="round"/>
+  <path d="M114 300c18-34 71-53 142-53s124 19 142 53c-13 32-73 52-142 52s-129-20-142-52z" fill="#e9b968" stroke="#7c633b" stroke-width="8"/>
+  <path d="M127 294c23-27 70-41 129-41s107 14 129 41c-25 16-71 24-129 24s-104-8-129-24z" fill="#80c886"/>
+  <path d="M330 273c8-31 8-57 0-83" fill="none" stroke="#815d3b" stroke-width="12" stroke-linecap="round"/>
+  <path d="M330 199c-23-32-43-24-50-13 15 0 30 7 43 19-23-10-40-2-42 12 16-6 31-5 46-2 13-12 29-18 44-17-8-13-24-19-41 1z" fill="#4d9d67"/>
+  <circle cx="216" cy="239" r="56" fill="#f9d19c" stroke="#79543d" stroke-width="7"/>
+  <circle cx="177" cy="201" r="21" fill="#f9d19c" stroke="#79543d" stroke-width="7"/>
+  <circle cx="255" cy="201" r="21" fill="#f9d19c" stroke="#79543d" stroke-width="7"/>
+  <ellipse cx="216" cy="255" rx="25" ry="17" fill="#fff2d9"/>
+  <circle cx="198" cy="235" r="5" fill="#553d32"/><circle cx="234" cy="235" r="5" fill="#553d32"/>
+  <path d="M211 249h10m-5 0v8m-10 3c6 6 14 6 20 0" fill="none" stroke="#79543d" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="350" cy="145" r="20" fill="#ffd15d"/>
+  <path d="M135 149c8-14 18-19 30-12 8-19 33-17 40 1 11-3 20 2 23 11z" fill="#fff"/>
 </svg>

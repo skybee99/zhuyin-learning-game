@@ -8,15 +8,52 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
         with:
-          node-version: '20'
-      - name: Validate app files and PWA settings
-        run: node tests/validate-app.js
-      - name: Check app JavaScript syntax
-        run: node --check public/src/app.js
-      - name: Check service worker syntax
-        run: node --check public/service-worker.js
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install locked dependencies
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p .browser-evidence
+          npm ci 2>&1 | tee .browser-evidence/npm-ci.log
+      - name: Install Chromium
+        shell: bash
+        run: |
+          set -o pipefail
+          npx playwright install --with-deps chromium 2>&1 | tee .browser-evidence/chromium-install.log
+          echo "CHROME_PATH=$(node -e "process.stdout.write(require('@playwright/test').chromium.executablePath())")" >> "$GITHUB_ENV"
+      - name: JavaScript syntax
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run check:syntax 2>&1 | tee .browser-evidence/syntax.log
+      - name: Data and offline shell
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run test:static 2>&1 | tee .browser-evidence/static.log
+      - name: Real IndexedDB transaction checks
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run test:ledger 2>&1 | tee .browser-evidence/ledger.log
+      - name: Browser integration tests
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run test:browser 2>&1 | tee .browser-evidence/browser.log
+      - name: Preserve test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pwa-validation-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            .browser-evidence/
+            playwright-report/
+            test-results/
+          if-no-files-found: warn
+          include-hidden-files: true

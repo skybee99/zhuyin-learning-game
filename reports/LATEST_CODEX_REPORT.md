@@ -1,56 +1,26 @@
-# LATEST CODEX REPORT — V1.3.2
+# 注音動物島 V2.0.0｜Windows 本機整合候選報告
 
-## 修正檔案
+日期：2026-11-09（UTC+7）。基準：`8f4f1fa7feeed11515116bd2251691faf10f0a82`（main，PR #12）。本文件跟隨候選 commit；PR、Actions、部署和備份雲端讀回的獨立回執以交付報告為準。
 
-- `public/src/app.js`：資料載入、已驗證題池、功能卡、家長備份中心、匯入摘要與版本資訊。
-- `public/src/styles.css`：手機直式、功能卡、看圖認字卡片、注音與聲調尺寸。
-- `public/data/characters.json`：人工審核核心國字資料。
-- `public/data/words.json`：人工審核核心詞語資料。
-- `public/data/media-map.json`：圖片/Emoji 與字詞關聯資料。
-- `public/data/questions.json`：正式模式可用題庫題目。
-- `public/service-worker.js`、`public/manifest.json`、`public/index.html`：V1.3.2 與離線資料快取。
-- `tests/validate-app.js`：更新 V1.3.2 與新資料檔驗證。
-- 專案管理文件：`PROGRESS.md`、`TASKS.md`、`DECISIONS.md`、`CHANGELOG.md`。
+開工規劃：基準 36 個受控檔、160,243 bytes；估計 8–14 工程小時、15–35 萬模型 tokens（含平行開發和驗證）、0.5–1.5 GB 瀏覽器測試空間，並非用量或完工時間實測。集中在同一分支，讓角色遷移、題庫、交易和 Service Worker 可交叉驗證；保留 PRE、實作、驗證、交付四個關卡。主要風險是裝置資料、雙分頁交易、舊版 PWA 快取、來源授權和公開範圍。
 
-## 看圖認字資料一致性
+| 驗收項目 | 狀態 | 具體證據與剩餘範圍 |
+|---|---|---|
+| A：開工 PRE 及保護 | PASS／NOT_RUN | 基準快照解壓後 36/36 Git blob 相符，完整 Git bundle 驗證。第一次 Windows 換行轉換造成 exact blob 比對失敗，保留收據；停用轉換後重作通過。真實孩子匯出未取得，既有資料不得說已備份。 |
+| A：三角色遷移 | PASS／NOT_RUN | `public/src/storage.js`、`tests/browser/upgrade-and-backup.spec.cjs`：三組合成舊角色 7/11/17 星、進度／設定／字庫，基準原始鍵不被改寫；新版另外加上帳本成就。實體裝置另驗。 |
+| A：歷史字庫 | PASS／PARTIAL | `reports/DICTIONARY_AUDIT.md`：歷史 360 列→130 字，兩版各 240 詞列→158／240 不同詞；840 列隔離待審。Git 基準與候選核心資料 blob 相同；Windows checkout CRLF 和 Git LF 的原始 bytes 不同，內容正規化後相同。家長裝置字庫仍 UNKNOWN。 |
+| B：島圖與原有五模式 | PASS／PARTIAL | Windows Chrome：地圖、清單、島友、卡片、認識注音 37 筆、聽一聽、初／進階拼音、看圖認字、收藏／布置。現行 14 詞與 14 題皆通過同筆結構校驗；人工逐項圖意及語音實聽仍未驗。 |
+| C：設施 | PASS／PARTIAL | `tests/browser/island.spec.cjs`：旋轉木馬約 18 秒、雲霄飛車約 20 秒，可選動物、車色、確認、動畫、揮手、暫停／跳過、返回、減少動態。Chrome 驗證動作；實際設備音效仍待。 |
+| D：遊樂券交易 | PASS／PARTIAL | `tests/test-ticket-ledger.cjs` Chrome 真實 IndexedDB 24 項；另有兩分頁連點、離線重啟、隔離驗證。每題第一次完成發券，同題近 10 個已完成回合內最多 2 張並記錄未發券；星星不扣。未開始的預留取消／逾期會退款；強制關閉恰落在 durable start 到第一個動畫 frame 的極短窗口，可能留下已開始、已扣款，不能保證全退。 |
+| E：南一教材 | PASS／BLOCKED | `public/src/curriculum.js`：三本分級路徑、來源、待審、引用、自由描寫；三冊內容皆 WAITING_FOR_SOURCE。只有封面，沒有課次或生字正文；不編造來源。自由描寫不發券；分級詞語配對、造句與短句理解未擴充成額外題庫。 |
+| F：PWA 自動化 | PASS | 實際 V1.3.2 Worker→V2.0.0、等待更新、清理專案快取並保留他站快取；離線重開可讀題、完成、保留回合與券，恢復網路後資料仍在；導覽 URL 沒寫入快取。測試使用合成資料。 |
+| F：iPhone／iPad | NOT_RUN | Safari 一般／私密分頁、安裝主畫面、iPhone 直式、iPad 直式／橫式、語音、描寫、升級、重啟、離線、恢復網路，以及歷史 iPhone Chrome／Zalo WebView 均未實測。Safari 分頁和主畫面可能有各自儲存空間，兩邊分別匯出及測試。 |
+| G：本機測試／CI／交付 | PASS／另見回執 | 本機 Node、核心資料、聲調、教材、24 帳本檢查及 7 個 Playwright 情境；Workflow 上傳原始 stdout 與瀏覽器產物。遠端 CI、Draft PR 和 G 槽雲端原檔驗證須依獨立回執，不由本文件自我宣告。 |
+| G：Cloudflare、D1 | NOT_RUN／BLOCKED | 本機 Worker 路由驗證；無 D1 binding，字庫回 503；文件解析及未認證寫入明確回 501。沒有部署或正式帳號驗收。舊有部署 403 是歷史紀錄，本輪未發動正式部署；也未觸發 main 合併。 |
+| H：公開範圍 | PASS（限候選快照）／PARTIAL（歷史） | 移除目前檔案中的既有明文名字；固定字串及常見金鑰掃描沒有命中。舊槽用固定雜湊做相容遷移；既有 Git 歷史和舊 diff 仍可見，沒有重寫歷史。受控快照不含 Git 歷史、裝置備份、憑證或教材掃描。 |
 
-- 一題對應一筆 `questions.json` 題目，題目以 `correctAnswerId` 反查 `words.json`。
-- 詞語需通過 `validWordQuestion()`：approved/reviewed/verified、speechText 等於詞語、targetCharacter 對應 targetIndex、逐字注音存在，且有已驗證媒體或 Emoji。
-- `media-map.json` 預留 source、license、author、verified 欄位；目前使用內建 Emoji，不抓隨機外部圖片。
+已知限制：正式真人錄音、經人工核對的正式題圖、逐字錄音時間戳、DOCX／PDF／OCR、正式 D1 與家長登入仍待。語音以 zh-TW 系統合成及例字輔助，單音可能不準；設施用獨立音效。V2 的 PNG 圖示已生成，iOS 外觀未實測。家長匯入需顯示差異、明確確認和完整本機 PRE 雜湊驗證，只合併／覆蓋受支援角色欄位和本機字庫。交易帳本、教材待審、布置可備份，未提供跨裝置整體寫回；不能以匯出代替還原驗收。對於不支援 Web Locks 或不允許本機儲存的瀏覽器，資料寫入無法驗收。帳本長期容量及受控交易修復仍待。未取得設備資料時勿推算真實學習成績。
 
-## 注音與聲調顯示
+回復：候選開發可關閉 Draft PR 或在另開工作分支上 revert；不重寫 main 或歷史。正式未部署時沒有需要回復的正式版本。未來正式上線前先在各真機匯出並驗證，再留存前版部署 ID；程式回退與資料還原分開，V1 舊鍵保留但不會顯示 V2 新交易。不要刪 localStorage、IndexedDB 或裝置紀錄來排除故障。
 
-- 持續使用自訂直排注音元件，聲調由 `.zhuyin-tone` 獨立定位。
-- V1.3.2 加大 `.bopomofo-vertical` 與 `.zhuyin-tone`，避免聲調太小或貼近其他字。
-
-## 手機版面
-
-- 主容器縮至更適合直式閱讀的寬度。
-- 首頁功能卡保持 2 欄、降低卡片高度與文字壓力。
-- 看圖認字圖片、提示文字與答案區加大間距，手機保留清楚觸控區。
-
-## 主題卡
-
-- 功能卡只顯示：🐶 注音卡、🦉 認識注音、🐘 聽一聽、🦊 拼一拼、🐼 看圖認字、🐻 家長。
-- 移除「兔子花園」「狐狸拼圖屋」「大象音樂池」等長副標題。
-- Lisa、Jack、Kyky 維持相同 `storybook-zoo` 視覺風格。
-
-## 字庫與備份
-
-- 家長字庫管理保留查看搜尋、新增國字、新增詞語、文件匯入、資料檢查、清除 App 快取。
-- 新增備份中心：匯出全部資料、字庫、圖片關聯、小孩成績、使用紀錄。
-- JSON 匯入會顯示版本、備份日期與各類筆數，並先自動備份目前資料；合併/覆蓋寫入仍列為後續待辦。
-
-## 測試結果
-
-- `node --check public/src/app.js`：通過。
-- `node --check public/service-worker.js`：通過。
-- `node tests/validate-app.js`：通過。
-- `node tests/validate-zhuyin-tones.js`：通過。
-- `node tests/validate-dictionary-media.js`：通過。
-
-## 已知限制
-
-- 本環境無法執行實體 iPhone Safari、iPhone Chrome、Zalo WebView、iPad Safari 驗收。
-- 匯入目前完成安全摘要與自動備份，尚未直接覆寫正式資料。
-- 正式本地圖片與真人錄音仍待後續補檔。
+下一步：家長逐設備安全匯出→實測 iPhone Safari 和 iPad 直／橫、主畫面與音效→確認南一版次與來源證據、逐課審核→檢視 PR／CI，再由使用者確認 merge 和正式 Cloudflare 發布。
