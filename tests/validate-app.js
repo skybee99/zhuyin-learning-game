@@ -21,9 +21,9 @@ assert(!wrangler.includes('"d1_databases"') && !wrangler.includes('replace-with-
 const manifest = JSON.parse(read('public/manifest.json'));
 assert(manifest.display === 'standalone' && manifest.scope === '/', 'Manifest display or scope invalid');
 for (const size of ['192x192','512x512']) assert(manifest.icons.some(i => i.sizes === size && fs.existsSync(path.join(pub, i.src.replace(/^\//,'')))), `Manifest missing ${size} icon`);
-const html = read('public/index.html').replace(/\?v=V[0-9.]+/g, '');
+const html = read('public/index.html').replace(/\?v=V[0-9.]+(?:-explore\.[0-9]+)?/g, '');
 for (const id of ['profileView','cardsView','learnView','listenView','wordView','spellView','parentView','islandView','ridesView','collectionView','curriculumView']) assert(html.includes(`id="${id}"`), `Missing ${id}`);
-const scriptOrder = ['version','storage','ticket-ledger','island','curriculum','app'];
+const scriptOrder = ['version','storage','ticket-ledger','island-world','island-explore','island','curriculum','app'];
 let position = -1;
 for (const name of scriptOrder) {
   const regex = new RegExp(`<script\\s+src="src/${name}\\.js"\\s+defer></script>`);
@@ -41,7 +41,7 @@ assert(categories.length === 17 && chars.length >= 12 && words.length >= 12, 'Au
 const sw = read('public/service-worker.js');
 for (const token of ["importScripts('/src/version.js')", 'APP_SHELL', 'canCacheStaticResponse', "request.mode !== 'navigate'", "request.mode === 'navigate'", 'SKIP_WAITING', 'clients.claim', "cache.match('/offline.html')"]) assert(sw.includes(token), `Service worker missing ${token}`);
 assert(!/cache\.put\(event\.request/.test(sw), 'Navigation request must not be written to cache');
-const sandbox = { ZHUYIN_RELEASE: {version:'test'}, importScripts() {}, self: { addEventListener() {} }, Set };
+const sandbox = { ZHUYIN_RELEASE: {assetRevision:'test'}, importScripts() {}, self: { addEventListener() {} }, Set };
 vm.createContext(sandbox);
 vm.runInContext(sw + '\nthis.testShell = APP_SHELL;', sandbox);
 assert(sandbox.testShell.includes('/offline.html') && !sandbox.testShell.includes('/') && !sandbox.testShell.includes('/index.html'), 'Invalid offline shell allowlist');

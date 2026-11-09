@@ -84,6 +84,7 @@ test('coaster movement, interruption and reload retain one charge', async ({ pag
 test('touch targets and island layout fit phone and tablet widths', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await selectChild(page);
+  await page.locator('.island-classic summary').click();
   const mapTargets = page.locator('#islandView .map-place');
   for (const target of await mapTargets.all()) {
     const box = await target.boundingBox();

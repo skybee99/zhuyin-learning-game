@@ -5,6 +5,7 @@
   const STORE = 'children';
   const VERSION = 1;
   const RESERVATION_MS = 30000;
+  const PAINT_ACK_POLICY = 'paint-ack-v1';
   const REPEAT_WINDOW = 10;
   const REPEAT_LIMIT = 2;
   const copy = value => JSON.parse(JSON.stringify(value));
@@ -161,17 +162,37 @@
       async reserveRide(childId, input) {
         return change(childId, s => {
           const operationId = requireId(input.operationId, 'operationId'), rideName = requireId(input.ride, 'ride');
+          if (input.startPolicy !== undefined && input.startPolicy !== PAINT_ACK_POLICY) throw new Error('Invalid ride start policy');
           const prior = s.rides[operationId];
-          if (prior) { if (prior.ride !== rideName) throw new Error('Operation ID conflict'); return { reservation: copy(prior) }; }
+          if (prior) {
+            if (prior.ride !== rideName || (input.startPolicy !== undefined && prior.startPolicy !== input.startPolicy)) throw new Error('Operation ID conflict');
+            return { reservation: copy(prior) };
+          }
           if (s.balance < 1) throw new Error('Insufficient tickets');
           const now = Date.now(), reservation = { operationId, ride: rideName, status: 'reserved', reservedAt: now, expiresAt: now + RESERVATION_MS };
+          if (input.startPolicy === PAINT_ACK_POLICY) { reservation.startPolicy = PAINT_ACK_POLICY; reservation.phase = 'reserved'; }
           s.balance--; s.rides[operationId] = reservation; log(s, { type: 'ride_debit', operationId, ride: rideName, amount: -1 });
           return { reservation: copy(reservation) };
+        });
+      },
+      // A UI acknowledgment, not independent proof that physical pixels were seen.
+      // This phase remains refundable until startRide commits.
+      async markRidePainted(childId, operationId) {
+        return change(childId, s => {
+          const r = s.rides[requireId(operationId, 'operationId')];
+          if (!r) throw new Error('Ride reservation missing');
+          if (r.startPolicy !== PAINT_ACK_POLICY) throw new Error('Ride paint policy missing');
+          if (r.status === 'reserved' && r.phase === 'reserved') {
+            r.phase = 'painted'; r.paintedAt = Date.now();
+            log(s, { type: 'ride_paint_ack', operationId, ride: r.ride, amount: 0 });
+          }
+          return { reservation: copy(r) };
         });
       },
       async startRide(childId, operationId) {
         return change(childId, s => {
           const r = s.rides[requireId(operationId, 'operationId')]; if (!r) throw new Error('Ride reservation missing');
+          if (r.status === 'reserved' && r.startPolicy === PAINT_ACK_POLICY && r.phase !== 'painted') throw new Error('Ride paint acknowledgment required');
           if (r.status === 'reserved') { r.status = 'started'; r.startedAt = Date.now(); log(s, { type: 'ride_started', operationId, ride: r.ride, amount: 0 }); }
           return { reservation: copy(r) };
         });
@@ -201,6 +222,6 @@
       }
     };
   }
-  root.TicketLedger = Object.freeze({ open, RESERVATION_MS, REPEAT_WINDOW, REPEAT_LIMIT });
+  root.TicketLedger = Object.freeze({ open, RESERVATION_MS, REPEAT_WINDOW, REPEAT_LIMIT, PAINT_ACK_POLICY });
   if (typeof module !== 'undefined' && module.exports) module.exports = root.TicketLedger;
 })(globalThis);

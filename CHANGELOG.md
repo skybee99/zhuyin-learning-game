@@ -68,3 +68,10 @@
 ## V2.0.0 candidate — 2026-11-09
 
 Development candidate for an original island theme, local transaction ledger, anonymized profile migration and staged textbook curriculum. This entry does not claim tests, release, or real-device acceptance. Previous release records remain historical.
+
+## V2.0.0 候選資產修訂 explore.1
+
+- 新增 Q 版人偶、髮型／服色／配件、四向行走、動作與跟隨鏡頭。
+- 新增搖桿、鍵盤、地圖點擊、障礙碰撞、A*、NPC、中央廣場回復與角色隔離。
+- 兩座原設施可從探索入口搭乘並回到原地，沿用既有券帳本，增加開始畫面確認及中斷復原證據。
+- 增加 PWA 同版本資產更新、瀏覽器尺寸和探索流程驗收。

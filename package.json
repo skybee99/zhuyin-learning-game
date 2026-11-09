@@ -2,8 +2,8 @@
   "name": "zhuyin-animal-island",
   "private": true,
   "scripts": {
-    "check:syntax": "node --check public/src/app.js && node --check public/src/storage.js && node --check public/src/ticket-ledger.js && node --check public/src/island.js && node --check public/src/curriculum.js && node --check public/src/version.js && node --check public/service-worker.js && node --check src/worker.js",
-    "test:static": "node tests/validate-app.js && node tests/validate-dictionary-media.js && node tests/validate-zhuyin-tones.js && node tests/test-curriculum.js && node tests/test-worker.mjs && node scripts/rebuild-shell.cjs --check",
+    "check:syntax": "node --check public/src/app.js && node --check public/src/storage.js && node --check public/src/ticket-ledger.js && node --check public/src/island.js && node --check public/src/island-world.js && node --check public/src/island-explore.js && node --check public/src/curriculum.js && node --check public/src/version.js && node --check public/service-worker.js && node --check src/worker.js",
+    "test:static": "node tests/validate-app.js && node tests/validate-dictionary-media.js && node tests/validate-zhuyin-tones.js && node tests/test-curriculum.js && node tests/test-island-world.cjs && node tests/test-worker.mjs && node scripts/rebuild-shell.cjs --check",
     "test:ledger": "node tests/test-ticket-ledger.cjs",
     "test:browser": "playwright test",
     "test": "npm run check:syntax && npm run test:static && npm run test:ledger && npm run test:browser"

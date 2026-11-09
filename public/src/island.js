@@ -1,7 +1,7 @@
 /* Original local island artwork and ride interaction. No network assets. */
 (function (global) {
   'use strict';
-  let api = {}, view = '', ride = null, generation = 0, sound = null;
+  let api = {}, view = '', ride = null, sound = null;
   const $ = (s, root = document) => root.querySelector(s);
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const animals = ['🐰','🐻','🐱','🐸'];
@@ -14,30 +14,349 @@
   function refresh() { document.querySelectorAll('[data-island-profile]').forEach(x => { x.textContent = `${profile().avatar || '🐾'} ${profile().name || '島上朋友'}`; }); document.querySelectorAll('[data-island-stars]').forEach(x => { x.textContent = String(profile().stars ?? 0); }); document.querySelectorAll('[data-island-balance]').forEach(x => { x.textContent = balance() === null ? '—' : String(balance()); }); }
   function map() {
     const el = $('#islandView'); if (!el) return;
-    el.innerHTML = `${header('歡迎來到注音動物島', '一起探索、學習，收藏屬於你的快樂。')}
-    <div class="island-map" role="group" aria-label="動物島地圖">
+    const classicMap = `<div class="island-map" role="group" aria-label="動物島地圖">
       <div class="map-sun" aria-hidden="true">☀</div><div class="map-cloud cloud-one" aria-hidden="true"></div><div class="map-cloud cloud-two" aria-hidden="true"></div>
       <div class="map-land" aria-hidden="true"><div class="map-path"></div><div class="map-pond"></div><span class="map-tree tree-a">🌳</span><span class="map-tree tree-b">🌴</span><span class="map-tree tree-c">🌲</span><span class="map-flower">🌼</span></div>
       <div class="map-plaza"><span>⛲</span><strong>中央廣場</strong><small>今天想去哪裡？</small></div>
       <button type="button" class="map-place map-village" data-go="cardsView"><span>🏠</span><strong>學習動物村</strong><small>和朋友一起學注音</small></button>
       <button type="button" class="map-place map-park" data-go="ridesView"><span>🎠 🎢</span><strong>歡樂遊樂園</strong><small>遊樂券帶你去兜風</small></button>
       <button type="button" class="map-place map-garden" data-go="collectionView"><span>🐰 🌷</span><strong>動物花園</strong><small>布置自己的小角落</small></button>
-    </div><div class="island-section-title"><div><p class="island-kicker">EXPLORE THE ISLAND</p><h3>想去哪裡？</h3></div><span>點選一個地方出發 ↗</span></div>
-    <div class="island-destinations"><button data-go="cardsView">🐶 <span><b>注音卡</b><small>跟著聲音認識注音</small></span>↗</button><button data-go="learnView">🦉 <span><b>認識注音</b><small>一起看看所有注音</small></span>↗</button><button data-go="listenView">🐘 <span><b>聽一聽</b><small>仔細聽，再選答案</small></span>↗</button><button data-go="spellView">🦊 <span><b>拼一拼</b><small>拼出正確的聲音</small></span>↗</button><button data-go="wordView">🐼 <span><b>看圖認字</b><small>看看圖片找文字</small></span>↗</button><button data-go="curriculumView">📚 <span><b>學習路線</b><small>看看學習旅程</small></span>↗</button><button data-go="ridesView">🎠 <span><b>遊樂園</b><small>搭乘快樂設施</small></span>↗</button><button data-go="collectionView">🌷 <span><b>動物花園</b><small>動物與布置</small></span>↗</button></div><button class="island-parent" data-go="parentView">家長專區 ↗</button>`; refresh();
+    </div>`;
+    el.innerHTML = `${header('歡迎來到注音動物島', '一起探索、學習，收藏屬於你的快樂。')}
+    <section id="islandExplore" aria-label="人偶自由探索"></section><div class="island-section-title"><div><p class="island-kicker">EXPLORE THE ISLAND</p><h3>想去哪裡？</h3></div><span>點選一個地方出發 ↗</span></div>
+    <div class="island-destinations"><button data-go="cardsView">🐶 <span><b>注音卡</b><small>跟著聲音認識注音</small></span>↗</button><button data-go="learnView">🦉 <span><b>認識注音</b><small>一起看看所有注音</small></span>↗</button><button data-go="listenView">🐘 <span><b>聽一聽</b><small>仔細聽，再選答案</small></span>↗</button><button data-go="spellView">🦊 <span><b>拼一拼</b><small>拼出正確的聲音</small></span>↗</button><button data-go="wordView">🐼 <span><b>看圖認字</b><small>看看圖片找文字</small></span>↗</button><button data-go="curriculumView">📚 <span><b>學習路線</b><small>看看學習旅程</small></span>↗</button><button data-go="ridesView">🎠 <span><b>遊樂園</b><small>搭乘快樂設施</small></span>↗</button><button data-go="collectionView">🌷 <span><b>動物花園</b><small>動物與布置</small></span>↗</button></div><details class="island-classic"><summary>原版島嶼地圖</summary>${classicMap}</details><button class="island-parent" data-go="parentView">家長專區 ↗</button>`;
+    global.IslandExplore?.mount($('#islandExplore', el), {
+      childId: childId(), navigate: api.navigate, ride: openRide, speak: api.speak, stopSpeech: api.stopSpeech, getSettings: settings
+    });
+    refresh();
   }
   function collection() { const el=$('#collectionView'); if(!el)return; let selection='🌷'; try { selection=localStorage.getItem('zhuyin-island-decor-'+childId()) || selection; } catch (_) {} if(!['🌷','🌻','🍄','🪴'].includes(selection)) selection='🌷';
     el.innerHTML=`${header('動物花園', '替動物朋友佈置一個舒服的角落。')}<button class="island-back" data-go="islandView">← 返回島嶼</button><div class="garden-layout"><div class="garden-scene"><span class="garden-sun">☀️</span><div class="garden-house">🏡</div><div class="garden-friends">🐰 🐻 🐸</div><div class="garden-decor" aria-label="目前佈置">${selection} ${selection} ${selection}</div></div><div class="garden-controls"><p class="island-kicker">MY LITTLE GARDEN</p><h3>我的小花園</h3><p>選一種喜歡的裝飾，放進花園裡。</p><div class="decor-options">${['🌷','🌻','🍄','🪴'].map((d,i)=>`<button type="button" data-decor="${d}" aria-label="選擇${['鬱金香','向日葵','蘑菇','盆栽'][i]}" aria-pressed="${d===selection}">${d}</button>`).join('')}</div><p class="garden-note" aria-live="polite">布置保存在這台裝置。</p><h4>島上的朋友</h4><div class="friend-list">🐰 兔兔　🐻 熊熊　🐸 青蛙　🐱 貓咪</div></div></div>`; refresh(); }
   function rides() { const el=$('#ridesView'); if(!el)return; el.innerHTML=`${header('歡樂遊樂園', '選一座設施，邀請動物朋友一起出發！')}<button class="island-back" data-go="islandView">← 返回島嶼</button><div class="ride-selection"><button class="ride-card carousel-card" data-ride="carousel"><span class="ride-art">🎠</span><span class="ride-label"><small>GENTLE RIDE · 18 秒</small><b>旋轉木馬</b><span>和動物朋友慢慢轉一圈</span><strong>🎟️ 1 張遊樂券　↗</strong></span></button><button class="ride-card coaster-card" data-ride="coaster"><span class="ride-art">🎢</span><span class="ride-label"><small>HAPPY RIDE · 20 秒</small><b>雲霄飛車</b><span>翻過小山丘，迎風出發</span><strong>🎟️ 1 張遊樂券　↗</strong></span></button></div><p class="ride-footnote">星星是學習成就；遊樂券可以用來搭乘設施。</p>`; refresh(); }
-  function setup(type) { ride={type, animal:'🐰', color:'coral', status:'setup', elapsed:0, duration:type==='carousel'?18000:20000, op:null, reserved:false, started:false, paused:false, raf:0, last:0}; renderRide(); }
-  function renderRide() { const el=$('#ridesView'); if(!el || !ride)return; const r=ride, carousel=r.type==='carousel'; el.innerHTML=`${header(carousel?'旋轉木馬':'雲霄飛車', carousel?'挑選喜歡的動物座位，準備慢慢轉圈。':'挑選乘客和車廂顏色，一起翻越小山丘。')}<button class="island-back" data-ride-action="return">← 返回遊樂園</button><div class="ride-stage ${carousel?'stage-carousel':'stage-coaster'}" aria-label="${carousel?'旋轉木馬':'雲霄飛車'}遊樂畫面"><div class="stage-sun">☀</div><div class="stage-cloud">☁️</div>${carousel?'<div class="carousel-canopy"></div><div class="carousel-pole"></div><div class="carousel-base"></div>':'<svg class="coaster-track" viewBox="0 0 600 250" aria-hidden="true"><path d="M 10 195 C 100 195 100 80 180 95 S 280 210 355 145 S 455 40 590 135" fill="none" stroke="#bf755c" stroke-width="15" stroke-linecap="round"/><path d="M 10 195 C 100 195 100 80 180 95 S 280 210 355 145 S 455 40 590 135" fill="none" stroke="#fff3ce" stroke-width="4" stroke-dasharray="7 10"/></svg>'}<div class="ride-vehicle ${r.color}" aria-hidden="true"><span class="ride-animal">${r.animal}</span><span class="ride-seat">${carousel?'🐎':'🚃'}</span></div><div class="stage-ground"></div></div><div class="ride-panel"><div><p class="island-kicker">${carousel?'CAROUSEL':'ROLLER COASTER'}</p><h3>${carousel?'選擇動物座位':'選擇動物乘客'}</h3><div class="animal-options">${animals.map((a,i)=>`<button data-animal="${a}" aria-label="選擇${['兔子','熊','貓','青蛙'][i]}" aria-pressed="${a===r.animal}" ${r.status!=='setup'?'disabled':''}>${a}</button>`).join('')}</div>${carousel?'':`<h4>車廂顏色</h4><div class="color-options">${[['coral','珊瑚紅'],['blue','天空藍'],['yellow','陽光黃']].map(([c,n])=>`<button class="color-${c}" data-color="${c}" aria-label="${n}" aria-pressed="${r.color===c}" ${r.status!=='setup'?'disabled':''}>${n}</button>`).join('')}</div>`}</div><div class="ride-actions"><p class="ride-status" role="status" aria-live="polite">${r.message || (r.status==='setup'?'每次搭乘 1 張遊樂券，準備好了嗎？':'')}</p>${r.status==='setup'?'<button class="ride-primary" data-ride-action="confirm">確認票價並開始 🎟️</button>':r.status==='confirm'?'<p class="ride-confirm">這一趟需要 1 張遊樂券。開始後會扣除，準備出發嗎？</p><button class="ride-primary" data-ride-action="start">確認搭乘</button><button data-ride-action="cancel">再想一想</button>':r.status==='busy'?'<p>正在準備設施，請稍等…</p>':r.status==='running'?`<progress max="100" value="${Math.floor(r.elapsed/r.duration*100)}" aria-label="搭乘進度"></progress><div class="ride-button-row"><button data-ride-action="pause">${r.paused?'繼續':'暫停'}</button><button data-ride-action="skip">跳過並結束</button><button data-ride-action="sound" aria-pressed="${!r.muted}">${r.muted?'🔇 開啟音效':'🔊 關閉音效'}</button></div>`:'<button class="ride-primary" data-ride-action="return">返回遊樂園</button>'}</div></div>`; refresh(); if(r.status==='running') draw(); }
+  function openRide(type) {
+    if (['carousel', 'coaster'].includes(type)) api.navigate?.('ridesView', { ride: type, fromIsland: true });
+  }
+
+  function setup(type, fromIsland = false) {
+    ride = {
+      type, fromIsland, animal: '🐰', color: 'coral', status: 'setup', elapsed: 0,
+      duration: type === 'carousel' ? 18000 : 20000,
+      op: null, reserved: false, started: false, paused: false, raf: 0, last: 0, waved: false
+    };
+    renderRide();
+  }
+
+  function isStarting() { return ride?.status === 'busy'; }
+  function renderRide() { const el=$('#ridesView'); if(!el || !ride)return; const r=ride, carousel=r.type==='carousel'; el.innerHTML=`${header(carousel?'旋轉木馬':'雲霄飛車', carousel?'挑選喜歡的動物座位，準備慢慢轉圈。':'挑選乘客和車廂顏色，一起翻越小山丘。')}<button class="island-back" data-ride-action="return" ${isStarting() ? 'disabled' : ''}>← ${r.fromIsland ? '返回島嶼' : '返回遊樂園'}</button><div class="ride-stage ${carousel?'stage-carousel':'stage-coaster'}" aria-label="${carousel?'旋轉木馬':'雲霄飛車'}遊樂畫面"><div class="stage-sun">☀</div><div class="stage-cloud">☁️</div>${carousel?'<div class="carousel-canopy"></div><div class="carousel-pole"></div><div class="carousel-base"></div>':'<svg class="coaster-track" viewBox="0 0 600 250" aria-hidden="true"><path d="M 10 195 C 100 195 100 80 180 95 S 280 210 355 145 S 455 40 590 135" fill="none" stroke="#bf755c" stroke-width="15" stroke-linecap="round"/><path d="M 10 195 C 100 195 100 80 180 95 S 280 210 355 145 S 455 40 590 135" fill="none" stroke="#fff3ce" stroke-width="4" stroke-dasharray="7 10"/></svg>'}<div class="ride-vehicle ${r.color}" aria-hidden="true"><div class="ride-passengers">${global.IslandExplore?.rideAvatar(r.child || childId(), r.waved ? 'wave' : 'ride') || ''}<span class="ride-animal">${r.animal}</span></div><span class="ride-seat">${carousel?'🐎':'🚃'}</span></div><div class="stage-ground"></div></div><div class="ride-panel"><div><p class="island-kicker">${carousel?'CAROUSEL':'ROLLER COASTER'}</p><h3>${carousel?'選擇動物座位':'選擇動物乘客'}</h3><div class="animal-options">${animals.map((a,i)=>`<button data-animal="${a}" aria-label="選擇${['兔子','熊','貓','青蛙'][i]}" aria-pressed="${a===r.animal}" ${r.status!=='setup'?'disabled':''}>${a}</button>`).join('')}</div>${carousel?'':`<h4>車廂顏色</h4><div class="color-options">${[['coral','珊瑚紅'],['blue','天空藍'],['yellow','陽光黃']].map(([c,n])=>`<button class="color-${c}" data-color="${c}" aria-label="${n}" aria-pressed="${r.color===c}" ${r.status!=='setup'?'disabled':''}>${n}</button>`).join('')}</div>`}</div><div class="ride-actions"><p class="ride-status" role="status" aria-live="polite">${r.message || (r.status==='setup'?'每次搭乘 1 張遊樂券，準備好了嗎？':'')}</p>${r.status==='setup'?'<button class="ride-primary" data-ride-action="confirm">確認票價並開始 🎟️</button>':r.status==='confirm'?'<p class="ride-confirm">這一趟需要 1 張遊樂券。開始後會扣除，準備出發嗎？</p><button class="ride-primary" data-ride-action="start">確認搭乘</button><button data-ride-action="cancel">再想一想</button>':r.status==='busy'?'<p>正在準備設施，請稍等…</p>':r.status==='running'?`<progress max="100" value="${Math.floor(r.elapsed/r.duration*100)}" aria-label="搭乘進度"></progress><div class="ride-button-row"><button data-ride-action="pause">${r.paused?'繼續':'暫停'}</button><button data-ride-action="wave">向朋友揮手</button><button data-ride-action="skip">跳過並結束</button><button data-ride-action="sound" aria-pressed="${!r.muted}">${r.muted?'🔇 開啟音效':'🔊 關閉音效'}</button></div>`:`<button class="ride-primary" data-ride-action="return">${r.fromIsland ? '返回島嶼' : '返回遊樂園'}</button>`}</div></div>`; refresh(); if (r.status === 'running' || r.previewing) draw(); }
   function draw() { if(!ride)return; const v=$('.ride-vehicle',$('#ridesView')); if(!v)return; const t=ride.elapsed/ride.duration, gentle=reduced(); if(ride.type==='carousel'){ const angle=t*Math.PI*4, x=Math.sin(angle)* (gentle?25:95), y=Math.cos(angle*2)*(gentle?3:12); v.style.transform=`translate(${x}px,${y}px) scale(${0.93+0.07*Math.cos(angle)})`; v.style.zIndex=Math.cos(angle)>0?'3':'1'; } else { const x=4+Math.min(t,1)*85, y=gentle?38:38-18*Math.sin(t*Math.PI*3); v.style.left=x+'%'; v.style.top=y+'%'; v.style.transform=`translate(-50%,-50%) rotate(${gentle?0:-8*Math.cos(t*Math.PI*3)}deg)`; } const progress=$('progress',$('#ridesView')); if(progress) progress.value=Math.floor(t*100); }
-  function stopSound(){ if(sound){ try { sound.osc.stop(); sound.ctx.close(); } catch(_) {} sound=null; } }
-  function playSound(){ stopSound(); if(!ride || ride.muted || settings().soundOn===false || settings().rideSoundOn===false || !global.AudioContext && !global.webkitAudioContext) return; try{ const C=global.AudioContext||global.webkitAudioContext, ctx=new C(), osc=ctx.createOscillator(), gain=ctx.createGain(); osc.type='sine'; osc.frequency.value=ride.type==='carousel'?261.63:196; gain.gain.value=Math.min(0.025,Math.max(0,Number(settings().volume ?? 0.7))*0.025); osc.connect(gain);gain.connect(ctx.destination);osc.start();sound={ctx,osc}; }catch(_){} }
-  function tick(now){ if(!ride || ride.status!=='running' || ride.paused)return; if(ride.last) ride.elapsed += Math.min(now-ride.last,100); ride.last=now; draw(); if(ride.elapsed>=ride.duration){ finish(); return; } ride.raf=requestAnimationFrame(tick); }
-  async function finish(){ if(!ride || ride.status!=='running')return; const r=ride; cancelAnimationFrame(r.raf);stopSound();r.status='finished';r.message='這趟旅程結束了，謝謝一起玩！';renderRide(); try{ await api.ledger?.completeRide(r.child,r.op); }catch(_) { if(ride===r){r.message='旅程已結束，紀錄將在下次開啟時確認。';renderRide();} } }
-  async function start(){ const r=ride, token=generation; if(!r || r.status!=='confirm')return; if(!api.ledger || !childId()){r.status='setup';r.message='遊樂券暫時無法使用，請稍後再試。';renderRide();return;} r.child=childId(); r.op=global.crypto?.randomUUID?.() || `ride-${Date.now()}-${Math.random().toString(36).slice(2)}`; r.status='busy';renderRide(); try{ await api.ledger.reserveRide(r.child,{operationId:r.op,ride:r.type}); r.reserved=true; if(token!==generation || ride!==r){await api.ledger.cancelRide(r.child,r.op);return;} const result=await api.ledger.startRide(r.child,r.op); if(result?.reservation?.status!=='started') throw new Error('ride did not start'); r.started=true; r.reserved=false; if(token!==generation || ride!==r){await api.ledger.completeRide(r.child,r.op);return;} r.status='running'; r.muted=settings().soundOn===false || settings().rideSoundOn===false; r.message='旅程開始了！可以隨時暫停或結束。';renderRide();playSound();r.raf=requestAnimationFrame(tick); api.onBalanceChange?.(); }catch(e){ if(r.reserved && !r.started){try{await api.ledger.cancelRide(r.child,r.op);}catch(_) {}} if(ride===r){r.status='setup';r.message='無法開始搭乘，請確認遊樂券餘額後再試。';renderRide();} api.onBalanceChange?.(); } }
-  function leave(){generation++; const r=ride;ride=null;view='';stopSound();if(r){cancelAnimationFrame(r.raf);if(r.reserved&&!r.started) api.ledger?.cancelRide(r.child,r.op).catch(()=>{}); else if(r.started&&r.status==='running')api.ledger?.completeRide(r.child,r.op).catch(()=>{});} }
-  function go(id){leave();api.navigate?.(id);}
-  function click(e){const root=e.target.closest('#islandView, #ridesView, #collectionView');if(!root)return;const nav=e.target.closest('[data-go]');if(nav){go(nav.dataset.go);return;}const decor=e.target.closest('[data-decor]');if(decor){try{localStorage.setItem('zhuyin-island-decor-'+childId(),decor.dataset.decor);collection();}catch(_){const n=$('.garden-note',root);if(n)n.textContent='無法儲存，請檢查裝置儲存空間。';}return;}const choose=e.target.closest('[data-ride]');if(choose){setup(choose.dataset.ride);return;}if(!ride)return;const a=e.target.closest('[data-animal]');if(a&&ride.status==='setup'){ride.animal=a.dataset.animal;renderRide();return;}const c=e.target.closest('[data-color]');if(c&&ride.status==='setup'){ride.color=c.dataset.color;renderRide();return;}const button=e.target.closest('[data-ride-action]');if(!button)return;switch(button.dataset.rideAction){case 'return': leave();view='ridesView';rides();break;case 'confirm':ride.status='confirm';renderRide();break;case 'cancel':ride.status='setup';renderRide();break;case 'start':start();break;case 'pause':ride.paused=!ride.paused;ride.last=0;if(ride.paused){cancelAnimationFrame(ride.raf);stopSound();}else{playSound();ride.raf=requestAnimationFrame(tick);}renderRide();break;case 'skip':finish();break;case 'sound':ride.muted=!ride.muted;if(ride.muted)stopSound();else if(!ride.paused)playSound();renderRide();break;} }
-  global.AnimalIsland={init(options){api=options||{};document.removeEventListener('click',click);document.addEventListener('click',click);},enter(id){if(view && view!==id)leave();view=id;if(id==='islandView')map();else if(id==='ridesView')rides();else if(id==='collectionView')collection();},leave,refresh};
+  function primeSound() {
+    if (sound || settings().soundOn === false || settings().rideSoundOn === false) return;
+    const Context = global.AudioContext || global.webkitAudioContext;
+    if (!Context) return;
+    try {
+      const ctx = new Context();
+      sound = { ctx, osc: null };
+      ctx.resume().catch(() => {});
+    } catch (_) { /* audio is optional */ }
+  }
+
+  function stopSound() {
+    if (!sound) return;
+    const { ctx, osc } = sound;
+    sound = null;
+    try { osc?.stop(); } catch (_) { /* already stopped */ }
+    ctx.close().catch(() => {});
+  }
+
+  function playSound() {
+    if (!ride || ride.muted || document.hidden) return;
+    primeSound();
+    if (!sound || sound.osc) return;
+    try {
+      const { ctx } = sound;
+      const oscillator = ctx.createOscillator();
+      const gain = ctx.createGain();
+      oscillator.frequency.value = ride.type === 'carousel' ? 261.63 : 196;
+      gain.gain.value = Math.min(0.025, Math.max(0, Number(settings().volume ?? 0.7)) * 0.025);
+      oscillator.connect(gain);
+      gain.connect(ctx.destination);
+      oscillator.start();
+      sound.osc = oscillator;
+    } catch (_) { stopSound(); }
+  }
+
+  function tick(now) {
+    if (!ride || ride.status !== 'running' || ride.paused) return;
+    if (ride.last) ride.elapsed += Math.min(now - ride.last, 100);
+    ride.last = now;
+    draw();
+    if (ride.elapsed >= ride.duration) {
+      finish();
+      return;
+    }
+    ride.raf = requestAnimationFrame(tick);
+  }
+
+  async function finish() {
+    const r = ride;
+    if (r?.status !== 'running') return;
+    cancelAnimationFrame(r.raf);
+    stopSound();
+    r.status = 'finished';
+    r.message = '這趟旅程結束了，謝謝一起玩！';
+    renderRide();
+    try {
+      await api.ledger.completeRide(r.child, r.op);
+    } catch (_) {
+      if (ride === r) {
+        r.message = '旅程已結束，搭乘結束紀錄未能儲存。';
+        renderRide();
+      }
+    }
+  }
+
+  function assertVisibleStart(r) {
+    const stage = $('.ride-stage', $('#ridesView'));
+    if (ride !== r || r.interrupted || document.hidden || !stage) throw new Error('Ride start interrupted');
+    const bounds = stage.getBoundingClientRect();
+    if (bounds.width < 1 || bounds.height < 1 || bounds.top >= innerHeight || bounds.bottom <= 0) {
+      throw new Error('Ride preview outside viewport');
+    }
+    return stage;
+  }
+
+  function visibleFrame(r) {
+    return new Promise((resolve, reject) => {
+      const frame = requestAnimationFrame(() => {
+        clearTimeout(deadline);
+        try { assertVisibleStart(r); resolve(); } catch (error) { reject(error); }
+      });
+      const deadline = setTimeout(() => {
+        cancelAnimationFrame(frame);
+        reject(new Error('Ride preview timed out'));
+      }, 2000);
+    });
+  }
+
+  async function showFirstMotion(r) {
+    const stage = $('.ride-stage', $('#ridesView'));
+    stage.scrollIntoView({ block: 'nearest' });
+    await visibleFrame(r);
+    r.elapsed = 150;
+    draw();
+    await visibleFrame(r);
+  }
+
+  async function start() {
+    const r = ride;
+    if (r?.status !== 'confirm') return;
+    if (!api.ledger || !childId()) {
+      r.status = 'setup';
+      r.message = '遊樂券暫時無法使用，請稍後再試。';
+      renderRide();
+      return;
+    }
+
+    r.child = childId();
+    r.op = global.crypto.randomUUID();
+    r.status = 'busy';
+    r.interrupted = false;
+    r.muted = settings().soundOn === false || settings().rideSoundOn === false;
+    if (!r.muted) primeSound(); // Keep the original confirmation gesture for Web Audio.
+    renderRide();
+
+    try {
+      const reserved = await api.ledger.reserveRide(r.child, {
+        operationId: r.op, ride: r.type, startPolicy: global.TicketLedger.PAINT_ACK_POLICY
+      });
+      if (reserved.reservation?.status !== 'reserved') throw new Error('Ride reservation unavailable');
+      r.reserved = true;
+      if (r.interrupted || ride !== r || document.hidden) throw new Error('Ride start interrupted');
+
+      r.previewing = true;
+      r.message = '車輛正在出發。';
+      renderRide();
+      await showFirstMotion(r);
+      assertVisibleStart(r);
+      // Between callbacks the browser has a paint opportunity. The lease still refunds until start commits.
+      const painted = await api.ledger.markRidePainted(r.child, r.op);
+      if (painted.reservation?.phase !== 'painted' || painted.reservation?.status !== 'reserved') {
+        throw new Error('Ride preview acknowledgement unavailable');
+      }
+      assertVisibleStart(r);
+      const started = await api.ledger.startRide(r.child, r.op);
+      if (started.reservation?.status !== 'started') throw new Error('Ride did not start');
+      r.started = true;
+      r.reserved = false;
+      if (ride !== r) return;
+      r.previewing = false;
+      r.status = 'running';
+      r.paused = document.hidden || r.interrupted;
+      r.message = r.paused ? '旅程已暫停。回到畫面後可繼續。' : '旅程開始了！可以隨時暫停或結束。';
+      renderRide();
+      if (!r.paused) {
+        playSound();
+        r.raf = requestAnimationFrame(tick);
+      }
+    } catch (_) {
+      if (r.reserved && !r.started) {
+        try { await api.ledger.cancelRide(r.child, r.op); } catch (_) { /* expiry can refund */ }
+      }
+      if (ride === r) {
+        stopSound();
+        r.status = 'setup';
+        r.previewing = false;
+        r.reserved = false;
+        r.elapsed = 0;
+        r.message = '無法開始搭乘，請回到畫面並確認遊樂券餘額後再試。';
+        renderRide();
+      }
+    } finally {
+      api.onBalanceChange?.();
+    }
+  }
+
+  function leave() {
+    global.IslandExplore?.leave();
+    const r = ride;
+    ride = null;
+    view = '';
+    stopSound();
+    if (!r) return;
+    cancelAnimationFrame(r.raf);
+    if (r.reserved && !r.started) {
+      api.ledger?.cancelRide(r.child, r.op).catch(() => {}).finally(() => api.onBalanceChange?.());
+    } else if (r.started && r.status === 'running') {
+      api.ledger?.completeRide(r.child, r.op).catch(() => {});
+    }
+  }
+
+  function go(id) { api.navigate?.(id); }
+
+  function returnFromRide() {
+    if (!ride || isStarting()) return;
+    if (ride.fromIsland) {
+      go('islandView');
+      return;
+    }
+    leave();
+    view = 'ridesView';
+    rides();
+  }
+
+  function pauseRide() {
+    if (ride?.status !== 'running' || ride.paused) return;
+    ride.paused = true;
+    ride.last = 0;
+    cancelAnimationFrame(ride.raf);
+    stopSound();
+    renderRide();
+  }
+
+  function onHidden() {
+    if (!ride) return;
+    if (isStarting()) ride.interrupted = true;
+    pauseRide();
+    stopSound();
+  }
+
+  function click(event) {
+    const root = event.target.closest('#islandView, #ridesView, #collectionView');
+    if (!root || event.target.closest('#islandExplore')) return;
+    const nav = event.target.closest('[data-go]');
+    if (nav) {
+      go(nav.dataset.go);
+      return;
+    }
+
+    const decor = event.target.closest('[data-decor]');
+    if (decor) {
+      try {
+        localStorage.setItem('zhuyin-island-decor-' + childId(), decor.dataset.decor);
+        collection();
+      } catch (_) {
+        const message = $('.garden-note', root);
+        if (message) message.textContent = '無法儲存，請檢查裝置儲存空間。';
+      }
+      return;
+    }
+
+    const choose = event.target.closest('[data-ride]');
+    if (choose && !isStarting()) {
+      setup(choose.dataset.ride);
+      return;
+    }
+    if (!ride) return;
+    const animal = event.target.closest('[data-animal]');
+    const color = event.target.closest('[data-color]');
+    if (ride.status === 'setup' && (animal || color)) {
+      if (animal) ride.animal = animal.dataset.animal;
+      if (color) ride.color = color.dataset.color;
+      renderRide();
+      return;
+    }
+
+    const action = event.target.closest('[data-ride-action]')?.dataset.rideAction;
+    switch (action) {
+      case 'return': returnFromRide(); break;
+      case 'confirm': ride.status = 'confirm'; renderRide(); break;
+      case 'cancel': ride.status = 'setup'; renderRide(); break;
+      case 'start': start(); break;
+      case 'pause':
+        if (!ride.paused) pauseRide();
+        else {
+          ride.paused = false;
+          ride.last = 0;
+          playSound();
+          ride.raf = requestAnimationFrame(tick);
+          renderRide();
+        }
+        break;
+      case 'wave': {
+        ride.waved = true;
+        const avatar = $('.ride-passengers svg');
+        if (avatar) avatar.outerHTML = global.IslandExplore.rideAvatar(ride.child, 'wave');
+        const status = $('.ride-status');
+        if (status) status.textContent = '動物朋友也向你揮手！';
+        break;
+      }
+      case 'skip': finish(); break;
+      case 'sound':
+        ride.muted = !ride.muted;
+        if (ride.muted) stopSound();
+        else if (!ride.paused) playSound();
+        renderRide();
+        break;
+    }
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) onHidden();
+  });
+  global.addEventListener('pagehide', onHidden);
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || view !== 'ridesView' || isStarting()) return;
+    if (event.target.closest?.('input, select, textarea, [contenteditable], dialog[open]')) return;
+    event.preventDefault();
+    if (ride) returnFromRide();
+    else go('islandView');
+  });
+
+  global.AnimalIsland = {
+    init(options) {
+      api = options || {};
+      document.removeEventListener('click', click);
+      document.addEventListener('click', click);
+    },
+    enter(id, details) {
+      if (view && view !== id) leave();
+      view = id;
+      if (id === 'islandView') map();
+      else if (id === 'ridesView') {
+        if (['carousel', 'coaster'].includes(details?.ride)) setup(details.ride, details.fromIsland);
+        else rides();
+      } else if (id === 'collectionView') collection();
+    },
+    isStarting, leave, refresh
+  };
 })(globalThis);

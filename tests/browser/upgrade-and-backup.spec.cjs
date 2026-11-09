@@ -8,7 +8,39 @@ const path = require('node:path');
 const root = path.resolve(__dirname,'../..');
 const BASE = '8f4f1fa7feeed11515116bd2251691faf10f0a82';
 const mime = {'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.svg':'image/svg+xml'};
-const old = (relative) => execFileSync('git',['show',`${BASE}:public/${relative}`],{cwd:root,stdio:['ignore','pipe','ignore']});
+const old = (relative, base = BASE) => execFileSync('git',['show',`${base}:public/${relative}`],{cwd:root,stdio:['ignore','pipe','ignore']});
+
+
+async function switchableOrigin(base, requests = []) {
+  let upgraded = false;
+  const oldAssets = new Map();
+  const server = http.createServer((req,res) => {
+    const name = new URL(req.url,'http://127.0.0.1').pathname.slice(1) || 'index.html';
+    requests.push(name);
+    if (name === '__test_seed.html') {
+      return res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'}).end('<title>Isolated upgrade fixture</title>');
+    }
+    if (name.includes('..')) return res.writeHead(403).end();
+    try {
+      let bytes;
+      if (upgraded) bytes = fs.readFileSync(path.join(root,'public',name));
+      else {
+        if (!oldAssets.has(name)) oldAssets.set(name,old(name,base));
+        bytes = oldAssets.get(name);
+      }
+      res.writeHead(200,{'Content-Type':mime[path.extname(name)] ?? 'application/octet-stream','Cache-Control':'no-store'}).end(bytes);
+    } catch { res.writeHead(404).end(); }
+  });
+  await new Promise((resolve)=>server.listen(0,'127.0.0.1',resolve));
+  return {
+    origin:`http://127.0.0.1:${server.address().port}`,
+    upgrade() { upgraded = true; },
+    async close() {
+      server.closeAllConnections();
+      await new Promise((resolve)=>server.close(resolve));
+    }
+  };
+}
 
 test('actual baseline service worker to V2, preserve three synthetic roles, then restart offline',async ({page,context}) => {
   const legacySource = old('src/app.js').toString();
@@ -19,27 +51,13 @@ test('actual baseline service worker to V2, preserve three synthetic roles, then
     settings:{soundOn:false,volume:0.3,textSize:'large'},extraPreserved:'synthetic'
   })}));
   const legacyDict = JSON.stringify({characters:[{id:'synthetic-character',han:'土',zhuyin:['ㄊ','ㄨ','ˇ']}],words:[],changeLogs:[]});
-  let upgraded = false;
   const requests = [];
   const errors = [];
   const cdp = await context.newCDPSession(page);
   cdp.on('ServiceWorker.workerErrorReported',({error})=>errors.push(error.errorMessage));
   await cdp.send('ServiceWorker.enable');
-  const oldAssets = new Map();
-  const server = http.createServer((req,res)=>{
-    const name = new URL(req.url,'http://127.0.0.1').pathname.slice(1) || 'index.html';
-    requests.push(name);
-    if (name === '__test_seed.html') return res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'}).end('<title>Isolated upgrade fixture</title>');
-    if (name.includes('..')) return res.writeHead(403).end();
-    try {
-      let bytes;
-      if (upgraded) bytes = fs.readFileSync(path.join(root,'public',name));
-      else { if (!oldAssets.has(name)) oldAssets.set(name,old(name)); bytes = oldAssets.get(name); }
-      res.writeHead(200,{'Content-Type':`${mime[path.extname(name)] ?? 'application/octet-stream'}; charset=utf-8`,'Cache-Control':'no-store'}).end(bytes);
-    } catch { res.writeHead(404).end(); }
-  });
-  await new Promise((resolve)=>server.listen(0,'127.0.0.1',resolve));
-  const origin = `http://127.0.0.1:${server.address().port}`;
+  const site = await switchableOrigin(BASE, requests);
+  const {origin} = site;
   try {
     await page.goto(`${origin}/__test_seed.html`);
     await page.evaluate(async ({seed,legacyDict,id})=>{
@@ -52,7 +70,7 @@ test('actual baseline service worker to V2, preserve three synthetic roles, then
     },{seed,legacyDict,id:ids[1]});
     await expect.poll(()=>page.evaluate(()=>Boolean(navigator.serviceWorker.controller))).toBe(true);
     expect(await page.evaluate(()=>caches.keys())).toContain('zhuyin-zoo-v1-3-2');
-    upgraded = true;
+    site.upgrade();
     await page.goto(origin);
     await expect(page.locator('#starsCount')).toHaveText('11');
     await expect(page.locator('body')).toHaveAttribute('data-text-size','large');
@@ -61,7 +79,7 @@ test('actual baseline service worker to V2, preserve three synthetic roles, then
     catch (e) { throw new Error(JSON.stringify({requests,errors,appStatus:await page.locator('#appStatus').textContent(),cacheNames:await page.evaluate(()=>caches.keys())}),{cause:e}); }
     await Promise.all([page.waitForEvent('framenavigated',{predicate:(f)=>f===page.mainFrame()}),page.locator('#updateNow').click()]);
     await page.waitForLoadState('domcontentloaded');
-    await expect.poll(()=>page.evaluate(async()=>(await caches.keys()).filter((k)=>k.startsWith('zhuyin-')))).toEqual(['zhuyin-island-v2-0-0']);
+    await expect.poll(()=>page.evaluate(async()=>(await caches.keys()).filter((k)=>k.startsWith('zhuyin-')))).toEqual(['zhuyin-island-v2-0-0-explore-1']);
     expect(await page.evaluate(()=>caches.keys())).toContain('unrelated-app-test');
     await expect(page.locator('#starsCount')).toHaveText('11');
     await page.locator('#switchChild').click();
@@ -95,7 +113,7 @@ test('actual baseline service worker to V2, preserve three synthetic roles, then
       const ledger = await TicketLedger.open();
       try {
         const s = await ledger.get('child-3');
-        const cache = await caches.open('zhuyin-island-v2-0-0');
+        const cache = await caches.open('zhuyin-island-v2-0-0-explore-1');
         return { key:s.activeRounds.word,balance:s.balance,paths:(await cache.keys()).map((r)=>new URL(r.url).pathname) };
       } finally { ledger.close(); }
     });
@@ -113,8 +131,7 @@ test('actual baseline service worker to V2, preserve three synthetic roles, then
     await expect(page.locator('#starsCount')).toHaveText('18');
   } finally {
     await context.setOffline(false);
-    server.closeAllConnections();
-    await new Promise((resolve)=>server.close(resolve));
+    await site.close();
   }
 });
 
@@ -149,4 +166,44 @@ test('parent gate and explicit backup import preserve other roles and keep a ver
   await page.locator('#switchChild').click();
   await page.locator('[data-child="child-2"]').click();
   await expect(page.locator('#starsCount')).toHaveText('0');
+});
+
+test('the original V2.0.0 cache upgrades to exploration and preserves a completed round', async ({page,context}) => {
+  const site = await switchableOrigin('c966822ce86fc96c6503d12999cd75b77a45fcee');
+  const snapshot = () => page.evaluate(async () => {
+    const ledger = await TicketLedger.open();
+    try {
+      const record = await ledger.get('child-1');
+      const id = record.activeRounds.listen;
+      return {id,balance:record.balance,correctId:record.rounds[id]?.correctId,stars:record.stars};
+    } finally { ledger.close(); }
+  });
+  try {
+    await page.goto(site.origin);
+    await page.locator('[data-child="child-1"]').click();
+    await expect.poll(()=>page.evaluate(()=>Boolean(navigator.serviceWorker.controller))).toBe(true);
+    expect(await page.evaluate(()=>caches.keys())).toContain('zhuyin-island-v2-0-0');
+    await page.locator('#islandView [data-go="listenView"]').click();
+    await expect(page.locator('#listenChoices [data-answer]')).toHaveCount(4);
+    const pending = await snapshot();
+    await page.locator(`#listenChoices [data-answer="${pending.correctId}"]`).click();
+    await expect(page.locator('#listenFeedback')).toContainText('獲得 1 張');
+    const before = await snapshot();
+    expect(before.balance).toBe(1);
+    site.upgrade();
+    await page.goto(site.origin);
+    await expect(page.locator('.explore-player')).toBeVisible();
+    await expect(page.locator('#updateNow')).toBeVisible({timeout:18000});
+    await Promise.all([page.waitForEvent('framenavigated',{predicate:(f)=>f===page.mainFrame()}),page.locator('#updateNow').click()]);
+    await expect(page.locator('.explore-player')).toBeVisible();
+    expect(await snapshot()).toEqual(before);
+    await context.setOffline(true);
+    await page.reload();
+    await expect(page.locator('.offline-status')).toBeVisible();
+    await expect(page.locator('.explore-player')).toBeVisible();
+    expect(await snapshot()).toEqual(before);
+  } finally {
+    await context.setOffline(false);
+    await site.close();
+  }
 });

@@ -1,15 +1,15 @@
 importScripts('/src/version.js');
-const CACHE_NAME = 'zhuyin-island-' + ZHUYIN_RELEASE.version.toLowerCase().replaceAll('.', '-');
+const CACHE_NAME = 'zhuyin-island-' + ZHUYIN_RELEASE.assetRevision.toLowerCase().replaceAll('.', '-');
 const APP_SHELL = [
-  '/offline.html', '/src/styles.css', '/src/island.css', '/src/curriculum.css', '/src/version.js', '/src/app.js',
-  '/src/storage.js', '/src/ticket-ledger.js', '/src/island.js', '/src/curriculum.js',
+  '/offline.html', '/src/styles.css', '/src/island.css', '/src/curriculum.css', '/src/island-explore.css', '/src/version.js', '/src/app.js',
+  '/src/storage.js', '/src/ticket-ledger.js', '/src/island.js', '/src/island-world.js', '/src/island-explore.js', '/src/curriculum.js',
   '/manifest.json', '/assets/icons/icon.svg', '/assets/icons/icon-192.png', '/assets/icons/icon-512.png',
   '/assets/audio/audio-manifest.json',
   '/data/zhuyin.json', '/data/characters.json', '/data/words.json', '/data/categories.json',
   '/data/media-map.json', '/data/questions.json'
 ];
 const CORE = new Set(APP_SHELL);
-const RELEASE_QUERY = '?v=' + ZHUYIN_RELEASE.version;
+const RELEASE_QUERY = '?v=' + ZHUYIN_RELEASE.assetRevision;
 
 function isProjectCache(key) {
   return ['zhuyin-bee-', 'zhuyin-zoo-', 'zhuyin-island-'].some((prefix) => key.startsWith(prefix));

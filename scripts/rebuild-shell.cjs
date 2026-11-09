@@ -4,7 +4,7 @@ const path = require('node:path');
 const root = path.join(__dirname, '..', 'public');
 require('../public/src/version.js');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
-const index = html.replace(/((?:src|href)="src\/[^"?]+)(?:\?v=[^"]*)?"/g, '$1?v=' + globalThis.ZHUYIN_RELEASE.version + '"');
+const index = html.replace(/((?:src|href)="src\/[^"?]+)(?:\?v=[^"]*)?"/g, '$1?v=' + globalThis.ZHUYIN_RELEASE.assetRevision + '"');
 if (process.argv.includes('--check')) {
   if (index !== html) throw new Error('HTML resource release tags are out of date');
 } else if (index !== html) {

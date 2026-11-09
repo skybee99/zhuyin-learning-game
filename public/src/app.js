@@ -171,7 +171,7 @@ function chooseChild() {
 }
 const ISLAND_VIEWS = new Set(['islandView','ridesView','collectionView']);
 const VIEWS = new Set([...ISLAND_VIEWS,'curriculumView','cardsView','learnView','listenView','spellView','wordView','parentView']);
-function showView(id) {
+function showView(id, details) {
   if (AnimalIsland.isStarting?.() || !state.child || !VIEWS.has(id)) return;
   if (id === 'parentView' && !state.parentUnlocked) {
     if (!$('#parentGate').open) { $('#parentGate').showModal(); $('#cancelParent').focus(); }
@@ -189,7 +189,7 @@ function showView(id) {
   report();
   document.querySelectorAll('main .panel').forEach((p) => p.classList.toggle('active', p.id === id));
   window.scrollTo(0,0);
-  if (ISLAND_VIEWS.has(id)) AnimalIsland.enter(id);
+  if (ISLAND_VIEWS.has(id)) AnimalIsland.enter(id, details);
   if (id === 'curriculumView') Curriculum.mount($('#curriculumView'),null);
   if (id === 'parentView') renderParent();
   if (modeForView()) loadQuiz();
@@ -228,7 +228,7 @@ async function loadData() {
   const urls = ['data/zhuyin.json','data/characters.json','data/words.json','data/categories.json','data/media-map.json','data/questions.json'];
   await Promise.all(urls.map(async (url,i) => {
     try {
-      const r = await fetch(url + '?v=' + APP_VERSION.version);
+      const r = await fetch(url + '?v=' + APP_VERSION.assetRevision);
       const value = r.ok ? await r.json() : null;
       if (Array.isArray(value) && value.length) state.data[keys[i]] = value;
     } catch { /* embedded symbols still available */ }
@@ -460,6 +460,7 @@ async function collectBackup(kind='full') {
   if (kind === 'full') return {...payload,dictionary,media:state.data.media,questions:state.data.questions,progress,ledger,
     curriculum: JSON.parse(localStorage.getItem('zhuyin-animal-island-curriculum-v1') || 'null'),
     decorations:Object.fromEntries(PROFILES.map(({id}) => [id,localStorage.getItem('zhuyin-island-decor-'+id)])),
+    exploration:Object.fromEntries(PROFILES.map(({id}) => [id,globalThis.IslandExplore?.snapshot(id) ?? null])),
     settings:{currentChildId:state.child}};
   if (kind === 'dictionary') return {...payload,dictionary};
   if (kind === 'media') return {...payload,media:state.data.media};
@@ -474,7 +475,7 @@ function download(name,body) {
   setTimeout(() => URL.revokeObjectURL(link.href),2000);
 }
 function renderParentBackupPanel() {
-  return `<h3>備份中心</h3><p>匯入可合併或還原角色的舊版進度、設定及本機字庫。遊樂券交易、教材待審和布置可匯出備查，這個匯入功能會保留它們的現況。</p>
+  return `<h3>備份中心</h3><p>匯入可合併或還原角色的舊版進度、設定及本機字庫。遊樂券交易、教材待審、布置和人偶探索資料可匯出備查，這個匯入功能會保留它們的現況。</p>
   <div class="tool-grid">${Object.entries({full:'全部資料',dictionary:'字庫',media:'圖片關聯',progress:'角色成績',usage:'使用紀錄'}).map(([id,label]) => `<button type="button" data-export-backup="${id}">匯出${label}</button>`).join('')}</div>
   <label>選擇備份檔 <input id="backupImportFile" type="file" accept="application/json,.json"></label>
   <label>還原方式 <select id="backupImportMode"><option value="merge">合併</option><option value="replace">覆蓋檔內選定項目</option></select></label>
@@ -497,7 +498,7 @@ async function previewBackupImport() {
     const {profiles,dictionary} = plan.summary;
     target.innerHTML = `<p>${esc(file.name)}｜備份 ${esc(data.version)}｜${esc(data.exportedAt)}｜${mode === 'merge' ? '合併' : '覆蓋'}</p>
     <ul>${profiles.map((x)=>`<li>${esc(info(x.id,null).name)}：舊版星星 ${x.beforeStars} → ${x.afterStars}；作答 ${x.beforeAnswers} → ${x.afterAnswers}</li>`).join('')}
-    ${dictionary.map((x)=>`<li>${esc({characters:'國字',words:'詞語',candidates:'候選',changeLogs:'紀錄'}[x.key])}：${x.before} → ${x.after} 筆${x.conflicts ? `，${x.conflicts} 筆衝突保留現況` : ''}</li>`).join('')}</ul><p>核心題庫、現有遊樂券、教材和布置保留。</p>`;
+    ${dictionary.map((x)=>`<li>${esc({characters:'國字',words:'詞語',candidates:'候選',changeLogs:'紀錄'}[x.key])}：${x.before} → ${x.after} 筆${x.conflicts ? `，${x.conflicts} 筆衝突保留現況` : ''}</li>`).join('')}</ul><p>核心題庫、現有遊樂券、教材、布置和人偶探索資料保留。</p>`;
     button.hidden = false;
   } catch(e) { if (token !== state.previewEpoch) return; target.textContent = `無法預覽：${e.message}`; }
 }
@@ -531,6 +532,13 @@ async function clearAppCache() {
   } catch { report('目前無法清除 App 快取。'); }
 }
 function bind() {
+  document.addEventListener('keydown', (event) => {
+    const returnViews = ['cardsView','learnView','listenView','spellView','wordView','curriculumView','collectionView'];
+    if (event.key !== 'Escape' || event.defaultPrevented || !returnViews.includes(state.view) || $('dialog[open]')) return;
+    if (event.target.closest?.('input, select, textarea, [contenteditable]')) return;
+    event.preventDefault();
+    showView('islandView');
+  });
   document.body.addEventListener('click',(e) => {
     const target = e.target.closest('button,.readable');
     if (!target) return;
@@ -641,7 +649,7 @@ async function init() {
   state.dictionary = local().dictionary;
   $('#appTitle').innerHTML = ruby(textBank.title);
   $('#versionLine').textContent = `${APP_VERSION.version}｜${APP_VERSION.modifiedAt}`;
-  AnimalIsland.init({navigate:showView,getProfile:info,getChildId:()=>state.child,getSettings:()=>state.profile?.settings,
+  AnimalIsland.init({navigate:showView,speak:speakSystemText,stopSpeech:stopAllSpeech,getProfile:info,getChildId:()=>state.child,getSettings:()=>state.profile?.settings,
     getBalance:()=>state.ticket?.balance ?? null,ledger:state.ledger,onBalanceChange:()=>refreshLedger()});
   state.ledger?.subscribe((id) => { if (id === state.child) refreshLedger(id); });
   renderProfiles();

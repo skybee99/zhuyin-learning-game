@@ -19,3 +19,24 @@
 @media(max-width:700px){.island-destinations {grid-template-columns:repeat(2,minmax(0,1fr));}.island-map {height:430px;}.map-place {min-width:120px;}.map-village {left:3%;top:27%;}.map-park {right:3%;top:27%;}.map-garden {right:8%;bottom:8%;}.map-plaza {left:22%;top:52%;}.ride-selection,.garden-layout,.ride-panel {grid-template-columns:1fr;}.ride-art {height:150px;font-size:5rem;}.island-section-title>span {display:none;}}
 @media(max-width:360px){.map-place {min-width:100px;}.map-place small {display:none;}.island-destinations button {padding:8px;font-size:1.2rem;}.island-destinations small {display:none;}}
 @media(prefers-reduced-motion:reduce){#islandView *,#ridesView *,#collectionView * {scroll-behavior:auto!important;transition:none!important;animation:none!important;}}
+
+/* Keep the study panels compact and give exploration room on wide windows. */
+.app-shell:has(#islandView.active) {
+  width: min(100%, 1260px);
+  max-width: 1260px;
+}
+.app-shell:has(#islandView.active) #themeTitle { display: none; }
+.app-shell:has(#islandView.active) #home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.app-shell:has(#islandView.active) #appTitle { font-size: clamp(1.35rem, 3vw, 2rem); margin: 0; }
+.app-shell:has(#islandView.active) #islandHome { display: none; }
+.island-classic { margin-block: 16px; }
+.island-classic > summary { align-content: center; cursor: pointer; font-weight: 700; color: #315848; }
+.ride-passengers { display: flex; align-items: flex-end; gap: 2px; }
+.ride-passengers svg { width: 42px; height: 51px; flex: 0 0 auto; }
+.ride-passengers .ride-animal { font-size: 28px; }
