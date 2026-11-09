@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const source = await readFile(new URL('../src/worker.js',import.meta.url),'utf8');
+const {default:worker} = await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const environment = {ASSETS:{ fetch:async()=>new Response('synthetic static asset') }};
+const request = (path, method='GET', env=environment) => worker.fetch(new Request('https://fixture.invalid'+path,{method}),env);
+assert.equal(await (await request('/')).text(),'synthetic static asset');
+assert.equal((await request('/api/dictionary/stats')).status,503);
+assert.equal((await request('/api/import/document','POST')).status,501);
+assert.equal((await request('/api/dictionary/words','POST',{...environment,DB:{}})).status,501);
+assert.equal((await request('/api/unknown')).status,404);
+console.log('PASS Worker Assets routing, missing D1, and explicit unavailable API writes');

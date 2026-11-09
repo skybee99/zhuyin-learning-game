@@ -1,56 +1,26 @@
-# LATEST CODEX REPORT — V1.3.2
+# 注音動物島 V2.0.0 自由探索候選
 
-## 修正檔案
+2026-11-09，UTC+7。從 `c966822ce86fc96c6503d12999cd75b77a45fcee` 延續原分支與 Draft PR #13。V2.0.0 的資料版本沿用，快取與 HTML 資產改用 `V2.0.0-explore.1`。
 
-- `public/src/app.js`：資料載入、已驗證題池、功能卡、家長備份中心、匯入摘要與版本資訊。
-- `public/src/styles.css`：手機直式、功能卡、看圖認字卡片、注音與聲調尺寸。
-- `public/data/characters.json`：人工審核核心國字資料。
-- `public/data/words.json`：人工審核核心詞語資料。
-- `public/data/media-map.json`：圖片/Emoji 與字詞關聯資料。
-- `public/data/questions.json`：正式模式可用題庫題目。
-- `public/service-worker.js`、`public/manifest.json`、`public/index.html`：V1.3.2 與離線資料快取。
-- `tests/validate-app.js`：更新 V1.3.2 與新資料檔驗證。
-- 專案管理文件：`PROGRESS.md`、`TASKS.md`、`DECISIONS.md`、`CHANGELOG.md`。
+## 舊版與本輪差異
 
-## 看圖認字資料一致性
+| 原版候選 | 自由探索追加 |
+|---|---|
+| 點選島嶼地圖或學習捷徑 | 可在同一島嶼以搖桿、WASD、方向鍵或點擊操控分件 SVG 人偶。較窄視窗以鏡頭跟隨。原版圖與捷徑可單獨操作。 |
+| 孩子角色、星星、券與學習紀錄 | 髮型、服裝顏色、配件、位置和方向按匿名角色保存。探索資料新增至完整匯出，跨裝置匯入仍在既有範圍。 |
+| 直接從設施列表搭乘 | 走到停靠點可看到票價，進入原設施並帶同人偶與動物搭乘，再回到島上原位置。 |
+| 預留後直接記錄開始 | 預留、可見畫面移動確認、正式開始皆可按同一操作 ID 稽核。只有正式開始提交後費用成立。 |
 
-- 一題對應一筆 `questions.json` 題目，題目以 `correctAnswerId` 反查 `words.json`。
-- 詞語需通過 `validWordQuestion()`：approved/reviewed/verified、speechText 等於詞語、targetCharacter 對應 targetIndex、逐字注音存在，且有已驗證媒體或 Emoji。
-- `media-map.json` 預留 source、license、author、verified 欄位；目前使用內建 Emoji，不抓隨機外部圖片。
+地圖有房屋、水池、樹木與設施阻擋，A* 用可行走網格，手動移動按半徑與步進碰撞。五位動物朋友可走動、停下對話並用系統語音朗讀固定內容，學習入口沿用現有五種模式。中央廣場可一鍵返回。背景停止音效與遊戲更新。減少動態設定可保留操作並抑制裝飾動作。
 
-## 注音與聲調顯示
+## 驗收分層
 
-- 持續使用自訂直排注音元件，聲調由 `.zhuyin-tone` 獨立定位。
-- V1.3.2 加大 `.bopomofo-vertical` 與 `.zhuyin-tone`，避免聲調太小或貼近其他字。
+- **PASS｜PRE 與基準。** 62 個 Git 檔案在新目錄解壓逐檔比對。原版基準重跑 24 項交易及 7 個瀏覽器情境。前輪 G 槽 18 檔及回執重新核對 SHA-256。
+- **PASS｜純程式與瀏覽器。** 保留六個核心 JSON、37 注音、原學習與教材待審規則。幾何測試涵蓋碰撞、防穿越、可達停靠點及確定性尋路。擴充帳本驗證與 UI 退款、兩座設施、NPC、方向操作、角色隔離、離線及兩個基準 Worker 的升級檢查。最終各次命令與測試數以交付原始紀錄為準。
+- **PASS｜iPad 尺寸模擬。** 在 Chromium 檢查四型號直橫式、iPhone 直式、DPR 2／3 及即時窄視窗。以 Apple 面板尺寸推導測試用 CSS viewport。Safari 工具列、實際安全區及 Stage Manager 框架仍需實機驗收。[Air 11](https://support.apple.com/en-us/119894) · [Air 13](https://support.apple.com/en-in/119893) · [Pro 11](https://support.apple.com/en-ie/119892) · [Pro 13](https://support.apple.com/en-us/119891)
+- **PARTIAL｜Windows。** 使用 Windows 11 的實際 Chrome 與 Edge 執行本機瀏覽器自動化，尺寸測試含一般／窄視窗與 125%、150% 等效 CSS viewport。Windows 視窗原生輸入自動審查因無法可靠確認目前網址而中止。原生鍵鼠、觸控板、最大化及縮放選單的操作為 BLOCKED，Windows 10 實機為 NOT_RUN。
+- **PARTIAL｜交易收費界線。** 可見頁面送出第一段位移後，等下一個繪製機會才持久化 `ride_paint_ack`。此時仍可退款，再以 `startRide` 正式扣款。未開始的預留在 30 秒租期到期且再次操作帳本時恢復。Chrome 測試含強制關閉並重開持久化設定檔。瀏覽器繪製機會無法證明實體螢幕已呈現。開始提交後中斷維持扣款。探索同角色的同欄位若兩分頁同時編輯，仍以最後寫入為準。
+- **NOT_RUN｜真實備份、Apple 與發布。** 孩子實際裝置資料尚無新匯出。iPad Air M2 11／13、iPad Pro M4 11／13、iPhone Safari 及主畫面 PWA 的觸控、音效、效能、升級與離線未執行。Safari 分頁與主畫面分開驗證儲存。Cloudflare 正式部署未執行。
+- **BLOCKED｜外部資料與能力。** 南一三冊仍為 `WAITING_FOR_SOURCE`。正式生字、真人注音、正式 D1、完整家長認證和完整跨裝置還原維持上一輪的狀態。
 
-## 手機版面
-
-- 主容器縮至更適合直式閱讀的寬度。
-- 首頁功能卡保持 2 欄、降低卡片高度與文字壓力。
-- 看圖認字圖片、提示文字與答案區加大間距，手機保留清楚觸控區。
-
-## 主題卡
-
-- 功能卡只顯示：🐶 注音卡、🦉 認識注音、🐘 聽一聽、🦊 拼一拼、🐼 看圖認字、🐻 家長。
-- 移除「兔子花園」「狐狸拼圖屋」「大象音樂池」等長副標題。
-- Lisa、Jack、Kyky 維持相同 `storybook-zoo` 視覺風格。
-
-## 字庫與備份
-
-- 家長字庫管理保留查看搜尋、新增國字、新增詞語、文件匯入、資料檢查、清除 App 快取。
-- 新增備份中心：匯出全部資料、字庫、圖片關聯、小孩成績、使用紀錄。
-- JSON 匯入會顯示版本、備份日期與各類筆數，並先自動備份目前資料；合併/覆蓋寫入仍列為後續待辦。
-
-## 測試結果
-
-- `node --check public/src/app.js`：通過。
-- `node --check public/service-worker.js`：通過。
-- `node tests/validate-app.js`：通過。
-- `node tests/validate-zhuyin-tones.js`：通過。
-- `node tests/validate-dictionary-media.js`：通過。
-
-## 已知限制
-
-- 本環境無法執行實體 iPhone Safari、iPhone Chrome、Zalo WebView、iPad Safari 驗收。
-- 匯入目前完成安全摘要與自動備份，尚未直接覆寫正式資料。
-- 正式本地圖片與真人錄音仍待後續補檔。
+前輪報告保留於 `reports/archive/ZHUYIN_CODEX_REPORT_20261109.md`。本輪在既有分支新增 commit，CI、Git 和 Drive 原檔回讀以交付回執所列精確 SHA 為準。若需回復探索程式，可在獨立分支 revert，或使用已驗證的 PRE 原始碼重建。瀏覽器資料與程式回復分開處理。正式驗收前先由家長在各真機儲存環境安全匯出並讀回，再驗證真實觸控、聲音、尺寸和離線。

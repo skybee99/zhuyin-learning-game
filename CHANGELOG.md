@@ -28,7 +28,7 @@
 - Split button speech behavior so content playback buttons do not announce their labels and parent mode stays silent.
 - Added parent dictionary management stats, search, manual add forms, import-review placeholders, data checks, export, and cache repair.
 - Added Cloudflare D1 schema migration, Worker API skeleton, `DATABASE.md`, and `API.md`.
-- Added original child themes for Lisa, Jack, and Kyky without official character assets.
+- Added original child themes for child-1, child-2, and child-3 without official character assets.
 
 ## PR #7 — Merged 2026-07-19T09:11:19Z
 
@@ -47,7 +47,7 @@
 
 ## V1.3.1 — 2026-07-19 19:37 Asia/Ho_Chi_Minh
 
-- Updated app brand to 「注音動物園」 with one shared storybook-zoo theme for Lisa, Jack, and Kyky.
+- Updated app brand to 「注音動物園」 with one shared storybook-zoo theme for child-1, child-2, and child-3.
 - Split zhuyin tone data/rendering into base symbols plus independent tone marks using `parseZhuyinSyllable()` and `.zhuyin-tone` positioning.
 - Updated Service Worker cache to `zhuyin-zoo-v1-3-1` and cleanup for old `zhuyin-bee-*` / `zhuyin-zoo-*` project caches only.
 - Re-reviewed 37 zhuyin examples; fixed ㄢ → 山 → ㄕㄢ → ⛰️ and ㄣ → 門 → ㄇㄣˊ → 🚪.
@@ -64,3 +64,14 @@
 - Enlarged custom zhuyin tone marks and improved narrow iPhone portrait spacing.
 - Added a parent backup center for full, dictionary, media, progress, and usage JSON exports plus import summary preview with automatic current-data backup.
 - Updated app/version references and Service Worker cache to `zhuyin-zoo-v1-3-2`.
+
+## V2.0.0 candidate — 2026-11-09
+
+Development candidate for an original island theme, local transaction ledger, anonymized profile migration and staged textbook curriculum. This entry does not claim tests, release, or real-device acceptance. Previous release records remain historical.
+
+## V2.0.0 候選資產修訂 explore.1
+
+- 新增 Q 版人偶、髮型／服色／配件、四向行走、動作與跟隨鏡頭。
+- 新增搖桿、鍵盤、地圖點擊、障礙碰撞、A*、NPC、中央廣場回復與角色隔離。
+- 兩座原設施可從探索入口搭乘並回到原地，沿用既有券帳本，增加開始畫面確認及中斷復原證據。
+- 增加 PWA 同版本資產更新、瀏覽器尺寸和探索流程驗收。
