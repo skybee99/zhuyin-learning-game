@@ -1,3 +1,7 @@
+## 2026-11-10｜V2.1.0 Windows 本機候選
+
+以 PR #13 合併後 main `ad2e057cf0ae18f0f19067517a25fd74057133e6` 為基準。PRE 的 72 個 Git 原始檔在隔離目錄逐一解壓並核對。基準套件在 Windows 重跑。新版加入三維地圖、六座設施、私人房間和精準 PWA 資產。驗收以 `reports/LATEST_CODEX_REPORT.md` 與獨立回執為準，區分本機和實際設備。
+
 ## 2026-07-19 PR #8 最終 metadata
 
 - PR：#8

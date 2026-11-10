@@ -1,0 +1,26 @@
+
+.app-shell:has(#island3DView.active) { width:min(100%,1260px); max-width:1260px }
+.app-shell:has(#island3DView.active) #themeTitle { display:none }
+.app-shell:has(#island3DView.active) #home { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px }
+.app-shell:has(#island3DView.active) #appTitle { font-size:clamp(1.35rem,3vw,2rem); margin:0 }
+.app-shell:has(#island3DView.active) #islandHome { display:none }
+#island3DView { text-align:start }
+.island-3d-launch { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px; margin:0 0 16px }
+.world3d-heading,.room-heading { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px 16px }
+.world3d-heading h2,.room-heading h2,.world3d-heading p,.room-heading p { margin:0 }
+.world3d-heading { margin-bottom:12px }
+.room-card { margin-block:12px; border-radius:20px; background:#f5f8ec; border:1px solid #c7d8af; padding:14px }
+.room-heading h2 { font-size:1.15rem }
+.room-actions,.ride3d-list { display:flex; flex-wrap:wrap; align-items:center; gap:8px }
+.room-card button,.ride3d-list button { background:#fffdf5; color:#234938; border:1px solid #91b49b; padding:8px 12px; border-radius:12px; font-size:1rem; font-weight:700 }
+.room-card button:disabled { opacity:.55 }
+.room-card select,.room-card input { min-height:48px; max-width:100%; padding:8px; font-size:1rem }
+.room-card label { display:flex; flex-wrap:wrap; align-items:center; gap:8px }
+.room-dialog { width:min(90vw,440px); border:2px solid #839a6f; background:#fffdf2; border-radius:20px; color:#284a36; padding:16px }
+.room-dialog label { margin:12px 0 }
+.room-dialog input { width:100% }
+.room-dialog::backdrop { background:#13331a72 }
+.room-players { display:flex; flex-wrap:wrap; gap:8px 18px; list-style:none; padding:0 }
+.room-offer,.room-connected { margin-block:12px }
+.room-offer { background:#e5efcc; padding:12px; border-radius:12px }
+[data-room-error] { color:#8b2f28 }

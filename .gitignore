@@ -1,6 +1,10 @@
 node_modules/
 playwright-report/
 test-results/
+test-results-*/
+.wrangler/
+.dev.vars
+.dev.vars.*
 .browser-evidence/
 *.local.json
 .env

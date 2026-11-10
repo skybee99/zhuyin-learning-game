@@ -45,8 +45,9 @@
     let booking = bookings[0];
     const replay = await b.reserveRide(child,{operationId:booking.operationId,ride:booking.ride});
     ok(replay.state.balance === 0 && replay.reservation.operationId === booking.operationId, 'reservation replay never charges twice');
-    await a.cancelRide(child, booking.operationId); const cancelled = await b.cancelRide(child, booking.operationId);
+    await a.cancelRide(child, booking.operationId,{reviewedByParent:true}); const cancelled = await b.cancelRide(child, booking.operationId);
     ok(cancelled.state.balance === 1 && cancelled.reservation.status === 'refunded', 'cancel refunds exactly once');
+    ok(cancelled.reservation.refundReason === 'parent-review' && cancelled.state.transactions.filter(t=>t.operationId===booking.operationId && t.type==='ride_refund' && t.reason==='parent-review').length===1, 'parent review marks only the original refund in the audit log');
     booking = bookings[1];
     const started = await a.startRide(child, booking.operationId);
     const noRefund = await b.cancelRide(child, booking.operationId);
@@ -94,6 +95,19 @@
     const starts = await Promise.all([a.startRide(pc,doubleStart),b.startRide(pc,doubleStart)]);
     state = await b.get(pc);
     ok(starts.every(x => x.reservation.status === 'started') && state.transactions.filter(x => x.type === 'ride_started' && x.operationId === doubleStart).length === 1, 'concurrent acknowledged starts charge once and log once');
+    for (const rideName of ['carousel','coaster','ferris','bumper','pirate','train']) {
+      const cId='ride-check-'+rideName, q=(await a.getOrCreateRound(cId,spec('test','test:'+rideName))).round;
+      await a.answer(cId,ans(q,'a'));
+      const cancelId=id(); await a.reserveRide(cId,{operationId:cancelId,ride:rideName,startPolicy:policy});
+      const refund=await a.cancelRide(cId,cancelId); await b.cancelRide(cId,cancelId);
+      ok(refund.state.balance===1,rideName+' pre-start cancellation refunds once');
+      const op=id(); await a.reserveRide(cId,{operationId:op,ride:rideName,startPolicy:policy});
+      await b.reserveRide(cId,{operationId:op,ride:rideName,startPolicy:policy});
+      await a.markRidePainted(cId,op); await a.startRide(cId,op); await a.completeRide(cId,op);
+      const end=await b.get(cId);
+      ok(end.balance===0 && end.rides[op].status==='completed' && end.transactions.filter(t=>t.type==='ride_debit'&&t.operationId===op).length===1,rideName+' paint/start/completion debits once');
+    }
+    await rejected(a.reserveRide(child,{operationId:id(),ride:'invalid-ride'}), 'unknown ride type rejected');
     await rejected(a.reserveRide(child,{operationId:'constructor',ride:'carousel'}), 'unsafe identifier rejected');
     let notices = 0;
     const unsubscribe = b.subscribe(id => { if (id === 'notify-child') { notices++; b.get(id); } });

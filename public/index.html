@@ -10,10 +10,13 @@
     <meta name="description" content="和動物朋友一起學注音，適合 iPhone 與 iPad 的注音、認字與語音學習遊戲。" />
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
-    <link rel="stylesheet" href="src/styles.css?v=V2.0.0-explore.1" />
-    <link rel="stylesheet" href="src/island.css?v=V2.0.0-explore.1" />
-    <link rel="stylesheet" href="src/island-explore.css?v=V2.0.0-explore.1" />
-    <link rel="stylesheet" href="src/curriculum.css?v=V2.0.0-explore.1" />
+    <link rel="stylesheet" href="src/styles.css?v=V2.1.0-3d.2" />
+    <link rel="stylesheet" href="src/island.css?v=V2.1.0-3d.2" />
+    <link rel="stylesheet" href="src/island-3d.css?v=V2.1.0-3d.2" />
+    <link rel="stylesheet" href="src/island-rides-3d.css?v=V2.1.0-3d.2" />
+    <link rel="stylesheet" href="src/island-room.css?v=V2.1.0-3d.2" />
+    <link rel="stylesheet" href="src/island-explore.css?v=V2.1.0-3d.2" />
+    <link rel="stylesheet" href="src/curriculum.css?v=V2.1.0-3d.2" />
     <title>注音動物島</title>
   </head>
   <body data-zhuyin-display="all" data-child-theme="storybook-zoo" data-theme="storybook-zoo" data-text-size="standard" data-zhuyin-size="standard">
@@ -42,6 +45,23 @@
         <section class="panel" id="listenView"><h2>🔊 聽一聽</h2><div class="quiz-card"><button class="primary-action" id="playPrompt" type="button" data-speech="聽一聽">🔊 聽注音</button><button type="button" class="inline-action" id="playExamplePrompt">🔊 聽例字</button><p class="audio-notice">系統語音可能不準，可聽例字輔助。</p><div class="choice-grid" id="listenChoices"></div><button class="primary-action quiz-next" id="nextListen" type="button" hidden>➡️ 下一題</button><div class="feedback" aria-live="polite" id="listenFeedback">👇 選答案</div></div></section>
         <section class="panel" id="spellView"><h2>🧩 拼一拼</h2><div class="quiz-card"><label>難度 <select id="difficulty"><option value="beginner">🌱 初級</option><option value="advanced">🌟 進階</option></select></label><div class="spell-prompt" id="spellPrompt"></div><div class="choice-grid" id="spellChoices"></div><button class="primary-action" id="nextSpell" type="button" data-speech="下一題">➡️ 下一題</button><div class="feedback" aria-live="polite" id="spellFeedback">👇 選答案</div></div></section>
         <section class="panel" id="wordView"><h2>🖼️ 看圖認字</h2><div class="quiz-card picture-card"><div class="picture" id="picturePrompt">🌈</div><p class="hint" id="wordHint">👇 選答案</p><div class="choice-grid" id="wordChoices"></div><button class="primary-action quiz-next" id="nextWord" type="button" hidden>➡️ 下一題</button><div class="feedback" aria-live="polite" id="wordFeedback">🌱 再試一次也很棒</div></div></section>
+        <section class="panel" id="island3DView" aria-label="3D 動物島">
+          <header class="world3d-heading">
+            <div><h2>🌴 3D 動物島</h2><p><span data-island-profile></span> · ⭐ <b data-island-stars></b> · 🎟️ <b data-island-balance></b></p></div>
+            <div><button type="button" id="rides3dJump" class="island-back">六座設施</button><button type="button" id="islandBack2D" class="island-back">2D 動物島</button></div>
+          </header>
+          <div id="ride3dList" class="ride3d-list" hidden>
+            <button type="button" data-ride3d="carousel">旋轉木馬</button>
+            <button type="button" data-ride3d="coaster">雲霄飛車</button>
+            <button type="button" data-ride3d="ferris">摩天輪</button>
+            <button type="button" data-ride3d="bumper">碰碰車</button>
+            <button type="button" data-ride3d="pirate">海盜船</button>
+            <button type="button" data-ride3d="train">環島小火車</button>
+          </div>
+          <div id="world3d"></div>
+          <div id="ride3d" hidden></div>
+          <div id="roomPanel"></div>
+        </section>
         <section class="panel" id="parentView"><h2>家長模式</h2><div class="parent-box" id="parentBox"></div></section>
       </main>
       <footer class="version" id="versionLine"></footer>
@@ -52,13 +72,19 @@
       <div class="tool-grid"><button id="cancelParent" type="button">返回遊戲</button><button id="unlockParent" type="button">我是家長，繼續</button></div>
     </dialog>
     <template id="rubyRequirement"><ruby>聽<rt>ㄊㄧㄥ</rt></ruby></template>
-    <script src="src/version.js?v=V2.0.0-explore.1" defer></script>
-    <script src="src/storage.js?v=V2.0.0-explore.1" defer></script>
-    <script src="src/ticket-ledger.js?v=V2.0.0-explore.1" defer></script>
-    <script src="src/island-world.js?v=V2.0.0-explore.1" defer></script>
-    <script src="src/island-explore.js?v=V2.0.0-explore.1" defer></script>
-    <script src="src/island.js?v=V2.0.0-explore.1" defer></script>
-    <script src="src/curriculum.js?v=V2.0.0-explore.1" defer></script>
-    <script src="src/app.js?v=V2.0.0-explore.1" defer></script>
+    <script src="src/version.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/storage.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/ticket-ledger.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/island-world.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/island-explore.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/island.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/curriculum.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/three.vendor.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/island-world-3d.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/island-3d.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/island-rides-3d.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/island-room-client.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/island-3d-app.js?v=V2.1.0-3d.2" defer></script>
+    <script src="src/app.js?v=V2.1.0-3d.2" defer></script>
   </body>
 </html>
