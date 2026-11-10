@@ -47,6 +47,7 @@
         stopSpeech:this.options.stopSpeech, onFallback:(message)=>this.backTo2D(message),
         onPosition:(position)=>this.room.position(position),
         onAppearance:(appearance)=>this.room.appearance(appearance),
+        onGesture:(action)=>this.room.announceGesture(action),
         onPlaza:()=>this.room.resetPlaza()
       });
       if (success) global.Island3D.setPeers(this.peers || []);

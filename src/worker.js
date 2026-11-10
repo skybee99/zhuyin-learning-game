@@ -237,8 +237,10 @@ export class RoomObject {
   }
   async schedule(room) {
     let next = room.expiresAt;
-    for (const p of Object.values(room.players))
+    for (const p of Object.values(room.players)) {
       if (!p.connected) next = Math.min(next, p.expiresAt);
+      if (p.gestureUntil) next = Math.min(next, Math.max(Date.now() + 1, p.gestureUntil));
+    }
     if (room.ride)
       next = Math.min(
         next,
@@ -266,12 +268,13 @@ export class RoomObject {
     for (const ws of this.sockets()) this.send(ws, event || this.snapshot(room));
   }
   snapshot(room, type = 'snapshot', self) {
+    const now = Date.now();
     const players = Object.values(room.players).map((p) => ({
       sessionId: p.sessionId,
       x: p.x,
       z: p.z,
       direction: p.direction,
-      action: p.action,
+      action: p.gestureUntil > now ? p.gestureAction : p.action,
       appearance: p.appearance,
       connected: p.connected,
     }));
@@ -288,7 +291,7 @@ export class RoomObject {
       : null;
     return {
       type,
-      serverTime: Date.now(),
+      serverTime: now,
       players,
       locked: room.locked,
       ride,
@@ -310,6 +313,13 @@ export class RoomObject {
     }
     let changed = false,
       lostSeat = false;
+    for (const p of Object.values(room.players)) {
+      if (p.gestureUntil && p.gestureUntil <= now) {
+        delete p.gestureUntil;
+        delete p.gestureAction;
+        changed = true;
+      }
+    }
     for (const p of Object.values(room.players))
       if (
         p.connected &&
@@ -611,6 +621,15 @@ export class RoomObject {
         this.send(ws, this.snapshot(room));
         return;
       }
+      if (m.type === 'gesture' && exactKeys(m, ['type', 'action']) && ['wave', 'joy'].includes(m.action)) {
+        if ((p.gestureUntil || 0) - 1000 > now) return invalid();
+        p.gestureAction = m.action;
+        p.gestureUntil = now + 1500;
+        await this.save(room);
+        await this.schedule(room);
+        this.broadcast(room);
+        return;
+      }
       if (m.type === 'leave' && exactKeys(m, ['type'])) {
         if (p.role === 'host') {
           await this.closeRoom(room, 'host left');
@@ -692,10 +711,15 @@ export class RoomObject {
         p.x = m.x;
         p.z = m.z;
         p.direction = m.direction;
-        p.action = m.action;
+        if (m.action === 'wave' || m.action === 'joy') {
+          p.gestureAction = m.action;
+          p.gestureUntil = now + 1500;
+          p.action = 'idle';
+        } else p.action = m.action;
         p.lastMove = now;
         p.motionCredit = credit - distance;
         await this.save(room);
+        if (p.gestureUntil > now) await this.schedule(room);
         this.broadcast(room);
         return;
       }

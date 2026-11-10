@@ -24,6 +24,8 @@
 
 `move` 為有限範圍數值、允許的四方向及 `idle/walk/wave/joy`；每 socket 最多每秒 15 個移動訊息，全部訊息每秒 30 個；採伺服器時間及有上限的速度額度，使用與 3D 客戶端共同的純世界幾何檢查終點與路徑。`plaza` 是有 5 秒冷卻的顯式中央廣場重置，不是任意座標傳送。外觀僅髮型、四種指定顏色和配件預設值。攻擊者仍可修改自己的客戶端；坐標驗證只保護房間可用性，並非反作弊或身分系統。
 
+已認證玩家可傳送 `{type:'gesture',action:'wave'|'joy'}`，不帶座標或其他身分欄位；服務端立即廣播包含手勢的既有 snapshot，持續約 1.5 秒，期間後續 idle／walk 位置更新不會抹去手勢；到期由 alarm 清除並廣播目前移動狀態。手勢訊息仍受每秒總訊息限制，且有 500 毫秒冷卻；非法動作或額外欄位遭拒絕。舊版 `move` 夾帶 wave／joy 仍相容，手勢同樣到期。實際播放與跨裝置視覺效果仍需客戶端及實機驗證。
+
 ## 同乘與本機帳本
 
 房主 `ride_offer` 包含六種白名單 ride；snapshot 的 `ride` 含 `rideId`、類型、hostId、30 秒 deadline、participants 的 sessionId／ready、status 與開始時間。每人自己選擇並在自己裝置預留帳本操作後才送 `ride_ready`；房主 `ride_start` 要求至少兩名目前在線的參與者均 ready，服務端廣播 `ride_started` 與未來約 1 秒開始時間。房主可在開始前 `ride_cancel`；等待時成員離線／踢除或超時亦會廣播 `ride_cancelled`，各客戶端必須自行取消未啟動的本機預留。服務端不接收或證明玩家券數、預留及扣款成功，因此不承諾跨裝置原子交易或防竄改資產；提交時間、中斷及實際畫面確認的殘餘窗口需另列驗收。
@@ -32,7 +34,7 @@
 
 ## 檢查與限制
 
-- **PASS（本機、合成資料，限當次程式）**：`node tests/test-multiplayer-runner.cjs` 使用獨立臨時目錄、Wrangler 4.159.0、SQLite DO 與真實 loopback WebSocket。最近執行 28 項檢查，包含三席／第四席、Origin、家長鑰匙、邀請、巨型 HTTP、錯誤／假冒 frame、動作與外觀、重連、限流、共乘、碰碰車、火車出口、取消、踢人與房主結束；另外測試同一 SQLite 目錄下強制停止本機 Worker 行程、重新啟動後幽靈座位清除及兩席重連。一次先前環境啟動逾時記錄保留，後續重試通過。這是受測程式當下的結果，後續修改需重新執行。
+- **PASS（本機、合成資料，限當次程式）**：`node tests/test-multiplayer-runner.cjs` 使用獨立臨時目錄、Wrangler 4.159.0、SQLite DO 與真實 loopback WebSocket。最近執行 30 項檢查，包含三席／第四席、Origin、家長鑰匙、邀請、巨型 HTTP、錯誤／假冒 frame、動作與外觀、手勢傳送與逾時、重連、限流、共乘、碰碰車、火車出口、取消、踢人與房主結束；另外測試同一 SQLite 目錄下強制停止本機 Worker 行程、重新啟動後幽靈座位清除及兩席重連。一次先前環境啟動逾時記錄保留，後續重試通過。這是受測程式當下的結果，後續修改需重新執行。
 - **NOT_RUN：** Cloudflare staging／正式帳號操作、跨實體裝置與跨網路房間、Apple 真機、Cloudflare 生產 WAF、正式金鑰輪替，以及 Cloudflare 真實環境額度／成本。
 - **NOT_RUN：** 真正 DO eviction 後既有 socket 存活的測試。本機 `wrangler dev` 雖提供 hibernation handler，但官方文件指出本機 DO 不會自然 eviction；需 Cloudflare Vitest 的 `evictDurableObject()` 或經授權 staging 驗證。參考 [Cloudflare WebSocket hibernation](https://developers.cloudflare.com/durable-objects/best-practices/websockets/) 與 [eviction testing](https://developers.cloudflare.com/durable-objects/examples/testing-with-durable-objects/)。
 - 多個 SQLite 寫入失敗、quota 耗盡、惡意分散來源流量及完整網路封包遺失的韌性尚未證明；不可將本機測試視為安全審計或真機驗收。

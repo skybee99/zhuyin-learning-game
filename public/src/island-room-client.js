@@ -271,6 +271,12 @@
       }
     }
 
+    announceGesture(action) {
+      const now = performance.now();
+      if (now - (this.lastGesture ?? -Infinity) < 500) return;
+      if (this.send({type:'gesture',action})) this.lastGesture = now;
+    }
+
     appearance(appearance) {
       if (appearance) this.send({type:'appearance',appearance});
     }

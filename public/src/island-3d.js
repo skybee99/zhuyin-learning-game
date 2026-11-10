@@ -598,16 +598,17 @@
         (peer.x - peer.actor.position.x) * Math.min(1, dt * 9);
       peer.actor.position.z +=
         (peer.z - peer.actor.position.z) * Math.min(1, dt * 9);
-      peer.actor.position.y = peer.action === "joy" && !s.reduced ? Math.abs(Math.sin(now / 180)) * .18 : 0;
+      const action = peer.gestureUntil && now > peer.gestureUntil ? "idle" : peer.action;
+      peer.actor.position.y = action === "joy" && !s.reduced ? Math.abs(Math.sin(now / 180)) * .18 : 0;
       peer.actor.rotation.y =
         { down: 0, up: Math.PI, left: -Math.PI / 2, right: Math.PI / 2 }[
           peer.direction
         ] || 0;
       actorPose(
         peer.actor,
-        peer.action === "walk",
+        action === "walk",
         now / 1000,
-        peer.action,
+        action,
         s.reduced,
       );
     }
@@ -640,7 +641,7 @@
         x: p.x,
         z: p.z,
         direction: s.facing,
-        action: moving ? "walk" : s.action,
+        action: moving ? "walk" : "idle",
       });
     }
     s.avatar.userData.moving = moving;
@@ -670,6 +671,7 @@
     const s = active;
     if (!s || !["wave", "joy"].includes(action)) return;
     s.action = action;
+    s.opts.onGesture?.(action);
     clearTimeout(s.gestureTimer);
     s.gestureTimer = setTimeout(() => {
       if (active === s) s.action = "idle";
@@ -1231,9 +1233,11 @@
       peer.direction = ["up", "down", "left", "right"].includes(p.direction)
         ? p.direction
         : "down";
-      peer.action = ["idle", "walk", "wave", "joy"].includes(p.action)
-        ? p.action
-        : "idle";
+      const action = ["idle", "walk", "wave", "joy"].includes(p.action) ? p.action : "idle";
+      if (peer.action !== action) {
+        peer.action = action;
+        peer.gestureUntil = ["wave", "joy"].includes(action) ? performance.now() + 1800 : 0;
+      }
     }
     for (const [id, p] of s.peers)
       if (!seen.has(id)) {

@@ -55,6 +55,18 @@ try{
   ok(true,'peers receive authorized valid position; out-of-bounds position denied');
   k.send({type:'move',sessionId:host.sessionId,x:.6,z:.5,direction:'right',action:'walk'});
   await k.wait(x=>x.type==='error');ok(true,'spoofed player identity rejected');
+  k.send({type:'gesture',action:'wave'});
+  const wave=await h.wait(x=>x.type==='snapshot'&&x.players.some(p=>p.sessionId===join2.data.sessionId&&p.action==='wave'));
+  assert.ok(wave.players.some(p=>p.sessionId===join2.data.sessionId&&p.x===.6));
+  await g.wait(x=>x.type==='snapshot'&&x.players.some(p=>p.sessionId===join2.data.sessionId&&p.action==='wave'));
+  k.send({type:'move',x:.6,z:.5,direction:'right',action:'idle'});
+  await h.wait(x=>x.type==='snapshot'&&x.serverTime>=wave.serverTime&&x.players.some(p=>p.sessionId===join2.data.sessionId&&p.action==='wave'));
+  await h.wait(x=>x.type==='snapshot'&&x.serverTime>=wave.serverTime+1400&&x.players.some(p=>p.sessionId===join2.data.sessionId&&p.action==='idle'),6000);
+  ok(true,'dedicated gesture reaches two peers, survives idle move and expires');
+  k.send({type:'gesture',action:'<script>'});await k.wait(x=>x.type==='error');
+  k.send({type:'gesture',action:'joy',sessionId:host.sessionId});await k.wait(x=>x.type==='error');
+  k.send({type:'gesture',action:'joy'});await h.wait(x=>x.type==='snapshot'&&x.players.some(p=>p.sessionId===join2.data.sessionId&&p.action==='joy'));
+  ok(true,'only allowed gestures without spoofed identity are broadcast');
   k.send({type:'appearance',appearance:{hair:'bob',color:'#7cbad0',accessory:'star'}});
   await h.wait(x=>x.type==='snapshot'&&x.players.some(p=>p.sessionId===join2.data.sessionId&&p.appearance.hair==='bob'));
   k.send({type:'appearance',appearance:{hair:'<img>',color:'#7cbad0',accessory:'star'}});await k.wait(x=>x.type==='error');

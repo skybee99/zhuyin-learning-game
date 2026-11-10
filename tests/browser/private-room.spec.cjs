@@ -141,8 +141,21 @@ test('real private WebSocket room: two then three browsers, six shared rides and
       await expect.poll(()=>host.packets.some(packet=>packet.players?.some(p=>p.sessionId===thirdId&&p.x>.75)),{timeout:10000}).toBe(true);
     }finally{await third.page.keyboard.up('d');}
     const hostId=host.packets.find(p=>p.type==='welcome').selfId;
-    await third.page.locator('[data-room-wave]').click();
-    await expect.poll(()=>guest.packets.some(packet=>packet.players?.some(p=>p.sessionId===thirdId&&p.action==='wave'))).toBe(true);
+    await test.step('不依賴移動封包的揮手',async()=>{
+      await third.page.evaluate(()=>{
+        window.originalRoomSend=WebSocket.prototype.send;
+        WebSocket.prototype.send=function(payload) {
+          if(typeof payload==='string' && JSON.parse(payload).type==='move') return;
+          return window.originalRoomSend.call(this,payload);
+        };
+      });
+      try {
+        await third.page.locator('[data-room-wave]').click();
+        await expect.poll(()=>guest.packets.some(packet=>packet.players?.some(p=>p.sessionId===thirdId&&p.action==='wave'))).toBe(true);
+      } finally {
+        await third.page.evaluate(()=>{WebSocket.prototype.send=window.originalRoomSend; delete window.originalRoomSend;});
+      }
+    });
 
     async function ride(type, participants) {
       await host.page.locator('select[name="ride"]').selectOption(type);

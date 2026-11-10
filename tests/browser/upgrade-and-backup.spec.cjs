@@ -79,7 +79,7 @@ test('actual baseline service worker to V2, preserve three synthetic roles, then
     catch (e) { throw new Error(JSON.stringify({requests,errors,appStatus:await page.locator('#appStatus').textContent(),cacheNames:await page.evaluate(()=>caches.keys())}),{cause:e}); }
     await Promise.all([page.waitForEvent('framenavigated',{predicate:(f)=>f===page.mainFrame()}),page.locator('#updateNow').click()]);
     await page.waitForLoadState('domcontentloaded');
-    await expect.poll(()=>page.evaluate(async()=>(await caches.keys()).filter((k)=>k.startsWith('zhuyin-')))).toEqual(['zhuyin-island-v2-1-0-3d-1']);
+    await expect.poll(()=>page.evaluate(async()=>(await caches.keys()).filter((k)=>k.startsWith('zhuyin-')))).toEqual(['zhuyin-island-v2-1-0-3d-2']);
     expect(await page.evaluate(()=>caches.keys())).toContain('unrelated-app-test');
     await expect(page.locator('#starsCount')).toHaveText('11');
     await page.locator('#switchChild').click();
@@ -113,7 +113,7 @@ test('actual baseline service worker to V2, preserve three synthetic roles, then
       const ledger = await TicketLedger.open();
       try {
         const s = await ledger.get('child-3');
-        const cache = await caches.open('zhuyin-island-v2-1-0-3d-1');
+        const cache = await caches.open('zhuyin-island-v2-1-0-3d-2');
         return { key:s.activeRounds.word,balance:s.balance,paths:(await cache.keys()).map((r)=>new URL(r.url).pathname) };
       } finally { ledger.close(); }
     });
