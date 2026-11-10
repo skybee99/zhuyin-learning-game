@@ -103,7 +103,7 @@
 
 ## D031 V2.1.0 立體呈現與隔離
 
-採本機 Three.js／WebGL2 為候選呈現層，保留既有 2D 作降級和離線學習入口；3D 擴充幾何與原 2D 世界隔離。人物、NPC 和場景使用專案程式生成的低多邊形素材；Three.js 上游版本和授權隨 bundle 記錄。Babylon.js 未在相同條件實測 bundle／FPS，不能把工程整合判斷當效能比較結論。詳細範圍與尚未執行項目見 `reports/3D-ARCHITECTURE.md`。
+採本機 Three.js／WebGL2 為候選呈現層，保留既有 2D 作降級和離線學習入口；3D 擴充幾何與原 2D 世界隔離。人物、NPC 和場景使用專案程式生成的低多邊形素材；Three.js 上游版本和授權隨 bundle 記錄。已量測實際 Three.js 檔與 Babylon.js 代表性模組子集的原始及 gzip 大小，未做等同島景的 Babylon 移植或 FPS 比較。詳細範圍與尚未執行項目見 `reports/3D-ARCHITECTURE.md`。
 
 ## D032 房間與本機交易邊界
 

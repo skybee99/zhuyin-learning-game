@@ -4,7 +4,7 @@
 
 ## 選型及限制
 
-本候選採 Three.js 0.187.0、WebGL2 和既有原生 JavaScript。Three.js 使用標準場景、相機、幾何、光源及 WebGL renderer，能以本地 bundle 接上既有靜態 PWA；本輪沒有導入完整遊戲引擎或另外一套帳本。Babylon.js 亦能建立 3D 場景，但其相同功能所需 bundle、壓縮大小、行動效能與升級成本本輪沒有實測，因此此處是整合複雜度判斷，不是經同條件 benchmark 證明 Three.js 較快或較小。已生成的 `public/src/three.vendor.js` 實際 749,874 bytes（未壓縮；以本次檢查為準），由 `scripts/build-three.cjs` 重建；上游授權文本在 `public/assets/THREE-LICENSE.txt`。不代表經網路壓縮後的傳輸大小。版本、供應鏈更新及 PWA 離線清單仍需按根目錄整合結果審核。
+本候選採 Three.js 0.187.0、WebGL2 和既有原生 JavaScript。Three.js 使用標準場景、相機、幾何、光源及 WebGL renderer，能以本地 bundle 接上既有靜態 PWA；本輪沒有導入完整遊戲引擎或另外一套帳本。Babylon.js 也有相機、陰影、低多邊形網格、材質及 WebGL 引擎，以 ES 模組按需匯入。相同 esbuild 0.28.2、IIFE 和瀏覽器目標下，Three.js 實際 PWA bundle 749,874 bytes，gzip 192,311 bytes；Babylon.js 9.35.0 選取引擎、場景、相機、燈光、陰影及六種幾何的代表性 bundle 為 1,666,914 bytes，gzip 390,113 bytes。比較量測是 API 子集編譯，未將整座島移植，無法據此比較 GPU FPS。Three 只需鎖定一個運行時套件及一個可重建本地檔，便於沿用 Vanilla JS 的場景生命週期及 Service Worker 清單。更新依賴時應重新比對 shader、資源大小和離線快取。Three 由 `scripts/build-three.cjs` 重建，授權在 `public/assets/THREE-LICENSE.txt`。
 
 ## 組件與座標
 
