@@ -11,7 +11,10 @@ async function enter(page) {
 }
 
 test('WebGL2 island has real depth, keyboard movement, camera and both maps',async({page})=>{
+  // The CI runner uses software WebGL and camera changes can take several rendered frames.
+  test.setTimeout(90000);
   await enter(page);
+  await page.locator('[data-3d-quality]').selectOption('low');
   const canvas=page.locator('.island3d-canvas');
   await expect(canvas).toBeVisible();
   expect(await canvas.evaluate((el)=>{
@@ -34,7 +37,7 @@ test('WebGL2 island has real depth, keyboard movement, camera and both maps',asy
   }
   await page.locator('[data-3d-action="close-map"]').click();
   await page.locator('[data-3d-action="home"]').click();
-  await expect.poll(async()=>Number(await world.getAttribute('data-x'))).toBe(620);
+  await expect.poll(async()=>Number(await world.getAttribute('data-x')),{timeout:15000}).toBe(620);
 });
 
 test('WebGL2 disabled opens the original 2D island and learning',async({page})=>{
