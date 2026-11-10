@@ -162,6 +162,7 @@
       async reserveRide(childId, input) {
         return change(childId, s => {
           const operationId = requireId(input.operationId, 'operationId'), rideName = requireId(input.ride, 'ride');
+          if (!['carousel','coaster','ferris','bumper','pirate','train'].includes(rideName)) throw new Error('Invalid ride type');
           if (input.startPolicy !== undefined && input.startPolicy !== PAINT_ACK_POLICY) throw new Error('Invalid ride start policy');
           const prior = s.rides[operationId];
           if (prior) {
@@ -197,10 +198,14 @@
           return { reservation: copy(r) };
         });
       },
-      async cancelRide(childId, operationId) {
+      async cancelRide(childId, operationId, options) {
         return change(childId, s => {
           const r = s.rides[requireId(operationId, 'operationId')]; if (!r) throw new Error('Ride reservation missing');
-          if (r.status === 'reserved') { r.status = 'refunded'; r.refundReason = 'cancelled'; r.refundedAt = Date.now(); s.balance++; log(s, { type: 'ride_refund', operationId, ride: r.ride, amount: 1, reason: 'cancelled' }); }
+          if (r.status === 'reserved') {
+            const reason = options?.reviewedByParent === true ? 'parent-review' : 'cancelled';
+            r.status = 'refunded'; r.refundReason = reason; r.refundedAt = Date.now(); s.balance++;
+            log(s, { type: 'ride_refund', operationId, ride: r.ride, amount: 1, reason });
+          }
           return { reservation: copy(r) };
         });
       },

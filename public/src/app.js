@@ -128,6 +128,7 @@ function renderProgress() {
   document.body.dataset.zhuyinSize = p.settings.zhuyinSize;
   document.body.dataset.reduceMotion = String(Boolean(p.settings.reducedMotion));
   AnimalIsland.refresh();
+  globalThis.Island3D?.refresh?.();
 }
 async function selectChild(id) {
   if (AnimalIsland.isStarting?.() || !PROFILES.some((p) => p.id === id)) return;
@@ -150,6 +151,8 @@ async function selectChild(id) {
 }
 function exitChild() {
   state.epoch++;
+  state.homeView = 'islandView';
+  state.island3D?.resetChild();
   state.parentUnlocked = false;
   state.quiz = null;
   state.busy = false;
@@ -170,11 +173,16 @@ function chooseChild() {
   $('#profileCards button')?.focus();
 }
 const ISLAND_VIEWS = new Set(['islandView','ridesView','collectionView']);
-const VIEWS = new Set([...ISLAND_VIEWS,'curriculumView','cardsView','learnView','listenView','spellView','wordView','parentView']);
+const VIEWS = new Set([...ISLAND_VIEWS,'island3DView','curriculumView','cardsView','learnView','listenView','spellView','wordView','parentView']);
 function showView(id, details) {
   if (AnimalIsland.isStarting?.() || !state.child || !VIEWS.has(id)) return;
   if (id === 'parentView' && !state.parentUnlocked) {
     if (!$('#parentGate').open) { $('#parentGate').showModal(); $('#cancelParent').focus(); }
+    return;
+  }
+  if (id === 'island3DView' && !state.island3D) {
+    showView('islandView');
+    report('3D 資源尚未就緒，已開啟 2D 動物島。');
     return;
   }
   state.epoch++;
@@ -183,13 +191,16 @@ function showView(id, details) {
   state.importPlan = null;
   state.previewEpoch++;
   stopAllSpeech();
+  state.island3D?.leave();
   AnimalIsland.leave();
   if (id !== 'parentView') state.parentUnlocked = false;
   state.view = id;
+  if (id === 'islandView' || id === 'island3DView') state.homeView = id;
   report();
   document.querySelectorAll('main .panel').forEach((p) => p.classList.toggle('active', p.id === id));
   window.scrollTo(0,0);
   if (ISLAND_VIEWS.has(id)) AnimalIsland.enter(id, details);
+  if (id === 'island3DView') state.island3D.enter();
   if (id === 'curriculumView') Curriculum.mount($('#curriculumView'),null);
   if (id === 'parentView') renderParent();
   if (modeForView()) loadQuiz();
@@ -272,7 +283,7 @@ function draft(mode, prior) {
     options = shuffle([q,...shuffle(pool.filter((item) => itemKey(item) !== itemKey(q))).slice(0,3)]).map((item) => ({id:itemKey(item)}));
     correctId = itemKey(q);
   }
-  return { mode, questionKey:`${mode}:${itemKey(q)}`, correctId, question:{item:itemKey(q),options,release:APP_VERSION.version} };
+  return { mode, questionKey:`${mode}:${itemKey(q)}`, correctId, question:{item:itemKey(q),options,release:APP_VERSION.dataVersion} };
 }
 const QUIZ_UI = {listen:['listenChoices','listenFeedback','nextListen','answer'],word:['wordChoices','wordFeedback','nextWord','word'],spell:['spellChoices','spellFeedback','nextSpell','option-id']};
 const family = (mode) => mode.split(':')[0];
@@ -287,7 +298,7 @@ function drawQuiz(round) {
   const bank = poolFor(mode);
   const item = bank.find((q) => itemKey(q) === round.question?.item);
   state.quiz = round;
-  if (!item || !Array.isArray(round.question.options) || round.question.release !== APP_VERSION.version) {
+  if (!item || !Array.isArray(round.question.options) || round.question.release !== APP_VERSION.dataVersion) {
     choices.textContent = '';
     feedback.textContent = '這一題已不在目前的題庫中。';
     next.hidden = false;
@@ -323,7 +334,7 @@ async function loadQuiz(advance = false) {
   try {
     const candidate = draft(mode,old);
     if (!state.ledger) throw new Error('目前無法開啟本機題目紀錄。注音卡仍可使用。');
-    if (advance && old?.status === 'active' && (old.question?.release !== APP_VERSION.version || !poolFor(mode).some((q) => itemKey(q) === old.question?.item)))
+    if (advance && old?.status === 'active' && (old.question?.release !== APP_VERSION.dataVersion || !poolFor(mode).some((q) => itemKey(q) === old.question?.item)))
       await state.ledger.abandonRound(id,mode,old.id);
     const result = advance && old ? await state.ledger.advanceRound(id,{...candidate,roundId:old.id}) : await state.ledger.getOrCreateRound(id,candidate);
     if (state.epoch !== epoch) return;
@@ -381,11 +392,13 @@ async function renderParentStats() {
       .filter(([,v]) => v.wrong > 0).sort((a,b) => b[1].wrong-a[1].wrong).slice(0,5)
       .map(([key,value]) => `${key.split(':').at(-1)}（${value.wrong} 次）`).join('、');
     const rides = Object.values(snapshot?.rides || {});
+    const pending = rides.filter((ride) => ride.status === 'reserved');
+    const review = pending.length ? `<details><summary>審核未開始的設施交易</summary><ul>${pending.map((ride)=>`<li>${esc(ride.ride)}｜${esc(new Date(ride.reservedAt).toLocaleString('zh-TW'))} <button type="button" data-refund-child="${esc(id)}" data-refund-operation="${esc(ride.operationId)}">確認未開始並退回 1 張券</button></li>`).join('')}</ul></details>` : '';
     const kinds = {quiz_credit:'答對發券',quiz_repeat_limit:'複習，不發券',ride_debit:'搭乘扣券',ride_refund:'未開始退款'};
     return `<section class="parent-child"><h3>${who.avatar} ${esc(who.name)}</h3><p>⭐ ${who.stars}｜舊版作答 ${number(p.answers)}｜遊樂券 ${snapshot?.balance ?? '無法讀取'}</p>
       <p>島嶼題數 ${number(stats?.started)}｜首次答對率 ${percent(stats?.firstCorrect,stats?.firstAnswered)}｜重試 ${number(stats?.retries)} 次｜最終完成率 ${percent(stats?.completed,stats?.started)}｜重試後完成率 ${percent((stats?.completed || 0)-(stats?.firstCorrect || 0),(stats?.firstAnswered || 0)-(stats?.firstCorrect || 0))}</p>
       <p>待練習：${esc(weak || '尚無')}｜搭乘 ${rides.filter((x) => ['started','completed'].includes(x.status)).length} 次｜結束 ${rides.filter((x) => x.status === 'completed').length} 次</p>
-      <details><summary>遊樂券明細（最近 20 筆）</summary><ul>${(snapshot?.transactions || []).slice(-20).reverse().map((entry) => `<li>${esc(new Date(entry.at).toLocaleString('zh-TW'))}｜${esc(kinds[entry.type] || entry.type)}｜${entry.amount > 0 ? '+' : ''}${esc(entry.amount)}</li>`).join('') || '<li>尚無紀錄</li>'}</ul></details></section>`;
+      ${review}<details><summary>遊樂券明細（最近 20 筆）</summary><ul>${(snapshot?.transactions || []).slice(-20).reverse().map((entry) => `<li>${esc(new Date(entry.at).toLocaleString('zh-TW'))}｜${esc(entry.reason === 'parent-review' ? '家長審核退款' : kinds[entry.type] || entry.type)}｜${entry.amount > 0 ? '+' : ''}${esc(entry.amount)}</li>`).join('') || '<li>尚無紀錄</li>'}</ul></details></section>`;
   }).join('');
 }
 function renderParent() {
@@ -460,7 +473,7 @@ async function collectBackup(kind='full') {
   if (kind === 'full') return {...payload,dictionary,media:state.data.media,questions:state.data.questions,progress,ledger,
     curriculum: JSON.parse(localStorage.getItem('zhuyin-animal-island-curriculum-v1') || 'null'),
     decorations:Object.fromEntries(PROFILES.map(({id}) => [id,localStorage.getItem('zhuyin-island-decor-'+id)])),
-    exploration:Object.fromEntries(PROFILES.map(({id}) => [id,globalThis.IslandExplore?.snapshot(id) ?? null])),
+    exploration:Object.fromEntries(PROFILES.map(({id}) => [id,globalThis.Island3D?.snapshot?.(id) ?? globalThis.IslandExplore?.snapshot(id) ?? null])),
     settings:{currentChildId:state.child}};
   if (kind === 'dictionary') return {...payload,dictionary};
   if (kind === 'media') return {...payload,media:state.data.media};
@@ -537,7 +550,7 @@ function bind() {
     if (event.key !== 'Escape' || event.defaultPrevented || !returnViews.includes(state.view) || $('dialog[open]')) return;
     if (event.target.closest?.('input, select, textarea, [contenteditable]')) return;
     event.preventDefault();
-    showView('islandView');
+    showView(state.homeView || 'islandView');
   });
   document.body.addEventListener('click',(e) => {
     const target = e.target.closest('button,.readable');
@@ -545,7 +558,7 @@ function bind() {
     if (target.dataset.child) return selectChild(target.dataset.child);
     if (!state.child) return;
     if (target.id === 'switchChild') return chooseChild();
-    if (target.id === 'islandHome') return showView('islandView');
+    if (target.id === 'islandHome') return showView(state.homeView || 'islandView');
     if (target.id === 'unlockParent') {
       $('#parentGate').close();
       state.parentUnlocked = true;
@@ -577,6 +590,18 @@ function bind() {
     if (target.dataset.exportBackup) {
       const kind = target.dataset.exportBackup;
       return collectBackup(kind).then((data)=>download(`zhuyin-island-${kind}`,JSON.stringify(data,null,2))).catch(()=>report('無法完成備份。'));
+    }
+    if (target.dataset.refundOperation && PROFILES.some(({id})=>id === target.dataset.refundChild)) {
+      const {refundChild,refundOperation} = target.dataset;
+      if (!state.ledger || !confirm('確認這筆設施尚未開始，並退回原預留的 1 張券？')) return;
+      target.disabled = true;
+      return state.ledger.cancelRide(refundChild,refundOperation,{reviewedByParent:true}).then(({reservation})=>{
+        report(reservation.status === 'refunded' ? '已確認遊樂券退回。' : '設施已開始，保留原交易。');
+        refreshLedger();
+      }).catch(()=>{
+        target.disabled = false;
+        report('無法審核這筆交易，請重新讀取帳本。');
+      });
     }
     if (target.id === 'previewBackupImport') return previewBackupImport();
     if (target.id === 'applyBackupImport') return applyBackupImport();
@@ -646,6 +671,10 @@ async function init() {
   const [store,ledger] = await Promise.allSettled([IslandStorage.open(),TicketLedger.open(),loadData()]);
   state.store = store.status === 'fulfilled' ? store.value : null;
   state.ledger = ledger.status === 'fulfilled' ? ledger.value : null;
+  if (typeof Island3DApp === 'function' && globalThis.Island3D && globalThis.IslandRooms && globalThis.IslandRides3D) state.island3D = new Island3DApp({childId:()=>state.child,ledger:()=>state.ledger,
+    getProfile:info,getBalance:()=>state.ticket?.balance ?? null,
+    settings:()=>state.profile?.settings || {},navigate:showView,refreshBalance:()=>refreshLedger(),
+    speak:speakSystemText,stopSpeech:stopAllSpeech,report});
   state.dictionary = local().dictionary;
   $('#appTitle').innerHTML = ruby(textBank.title);
   $('#versionLine').textContent = `${APP_VERSION.version}｜${APP_VERSION.modifiedAt}`;

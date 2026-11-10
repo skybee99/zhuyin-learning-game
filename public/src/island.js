@@ -23,6 +23,7 @@
       <button type="button" class="map-place map-garden" data-go="collectionView"><span>🐰 🌷</span><strong>動物花園</strong><small>布置自己的小角落</small></button>
     </div>`;
     el.innerHTML = `${header('歡迎來到注音動物島', '一起探索、學習，收藏屬於你的快樂。')}
+    <div class="island-3d-launch"><button type="button" class="primary-action" data-go="island3DView">🌴 進入 3D 動物島</button><p>走近六座遊樂設施，或請家長開啟私人同樂。</p></div>
     <section id="islandExplore" aria-label="人偶自由探索"></section><div class="island-section-title"><div><p class="island-kicker">EXPLORE THE ISLAND</p><h3>想去哪裡？</h3></div><span>點選一個地方出發 ↗</span></div>
     <div class="island-destinations"><button data-go="cardsView">🐶 <span><b>注音卡</b><small>跟著聲音認識注音</small></span>↗</button><button data-go="learnView">🦉 <span><b>認識注音</b><small>一起看看所有注音</small></span>↗</button><button data-go="listenView">🐘 <span><b>聽一聽</b><small>仔細聽，再選答案</small></span>↗</button><button data-go="spellView">🦊 <span><b>拼一拼</b><small>拼出正確的聲音</small></span>↗</button><button data-go="wordView">🐼 <span><b>看圖認字</b><small>看看圖片找文字</small></span>↗</button><button data-go="curriculumView">📚 <span><b>學習路線</b><small>看看學習旅程</small></span>↗</button><button data-go="ridesView">🎠 <span><b>遊樂園</b><small>搭乘快樂設施</small></span>↗</button><button data-go="collectionView">🌷 <span><b>動物花園</b><small>動物與布置</small></span>↗</button></div><details class="island-classic"><summary>原版島嶼地圖</summary>${classicMap}</details><button class="island-parent" data-go="parentView">家長專區 ↗</button>`;
     global.IslandExplore?.mount($('#islandExplore', el), {

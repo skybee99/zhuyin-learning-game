@@ -79,7 +79,7 @@ test('actual baseline service worker to V2, preserve three synthetic roles, then
     catch (e) { throw new Error(JSON.stringify({requests,errors,appStatus:await page.locator('#appStatus').textContent(),cacheNames:await page.evaluate(()=>caches.keys())}),{cause:e}); }
     await Promise.all([page.waitForEvent('framenavigated',{predicate:(f)=>f===page.mainFrame()}),page.locator('#updateNow').click()]);
     await page.waitForLoadState('domcontentloaded');
-    await expect.poll(()=>page.evaluate(async()=>(await caches.keys()).filter((k)=>k.startsWith('zhuyin-')))).toEqual(['zhuyin-island-v2-0-0-explore-1']);
+    await expect.poll(()=>page.evaluate(async()=>(await caches.keys()).filter((k)=>k.startsWith('zhuyin-')))).toEqual(['zhuyin-island-v2-1-0-3d-1']);
     expect(await page.evaluate(()=>caches.keys())).toContain('unrelated-app-test');
     await expect(page.locator('#starsCount')).toHaveText('11');
     await page.locator('#switchChild').click();
@@ -113,7 +113,7 @@ test('actual baseline service worker to V2, preserve three synthetic roles, then
       const ledger = await TicketLedger.open();
       try {
         const s = await ledger.get('child-3');
-        const cache = await caches.open('zhuyin-island-v2-0-0-explore-1');
+        const cache = await caches.open('zhuyin-island-v2-1-0-3d-1');
         return { key:s.activeRounds.word,balance:s.balance,paths:(await cache.keys()).map((r)=>new URL(r.url).pathname) };
       } finally { ledger.close(); }
     });
@@ -168,8 +168,11 @@ test('parent gate and explicit backup import preserve other roles and keep a ver
   await expect(page.locator('#starsCount')).toHaveText('0');
 });
 
-test('the original V2.0.0 cache upgrades to exploration and preserves a completed round', async ({page,context}) => {
-  const site = await switchableOrigin('c966822ce86fc96c6503d12999cd75b77a45fcee');
+for (const [base,cache] of [
+  ['c966822ce86fc96c6503d12999cd75b77a45fcee','zhuyin-island-v2-0-0'],
+  ['ad2e057cf0ae18f0f19067517a25fd74057133e6','zhuyin-island-v2-0-0-explore-1']
+]) test(`${cache} upgrades to 3D and preserves a completed round`, async ({page,context}) => {
+  const site = await switchableOrigin(base);
   const snapshot = () => page.evaluate(async () => {
     const ledger = await TicketLedger.open();
     try {
@@ -182,7 +185,7 @@ test('the original V2.0.0 cache upgrades to exploration and preserves a complete
     await page.goto(site.origin);
     await page.locator('[data-child="child-1"]').click();
     await expect.poll(()=>page.evaluate(()=>Boolean(navigator.serviceWorker.controller))).toBe(true);
-    expect(await page.evaluate(()=>caches.keys())).toContain('zhuyin-island-v2-0-0');
+    expect(await page.evaluate(()=>caches.keys())).toContain(cache);
     await page.locator('#islandView [data-go="listenView"]').click();
     await expect(page.locator('#listenChoices [data-answer]')).toHaveCount(4);
     const pending = await snapshot();
@@ -202,6 +205,11 @@ test('the original V2.0.0 cache upgrades to exploration and preserves a complete
     await expect(page.locator('.offline-status')).toBeVisible();
     await expect(page.locator('.explore-player')).toBeVisible();
     expect(await snapshot()).toEqual(before);
+    if (cache.endsWith('explore-1')) {
+      await page.locator('[data-go="island3DView"]').click();
+      await expect(page.locator('.island3d-canvas')).toBeVisible();
+      expect(await snapshot()).toEqual(before);
+    }
   } finally {
     await context.setOffline(false);
     await site.close();

@@ -115,7 +115,7 @@
 
   async function planImport(data, mode, before) {
     if (!object(data) || !['zhuyin-zoo','zhuyin-island'].includes(data.app)
-      || !/^V(?:1\.[0-9]+\.[0-9]+|2\.0\.0)$/.test(data.version || '')
+      || !/^V(?:1\.[0-9]+\.[0-9]+|2\.[01]\.0)$/.test(data.version || '')
       || !['merge','replace'].includes(mode)) throw new Error('無法辨識備份版本或格式');
     const next = clone(before);
     const summary = { profiles: [], dictionary: [], ledgerIncluded: data.ledger != null, curriculumIncluded: data.curriculum != null };

@@ -7,8 +7,8 @@ module.exports = defineConfig({
   testDir: './tests/browser',
   timeout: 30000,
   expect: { timeout: 7000 },
-  workers: process.env.CI ? 2 : 1,
+  workers: 1,
   reporter: [['list'], ['html', { open: 'never' }]],
-  use: { baseURL, browserName: 'chromium', launchOptions: executablePath ? { executablePath } : {}, trace: 'retain-on-failure', screenshot: 'only-on-failure' },
+  use: { baseURL, browserName: 'chromium', launchOptions: { ...(executablePath ? {executablePath} : {}), args:['--enable-unsafe-swiftshader'] }, trace: 'retain-on-failure', screenshot: 'only-on-failure' },
   webServer: { command: 'node tests/serve-local.cjs', url: baseURL + '/', reuseExistingServer: false, timeout: 15000 }
 });

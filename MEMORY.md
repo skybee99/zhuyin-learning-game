@@ -1,5 +1,9 @@
 # MEMORY
 
+- V2.1.0 將資產修訂與資料版本分開。已開啟的 V2.0.0 題目、匿名角色、離線字庫及 IndexedDB 資料延續原結構。
+- 2D 單人地圖是可直接使用的相容入口，3D 的 WebGL2 失敗與 context loss 會回到 2D。私人房間在隔離配置驗證，動態房間回應不快取。
+- 同乘以一次本機 operationId 預留／畫面確認／開始／完成或退款。房間只協調匿名席位及動作，幣值與成績在各裝置。
+
 - 專案是「小學生注音、認字與語音學習遊戲」PWA，主要支援 iPhone/iPad Safari。
 - V1.3.0 版本來源在 `public/src/app.js` 的 `APP_VERSION`。
 - Service Worker 導覽 request 不得寫入 Cache Storage；離線導覽 fallback 固定 `/offline.html`。

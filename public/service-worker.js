@@ -3,7 +3,9 @@ const CACHE_NAME = 'zhuyin-island-' + ZHUYIN_RELEASE.assetRevision.toLowerCase()
 const APP_SHELL = [
   '/offline.html', '/src/styles.css', '/src/island.css', '/src/curriculum.css', '/src/island-explore.css', '/src/version.js', '/src/app.js',
   '/src/storage.js', '/src/ticket-ledger.js', '/src/island.js', '/src/island-world.js', '/src/island-explore.js', '/src/curriculum.js',
-  '/manifest.json', '/assets/icons/icon.svg', '/assets/icons/icon-192.png', '/assets/icons/icon-512.png',
+  '/src/three.vendor.js', '/src/island-world-3d.js', '/src/island-3d.js', '/src/island-rides-3d.js',
+  '/src/island-3d.css', '/src/island-rides-3d.css', '/src/island-room.css', '/src/island-room-client.js', '/src/island-3d-app.js',
+  '/assets/THREE-LICENSE.txt', '/manifest.json', '/assets/icons/icon.svg', '/assets/icons/icon-192.png', '/assets/icons/icon-512.png',
   '/assets/audio/audio-manifest.json',
   '/data/zhuyin.json', '/data/characters.json', '/data/words.json', '/data/categories.json',
   '/data/media-map.json', '/data/questions.json'

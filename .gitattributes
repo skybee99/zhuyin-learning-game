@@ -1,0 +1,3 @@
+# Preserve exact generated shader bytes and the upstream license.
+public/src/three.vendor.js -text -whitespace
+public/assets/THREE-LICENSE.txt -text

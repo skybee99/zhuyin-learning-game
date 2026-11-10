@@ -21,9 +21,9 @@ assert(!wrangler.includes('"d1_databases"') && !wrangler.includes('replace-with-
 const manifest = JSON.parse(read('public/manifest.json'));
 assert(manifest.display === 'standalone' && manifest.scope === '/', 'Manifest display or scope invalid');
 for (const size of ['192x192','512x512']) assert(manifest.icons.some(i => i.sizes === size && fs.existsSync(path.join(pub, i.src.replace(/^\//,'')))), `Manifest missing ${size} icon`);
-const html = read('public/index.html').replace(/\?v=V[0-9.]+(?:-explore\.[0-9]+)?/g, '');
-for (const id of ['profileView','cardsView','learnView','listenView','wordView','spellView','parentView','islandView','ridesView','collectionView','curriculumView']) assert(html.includes(`id="${id}"`), `Missing ${id}`);
-const scriptOrder = ['version','storage','ticket-ledger','island-world','island-explore','island','curriculum','app'];
+const html = read('public/index.html').replace(/\?v=V[0-9.]+(?:-[a-z0-9.]+)?/g, '');
+for (const id of ['profileView','cardsView','learnView','listenView','wordView','spellView','parentView','island3DView','islandView','ridesView','collectionView','curriculumView']) assert(html.includes(`id="${id}"`), `Missing ${id}`);
+const scriptOrder = ['version','storage','ticket-ledger','island-world','island-explore','island','curriculum','three.vendor','island-world-3d','island-3d','island-rides-3d','island-room-client','island-3d-app','app'];
 let position = -1;
 for (const name of scriptOrder) {
   const regex = new RegExp(`<script\\s+src="src/${name}\\.js"\\s+defer></script>`);
